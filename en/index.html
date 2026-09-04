@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nałęczów Stanisława Strzyżyńskiego — a virtual walk</title>
+<meta name="description" content="A virtual walk through Nałęczów following the sculptures of Stanisław Strzyżyński. Narrated by his son, Zbigniew Strzyżyński.">
+<link rel="canonical" href="./index.html">
+<link rel="alternate" hreflang="pl" href="../index.html">
+<link rel="alternate" hreflang="en" href="./index.html">
+<link rel="alternate" hreflang="x-default" href="../index.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../css/style.css">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Nałęczów Stanisława Strzyżyńskiego">
+<meta property="og:title" content="Nałęczów Stanisława Strzyżyńskiego — a virtual walk">
+<meta property="og:description" content="A virtual walk through Nałęczów following the sculptures of Stanisław Strzyżyński. Narrated by his son, Zbigniew Strzyżyński.">
+<meta property="og:image" content="../img/og-cover.jpg">
+<meta property="og:url" content="./index.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-top">
+    <p class="site-title">
+      <a href="./index.html">Nałęczów<span class="site-title-sub">Stanisław Strzyżyński — a virtual walk</span></a>
+    </p>
+    <div class="header-tools">
+      <div class="text-size-switch" role="group" aria-label="Text size">
+        <button type="button" data-scale="100" aria-pressed="true">A</button>
+        <button type="button" data-scale="125" aria-pressed="false">A+</button>
+        <button type="button" data-scale="150" aria-pressed="false">A++</button>
+      </div>
+      <a class="lang-switch" href="../index.html" hreflang="pl" lang="pl">Polski</a>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul role="list">
+        <li><a href="./index.html" aria-current="page">Home</a></li>
+        <li><a href="./prus-bench.html">1. Prus Bench</a></li>
+        <li><a href="./genealogy-tree.html">2. Genealogical Tree</a></li>
+        <li><a href="./ewelina-cafe.html">3. Girl with a Fish</a></li>
+        <li><a href="./ak-monument.html">4. AK Monument</a></li>
+        <li><a href="./about.html">About the project</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <h1>Nałęczów Stanisława Strzyżyńskiego</h1>
+    <p class="content">
+      This virtual walk follows four sculptures by Stanisław Strzyżyński
+      (1923–2015), which have shaped the landscape of Nałęczów for decades.
+      The recordings are narrated by his son, Zbigniew Strzyżyński, who tells
+      the story of his father and his work. You can take the whole walk from
+      home before visiting Nałęczów, or step by step on site by scanning the
+      QR codes by each sculpture. The route has four stops — you'll find the
+      exact distance and estimated walking time below the map.
+    </p>
+
+    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
+      <h2 id="mapa-heading">Walk map</h2>
+      <p>
+        Click a numbered pin or an item on the list below to see a preview of
+        the sculpture and open its recording. The map can also be used with a
+        keyboard (Tab, Enter).
+      </p>
+
+      <div class="map-wrap" id="map-wrap">
+        <div id="map" class="map-el" role="application" aria-label="Walk map with four numbered stops"></div>
+        <div class="map-scroll-hint" id="map-scroll-hint" role="button" tabindex="0">
+          Click the map to zoom with the scroll wheel
+        </div>
+      </div>
+      <div class="map-fallback" id="map-fallback" hidden>
+        <p>The map is currently unavailable. Below is the full list of stops on the walk — it works independently of the map.</p>
+      </div>
+
+      <div class="map-meta">
+        <span id="map-meta"></span>
+        <button type="button" class="btn btn--secondary" id="geolocate-btn">📍 Show my location</button>
+      </div>
+      <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
+
+      <h3 class="visually-hidden">List of stops on the walk</h3>
+      <ul class="location-list" id="location-list" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="kafelki-heading">
+      <h2 id="kafelki-heading" class="visually-hidden">Sculptures on the route</h2>
+      <ul class="tile-grid" id="tile-grid" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="jak-korzystac-heading">
+      <h2 id="jak-korzystac-heading">How to use this walk</h2>
+      <ol class="steps-grid" role="list">
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">1</div>
+          <p><strong>Choose a stop.</strong> On the map, the list, or the tiles above — click the sculpture you want to learn more about.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">2</div>
+          <p><strong>Listen to the story.</strong> Every page has a video or audio recording narrated by the artist's son, Zbigniew Strzyżyński.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">3</div>
+          <p><strong>Go for a walk.</strong> Standing by the sculpture, scan the QR code on the plaque to listen on the spot — or type the web address by hand.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bio-section-wrap" aria-labelledby="bio-heading">
+      <h2 id="bio-heading">Stanisław Strzyżyński (1923–2015)</h2>
+      <div class="bio-section">
+        <img src="../img/stanislaw-strzyzynski-portret.svg" alt="Portrait of Stanisław Strzyżyński in his sculpture studio — PHOTO PENDING" width="480" height="600" loading="lazy">
+        <div class="content">
+          <h3>Youth and education</h3>
+          <p><!-- EN TRANSLATION NEEDED --></p>
+
+          <h3>Nałęczów</h3>
+          <p><!-- EN TRANSLATION NEEDED --></p>
+
+          <h3>Body of work</h3>
+          <p><!-- EN TRANSLATION NEEDED --></p>
+
+          <h3>Beyond Nałęczów</h3>
+          <p><!-- EN TRANSLATION NEEDED --></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>A virtual walk following the sculptures.</p>
+    </div>
+    <div>
+      <p><a href="./about.html">About the project</a></p>
+      <p><a href="../qr/tabliczki.html">Printable QR plaques</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Close enlarged photo">✕</button>
+  <img src="" alt="">
+</div>
+
+<script src="../data/rzezby.js"></script>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/map.js"></script>
+</body>
+</html>

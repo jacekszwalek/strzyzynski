@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Placeholder: ZDJĘCIE DO UZUPEŁNIENIA. Miniatura: Pomnik żołnierzy Armii Krajowej, polana harcerska">
+  <title>ZDJĘCIE DO UZUPEŁNIENIA</title>
+  <desc>Miniatura: Pomnik żołnierzy Armii Krajowej, polana harcerska</desc>
+  <rect width="400" height="300" fill="#EDE7DA"/>
+  <rect x="4" y="4" width="392" height="292" fill="none" stroke="#8C7A5B" stroke-width="3" stroke-dasharray="14 8"/>
+  <line x1="4" y1="4" x2="396" y2="296" stroke="#8C7A5B" stroke-width="1.5" opacity="0.5"/>
+  <line x1="396" y1="4" x2="4" y2="296" stroke="#8C7A5B" stroke-width="1.5" opacity="0.5"/>
+  <text text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="18" fill="#3A3227"><tspan x="50%" y="138.3">ZDJĘCIE DO UZUPEŁNIENIA</tspan></text>
+  <text text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#3A3227"><tspan x="50%" y="161.7">Miniatura: Pomnik żołnierzy Armii Krajowej, polana harcerska</tspan></text>
+  <text x="50%" y="184.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6B6153">400 × 300 px</text>
+</svg>

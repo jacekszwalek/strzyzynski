@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  UWAGA: adresy poniżej używają placeholdera https://USER.github.io/REPO/
+  Po wdrożeniu na GitHub Pages podmień go na swój prawdziwy adres we
+  WSZYSTKICH wystąpieniach w tym pliku (patrz README.md).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://USER.github.io/REPO/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/index.html"/>
+  </url>
+  <url>
+    <loc>https://USER.github.io/REPO/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/index.html"/>
+  </url>
+
+  <url>
+    <loc>https://USER.github.io/REPO/lawka-prusa.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/lawka-prusa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/prus-bench.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/lawka-prusa.html"/>
+  </url>
+  <url>
+    <loc>https://USER.github.io/REPO/en/prus-bench.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/lawka-prusa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/prus-bench.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/lawka-prusa.html"/>
+  </url>
+
+  <url>
+    <loc>https://USER.github.io/REPO/drzewo-genealogiczne.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/drzewo-genealogiczne.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/genealogy-tree.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/drzewo-genealogiczne.html"/>
+  </url>
+  <url>
+    <loc>https://USER.github.io/REPO/en/genealogy-tree.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/drzewo-genealogiczne.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/genealogy-tree.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/drzewo-genealogiczne.html"/>
+  </url>
+
+  <url>
+    <loc>https://USER.github.io/REPO/kawiarnia-ewelina.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/kawiarnia-ewelina.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/ewelina-cafe.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/kawiarnia-ewelina.html"/>
+  </url>
+  <url>
+    <loc>https://USER.github.io/REPO/en/ewelina-cafe.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/kawiarnia-ewelina.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/ewelina-cafe.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/kawiarnia-ewelina.html"/>
+  </url>
+
+  <url>
+    <loc>https://USER.github.io/REPO/pomnik-ak.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/pomnik-ak.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/ak-monument.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/pomnik-ak.html"/>
+  </url>
+  <url>
+    <loc>https://USER.github.io/REPO/en/ak-monument.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/pomnik-ak.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/ak-monument.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/pomnik-ak.html"/>
+  </url>
+
+  <url>
+    <loc>https://USER.github.io/REPO/o-projekcie.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/o-projekcie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/o-projekcie.html"/>
+  </url>
+  <url>
+    <loc>https://USER.github.io/REPO/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://USER.github.io/REPO/o-projekcie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USER.github.io/REPO/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://USER.github.io/REPO/o-projekcie.html"/>
+  </url>
+
+</urlset>

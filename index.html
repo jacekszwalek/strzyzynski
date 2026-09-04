@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pl" data-root="./">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nałęczów Stanisława Strzyżyńskiego — wirtualny spacer</title>
+<meta name="description" content="Wirtualny spacer po Nałęczowie śladami rzeźb Stanisława Strzyżyńskiego. O ojcu i jego twórczości opowiada syn, Zbigniew Strzyżyński.">
+<link rel="canonical" href="./index.html">
+<link rel="alternate" hreflang="pl" href="./index.html">
+<link rel="alternate" hreflang="en" href="./en/index.html">
+<link rel="alternate" hreflang="x-default" href="./index.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="./favicon.ico">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Nałęczów Stanisława Strzyżyńskiego">
+<meta property="og:title" content="Nałęczów Stanisława Strzyżyńskiego — wirtualny spacer">
+<meta property="og:description" content="Wirtualny spacer po Nałęczowie śladami rzeźb Stanisława Strzyżyńskiego. O ojcu i jego twórczości opowiada syn, Zbigniew Strzyżyński.">
+<meta property="og:image" content="./img/og-cover.jpg">
+<meta property="og:url" content="./index.html">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<header class="site-header">
+  <div class="container header-top">
+    <p class="site-title">
+      <a href="./index.html">Nałęczów<span class="site-title-sub">Stanisława Strzyżyńskiego — wirtualny spacer</span></a>
+    </p>
+    <div class="header-tools">
+      <div class="text-size-switch" role="group" aria-label="Rozmiar tekstu">
+        <button type="button" data-scale="100" aria-pressed="true">A</button>
+        <button type="button" data-scale="125" aria-pressed="false">A+</button>
+        <button type="button" data-scale="150" aria-pressed="false">A++</button>
+      </div>
+      <a class="lang-switch" href="./en/index.html" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <div class="container">
+      <ul role="list">
+        <li><a href="./index.html" aria-current="page">Start</a></li>
+        <li><a href="./lawka-prusa.html">1. Ławeczka Prusa</a></li>
+        <li><a href="./drzewo-genealogiczne.html">2. Drzewo genealogiczne</a></li>
+        <li><a href="./kawiarnia-ewelina.html">3. Panna z Rybą</a></li>
+        <li><a href="./pomnik-ak.html">4. Pomnik AK</a></li>
+        <li><a href="./o-projekcie.html">O projekcie</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <h1>Nałęczów Stanisława Strzyżyńskiego</h1>
+    <p class="content">
+      Ten wirtualny spacer prowadzi śladami czterech rzeźb Stanisława Strzyżyńskiego
+      (1923–2015), które przez dekady współtworzyły krajobraz Nałęczowa. O ojcu i jego
+      twórczości opowiada w nagraniach syn, Zbigniew Strzyżyński. Spacer możesz przejść
+      w całości z domu, zanim wybierzesz się do Nałęczowa, albo krok po kroku na miejscu,
+      skanując kody QR przy kolejnych rzeźbach. Trasa liczy cztery przystanki — dokładny
+      dystans i orientacyjny czas przejścia znajdziesz pod mapą poniżej.
+    </p>
+
+    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
+      <h2 id="mapa-heading">Mapa spaceru</h2>
+      <p>
+        Kliknij numerowaną pinezkę albo pozycję na liście poniżej, aby zobaczyć podgląd
+        rzeźby i przejść do nagrania. Mapę można też obsłużyć klawiaturą (Tab, Enter).
+      </p>
+
+      <div class="map-wrap" id="map-wrap">
+        <div id="map" class="map-el" role="application" aria-label="Mapa spaceru z czterema numerowanymi punktami"></div>
+        <div class="map-scroll-hint" id="map-scroll-hint" role="button" tabindex="0">
+          Kliknij mapę, aby przybliżać kółkiem myszy
+        </div>
+      </div>
+      <div class="map-fallback" id="map-fallback" hidden>
+        <p>Mapa jest obecnie niedostępna. Poniżej pełna lista punktów spaceru — działa niezależnie od mapy.</p>
+      </div>
+
+      <div class="map-meta">
+        <span id="map-meta"></span>
+        <button type="button" class="btn btn--secondary" id="geolocate-btn">📍 Pokaż moją pozycję</button>
+      </div>
+      <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
+
+      <h3 class="visually-hidden">Lista punktów spaceru</h3>
+      <ul class="location-list" id="location-list" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="kafelki-heading">
+      <h2 id="kafelki-heading" class="visually-hidden">Rzeźby na trasie</h2>
+      <ul class="tile-grid" id="tile-grid" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="jak-korzystac-heading">
+      <h2 id="jak-korzystac-heading">Jak korzystać ze spaceru</h2>
+      <ol class="steps-grid" role="list">
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">1</div>
+          <p><strong>Wybierz punkt.</strong> Na mapie, liście lub wśród kafelków powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">2</div>
+          <p><strong>Posłuchaj opowieści.</strong> Na każdej podstronie czeka nagranie wideo lub audio z opowieścią syna artysty, Zbigniewa Strzyżyńskiego.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">3</div>
+          <p><strong>Ruszaj na spacer.</strong> Stojąc przy rzeźbie, zeskanuj kod QR z tabliczki, aby posłuchać na miejscu — albo wpisz adres strony ręcznie.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bio-section-wrap" aria-labelledby="bio-heading">
+      <h2 id="bio-heading">Stanisław Strzyżyński (1923–2015)</h2>
+      <div class="bio-section">
+        <img src="./img/stanislaw-strzyzynski-portret.svg" alt="Portret Stanisława Strzyżyńskiego w pracowni rzeźbiarskiej — ZDJĘCIE DO UZUPEŁNIENIA" width="480" height="600" loading="lazy">
+        <div class="content">
+          <h3>Młodość i wykształcenie</h3>
+          <p>
+            Stanisław Strzyżyński urodził się 3 kwietnia 1923 roku w Kaliskach
+            (woj. wielkopolskie). Studiował w Państwowej Wyższej Szkole Sztuk
+            Plastycznych w Poznaniu, na Wydziale Rzeźby, w pracowni prof. Bazylego
+            Wojtowicza. Dyplom uzyskał w Akademii Sztuk Pięknych w Warszawie w 1955
+            roku, w pracowni prof. Mariana Wnuka.
+            <!-- DO UZUPEŁNIENIA: dodatkowe fakty z okresu studiów -->
+          </p>
+
+          <h3>Nałęczów</h3>
+          <p>
+            Do Nałęczowa przeniósł się w 1953 roku — jak wskazują dostępne źródła,
+            powodem były problemy z Urzędem Bezpieczeństwa.
+            <!-- DO UZUPEŁNIENIA: szczegóły okoliczności przeprowadzki -->
+            Przez trzydzieści lat, od 1953 do 1983 roku, uczył w Państwowym Liceum
+            Sztuk Plastycznych w Nałęczowie. Od 1951 roku należał do Związku Polskich
+            Artystów Plastyków, a w latach 1957–1974 współtworzył Grupę Nałęczowską.
+          </p>
+
+          <h3>Twórczość</h3>
+          <p>
+            W dorobku artysty jest kilkanaście pomników, około stu rzeźb portretowych,
+            rzeźby monumentalne, kilkadziesiąt medali oraz malarstwo.
+            <!-- DO UZUPEŁNIENIA: pełny wykaz najważniejszych realizacji -->
+          </p>
+
+          <h3>Poza Nałęczowem</h3>
+          <p>
+            Poza Nałęczowem Strzyżyński zrealizował m.in. dwudziestotrzymetrowy Pomnik
+            Bohaterskim Lotnikom Dęblińskiej Szkoły Orląt w Dęblinie (1966), a także
+            pomniki w Rąblowie, Kocku, Zbędowicach i Puławach oraz ławeczkę Marii Cunitz
+            w Świdnicy. W 1967 roku, wspólnie z Juliuszem Kłeczkiem, zdobył I nagrodę w
+            konkursie na Pomnik Walki i Męczeństwa na Majdanku — do realizacji skierowano
+            jednak projekt nagrodzony III nagrodą.
+            <!-- DO UZUPEŁNIENIA: więcej kontekstu wokół konkursu majdankowskiego -->
+            Był odznaczony m.in. Złotym Krzyżem Zasługi. Często współpracował z synami —
+            Leszkiem i Zbigniewem. Zmarł 16 marca 2015 roku w Nałęczowie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>Wirtualny spacer śladami rzeźb.</p>
+    </div>
+    <div>
+      <p><a href="./o-projekcie.html">O projekcie</a></p>
+      <p><a href="./qr/tabliczki.html">Tabliczki QR do druku</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Zamknij powiększone zdjęcie">✕</button>
+  <img src="" alt="">
+</div>
+
+<script src="./data/rzezby.js"></script>
+<script src="./vendor/leaflet/leaflet.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/map.js"></script>
+</body>
+</html>

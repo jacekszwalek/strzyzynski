@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Podmień USER/REPO po wdrożeniu na GitHub Pages — patrz README.md
+Sitemap: https://USER.github.io/REPO/sitemap.xml

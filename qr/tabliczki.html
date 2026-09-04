@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabliczki QR do druku — Nałęczów Stanisława Strzyżyńskiego</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container no-print" style="padding: var(--space-3) 0;">
+  <h1>Tabliczki QR do druku</h1>
+  <p class="content">
+    Arkusz A4 gotowy do wydruku — po jednym kafelku na rzeźbę, z kodem QR
+    (min. 5×5 cm), nazwą dzieła i dwujęzyczną instrukcją. Adres URL jest też
+    zapisany zwykłym tekstem pod kodem — dla osób, które wolą wpisać go
+    ręcznie. Kod prowadzi do polskiej wersji strony; angielską wersję można
+    otworzyć przyciskiem „English" na stronie.
+  </p>
+  <p>
+    <button type="button" class="btn btn--large" onclick="window.print()">🖨 Drukuj arkusz</button>
+  </p>
+  <p style="font-size:0.95rem">
+    Adres bazowy (<code>QR_BASE_URL</code>) ustawia się w pliku
+    <code>qr/base-url.js</code> — patrz README.md.
+  </p>
+</div>
+
+<div class="print-sheet">
+  <div class="print-tiles" id="print-tiles"></div>
+</div>
+
+<script src="../data/rzezby.js"></script>
+<script src="./base-url.js"></script>
+<script src="../vendor/qrcode/qrcode-svg.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  function makeSvg(url) {
+    var qr = new QRCode({
+      content: url,
+      padding: 1,
+      width: 512,
+      height: 512,
+      color: "#000000",
+      background: "#ffffff",
+      ecl: "H",
+      container: "svg-viewbox"
+    });
+    return qr.svg();
+  }
+
+  function render() {
+    if (typeof RZEZBY === "undefined" || typeof QRCode === "undefined") {
+      document.getElementById("print-tiles").textContent =
+        "Nie udało się wczytać danych rzeźb lub biblioteki QR.";
+      return;
+    }
+    var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
+    var html = items.map(function (r) {
+      var url = QR_BASE_URL + r.slug.pl;
+      var svg = makeSvg(url);
+      return (
+        '<div class="print-tile">' +
+          '<h2>' + r.nrTrasy + '. ' + r.tytul.pl + '</h2>' +
+          '<div class="qr-holder">' + svg + '</div>' +
+          '<p class="url-text">' + url + '</p>' +
+          '<p class="instructions">' +
+            'Skieruj aparat telefonu na kod, aby posłuchać opowieści syna artysty.<br>' +
+            'Point your phone camera at the code to listen to the artist’s son’s story.' +
+          '</p>' +
+        '</div>'
+      );
+    }).join("");
+    document.getElementById("print-tiles").innerHTML = html;
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

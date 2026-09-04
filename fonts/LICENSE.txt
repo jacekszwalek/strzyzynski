@@ -1,0 +1,12 @@
+Fonts used in this project: Lora and Source Sans 3.
+
+Both are licensed under the SIL Open Font License, Version 1.1.
+Full license text: https://openfontlicense.org
+
+- Lora — designed by Cyreal. https://fonts.google.com/specimen/Lora
+- Source Sans 3 — designed by Paul D. Hunt (Adobe). https://fonts.google.com/specimen/Source+Sans+3
+
+Files were downloaded as static WOFF2 subsets (Latin + Latin Extended, to
+cover Polish diacritics) via Google Fonts and are self-hosted in this
+repository under fonts/lora/ and fonts/source-sans/ — no runtime dependency
+on Google Fonts or any other CDN.

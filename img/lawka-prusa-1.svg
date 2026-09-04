@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Placeholder: ZDJĘCIE DO UZUPEŁNIENIA. Ławeczka Bolesława Prusa – ujęcie całości rzeźby z alejki parkowej">
+  <title>ZDJĘCIE DO UZUPEŁNIENIA</title>
+  <desc>Ławeczka Bolesława Prusa – ujęcie całości rzeźby z alejki parkowej</desc>
+  <rect width="800" height="600" fill="#EDE7DA"/>
+  <rect x="4" y="4" width="792" height="592" fill="none" stroke="#8C7A5B" stroke-width="3" stroke-dasharray="14 8"/>
+  <line x1="4" y1="4" x2="796" y2="596" stroke="#8C7A5B" stroke-width="1.5" opacity="0.5"/>
+  <line x1="796" y1="4" x2="4" y2="596" stroke="#8C7A5B" stroke-width="1.5" opacity="0.5"/>
+  <text text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="26" fill="#3A3227"><tspan x="50%" y="283.4">ZDJĘCIE DO UZUPEŁNIENIA</tspan></text>
+  <text text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#3A3227"><tspan x="50%" y="317.2">Ławeczka Bolesława Prusa – ujęcie całości rzeźby z alejki parkowej</tspan></text>
+  <text x="50%" y="350.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#6B6153">800 × 600 px</text>
+</svg>

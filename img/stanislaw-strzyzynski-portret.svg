@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600" role="img" aria-label="Placeholder: ZDJĘCIE DO UZUPEŁNIENIA. Portret Stanisława Strzyżyńskiego, najlepiej w pracowni rzeźbiarskiej">
+  <title>ZDJĘCIE DO UZUPEŁNIENIA</title>
+  <desc>Portret Stanisława Strzyżyńskiego, najlepiej w pracowni rzeźbiarskiej</desc>
+  <rect width="480" height="600" fill="#EDE7DA"/>
+  <rect x="4" y="4" width="472" height="592" fill="none" stroke="#8C7A5B" stroke-width="3" stroke-dasharray="14 8"/>
+  <line x1="4" y1="4" x2="476" y2="596" stroke="#8C7A5B" stroke-width="1.5" opacity="0.5"/>
+  <line x1="476" y1="4" x2="4" y2="596" stroke="#8C7A5B" stroke-width="1.5" opacity="0.5"/>
+  <text text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="21" fill="#3A3227"><tspan x="50%" y="276.3">ZDJĘCIE DO UZUPEŁNIENIA</tspan></text>
+  <text text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#3A3227"><tspan x="50%" y="303.6">Portret Stanisława Strzyżyńskiego, najlepiej w pracowni</tspan><tspan x="50%" y="323.9">rzeźbiarskiej</tspan></text>
+  <text x="50%" y="351.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B6153">480 × 600 px</text>
+</svg>
