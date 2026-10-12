@@ -27,7 +27,7 @@ var RZEZBY = [
     id: "lawka-prusa",
     nrTrasy: 1,
 
-    slug: { pl: "lawka-prusa.html", en: "prus-bench.html" },
+    slug: { pl: "lawka-prusa", en: "prus-bench" },
 
     tytul: {
       pl: "Ławeczka Bolesława Prusa",
@@ -123,7 +123,7 @@ var RZEZBY = [
     id: "drzewo-genealogiczne",
     nrTrasy: 2,
 
-    slug: { pl: "drzewo-genealogiczne.html", en: "genealogy-tree.html" },
+    slug: { pl: "drzewo-genealogiczne", en: "genealogy-tree" },
 
     tytul: {
       pl: "Drzewo genealogiczne",
@@ -216,7 +216,7 @@ var RZEZBY = [
     id: "kawiarnia-ewelina",
     nrTrasy: 4,
 
-    slug: { pl: "kawiarnia-ewelina.html", en: "ewelina-cafe.html" },
+    slug: { pl: "kawiarnia-ewelina", en: "ewelina-cafe" },
 
     tytul: {
       pl: "Kawiarnia Ewelina",
@@ -322,7 +322,7 @@ var RZEZBY = [
     id: "pomnik-wojtyla",
     nrTrasy: 3,
 
-    slug: { pl: "pomnik-wojtyla.html", en: "wojtyla-monument.html" },
+    slug: { pl: "pomnik-wojtyla", en: "wojtyla-monument" },
 
     tytul: {
       pl: "Pomnik kardynała Karola Wojtyły",
