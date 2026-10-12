@@ -1,0 +1,23 @@
+{
+  "name": "strzyzynski",
+  // Zaktualizuj na bieżącą datę przy większych zmianach w zachowaniu runtime.
+  "compatibility_date": "2026-10-12",
+  // Czysty, statyczny HTML/CSS/JS bez własnego skryptu Workera — assets
+  // serwowane bezpośrednio z katalogu głównego repo.
+  "assets": {
+    "directory": "."
+  },
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": false,
+      "head_sampling_rate": 1,
+      "persist": true
+    }
+  }
+}
