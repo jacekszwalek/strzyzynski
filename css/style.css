@@ -223,7 +223,12 @@ a:focus-visible, button:focus-visible, input:focus-visible,
 .container {
   max-width: 68rem;
   margin: 0 auto;
-  padding: 0 var(--space-3);
+  /* Celowo tylko lewy/prawy padding (nie skrót "padding") — .container bywa
+     łączony z innymi klasami (np. .header-top), które same ustalają własny
+     odstęp górny/dolny; skrót "padding" zerowałby go, który z dwóch
+     regularnie wygrywa zależy tylko od kolejności w pliku. */
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
 }
 
 .content {
@@ -277,7 +282,9 @@ section { margin-bottom: var(--space-6); }
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
-  padding: var(--space-3) 0;
+  /* Tylko góra/dół — lewy/prawy odstęp należy do .container (patrz tam). */
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
 }
 
 .site-title {
@@ -690,21 +697,6 @@ section { margin-bottom: var(--space-6); }
   overflow-wrap: break-word;
   flex: 1 1 auto;
 }
-.narrator-avatar-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 3.5rem; height: 3.5rem;
-  border-radius: 50%;
-  background: var(--color-accent-dark);
-  color: var(--color-text-on-accent);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 0.02em;
-}
-
 /* Karta "Nagranie" na podstronach rzeźb */
 .media-section {
   background: var(--color-accent-tint);
@@ -1193,6 +1185,6 @@ body.tone-solemn .site-nav a:hover { background: #2a251f; }
 @media (max-width: 640px) {
   h1 { font-size: 1.85rem; }
   h2 { font-size: 1.5rem; }
-  .container { padding: 0 var(--space-2); }
+  .container { padding-left: var(--space-2); padding-right: var(--space-2); }
   .bio-section, .tile-grid { gap: var(--space-2); }
 }
