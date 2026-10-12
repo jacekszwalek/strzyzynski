@@ -736,6 +736,7 @@ body.tone-solemn .media-section {
   border-radius: var(--radius-lg);
   padding: var(--space-3);
   margin-bottom: var(--space-2);
+  container-type: inline-size;
 }
 .audio-player.is-unavailable { text-align: center; }
 
@@ -800,8 +801,9 @@ body.tone-solemn .media-section {
   pointer-events: none;
 }
 
-.audio-duration {
+.audio-time {
   flex-shrink: 0;
+  white-space: nowrap;
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   color: var(--color-text);
@@ -810,15 +812,17 @@ body.tone-solemn .media-section {
 /* Rząd 2: cofnij / odtwórz / przewiń, wyśrodkowane; prędkość po prawej */
 .audio-controls-row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
   align-items: center;
 }
 
 .audio-controls-center {
   grid-column: 2;
-  justify-self: center;
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
 }
 
@@ -864,6 +868,29 @@ body.tone-solemn .media-section {
   cursor: pointer;
 }
 .audio-speed-toggle:hover { background: var(--color-border); }
+
+/* Na wąskich kartach (mały telefon i/lub powiększony tekst A++) cofnij/
+   odtwórz/przewiń i przełącznik prędkości nie mieszczą się już w jednym
+   rzędzie bez nachodzenia na siebie — przenieś przełącznik prędkości do
+   własnego, wyśrodkowanego rzędu pod spodem zamiast dopuszczać nakładanie. */
+@container (max-width: 285px) {
+  .audio-controls-row { row-gap: var(--space-2); }
+  .audio-speed-toggle {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: var(--space-2);
+  }
+}
+
+/* Skrajny przypadek: bardzo wąska karta (stary/mały telefon) razem z
+   powiększonym tekstem A++ — nawet samo cofnij/odtwórz/przewiń się nie
+   mieści. Pomniejsz te trzy przyciski, żeby zmieściły się bez zachodzenia
+   na siebie ani przycinania etykiet. */
+@container (max-width: 200px) {
+  .audio-controls-center { gap: var(--space-1); }
+  .audio-btn--seek { width: 2.5rem; height: 2.5rem; font-size: 0.7rem; }
+  .audio-btn--play { width: 3.5rem; height: 3.5rem; font-size: 1.3rem; }
+}
 
 .listen-only-btn { margin-top: var(--space-1); }
 

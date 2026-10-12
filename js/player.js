@@ -30,7 +30,8 @@
     var playBtn = root.querySelector(".audio-btn--play");
     var progress = root.querySelector(".audio-progress");
     var playedBar = root.querySelector(".audio-progress-played");
-    var durationEl = root.querySelector(".audio-duration");
+    var timeCurrent = root.querySelector(".audio-time-current");
+    var timeDuration = root.querySelector(".audio-time-duration");
     var seekBtns = root.querySelectorAll("[data-seek]");
     var speedBtn = root.querySelector(".audio-speed-toggle");
     var lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "pl";
@@ -62,18 +63,20 @@
 
     audio.addEventListener("loadedmetadata", function () {
       progress.max = String(Math.floor(audio.duration) || 0);
-      if (durationEl) durationEl.textContent = formatTime(audio.duration);
+      if (timeDuration) timeDuration.textContent = formatTime(audio.duration);
     });
 
     audio.addEventListener("timeupdate", function () {
       if (!progress.matches(":active")) {
         progress.value = String(Math.floor(audio.currentTime));
       }
+      if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
       updatePlayedBar();
     });
 
     progress.addEventListener("input", function () {
       audio.currentTime = Number(progress.value);
+      if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
       updatePlayedBar();
     });
 
