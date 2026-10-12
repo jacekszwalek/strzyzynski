@@ -66,25 +66,30 @@ faktach przekazanych na starcie projektu i oznaczone komentarzem
 dodatkowych szczegółów. Szukaj tego komentarza w plikach `*.html` oraz
 w `data/rzezby.js`.
 
-- **Strona główna** (`index.html`) — biogram Stanisława Strzyżyńskiego,
-  4 podsekcje: Młodość i wykształcenie, Nałęczów, Twórczość, Poza Nałęczowem.
-- **Ławeczka Prusa** (`lawka-prusa.html`) — okoliczności powstania, fundator,
-  przebieg odsłonięcia, szczegóły współpracy ojca i syna, związki Prusa
-  z Nałęczowem.
-- **Drzewo genealogiczne** (`drzewo-genealogiczne.html`) — okoliczności
-  powstania, historia nadania nazwy alei, kontekst w twórczości artysty.
-- **Panna z Rybą** (`kawiarnia-ewelina.html`) — **rok powstania i materiał
-  rzeźby są nieznane i wymagają ustalenia** (obecnie `null` w danych),
-  opis formy rzeźby, historia willi „Pod Matką Boską", **godziny otwarcia
-  kawiarni do zweryfikowania przed publikacją**.
-- **Pomnik kardynała Karola Wojtyły** (`pomnik-wojtyla.html`) — **priorytet:
-  potwierdzić, czy autorem pomnika jest Stanisław Strzyżyński** (pole
-  `autorzy` w `data/rzezby.js` jest obecnie `null` — jeśli to nie jego
-  dzieło, warto to wyraźnie zaznaczyć w opisie, żeby nie przypisywać mu
-  autorstwa). Dodatkowo: rok powstania, materiał, data i okoliczności
-  pobytu kardynała w Nałęczowie, treść tablicy pamiątkowej, dokładny adres.
-- **O projekcie** (`o-projekcie.html`) — rozwinięcie celu projektu, pełny
-  opis roli Fundacji Dom i Sztuka, podziękowania, informacja o finansowaniu,
+- **Strona główna** (`index.html`, adres `/`) — biogram Stanisława
+  Strzyżyńskiego, 4 podsekcje: Młodość i wykształcenie, Nałęczów, Twórczość,
+  Poza Nałęczowem.
+- **Ławeczka Prusa** (`laweczka-prusa/index.html`, adres `/laweczka-prusa/`)
+  — okoliczności powstania, fundator, przebieg odsłonięcia, szczegóły
+  współpracy ojca i syna, związki Prusa z Nałęczowem.
+- **Drzewo genealogiczne** (`drzewo-genealogiczne/index.html`, adres
+  `/drzewo-genealogiczne/`) — okoliczności powstania, historia nadania
+  nazwy alei, kontekst w twórczości artysty.
+- **Panna z Rybą** (`kawiarnia-ewelina/index.html`, adres
+  `/kawiarnia-ewelina/`) — **rok powstania i materiał rzeźby są nieznane
+  i wymagają ustalenia** (obecnie `null` w danych), opis formy rzeźby,
+  historia willi „Pod Matką Boską", **godziny otwarcia kawiarni do
+  zweryfikowania przed publikacją**.
+- **Pomnik kardynała Karola Wojtyły** (`pomnik-wojtyla/index.html`, adres
+  `/pomnik-wojtyla/`) — **priorytet: potwierdzić, czy autorem pomnika jest
+  Stanisław Strzyżyński** (pole `autorzy` w `data/rzezby.js` jest obecnie
+  `null` — jeśli to nie jego dzieło, warto to wyraźnie zaznaczyć w opisie,
+  żeby nie przypisywać mu autorstwa). Dodatkowo: rok powstania, materiał,
+  data i okoliczności pobytu kardynała w Nałęczowie, treść tablicy
+  pamiątkowej, dokładny adres.
+- **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) —
+  rozwinięcie celu projektu, pełny opis roli Fundacji Dom i Sztuka,
+  podziękowania, informacja o finansowaniu,
   lista źródeł, nazwa i zakres projektu wspomnianego w sekcji „Część
   większego projektu". Strona nie ma już sekcji kontaktowej (usunięta
   na prośbę właściciela repozytorium).
@@ -101,9 +106,10 @@ stronie") szukaj:
 - `<!-- EN TRANSLATION NEEDED -->` — brakujący akapit lub zdanie,
 - tekstu „Photo — caption pending translation" — brakujący opis (`alt`) zdjęcia.
 
-Dotyczy plików: `en/index.html`, `en/lawka-prusa.html` *(oraz pozostałe
-podstrony rzeźb w `en/`)*, `en/about.html`, a także pól `en` w
-`data/rzezby.js` (opisy krótkie/pełne, podpisy zdjęć, dojazd, dostępność).
+Dotyczy plików: `en/index.html`, `en/prus-bench/index.html` *(oraz
+pozostałe podstrony rzeźb w `en/`)*, `en/about/index.html`, a także pól
+`en` w `data/rzezby.js` (opisy krótkie/pełne, podpisy zdjęć, dojazd,
+dostępność).
 
 ---
 

@@ -201,12 +201,13 @@ tak samo jak przez edytor GitHub (punkt 1), szukając odpowiedniego akapitu.
 
 ## 7. Jak dodać nową rzeźbę
 
-Uwaga: podstrony rzeźb mają teraz „czyste" adresy bez `.html` (np.
-`.../lawka-prusa/` zamiast `.../lawka-prusa.html`) — każda jest **katalogiem**
-zawierającym plik `index.html`, nie samym plikiem. To trochę zmienia kroki
-3–4 poniżej; czytaj je uważnie, zwłaszcza fragmenty o ścieżkach `../`.
-Jeśli coś pójdzie nie tak, najprościej jest poprosić o pomoc Claude Code —
-to zadanie, które najlepiej wykonać z jego pomocą.
+Uwaga: podstrony rzeźb (a także strona główna i „O projekcie") mają teraz
+„czyste" adresy bez `.html` (np. `.../laweczka-prusa/` zamiast
+`.../laweczka-prusa.html`) — każda jest **katalogiem** zawierającym plik
+`index.html`, nie samym plikiem. To trochę zmienia kroki 3–4 poniżej;
+czytaj je uważnie, zwłaszcza fragmenty o ścieżkach `../`. Jeśli coś pójdzie
+nie tak, najprościej jest poprosić o pomoc Claude Code — to zadanie, które
+najlepiej wykonać z jego pomocą.
 
 1. Otwórz `data/rzezby.js` i skopiuj cały obiekt jednej z istniejących
    rzeźb (od `{` do `},`).
@@ -216,7 +217,7 @@ to zadanie, które najlepiej wykonać z jego pomocą.
    `material`, `lokalizacja`, `adres`, `wspolrzedne`), opisy oraz nazwy
    plików zdjęć/audio.
 3. Utwórz dla niej nowy katalog z plikiem `index.html` wewnątrz — najprościej
-   skopiuj istniejący katalog podstrony rzeźby (np. `lawka-prusa/` razem
+   skopiuj istniejący katalog podstrony rzeźby (np. `laweczka-prusa/` razem
    z plikiem `index.html` w środku) pod nową nazwą zgodną z `slug.pl`
    (np. `nowa-rzezba/index.html`), a dla wersji angielskiej katalog
    `en/prus-bench/` pod nazwą zgodną z `slug.en` (np.

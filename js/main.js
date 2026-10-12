@@ -19,7 +19,7 @@
     return document.documentElement.getAttribute("data-root") || "./";
   }
 
-  // Podstrony rzeźb mieszczą się teraz w katalogach (np. "lawka-prusa/"),
+  // Podstrony rzeźb mieszczą się teraz w katalogach (np. "laweczka-prusa/"),
   // więc do strony głównej/O projekcie trzeba wyjść o jeden poziom wyżej
   // niż do korzenia całej witryny, gdy strona EN jest zagnieżdżona
   // dwukrotnie (en/<slug>/). Ten prefiks prowadzi tylko do "korzenia"
@@ -58,21 +58,25 @@
     return root + rzezba.slug.pl + "/";
   }
 
+  // Strona główna/O projekcie to teraz "czyste" adresy katalogów (bez
+  // "index.html"/".html" w linku) — plik index.html wciąż istnieje na
+  // dysku (bez niego katalog nie miałby co wyświetlić), ale nigdzie nie
+  // linkujemy do niego po nazwie, żeby nie pojawiał się w adresie.
   function homeUrl(lang) {
     var current = getCurrentLang();
-    if (lang === current) return getLangRootPrefix() + "index.html";
+    if (lang === current) return getLangRootPrefix();
     var root = getRootPrefix();
-    if (current === "pl") return root + "en/index.html";
-    return root + "index.html";
+    if (current === "pl") return root + "en/";
+    return root;
   }
 
   function aboutUrl(lang) {
     var current = getCurrentLang();
-    var file = lang === "pl" ? "o-projekcie.html" : "about.html";
-    if (lang === current) return getLangRootPrefix() + file;
+    var dir = lang === "pl" ? "o-projekcie/" : "about/";
+    if (lang === current) return getLangRootPrefix() + dir;
     var root = getRootPrefix();
-    if (current === "pl") return root + "en/" + file;
-    return root + file;
+    if (current === "pl") return root + "en/" + dir;
+    return root + dir;
   }
 
   window.Naleczow = window.Naleczow || {};
