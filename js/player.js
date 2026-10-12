@@ -1,11 +1,14 @@
 /**
  * js/player.js — własny odtwarzacz audio z dużymi kontrolkami (play/pauza,
- * pasek postępu, czas, prędkość) oraz obsługa przełącznika wideo/audio
- * ("Wolę tylko posłuchać").
+ * ±10s, pasek postępu z dwutonowym odcinkiem odtworzonym/nieodtworzonym,
+ * łączny czas trwania, przełącznik prędkości 1×/0.75×) oraz obsługa
+ * przełącznika wideo/audio ("Wolę tylko posłuchać").
  *
  * Progresywne wzmocnienie: znacznik <audio controls> działa natywnie nawet
  * bez JS. Gdy JS jest dostępny, ukrywamy natywne kontrolki i budujemy
- * własne, większe.
+ * własne, większe. Pasek postępu to nadal natywny <input type="range">
+ * (pełne wsparcie klawiatury/dotyku/czytników ekranu za darmo) — nakładka
+ * .audio-progress-played to tylko kosmetyczna warstwa pod spodem.
  */
 
 (function () {
@@ -26,16 +29,25 @@
 
     var playBtn = root.querySelector(".audio-btn--play");
     var progress = root.querySelector(".audio-progress");
-    var timeCurrent = root.querySelector(".audio-time-current");
-    var timeDuration = root.querySelector(".audio-time-duration");
-    var speedBtns = root.querySelectorAll(".audio-speed-btn");
+    var playedBar = root.querySelector(".audio-progress-played");
+    var durationEl = root.querySelector(".audio-duration");
+    var seekBtns = root.querySelectorAll("[data-seek]");
+    var speedBtn = root.querySelector(".audio-speed-toggle");
     var lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "pl";
     var playLabel = lang === "pl" ? "Odtwórz" : "Play";
     var pauseLabel = lang === "pl" ? "Pauza" : "Pause";
+    var speedLabel = lang === "pl" ? "Prędkość odtwarzania" : "Playback speed";
 
     function setPlayIcon(isPlaying) {
       playBtn.textContent = isPlaying ? "❚❚" : "▶";
       playBtn.setAttribute("aria-label", isPlaying ? pauseLabel : playLabel);
+    }
+
+    function updatePlayedBar() {
+      if (!playedBar) return;
+      var max = Number(progress.max) || 0;
+      var pct = max > 0 ? (Number(progress.value) / max) * 100 : 0;
+      playedBar.style.width = pct + "%";
     }
 
     playBtn.addEventListener("click", function () {
@@ -50,30 +62,42 @@
 
     audio.addEventListener("loadedmetadata", function () {
       progress.max = String(Math.floor(audio.duration) || 0);
-      timeDuration.textContent = formatTime(audio.duration);
+      if (durationEl) durationEl.textContent = formatTime(audio.duration);
     });
 
     audio.addEventListener("timeupdate", function () {
       if (!progress.matches(":active")) {
         progress.value = String(Math.floor(audio.currentTime));
       }
-      timeCurrent.textContent = formatTime(audio.currentTime);
+      updatePlayedBar();
     });
 
     progress.addEventListener("input", function () {
       audio.currentTime = Number(progress.value);
+      updatePlayedBar();
     });
 
-    speedBtns.forEach(function (btn) {
+    seekBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        var speed = Number(btn.getAttribute("data-speed"));
-        audio.playbackRate = speed;
-        speedBtns.forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
-        btn.setAttribute("aria-pressed", "true");
+        var delta = Number(btn.getAttribute("data-seek"));
+        audio.currentTime = Math.min(Math.max(0, audio.currentTime + delta), audio.duration || Infinity);
       });
     });
 
+    if (speedBtn) {
+      speedBtn.addEventListener("click", function () {
+        var current = Number(speedBtn.getAttribute("data-speed"));
+        var next = current === 1 ? 0.75 : 1;
+        audio.playbackRate = next;
+        speedBtn.setAttribute("data-speed", String(next));
+        var label = (next === 1 ? "1" : "0.75") + "×";
+        speedBtn.textContent = label;
+        speedBtn.setAttribute("aria-label", speedLabel + ": " + label);
+      });
+    }
+
     setPlayIcon(false);
+    updatePlayedBar();
   }
 
   function initListenOnlyToggle(section) {
