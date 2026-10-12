@@ -841,21 +841,38 @@ body.tone-solemn .media-section {
 .listen-only-btn { margin-top: var(--space-1); }
 
 details.transcript {
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-2) var(--space-3);
   margin-bottom: var(--space-4);
-  background: var(--color-bg-card);
 }
+/* Lekkie CTA zamiast przycisku w ramce — wygląda i zachowuje się jak link,
+   ale zachowuje pełny 48px obszar dotykowy. */
 details.transcript summary {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.1rem;
   min-height: var(--tap-min);
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 0.4em;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+  list-style: none;
 }
-details.transcript .transcript-body { margin-top: var(--space-2); }
+details.transcript summary::-webkit-details-marker { display: none; }
+details.transcript summary::before {
+  content: "▸";
+  text-decoration: none;
+  display: inline-block;
+  color: var(--color-accent-brown);
+}
+details.transcript[open] summary::before { content: "▾"; }
+details.transcript summary:hover { color: var(--color-accent-dark); }
+details.transcript .transcript-body {
+  margin-top: var(--space-2);
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--color-border);
+}
 
 /* --------------------------------------------------------------------------
    10b. Nagłówek podstrony rzeźby — odznaka trasy i siatka metadanych
@@ -916,8 +933,9 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
   color: var(--color-text);
   overflow-wrap: break-word;
 }
-/* Na telefonie: Rok i Materiał zostają obok siebie (krótkie wartości),
-   Miejsce i Autorstwo dostają całą szerokość, żeby się sensownie zawijały. */
+/* Układ bazowy (telefon i domyślnie): Rok i Materiał zostają obok siebie
+   (krótkie wartości), Miejsce i Autorstwo dostają całą szerokość, żeby się
+   sensownie zawijały. Na desktopie ten układ jest nadpisywany poniżej. */
 .meta-grid-item--wide { grid-column: 1 / -1; }
 
 @media (max-width: 640px) {
@@ -925,6 +943,26 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
   .narrator-byline span:last-child {
     line-height: 1.3;
   }
+}
+
+/* Na desktopie: wszystkie pola metadanych w jednym rzędzie, obok siebie.
+   Szerokość każdej kolumny dopasowuje się do jej treści (krótkie pola jak
+   Rok/Materiał zostają wąskie) zamiast wymuszać równe szerokości; dłuższa
+   treść (Miejsce, Autorstwo) zajmuje pozostałą przestrzeń i zawija się w
+   obrębie swojej kolumny. Liczba widocznych pól bywa różna (1-4 w zależności
+   od rzeźby), więc flexbox zamiast sztywnych kolumn gridu. */
+@media (min-width: 641px) {
+  .meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+  /* Krótkie pola (Rok, Materiał) trzymają naturalną szerokość treści —
+     nigdy się nie kurczą, więc liczby/krótkie słowa nie łamią się w połowie. */
+  .meta-grid-item { flex: 0 0 auto; }
+  /* Długie pola (Miejsce, Autorstwo) dostają pułap szerokości i zawijają się
+     w jego obrębie, zamiast rozciągać wiersz w nieskończoność. */
+  .meta-grid-item--wide { flex: 0 1 auto; max-width: 22rem; }
 }
 
 /* --------------------------------------------------------------------------
