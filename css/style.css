@@ -399,9 +399,18 @@ section { margin-bottom: var(--space-6); }
   /* Menu nie może zająć całego ekranu po przeładowaniu strony — inaczej
      odwiedzający nie widzi żadnej treści i może pomyśleć, że link nie
      zadziałał. Ograniczamy wysokość do połowy ekranu; gdy pozycji jest
-     więcej niż się mieści, menu przewija się niezależnie od reszty strony. */
+     więcej niż się mieści, menu przewija się niezależnie od reszty strony.
+     Celowo "svh" (small viewport height), nie zwykłe "vh": na telefonie
+     "vh" bywa przeliczane na bieżąco w trakcie przewijania, gdy pasek
+     adresu przeglądarki chowa się/pokazuje — to ta sama zmiana przelicza
+     max-height menu klatka po klatce, co widać jako delikatne drganie
+     góra-dół treści wewnątrz tego przewijalnego kontenera. "svh" odnosi
+     się do najmniejszego możliwego widoku (pasek adresu rozwinięty) i nie
+     zmienia się w trakcie gestu przewijania/swipe'a. Zostawiamy "vh" jako
+     wartość zapasową dla starszych przeglądarek bez obsługi "svh". */
   .site-nav {
     max-height: 50vh;
+    max-height: 50svh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
