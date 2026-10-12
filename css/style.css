@@ -76,7 +76,8 @@
   --color-border-strong: #8c7a5b;
   --color-focus: #241f19;
   --color-danger: #7a2a1e;
-  --color-solemn-bg: #efece4;    /* delikatnie chłodniejsze tło dla podstrony pomnika AK */
+  --color-solemn-bg: #efece4;    /* delikatnie chłodniejsze tło dla podstron o poważniejszym tonie */
+  --color-accent-tint: #e3ead9;  /* jasna zieleń — tło karty "Nagranie" na podstronach rzeźb */
 
   /* Typografia */
   --font-serif: "Lora", Georgia, "Times New Roman", serif;
@@ -641,11 +642,41 @@ section { margin-bottom: var(--space-6); }
   margin-bottom: var(--space-2);
   font-size: 1.05rem;
 }
-.narrator-byline img {
+.narrator-avatar-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   width: 3.5rem; height: 3.5rem;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--color-border-strong);
+  background: var(--color-accent-dark);
+  color: var(--color-text-on-accent);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+/* Karta "Nagranie" na podstronach rzeźb */
+.media-section {
+  background: var(--color-accent-tint);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.media-section-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent-brown);
+  margin-bottom: var(--space-2);
+}
+body.tone-solemn .media-section {
+  background: var(--color-bg-card);
+  border-color: var(--color-text);
 }
 
 .video-wrap {
@@ -785,6 +816,64 @@ details.transcript summary {
   align-items: center;
 }
 details.transcript .transcript-body { margin-top: var(--space-2); }
+
+/* --------------------------------------------------------------------------
+   10b. Nagłówek podstrony rzeźby — odznaka trasy i siatka metadanych
+   -------------------------------------------------------------------------- */
+
+.route-badge-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+.route-badge-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.route-badge-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-brown);
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3) var(--space-4);
+  padding: var(--space-3) 0;
+  margin-bottom: var(--space-3);
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+}
+.meta-grid-item { min-width: 0; }
+.meta-grid-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent-brown);
+  margin-bottom: 0.25rem;
+}
+.meta-grid-value {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+@media (max-width: 560px) {
+  .meta-grid { grid-template-columns: 1fr; }
+}
 
 /* --------------------------------------------------------------------------
    11. Treść / figury / lightbox
