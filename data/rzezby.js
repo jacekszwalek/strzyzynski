@@ -138,7 +138,7 @@ var RZEZBY = [
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
     // i na kafelkach zostaje krótkie "Alejka Strzyżyńskiego" (pole tytul).
     tytulStrony: {
-      pl: "Alejka Stanisława Strzyżyńskiego",
+      pl: "Alejka Stanisława Strzyżyńskiego - Drzewo genealogiczne",
       en: "Stanisław Strzyżyński Alley"
     },
 
@@ -341,10 +341,9 @@ var RZEZBY = [
       en: "Papal Stone"
     },
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
-    // i na kafelkach zostaje krótkie "Kamień papieski" (pole tytul) — tu
-    // identyczny, bo ta nazwa nie ma dłuższej/krótszej wersji.
+    // i na kafelkach zostaje krótkie "Kamień papieski" (pole tytul).
     tytulStrony: {
-      pl: "Kamień papieski",
+      pl: "Kamień papieski - Pomnik upamiętniający pobyt kard. Karola Wojtyły",
       en: "Papal Stone"
     },
 
