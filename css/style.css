@@ -108,6 +108,22 @@
 html.text-scale-125 { font-size: 125%; }
 html.text-scale-150 { font-size: 150%; }
 
+/* Na wąskich ekranach zmniejszamy odstępy (marginesy, odstępy w gridach,
+   padding kart) o ok. 25%, żeby więcej treści mieściło się na ekranie bez
+   przewijania. --tap-min (minimalny rozmiar klikalnych elementów, 48px) i
+   --line-height-base (interlinia tekstu ciągłego, min. 1.7 — wymóg
+   dostępności) celowo NIE są tu dotknięte. */
+@media (max-width: 640px) {
+  :root {
+    --space-1: 0.375rem;
+    --space-2: 0.75rem;
+    --space-3: 1.125rem;
+    --space-4: 1.5rem;
+    --space-5: 2.25rem;
+    --space-6: 3rem;
+  }
+}
+
 /* --------------------------------------------------------------------------
    3. Reset i base
    -------------------------------------------------------------------------- */
@@ -901,8 +917,15 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
   color: var(--color-text);
   overflow-wrap: break-word;
 }
-@media (max-width: 560px) {
-  .meta-grid { grid-template-columns: 1fr; }
+/* Na telefonie: Rok i Materiał zostają obok siebie (krótkie wartości),
+   Miejsce i Autorstwo dostają całą szerokość, żeby się sensownie zawijały. */
+.meta-grid-item--wide { grid-column: 1 / -1; }
+
+@media (max-width: 640px) {
+  .meta-grid-label, .meta-grid-value, .route-badge-label, .tile-meta,
+  .narrator-byline span:last-child {
+    line-height: 1.3;
+  }
 }
 
 /* --------------------------------------------------------------------------
