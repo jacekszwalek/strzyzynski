@@ -97,13 +97,19 @@
           Your browser does not support audio playback. <a href="../audio/lawka-prusa.mp3">Download the MP3 file</a>.
         </audio>
         <div class="audio-progress-row">
-          <button type="button" class="audio-btn audio-btn--play" aria-label="Play">▶</button>
-          <input type="range" class="audio-progress" min="0" max="100" value="0" aria-label="Playback progress">
-          <span class="audio-time"><span class="audio-time-current">0:00</span> / <span class="audio-time-duration">0:00</span></span>
+          <div class="audio-progress-wrap">
+            <input type="range" class="audio-progress" min="0" max="100" value="0" aria-label="Playback progress">
+            <div class="audio-progress-played" aria-hidden="true"></div>
+          </div>
+          <span class="audio-duration">0:00</span>
         </div>
-        <div class="audio-extra-row">
-          <button type="button" class="audio-speed-btn" data-speed="0.75">0.75×</button>
-          <button type="button" class="audio-speed-btn" data-speed="1" aria-pressed="true">1×</button>
+        <div class="audio-controls-row">
+          <div class="audio-controls-center">
+            <button type="button" class="audio-btn audio-btn--seek" data-seek="-10" aria-label="Rewind 10 seconds">−10s</button>
+            <button type="button" class="audio-btn audio-btn--play" aria-label="Play">▶</button>
+            <button type="button" class="audio-btn audio-btn--seek" data-seek="10" aria-label="Forward 10 seconds">+10s</button>
+          </div>
+          <button type="button" class="audio-speed-toggle" data-speed="1" aria-label="Playback speed: 1×">1×</button>
         </div>
       </div>
       

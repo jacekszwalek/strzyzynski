@@ -97,13 +97,19 @@
           Twoja przeglądarka nie obsługuje odtwarzania audio. <a href="./audio/drzewo-genealogiczne.mp3">Pobierz plik MP3</a>.
         </audio>
         <div class="audio-progress-row">
-          <button type="button" class="audio-btn audio-btn--play" aria-label="Odtwórz">▶</button>
-          <input type="range" class="audio-progress" min="0" max="100" value="0" aria-label="Postęp odtwarzania">
-          <span class="audio-time"><span class="audio-time-current">0:00</span> / <span class="audio-time-duration">0:00</span></span>
+          <div class="audio-progress-wrap">
+            <input type="range" class="audio-progress" min="0" max="100" value="0" aria-label="Postęp odtwarzania">
+            <div class="audio-progress-played" aria-hidden="true"></div>
+          </div>
+          <span class="audio-duration">0:00</span>
         </div>
-        <div class="audio-extra-row">
-          <button type="button" class="audio-speed-btn" data-speed="0.75">0.75×</button>
-          <button type="button" class="audio-speed-btn" data-speed="1" aria-pressed="true">1×</button>
+        <div class="audio-controls-row">
+          <div class="audio-controls-center">
+            <button type="button" class="audio-btn audio-btn--seek" data-seek="-10" aria-label="Cofnij 10 sekund">−10s</button>
+            <button type="button" class="audio-btn audio-btn--play" aria-label="Odtwórz">▶</button>
+            <button type="button" class="audio-btn audio-btn--seek" data-seek="10" aria-label="Przewiń 10 sekund">+10s</button>
+          </div>
+          <button type="button" class="audio-speed-toggle" data-speed="1" aria-label="Prędkość odtwarzania: 1×">1×</button>
         </div>
       </div>
       
