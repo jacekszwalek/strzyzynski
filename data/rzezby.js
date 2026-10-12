@@ -138,7 +138,7 @@ var RZEZBY = [
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
     // i na kafelkach zostaje krótkie "Alejka Strzyżyńskiego" (pole tytul).
     tytulStrony: {
-      pl: "Alejka Stanisława Strzyżyńskiego - Drzewo genealogiczne",
+      pl: "Alejka Stanisława Strzyżyńskiego - rzeźba Drzewo genealogiczne",
       en: "Stanisław Strzyżyński Alley"
     },
 
@@ -237,7 +237,7 @@ var RZEZBY = [
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
     // i na kafelkach zostaje krótkie "Panna z rybą" (pole tytul).
     tytulStrony: {
-      pl: "Panna z rybą przy Kawiarni Ewelina",
+      pl: "Rzeźba Panna z rybą przy Kawiarni Ewelina",
       en: "The Maiden with a Fish at Ewelina Café"
     },
 
