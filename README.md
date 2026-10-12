@@ -201,20 +201,38 @@ tak samo jak przez edytor GitHub (punkt 1), szukając odpowiedniego akapitu.
 
 ## 7. Jak dodać nową rzeźbę
 
+Uwaga: podstrony rzeźb mają teraz „czyste" adresy bez `.html` (np.
+`.../lawka-prusa/` zamiast `.../lawka-prusa.html`) — każda jest **katalogiem**
+zawierającym plik `index.html`, nie samym plikiem. To trochę zmienia kroki
+3–4 poniżej; czytaj je uważnie, zwłaszcza fragmenty o ścieżkach `../`.
+Jeśli coś pójdzie nie tak, najprościej jest poprosić o pomoc Claude Code —
+to zadanie, które najlepiej wykonać z jego pomocą.
+
 1. Otwórz `data/rzezby.js` i skopiuj cały obiekt jednej z istniejących
    rzeźb (od `{` do `},`).
 2. Wklej kopię na końcu listy (przed zamykającym `];`) i zmień w niej:
-   `id`, `nrTrasy` (kolejny wolny numer), `slug`, `tytul`, dane
-   (`rok`, `material`, `lokalizacja`, `adres`, `wspolrzedne`), opisy oraz
-   nazwy plików zdjęć/audio.
-3. Utwórz dla niej nową podstronę `.html` — najprościej skopiuj istniejący
-   plik (np. `lawka-prusa.html`), zmień nazwę na nową (zgodną z polem
-   `slug.pl`) i zaktualizuj w nim tytuł, opisy i dane — analogicznie zrób
-   kopię `en/prus-bench.html` dla wersji angielskiej.
+   `id`, `nrTrasy` (kolejny wolny numer), `slug` (bez `.html`, np.
+   `{ pl: "nowa-rzezba", en: "new-sculpture" }`), `tytul`, dane (`rok`,
+   `material`, `lokalizacja`, `adres`, `wspolrzedne`), opisy oraz nazwy
+   plików zdjęć/audio.
+3. Utwórz dla niej nowy katalog z plikiem `index.html` wewnątrz — najprościej
+   skopiuj istniejący katalog podstrony rzeźby (np. `lawka-prusa/` razem
+   z plikiem `index.html` w środku) pod nową nazwą zgodną z `slug.pl`
+   (np. `nowa-rzezba/index.html`), a dla wersji angielskiej katalog
+   `en/prus-bench/` pod nazwą zgodną z `slug.en` (np.
+   `en/new-sculpture/index.html`). W skopiowanym `index.html` zaktualizuj
+   tytuł, opisy i dane — **ścieżek zaczynających się od `../` (do CSS, JS,
+   zdjęć, `favicon.svg` itd.) nie trzeba zmieniać** — nowy katalog jest na
+   tej samej głębokości co skopiowany, więc te odnośniki zostają takie,
+   jakie są.
 4. Dodaj link do nowej podstrony w menu nawigacji (`<nav class="site-nav">`)
    na **wszystkich** stronach — najszybciej przez wyszukanie w repozytorium
    (GitHub: klawisz `.` otwiera edytor w przeglądarce z wyszukiwaniem) frazy
-   `class="site-nav"` i dopisanie kolejnej pozycji `<li><a href="...">...</a></li>`.
+   `class="site-nav"` i dopisanie kolejnej pozycji. Adres do podstrony rzeźby
+   zawsze kończy się ukośnikiem `/`, bez `.html`, np.
+   `<li><a href="./nowa-rzezba/">Nowa rzeźba</a></li>` na stronach w
+   katalogu głównym, albo `<li><a href="../nowa-rzezba/">...</a></li>` z
+   wnętrza innej podstrony rzeźby (bo ta jest już w swoim katalogu).
 5. Mapa, kafelki na stronie głównej i przyciski „poprzedni/następny punkt"
    **zaktualizują się same** — są generowane automatycznie na podstawie
    `data/rzezby.js`.
@@ -239,6 +257,12 @@ tak samo jak przez edytor GitHub (punkt 1), szukając odpowiedniego akapitu.
 6. Każdy kafelek zawiera kod QR (min. 5×5 cm), nazwę rzeźby, dwujęzyczną
    instrukcję oraz adres strony **zwykłym tekstem** — na wypadek, gdyby ktoś
    wolał wpisać go ręcznie zamiast skanować.
+
+**Uwaga:** adres zakodowany w samym kodzie QR i adres wydrukowany pod nim
+zwykłym tekstem celowo się nieznacznie różnią (kod prowadzi przez krótkie,
+niewidoczne przekierowanie `-qr.html`). Dzięki temu w Cloudflare Web
+Analytics widać osobno, ile osób faktycznie zeskanowało tabliczkę — a mimo
+to każdy trafia na tę samą, czystą stronę rzeźby.
 
 Jeśli chcesz zapisać same kody QR jako osobne pliki SVG (np. do wysłania do
 drukarni albo umieszczenia w innym projekcie graficznym), użyj

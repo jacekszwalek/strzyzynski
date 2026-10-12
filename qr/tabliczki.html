@@ -61,13 +61,18 @@
     }
     var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
     var html = items.map(function (r) {
-      var url = QR_BASE_URL + r.slug.pl;
-      var svg = makeSvg(url);
+      // Kod QR koduje adres "-qr.html" (krótkie przekierowanie), żeby
+      // wizyty z zeskanowania tabliczki było widać osobno w Cloudflare
+      // Web Analytics. Pod kodem drukujemy już czysty, docelowy adres —
+      // wygodniejszy do ręcznego wpisania, choć bez tego rozróżnienia.
+      var trackedUrl = QR_BASE_URL + r.slug.pl + "-qr.html";
+      var displayUrl = QR_BASE_URL + r.slug.pl + "/";
+      var svg = makeSvg(trackedUrl);
       return (
         '<div class="print-tile">' +
           '<h2>' + r.nrTrasy + '. ' + r.tytul.pl + '</h2>' +
           '<div class="qr-holder">' + svg + '</div>' +
-          '<p class="url-text">' + url + '</p>' +
+          '<p class="url-text">' + displayUrl + '</p>' +
           '<p class="instructions">' +
             'Skieruj aparat telefonu na kod, aby posłuchać opowieści syna artysty.<br>' +
             'Point your phone camera at the code to listen to the artist’s son’s story.' +

@@ -66,8 +66,8 @@
     var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
     var list = [];
     items.forEach(function (r) {
-      list.push({ id: r.id, lang: "pl", label: r.tytul.pl, url: BASE_URL + r.slug.pl, filename: "qr-pl-" + r.id + ".svg" });
-      list.push({ id: r.id, lang: "en", label: r.tytul.en.replace(/\s*\(.*\)$/, ""), url: BASE_URL + "en/" + r.slug.en, filename: "qr-en-" + r.id + ".svg" });
+      list.push({ id: r.id, lang: "pl", label: r.tytul.pl, url: BASE_URL + r.slug.pl + "/", filename: "qr-pl-" + r.id + ".svg" });
+      list.push({ id: r.id, lang: "en", label: r.tytul.en.replace(/\s*\(.*\)$/, ""), url: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
     });
     return list;
   }

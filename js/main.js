@@ -19,6 +19,15 @@
     return document.documentElement.getAttribute("data-root") || "./";
   }
 
+  // Podstrony rzeźb mieszczą się teraz w katalogach (np. "lawka-prusa/"),
+  // więc do strony głównej/O projekcie trzeba wyjść o jeden poziom wyżej
+  // niż do korzenia całej witryny, gdy strona EN jest zagnieżdżona
+  // dwukrotnie (en/<slug>/). Ten prefiks prowadzi tylko do "korzenia"
+  // aktualnego języka (gdzie leżą index.html i o-projekcie.html/about.html).
+  function getLangRootPrefix() {
+    return document.documentElement.getAttribute("data-lang-root") || getRootPrefix();
+  }
+
   function getCurrentLang() {
     return document.documentElement.getAttribute("lang") === "en" ? "en" : "pl";
   }
@@ -35,21 +44,23 @@
   }
 
   // Link do podstrony danej rzeźby w danym języku, z właściwego miejsca.
+  // Podstrony rzeźb to katalogi z index.html (czyste adresy bez ".html"),
+  // stąd końcowe "/".
   function sculptureUrl(rzezba, lang) {
     var current = getCurrentLang();
     if (lang === current) {
-      return rzezba.slug[lang];
+      return getLangRootPrefix() + rzezba.slug[lang] + "/";
     }
     var root = getRootPrefix();
     if (current === "pl") {
-      return root + "en/" + rzezba.slug.en;
+      return root + "en/" + rzezba.slug.en + "/";
     }
-    return root + rzezba.slug.pl;
+    return root + rzezba.slug.pl + "/";
   }
 
   function homeUrl(lang) {
     var current = getCurrentLang();
-    if (lang === current) return "index.html";
+    if (lang === current) return getLangRootPrefix() + "index.html";
     var root = getRootPrefix();
     if (current === "pl") return root + "en/index.html";
     return root + "index.html";
@@ -58,7 +69,7 @@
   function aboutUrl(lang) {
     var current = getCurrentLang();
     var file = lang === "pl" ? "o-projekcie.html" : "about.html";
-    if (lang === current) return file;
+    if (lang === current) return getLangRootPrefix() + file;
     var root = getRootPrefix();
     if (current === "pl") return root + "en/" + file;
     return root + file;
@@ -66,6 +77,7 @@
 
   window.Naleczow = window.Naleczow || {};
   window.Naleczow.getRootPrefix = getRootPrefix;
+  window.Naleczow.getLangRootPrefix = getLangRootPrefix;
   window.Naleczow.getCurrentLang = getCurrentLang;
   window.Naleczow.resolveAsset = resolveAsset;
   window.Naleczow.sculptureUrl = sculptureUrl;
