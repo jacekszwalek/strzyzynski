@@ -396,28 +396,39 @@ section { margin-bottom: var(--space-6); }
 
 @media (max-width: 640px) {
   .nav-step { display: inline; }
-  /* Menu nie może zająć całego ekranu po przeładowaniu strony — inaczej
-     odwiedzający nie widzi żadnej treści i może pomyśleć, że link nie
-     zadziałał. Ograniczamy wysokość do połowy ekranu; gdy pozycji jest
-     więcej niż się mieści, menu przewija się niezależnie od reszty strony.
-     Celowo "svh" (small viewport height), nie zwykłe "vh": na telefonie
-     "vh" bywa przeliczane na bieżąco w trakcie przewijania, gdy pasek
-     adresu przeglądarki chowa się/pokazuje — to ta sama zmiana przelicza
-     max-height menu klatka po klatce, co widać jako delikatne drganie
-     góra-dół treści wewnątrz tego przewijalnego kontenera. "svh" odnosi
-     się do najmniejszego możliwego widoku (pasek adresu rozwinięty) i nie
-     zmienia się w trakcie gestu przewijania/swipe'a. Zostawiamy "vh" jako
-     wartość zapasową dla starszych przeglądarek bez obsługi "svh". */
-  .site-nav {
+  /* Przy domyślnym rozmiarze tekstu menu mieści się w całości — bez
+     ograniczenia wysokości i bez własnego przewijania, żeby swipe po
+     menu przewijał całą stronę, a nie tylko jego zawartość w osobnym,
+     wewnętrznym kontenerze (patrz reguła niżej dla A+/A++). */
+  .site-nav { max-height: none; overflow-y: visible; }
+  .site-nav ul { flex-direction: column; }
+  .site-nav a { width: 100%; padding: 0.75rem 1rem; font-size: 1.15rem; }
+  .header-top { flex-direction: column; align-items: stretch; }
+  .header-tools { justify-content: space-between; }
+}
+
+@media (max-width: 640px) {
+  /* Po włączeniu powiększenia tekstu (A+/A++) pozycji menu może nie
+     zmieścić się na ekranie po przeładowaniu strony — odwiedzający nie
+     widziałby żadnej treści i mógłby pomyśleć, że link nie zadziałał.
+     Tylko w tym wypadku ograniczamy wysokość do połowy ekranu; gdy
+     pozycji jest więcej niż się mieści, menu przewija się niezależnie od
+     reszty strony. Celowo "svh" (small viewport height), nie zwykłe
+     "vh": na telefonie "vh" bywa przeliczane na bieżąco w trakcie
+     przewijania, gdy pasek adresu przeglądarki chowa się/pokazuje — to
+     ta sama zmiana przelicza max-height menu klatka po klatce, co widać
+     jako delikatne drganie góra-dół treści wewnątrz tego przewijalnego
+     kontenera. "svh" odnosi się do najmniejszego możliwego widoku (pasek
+     adresu rozwinięty) i nie zmienia się w trakcie gestu
+     przewijania/swipe'a. Zostawiamy "vh" jako wartość zapasową dla
+     starszych przeglądarek bez obsługi "svh". */
+  html.text-scale-125 .site-nav,
+  html.text-scale-150 .site-nav {
     max-height: 50vh;
     max-height: 50svh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .site-nav ul { flex-direction: column; }
-  .site-nav a { width: 100%; padding: 0.75rem 1rem; font-size: 1.15rem; }
-  .header-top { flex-direction: column; align-items: stretch; }
-  .header-tools { justify-content: space-between; }
 }
 
 /* --------------------------------------------------------------------------
