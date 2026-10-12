@@ -328,6 +328,12 @@ var RZEZBY = [
       pl: "Pomnik kardynała Karola Wojtyły",
       en: "Cardinal Karol Wojtyła Monument (Pomnik kardynała Karola Wojtyły)"
     },
+    // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
+    // i na kafelkach zostaje krótkie "Pomnik kardynała Karola Wojtyły" (pole tytul).
+    tytulStrony: {
+      pl: "Pomnik upamiętniający pobyt kard. Karola Wojtyły",
+      en: "Monument Commemorating Cardinal Karol Wojtyła's Stay"
+    },
 
     rok: null, // DO UZUPEŁNIENIA — rok powstania nieustalony
     dataOdsloniecia: { pl: null, en: null },
