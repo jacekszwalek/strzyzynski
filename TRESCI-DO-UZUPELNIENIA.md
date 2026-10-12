@@ -85,8 +85,9 @@ w `data/rzezby.js`.
   pobytu kardynała w Nałęczowie, treść tablicy pamiątkowej, dokładny adres.
 - **O projekcie** (`o-projekcie.html`) — rozwinięcie celu projektu, pełny
   opis roli Fundacji Dom i Sztuka, podziękowania, informacja o finansowaniu,
-  lista źródeł, docelowy e-mail i telefon kontaktowy (obecnie placeholder
-  `kontakt@naleczow-strzyzynski.pl` / `+48 000 000 000`).
+  lista źródeł, nazwa i zakres projektu wspomnianego w sekcji „Część
+  większego projektu". Strona nie ma już sekcji kontaktowej (usunięta
+  na prośbę właściciela repozytorium).
 
 ---
 
