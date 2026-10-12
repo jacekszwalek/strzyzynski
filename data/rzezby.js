@@ -30,8 +30,14 @@ var RZEZBY = [
     slug: { pl: "laweczka-prusa", en: "prus-bench" },
 
     tytul: {
+      pl: "Ławeczka Prusa",
+      en: "Prus Bench"
+    },
+    // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
+    // i na kafelkach zostaje krótkie "Ławeczka Prusa" (pole tytul).
+    tytulStrony: {
       pl: "Ławeczka Bolesława Prusa",
-      en: "Bolesław Prus Bench (Ławeczka Bolesława Prusa)"
+      en: "Bolesław Prus Bench"
     },
 
     rok: 2002,
@@ -55,7 +61,7 @@ var RZEZBY = [
     adres: "Aleja St. Małachowskiego 3, 24-140 Nałęczów",
 
     dojazd: {
-      pl: "Wejdź do Parku Zdrojowego od strony Pałacu Małachowskich. Ławeczka stoi przy głównej alejce, w pobliżu stawu i pijalni wód, bardzo blisko Drzewa genealogicznego (punkt 2 tej trasy). Uwaga: w parku stoją dwa pomniki Bolesława Prusa — popiersie oraz ta ławeczka z siedzącą postacią — łatwo je pomylić.",
+      pl: "Wejdź do Parku Zdrojowego od strony Pałacu Małachowskich. Ławeczka stoi przy głównej alejce, w pobliżu stawu i pijalni wód, bardzo blisko Alejki Strzyżyńskiego (punkt 2 tej trasy). Uwaga: w parku stoją dwa pomniki Bolesława Prusa — popiersie oraz ta ławeczka z siedzącą postacią — łatwo je pomylić.",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
@@ -123,11 +129,17 @@ var RZEZBY = [
     id: "drzewo-genealogiczne",
     nrTrasy: 2,
 
-    slug: { pl: "drzewo-genealogiczne", en: "genealogy-tree" },
+    slug: { pl: "alejka-strzyzynskiego", en: "strzyzynski-alley" },
 
     tytul: {
-      pl: "Drzewo genealogiczne",
-      en: "Genealogical Tree (Drzewo genealogiczne)"
+      pl: "Alejka Strzyżyńskiego",
+      en: "Strzyżyński Alley"
+    },
+    // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
+    // i na kafelkach zostaje krótkie "Alejka Strzyżyńskiego" (pole tytul).
+    tytulStrony: {
+      pl: "Alejka Stanisława Strzyżyńskiego",
+      en: "Stanisław Strzyżyński Alley"
     },
 
     rok: 1977,
@@ -216,17 +228,17 @@ var RZEZBY = [
     id: "kawiarnia-ewelina",
     nrTrasy: 4,
 
-    slug: { pl: "kawiarnia-ewelina", en: "ewelina-cafe" },
+    slug: { pl: "panna-z-ryba", en: "maiden-with-a-fish" },
 
     tytul: {
-      pl: "Kawiarnia Ewelina",
-      en: "Ewelina Café"
+      pl: "Panna z rybą",
+      en: "The Maiden with a Fish"
     },
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
-    // i na kafelkach zostaje krótkie "Kawiarnia Ewelina" (pole tytul).
+    // i na kafelkach zostaje krótkie "Panna z rybą" (pole tytul).
     tytulStrony: {
-      pl: "Kawiarnia Ewelina – Panna z Rybą",
-      en: "Ewelina Café – The Maiden with a Fish"
+      pl: "Panna z rybą przy Kawiarni Ewelina",
+      en: "The Maiden with a Fish at Ewelina Café"
     },
 
     rok: null, // DO UZUPEŁNIENIA — rok powstania rzeźby Panna z Rybą nieustalony
@@ -322,17 +334,18 @@ var RZEZBY = [
     id: "pomnik-wojtyla",
     nrTrasy: 3,
 
-    slug: { pl: "pomnik-wojtyla", en: "wojtyla-monument" },
+    slug: { pl: "kamien-papieski", en: "papal-stone" },
 
     tytul: {
-      pl: "Pomnik kardynała Karola Wojtyły",
-      en: "Cardinal Karol Wojtyła Monument (Pomnik kardynała Karola Wojtyły)"
+      pl: "Kamień papieski",
+      en: "Papal Stone"
     },
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
-    // i na kafelkach zostaje krótkie "Pomnik kardynała Karola Wojtyły" (pole tytul).
+    // i na kafelkach zostaje krótkie "Kamień papieski" (pole tytul) — tu
+    // identyczny, bo ta nazwa nie ma dłuższej/krótszej wersji.
     tytulStrony: {
-      pl: "Pomnik upamiętniający pobyt kard. Karola Wojtyły",
-      en: "Monument Commemorating Cardinal Karol Wojtyła's Stay"
+      pl: "Kamień papieski",
+      en: "Papal Stone"
     },
 
     rok: null, // DO UZUPEŁNIENIA — rok powstania nieustalony
@@ -353,7 +366,7 @@ var RZEZBY = [
     adres: "Wyjście z Parku Zdrojowego, 24-140 Nałęczów", // DO ZWERYFIKOWANIA — dokładny adres/nazwa ulicy
 
     dojazd: {
-      pl: "Idąc od Drzewa genealogicznego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy jednym z wyjść z Parku Zdrojowego, w kierunku kawiarni Ewelina (punkt 4).",
+      pl: "Idąc od Alejki Strzyżyńskiego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy jednym z wyjść z Parku Zdrojowego, w kierunku kawiarni Ewelina (punkt 4).",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 

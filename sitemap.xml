@@ -29,42 +29,42 @@
   </url>
 
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/genealogy-tree/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
+    <loc>https://jacekszwalek.github.io/strzyzynski/alejka-strzyzynskiego/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/alejka-strzyzynskiego/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/strzyzynski-alley/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/alejka-strzyzynskiego/"/>
   </url>
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/genealogy-tree/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/genealogy-tree/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
-  </url>
-
-  <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/pomnik-wojtyla/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/pomnik-wojtyla/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/wojtyla-monument/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/pomnik-wojtyla/"/>
-  </url>
-  <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/wojtyla-monument/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/pomnik-wojtyla/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/wojtyla-monument/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/pomnik-wojtyla/"/>
+    <loc>https://jacekszwalek.github.io/strzyzynski/en/strzyzynski-alley/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/alejka-strzyzynskiego/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/strzyzynski-alley/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/alejka-strzyzynskiego/"/>
   </url>
 
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/kawiarnia-ewelina/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/kawiarnia-ewelina/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/ewelina-cafe/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/kawiarnia-ewelina/"/>
+    <loc>https://jacekszwalek.github.io/strzyzynski/kamien-papieski/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/papal-stone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
   </url>
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/ewelina-cafe/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/kawiarnia-ewelina/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/ewelina-cafe/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/kawiarnia-ewelina/"/>
+    <loc>https://jacekszwalek.github.io/strzyzynski/en/papal-stone/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/papal-stone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
+  </url>
+
+  <url>
+    <loc>https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/maiden-with-a-fish/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
+  </url>
+  <url>
+    <loc>https://jacekszwalek.github.io/strzyzynski/en/maiden-with-a-fish/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/maiden-with-a-fish/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
   </url>
 
   <url>

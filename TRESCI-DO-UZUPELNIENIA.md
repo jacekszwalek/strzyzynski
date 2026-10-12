@@ -48,9 +48,9 @@ plus transkrypcja tekstowa.
 | Rzeźba | Co dostarczyć |
 |---|---|
 | Ławeczka Bolesława Prusa | Nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`) **lub** plik `audio/lawka-prusa.mp3` + transkrypcja |
-| Drzewo genealogiczne | jw. → `audio/drzewo-genealogiczne.mp3` |
-| Pomnik kardynała Karola Wojtyły | jw. → `audio/pomnik-wojtyla.mp3` |
-| Panna z Rybą (kawiarnia Ewelina) | jw. → `audio/kawiarnia-ewelina.mp3` |
+| Alejka Stanisława Strzyżyńskiego | jw. → `audio/drzewo-genealogiczne.mp3` |
+| Kamień papieski | jw. → `audio/pomnik-wojtyla.mp3` |
+| Panna z rybą (kawiarnia Ewelina) | jw. → `audio/kawiarnia-ewelina.mp3` |
 
 Transkrypcje wklejamy w `<details class="transcript">` na każdej podstronie
 (obecnie placeholder `DO UZUPEŁNIENIA` / `EN TRANSLATION NEEDED`) — patrz
@@ -72,16 +72,16 @@ w `data/rzezby.js`.
 - **Ławeczka Prusa** (`laweczka-prusa/index.html`, adres `/laweczka-prusa/`)
   — okoliczności powstania, fundator, przebieg odsłonięcia, szczegóły
   współpracy ojca i syna, związki Prusa z Nałęczowem.
-- **Drzewo genealogiczne** (`drzewo-genealogiczne/index.html`, adres
-  `/drzewo-genealogiczne/`) — okoliczności powstania, historia nadania
+- **Alejka Strzyżyńskiego** (`alejka-strzyzynskiego/index.html`, adres
+  `/alejka-strzyzynskiego/`) — okoliczności powstania, historia nadania
   nazwy alei, kontekst w twórczości artysty.
-- **Panna z Rybą** (`kawiarnia-ewelina/index.html`, adres
-  `/kawiarnia-ewelina/`) — **rok powstania i materiał rzeźby są nieznane
+- **Panna z rybą** (`panna-z-ryba/index.html`, adres
+  `/panna-z-ryba/`) — **rok powstania i materiał rzeźby są nieznane
   i wymagają ustalenia** (obecnie `null` w danych), opis formy rzeźby,
   historia willi „Pod Matką Boską", **godziny otwarcia kawiarni do
   zweryfikowania przed publikacją**.
-- **Pomnik kardynała Karola Wojtyły** (`pomnik-wojtyla/index.html`, adres
-  `/pomnik-wojtyla/`) — **priorytet: potwierdzić, czy autorem pomnika jest
+- **Kamień papieski** (`kamien-papieski/index.html`, adres
+  `/kamien-papieski/`) — **priorytet: potwierdzić, czy autorem pomnika jest
   Stanisław Strzyżyński** (pole `autorzy` w `data/rzezby.js` jest obecnie
   `null` — jeśli to nie jego dzieło, warto to wyraźnie zaznaczyć w opisie,
   żeby nie przypisywać mu autorstwa). Dodatkowo: rok powstania, materiał,
