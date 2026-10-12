@@ -381,7 +381,14 @@ section { margin-bottom: var(--space-6); }
   box-shadow: inset var(--focus-ring);
 }
 
+/* Numer etapu spaceru przy pozycjach menu — tylko na telefonie, gdzie menu
+   jest pionową, przewijaną listą i numeracja pomaga się w niej odnaleźć.
+   Na desktopie numerów w menu nie pokazujemy (pozycje trasy widać na mapie
+   i w kafelkach na stronie głównej). */
+.nav-step { display: none; margin-right: 0.35em; }
+
 @media (max-width: 640px) {
+  .nav-step { display: inline; }
   /* Menu nie może zająć całego ekranu po przeładowaniu strony — inaczej
      odwiedzający nie widzi żadnej treści i może pomyśleć, że link nie
      zadziałał. Ograniczamy wysokość do połowy ekranu; gdy pozycji jest

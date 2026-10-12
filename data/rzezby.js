@@ -222,6 +222,12 @@ var RZEZBY = [
       pl: "Kawiarnia Ewelina",
       en: "Ewelina Café"
     },
+    // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
+    // i na kafelkach zostaje krótkie "Kawiarnia Ewelina" (pole tytul).
+    tytulStrony: {
+      pl: "Kawiarnia Ewelina – Panna z Rybą",
+      en: "Ewelina Café – The Girl with a Fish"
+    },
 
     rok: null, // DO UZUPEŁNIENIA — rok powstania rzeźby Panna z Rybą nieustalony
     dataOdsloniecia: { pl: null, en: null },
@@ -234,9 +240,11 @@ var RZEZBY = [
     },
     wspolautorstwoWyeksponowac: false,
 
+    // Opis strony skupia się na rzeźbie Panna z Rybą (stojącej w fontannie
+    // na terenie kawiarni), nie na samej kawiarni.
     lokalizacja: {
-      pl: "Willa „Pod Matką Boską”",
-      en: "The \"Pod Matką Boską\" villa (\"Under the Mother of God\")"
+      pl: "Fontanna przed willą „Pod Matką Boską”, w której mieści się kawiarnia Ewelina",
+      en: "Fountain in front of the \"Pod Matką Boską\" villa (\"Under the Mother of God\"), home to the Ewelina café"
     },
     adres: "ul. Lipowa 16, 24-140 Nałęczów",
 
@@ -294,14 +302,14 @@ var RZEZBY = [
     },
 
     opisKrotki: {
-      pl: "Jedyny przystanek na trasie z kawą, toaletą i miejscem do odpoczynku — a w fontannie na jej terenie stoi rzeźba Panna z Rybą.",
+      pl: "Rzeźba w fontannie przed willą „Pod Matką Boską” — i jedyny przystanek na trasie z kawą, toaletą i miejscem do odpoczynku.",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
     opisPelny: {
       pl: [
-        "Kawiarnia Ewelina działa w willi „Pod Matką Boską” przy ulicy Lipowej 16. To jedyny punkt tej trasy, przy którym można usiąść, wypić kawę i skorzystać z toalety — dla starszych odwiedzających to praktyczna informacja, nie tylko ciekawostka. Kawiarnia jest czynna codziennie. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
-        "Na terenie kawiarni, w fontannie, stoi rzeźba Panna z Rybą. <!-- DO UZUPEŁNIENIA: rok powstania, materiał, okoliczności powstania, opis formy rzeźby -->",
+        "Panna z Rybą to rzeźba osadzona w fontannie przed willą „Pod Matką Boską” przy ulicy Lipowej 16, w której dziś mieści się kawiarnia Ewelina. <!-- DO UZUPEŁNIENIA: rok powstania, materiał, okoliczności powstania, opis formy rzeźby -->",
+        "To jedyny punkt tej trasy, przy którym można usiąść, wypić kawę i skorzystać z toalety — dla starszych odwiedzających to praktyczna informacja, nie tylko ciekawostka. Kawiarnia Ewelina jest czynna codziennie. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ],
       en: ["<!-- EN TRANSLATION NEEDED -->"]
