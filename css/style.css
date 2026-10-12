@@ -104,6 +104,37 @@
   --focus-ring: 0 0 0 4px var(--color-bg), 0 0 0 7px var(--color-focus);
 }
 
+/* --------------------------------------------------------------------------
+   2b. Alternatywna szata graficzna „niebieska" — przełączana przyciskiem
+   w stopce (js/main.js, atrybut data-theme na <html>, zapamiętywane w
+   localStorage). Paleta: biel, niebieski #1d9dd5 i czerń.
+
+   Marka #1d9dd5 sama w sobie ma tylko ok. 3:1 kontrastu względem bieli —
+   za mało nawet na AA (4.5:1), nie mówiąc o wymaganym tu AAA (7:1) — więc
+   nie może służyć jako kolor tekstu/odnośników ani tło pod białym tekstem
+   bez złamania wymogów dostępności. Dlatego --color-accent i
+   --color-accent-dark to przyciemnione warianty tego samego odcienia
+   (ten sam hue, obniżona jasność), każdy z zapasem ponad progiem AAA;
+   #1d9dd5 jako takie pozostaje obecne tylko pośrednio, w jaśniejszych
+   tłach/obwódkach (--color-accent-tint, --color-border, --color-border-strong),
+   gdzie nie niesie bezpośrednio czytanego tekstu. */
+:root[data-theme="blue"] {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f9fa;
+  --color-bg-card: #ffffff;
+  --color-text: #000000;
+  --color-text-on-accent: #ffffff;
+  --color-accent: #0b3c51;        /* przyciemniony #1d9dd5 — AAA (11.8:1) na bieli, z zapasem
+                                      nawet przy 90% opacity (.route-nav-label; 8.77:1) */
+  --color-accent-dark: #072836;   /* hover/active, AAA (15.4:1) na bieli */
+  --color-accent-brown: #0b3c51;  /* ten sam niebieski co accent — paleta ma być tylko 2-kolorowa + czerń */
+  --color-border: #cbdee6;
+  --color-border-strong: #72afca;
+  --color-focus: #000000;
+  --color-solemn-bg: #eef3f5;
+  --color-accent-tint: #e5f0f5;
+}
+
 /* Skala tekstu A / A+ / A++, sterowana przez js/main.js (klasa na <html>) */
 html.text-scale-125 { font-size: 125%; }
 html.text-scale-150 { font-size: 150%; }
@@ -1104,6 +1135,30 @@ body.tone-solemn .site-nav a:hover { background: #2a251f; }
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: var(--space-3);
 }
+/* Dyskretny przełącznik szaty graficznej — osobny, pełnoszerokościowy
+   rządek na dole stopki, stylowany jak zwykły link, nie jak przycisk. */
+.footer-theme-switch {
+  grid-column: 1 / -1;
+  margin-top: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+.theme-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+  padding: 0;
+}
+.theme-switch-btn:hover { color: var(--color-accent-dark); }
 
 /* --------------------------------------------------------------------------
    18. Sekcja "O projekcie" — kontakt, partnerzy
