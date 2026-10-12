@@ -11,9 +11,10 @@
  * Dzięki temu ten plik wygląda identycznie niezależnie od języka strony,
  * która go wczytuje — nie trzeba go duplikować.
  *
- * Współrzędne oznaczone komentarzem "ZWERYFIKOWAĆ W TERENIE" są przybliżone
- * (namierzone zdalnie) i wymagają potwierdzenia telefonem na miejscu przed
- * drukiem tabliczek QR.
+ * Współrzędne (pole wspolrzedne) pochodzą z pomiaru GPS w terenie
+ * (2026-10-12). Jeśli przy którymś punkcie pojawi się komentarz
+ * "ZWERYFIKOWAĆ W TERENIE", oznacza to współrzędne wciąż namierzone
+ * zdalnie, wymagające potwierdzenia przed drukiem tabliczek QR.
  *
  * Pola tekstowe z placeholderem "<!-- EN TRANSLATION NEEDED -->" to treści
  * historyczne/opisowe czekające na tłumacza. Pola z "<!-- DO UZUPEŁNIENIA -->"
@@ -58,7 +59,7 @@ var RZEZBY = [
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
-    wspolrzedne: [51.2869847, 22.2084325], // ZWERYFIKOWAĆ W TERENIE — w parku stoją dwa pomniki Prusa, Google zwraca zbliżony punkt
+    wspolrzedne: [51.2870007258462, 22.208436990572082], // pomiar GPS w terenie, 2026-10-12
 
     media: {
       typ: "video",
@@ -151,7 +152,7 @@ var RZEZBY = [
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
-    wspolrzedne: [51.286975, 22.2109281],
+    wspolrzedne: [51.28714555955893, 22.21240346246493], // pomiar GPS w terenie, 2026-10-12
 
     media: {
       typ: "video",
@@ -213,7 +214,7 @@ var RZEZBY = [
 
   {
     id: "kawiarnia-ewelina",
-    nrTrasy: 3,
+    nrTrasy: 4,
 
     slug: { pl: "kawiarnia-ewelina.html", en: "ewelina-cafe.html" },
 
@@ -244,7 +245,7 @@ var RZEZBY = [
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
-    wspolrzedne: [51.2852147, 22.2182552], // ZWERYFIKOWAĆ
+    wspolrzedne: [51.28521977620118, 22.218260265804872], // pomiar GPS w terenie, 2026-10-12
 
     infoPraktyczne: {
       pl: "To jedyny punkt trasy z kawą, toaletą i miejscem do siedzenia. Kawiarnia Ewelina czynna codziennie 10:00–21:00 // GODZINY DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ",
@@ -310,99 +311,96 @@ var RZEZBY = [
   },
 
   {
-    id: "pomnik-ak",
-    nrTrasy: 4,
+    id: "pomnik-wojtyla",
+    nrTrasy: 3,
 
-    slug: { pl: "pomnik-ak.html", en: "ak-monument.html" },
+    slug: { pl: "pomnik-wojtyla.html", en: "wojtyla-monument.html" },
 
     tytul: {
-      pl: "Pomnik żołnierzy Armii Krajowej",
-      en: "Home Army Soldiers Monument (Pomnik żołnierzy Armii Krajowej)"
+      pl: "Pomnik kardynała Karola Wojtyły",
+      en: "Cardinal Karol Wojtyła Monument (Pomnik kardynała Karola Wojtyły)"
     },
 
-    rok: 1996,
-    dataOdsloniecia: {
-      pl: "19 maja 1996, wraz z mszą polową",
-      en: "<!-- EN TRANSLATION NEEDED -->"
-    },
+    rok: null, // DO UZUPEŁNIENIA — rok powstania nieustalony
+    dataOdsloniecia: { pl: null, en: null },
 
-    material: { pl: "granit", en: "granite" },
+    material: { pl: null, en: null }, // DO UZUPEŁNIENIA — materiał nieustalony
 
     autorzy: {
-      pl: "projekt: Stanisław Strzyżyński; wykonanie: Jan Dudek",
-      en: "<!-- EN TRANSLATION NEEDED -->"
+      pl: null, // DO USTALENIA — czy autorem jest Stanisław Strzyżyński, do potwierdzenia przed publikacją
+      en: null
     },
     wspolautorstwoWyeksponowac: false,
 
     lokalizacja: {
-      pl: "Skraj Lasu Zakładowego, tzw. polana harcerska",
-      en: "Edge of the Zakładowy Forest (Las Zakładowy), the so-called \"scouts' clearing\" (polana harcerska)"
+      pl: "Przy wyjściu z Parku Zdrojowego",
+      en: "By an exit from the Spa Park (Park Zdrojowy)"
     },
-    adres: "ul. Harcerska 10, 24-140 Nałęczów",
+    adres: "Wyjście z Parku Zdrojowego, 24-140 Nałęczów", // DO ZWERYFIKOWANIA — dokładny adres/nazwa ulicy
 
     dojazd: {
-      pl: "Ok. 0,5 km na południe od centrum ulicą Powstańców 1863 roku. Za mostkiem skręć ok. 200 m w prawo w ulicę Harcerską — pomnik stoi na skraju Lasu Zakładowego, na tzw. polanie harcerskiej.",
+      pl: "Idąc od Drzewa genealogicznego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy jednym z wyjść z Parku Zdrojowego, w kierunku kawiarni Ewelina (punkt 4).",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
-    wspolrzedne: [51.2814658, 22.2130420],
+    wspolrzedne: [51.285452819939685, 22.212785832706324], // pomiar GPS w terenie, 2026-10-12
 
     media: {
       typ: "video",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/pomnik-ak.mp3"
+      audioSrc: "./audio/pomnik-wojtyla.mp3"
     },
 
-    miniatura: "./img/pomnik-ak-mini.svg",
+    miniatura: "./img/pomnik-wojtyla-mini.svg",
     zdjecia: [
       {
-        src: "./img/pomnik-ak-1.svg",
+        src: "./img/pomnik-wojtyla-1.svg",
         w: 800,
         h: 600,
         alt: {
-          pl: "Pomnik żołnierzy Armii Krajowej — krzyż z bloków granitowych na polanie harcerskiej w Nałęczowie",
+          pl: "Pomnik z tablicą upamiętniającą pobyt kardynała Karola Wojtyły w Nałęczowie, przy wyjściu z Parku Zdrojowego",
           en: "<!-- EN TRANSLATION NEEDED -->"
         },
         podpis: {
-          pl: "Pomnik żołnierzy AK, granit, 1996 <!-- DO UZUPEŁNIENIA -->",
+          pl: "Pomnik kardynała Karola Wojtyły <!-- DO UZUPEŁNIENIA: rok, materiał, autor -->",
           en: "<!-- EN TRANSLATION NEEDED -->"
         }
       },
       {
-        src: "./img/pomnik-ak-2.svg",
+        src: "./img/pomnik-wojtyla-2.svg",
         w: 800,
         h: 600,
         alt: {
-          pl: "Zbliżenie na wizerunki orła i kotwicy — symbolu Polski Walczącej — na pomniku AK",
+          pl: "Zbliżenie na tablicę pamiątkową przy pomniku kardynała Karola Wojtyły",
           en: "<!-- EN TRANSLATION NEEDED -->"
         },
         podpis: {
-          pl: "Symbole orła i kotwicy Polski Walczącej <!-- DO UZUPEŁNIENIA -->",
+          pl: "Treść tablicy pamiątkowej <!-- DO UZUPEŁNIENIA -->",
           en: "<!-- EN TRANSLATION NEEDED -->"
         }
       }
     ],
 
     dostepnosc: {
-      pl: "Leśna, częściowo nieutwardzona ścieżka; teren nierówny, niedostosowany dla wózków. W pobliżu pomnika ławki. // DO ZWERYFIKOWANIA W TERENIE",
+      pl: "Utwardzona alejka przy wyjściu z parku, bez schodów. // DO ZWERYFIKOWANIA W TERENIE",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
     opisKrotki: {
-      pl: "Granitowy krzyż z wizerunkami orła i kotwicy, upamiętniający żołnierzy oddziału „Szatana” rozbitego przez NKWD w maju 1945 roku. Miejsce pamięci.",
+      pl: "Pomnik i tablica przypominające o pobycie kardynała Karola Wojtyły w Nałęczowie, przy jednym z wyjść z Parku Zdrojowego.",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
 
     opisPelny: {
       pl: [
-        "Pomnik odsłonięto 19 maja 1996 roku wraz z mszą polową. Ma formę krzyża złożonego z bloków granitowych, z wyrzeźbionymi wizerunkami orła i kotwicy — symbolu Polski Walczącej. Projekt wykonał Stanisław Strzyżyński, realizację — Jan Dudek.",
-        "Pomnik upamiętnia żołnierzy oddziału „Szatana” (Tadeusza Orłowskiego), rozbitego 19 maja 1945 roku przez oddział NKWD podczas odwrotu spod Nałęczowa. Zginęło wówczas 17 osób — wśród nich ranni, dobici przez sowietów. Pochowano ich na cmentarzu w Nałęczowie. Była to najkrwawsza partyzancka walka stoczona w okolicach Nałęczowa. <!-- DO UZUPEŁNIENIA: dalsze szczegóły wydarzeń z 19 maja 1945, źródła historyczne do zacytowania -->",
-        "To miejsce pamięci, nie atrakcja turystyczna — prosimy o zachowanie powagi podczas odwiedzin."
+        "Przy jednym z wyjść z Parku Zdrojowego stoi pomnik z tablicą upamiętniającą pobyt w Nałęczowie kardynała Karola Wojtyły — późniejszego papieża Jana Pawła II. <!-- DO UZUPEŁNIENIA: data i okoliczności wizyty, treść tablicy, rok powstania pomnika -->",
+        "<!-- DO UZUPEŁNIENIA: czy pomnik jest dziełem Stanisława Strzyżyńskiego — do potwierdzenia przed publikacją; jeśli nie, dostosować opis tak, by nie przypisywać mu autorstwa -->",
+        "Dla wielu odwiedzających to krótki przystanek na zadumę, zanim trasa prowadzi dalej, do kawiarni Ewelina. <!-- DO UZUPEŁNIENIA -->"
       ],
       en: ["<!-- EN TRANSLATION NEEDED -->"]
     },
 
-    tonPowazny: true
+    tonPowazny: false
   }
 ];
 

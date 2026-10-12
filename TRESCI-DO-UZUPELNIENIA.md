@@ -28,9 +28,9 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 | `kawiarnia-ewelina-mini.svg` | 400×300 | miniatura |
 | `kawiarnia-ewelina-1.svg` | 800×600 | zdjęcie 1 w opisie |
 | `kawiarnia-ewelina-2.svg` | 800×600 | zdjęcie 2 w opisie |
-| `pomnik-ak-mini.svg` | 400×300 | miniatura |
-| `pomnik-ak-1.svg` | 800×600 | zdjęcie 1 w opisie |
-| `pomnik-ak-2.svg` | 800×600 | zdjęcie 2 w opisie |
+| `pomnik-wojtyla-mini.svg` | 400×300 | miniatura |
+| `pomnik-wojtyla-1.svg` | 800×600 | zdjęcie 1 w opisie — widok całości pomnika |
+| `pomnik-wojtyla-2.svg` | 800×600 | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe) | biogram na stronie głównej |
 | `zbigniew-strzyzynski-avatar.svg` | 200×200 (kwadrat) | podpis "Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby |
 
@@ -49,8 +49,8 @@ plus transkrypcja tekstowa.
 |---|---|
 | Ławeczka Bolesława Prusa | Nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`) **lub** plik `audio/lawka-prusa.mp3` + transkrypcja |
 | Drzewo genealogiczne | jw. → `audio/drzewo-genealogiczne.mp3` |
+| Pomnik kardynała Karola Wojtyły | jw. → `audio/pomnik-wojtyla.mp3` |
 | Panna z Rybą (kawiarnia Ewelina) | jw. → `audio/kawiarnia-ewelina.mp3` |
-| Pomnik żołnierzy AK | jw. → `audio/pomnik-ak.mp3` |
 
 Transkrypcje wklejamy w `<details class="transcript">` na każdej podstronie
 (obecnie placeholder `DO UZUPEŁNIENIA` / `EN TRANSLATION NEEDED`) — patrz
@@ -77,8 +77,12 @@ w `data/rzezby.js`.
   rzeźby są nieznane i wymagają ustalenia** (obecnie `null` w danych),
   opis formy rzeźby, historia willi „Pod Matką Boską", **godziny otwarcia
   kawiarni do zweryfikowania przed publikacją**.
-- **Pomnik AK** (`pomnik-ak.html`) — dodatkowe źródła historyczne
-  o wydarzeniach z 19 maja 1945 roku.
+- **Pomnik kardynała Karola Wojtyły** (`pomnik-wojtyla.html`) — **priorytet:
+  potwierdzić, czy autorem pomnika jest Stanisław Strzyżyński** (pole
+  `autorzy` w `data/rzezby.js` jest obecnie `null` — jeśli to nie jego
+  dzieło, warto to wyraźnie zaznaczyć w opisie, żeby nie przypisywać mu
+  autorstwa). Dodatkowo: rok powstania, materiał, data i okoliczności
+  pobytu kardynała w Nałęczowie, treść tablicy pamiątkowej, dokładny adres.
 - **O projekcie** (`o-projekcie.html`) — rozwinięcie celu projektu, pełny
   opis roli Fundacji Dom i Sztuka, podziękowania, informacja o finansowaniu,
   lista źródeł, docelowy e-mail i telefon kontaktowy (obecnie placeholder
@@ -104,29 +108,21 @@ podstrony rzeźb w `en/`)*, `en/about.html`, a także pól `en` w
 
 ## 5. Dane do zweryfikowania w terenie
 
-- **Współrzędne Ławeczki Prusa** (`data/rzezby.js`, pole `wspolrzedne` przy
-  `id: "lawka-prusa"`) — w parku stoją dwa pomniki Prusa (popiersie
-  i ławeczka), obecny punkt wyznaczono zdalnie.
-- **Współrzędne rzeźby przy kawiarni Ewelina** (`id: "kawiarnia-ewelina"`) —
-  jw., do potwierdzenia telefonem na miejscu.
-- **Opisy dostępności** (`dostepnosc`) przy wszystkich czterech rzeźbach —
+- **Współrzędne wszystkich czterech punktów** pochodzą już z pomiaru GPS
+  w terenie (2026-10-12) — nie wymagają dalszej weryfikacji.
+- **Autorstwo pomnika kardynała Karola Wojtyły** — patrz punkt 3 wyżej,
+  to najważniejsza otwarta kwestia przed publikacją tego punktu trasy.
+- **Opisy dostępności** (`dostepnosc`) przy wszystkich czterech punktach —
   nawierzchnia, schody, ławki, dojazd wózkiem — obecne opisy to szkic do
   potwierdzenia na miejscu.
 - **Godziny otwarcia kawiarni Ewelina** — przed publikacją.
 
 ---
 
-## 6. Adresy do podmiany po wdrożeniu na GitHub Pages
+## 6. Adresy po wdrożeniu na GitHub Pages — ZROBIONE
 
-Po pierwszym uruchomieniu Pages podmień placeholder
-`https://USER.github.io/REPO/` na prawdziwy adres w:
-
-- `qr/base-url.js` (stała `QR_BASE_URL`) — używana przez generator kodów QR
-  i arkusz do druku,
-- `sitemap.xml` — wszystkie wystąpienia,
-- `robots.txt` — link do mapy strony.
-
-Pełna instrukcja: `README.md`.
+Strona jest opublikowana pod `https://jacekszwalek.github.io/strzyzynski/`.
+Adres jest już wpisany w `qr/base-url.js`, `sitemap.xml` i `robots.txt`.
 
 ---
 
