@@ -841,38 +841,21 @@ body.tone-solemn .media-section {
 .listen-only-btn { margin-top: var(--space-1); }
 
 details.transcript {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
   margin-bottom: var(--space-4);
+  background: var(--color-bg-card);
 }
-/* Lekkie CTA zamiast przycisku w ramce — wygląda i zachowuje się jak link,
-   ale zachowuje pełny 48px obszar dotykowy. */
 details.transcript summary {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.1rem;
   min-height: var(--tap-min);
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.4em;
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.15em;
-  list-style: none;
 }
-details.transcript summary::-webkit-details-marker { display: none; }
-details.transcript summary::before {
-  content: "▸";
-  text-decoration: none;
-  display: inline-block;
-  color: var(--color-accent-brown);
-}
-details.transcript[open] summary::before { content: "▾"; }
-details.transcript summary:hover { color: var(--color-accent-dark); }
-details.transcript .transcript-body {
-  margin-top: var(--space-2);
-  padding-left: var(--space-3);
-  border-left: 3px solid var(--color-border);
-}
+details.transcript .transcript-body { margin-top: var(--space-2); }
 
 /* --------------------------------------------------------------------------
    10b. Nagłówek podstrony rzeźby — odznaka trasy i siatka metadanych
@@ -933,12 +916,13 @@ details.transcript .transcript-body {
   color: var(--color-text);
   overflow-wrap: break-word;
 }
-/* Rok i Materiał zostają obok siebie (krótkie wartości), Miejsce i
-   Autorstwo dostają całą szerokość, żeby się sensownie zawijały — ten sam
-   układ 2 kolumn na telefonie i na desktopie. */
-.meta-grid-item--wide { grid-column: 1 / -1; }
+/* Na desktopie prawdziwa siatka 2x2 — każde pole we własnej komórce, bez
+   rozciągania na pełną szerokość. Na telefonie Miejsce i Autorstwo dostają
+   całą szerokość (patrz media query niżej), żeby dłuższy tekst miał gdzie
+   się sensownie zawinąć. */
 
 @media (max-width: 640px) {
+  .meta-grid-item--wide { grid-column: 1 / -1; }
   .meta-grid-label, .meta-grid-value, .route-badge-label, .tile-meta,
   .narrator-byline span:last-child {
     line-height: 1.3;
