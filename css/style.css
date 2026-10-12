@@ -230,7 +230,7 @@ a:focus-visible, button:focus-visible, input:focus-visible,
   max-width: var(--measure);
 }
 
-main { display: block; }
+main { display: block; padding-top: var(--space-4); }
 
 section { margin-bottom: var(--space-6); }
 
@@ -996,6 +996,7 @@ figure.content-figure figcaption {
   margin: var(--space-4) 0;
 }
 .how-to-get-box h2 { margin-top: 0; }
+.how-to-get-box .btn { margin: var(--space-2) 0; }
 .how-to-get-box .field { margin-bottom: var(--space-2); }
 .how-to-get-box .field-label { font-weight: 700; color: var(--color-accent-brown); display: block; }
 
