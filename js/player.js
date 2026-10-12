@@ -1,7 +1,7 @@
 /**
  * js/player.js — własny odtwarzacz audio z dużymi kontrolkami (play/pauza,
- * -15s/+15s, pasek postępu, czas, prędkość) oraz obsługa przełącznika
- * wideo/audio ("Wolę tylko posłuchać").
+ * pasek postępu, czas, prędkość) oraz obsługa przełącznika wideo/audio
+ * ("Wolę tylko posłuchać").
  *
  * Progresywne wzmocnienie: znacznik <audio controls> działa natywnie nawet
  * bez JS. Gdy JS jest dostępny, ukrywamy natywne kontrolki i budujemy
@@ -28,7 +28,6 @@
     var progress = root.querySelector(".audio-progress");
     var timeCurrent = root.querySelector(".audio-time-current");
     var timeDuration = root.querySelector(".audio-time-duration");
-    var seekBtns = root.querySelectorAll("[data-seek]");
     var speedBtns = root.querySelectorAll(".audio-speed-btn");
     var lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "pl";
     var playLabel = lang === "pl" ? "Odtwórz" : "Play";
@@ -63,13 +62,6 @@
 
     progress.addEventListener("input", function () {
       audio.currentTime = Number(progress.value);
-    });
-
-    seekBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var delta = Number(btn.getAttribute("data-seek"));
-        audio.currentTime = Math.min(Math.max(0, audio.currentTime + delta), audio.duration || Infinity);
-      });
     });
 
     speedBtns.forEach(function (btn) {

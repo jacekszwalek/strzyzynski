@@ -739,18 +739,11 @@ body.tone-solemn .media-section {
 }
 .audio-player.is-unavailable { text-align: center; }
 
-.audio-controls-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-3);
-}
-
 .audio-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   background: none;
   border: none;
   border-radius: 50%;
@@ -760,14 +753,9 @@ body.tone-solemn .media-section {
 }
 .audio-btn:hover { background: var(--color-bg-alt); }
 
-.audio-btn--seek {
-  width: 3rem; height: 3rem;
-  font-size: 0.8rem;
-}
-
 .audio-btn--play {
-  width: 4.25rem; height: 4.25rem;
-  font-size: 1.5rem;
+  width: 3.5rem; height: 3.5rem;
+  font-size: 1.3rem;
   background: var(--color-accent);
   color: var(--color-text-on-accent);
 }
