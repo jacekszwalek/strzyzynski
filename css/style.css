@@ -117,10 +117,19 @@ html.text-scale-150 { font-size: 150%; }
 html {
   font-size: 100%;
   scroll-behavior: auto;
+  /* Wyłącza automatyczne "podbijanie" rozmiaru tekstu przez mobilną
+     Chrome (Android) — bez tego przeglądarka potrafi samodzielnie
+     powiększyć nagłówki na wąskim ekranie ponad to, co ustala CSS,
+     przez co tekst (i to, co się wokół niego układa) nie mieści się
+     w ekranie i nie zawija poprawnie. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
@@ -139,15 +148,16 @@ h1, h2, h3, h4 {
   line-height: 1.25;
   font-weight: 700;
   margin: 0 0 var(--space-2) 0;
+  overflow-wrap: break-word;
 }
 h1 { font-size: 2.25rem; }
 h2 { font-size: 1.75rem; margin-top: var(--space-5); }
 h3 { font-size: 1.4rem; margin-top: var(--space-4); }
 h4 { font-size: 1.15rem; }
 
-p { margin: 0 0 var(--space-3) 0; max-width: var(--measure); }
+p { margin: 0 0 var(--space-3) 0; max-width: var(--measure); overflow-wrap: break-word; }
 ul, ol { margin: 0 0 var(--space-3) 0; padding-left: 1.4em; }
-li { margin-bottom: var(--space-1); max-width: var(--measure); }
+li { margin-bottom: var(--space-1); max-width: var(--measure); overflow-wrap: break-word; }
 
 a {
   color: var(--color-accent);
@@ -646,10 +656,16 @@ section { margin-bottom: var(--space-6); }
 
 .narrator-byline {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2);
   margin-bottom: var(--space-2);
   font-size: 1.05rem;
+}
+.narrator-byline span:last-child {
+  min-width: 0;
+  overflow-wrap: break-word;
+  flex: 1 1 auto;
 }
 .narrator-avatar-badge {
   display: flex;
@@ -832,6 +848,7 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
 
 .route-badge-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2);
   margin-bottom: var(--space-2);
@@ -854,6 +871,8 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent-brown);
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .meta-grid {
@@ -874,11 +893,13 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
   text-transform: uppercase;
   color: var(--color-accent-brown);
   margin-bottom: 0.25rem;
+  overflow-wrap: break-word;
 }
 .meta-grid-value {
   display: block;
   font-size: 1.1rem;
   color: var(--color-text);
+  overflow-wrap: break-word;
 }
 @media (max-width: 560px) {
   .meta-grid { grid-template-columns: 1fr; }
