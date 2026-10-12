@@ -954,12 +954,17 @@ details.transcript .transcript-body {
 @media (min-width: 641px) {
   .meta-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: start;
   }
-  /* Krótkie pola (Rok, Materiał) trzymają naturalną szerokość treści —
-     nigdy się nie kurczą, więc liczby/krótkie słowa nie łamią się w połowie. */
-  .meta-grid-item { flex: 0 0 auto; }
+  /* Krótkie pola (Rok, Materiał) trzymają naturalną szerokość treści, ale
+     mogą się skurczyć, jeśli zabraknie miejsca (patrz niżej) — w praktyce
+     ich treść jest zawsze krótsza niż podłoga 20%, więc i tak nie zawijają
+     się w połowie słowa. Każda szpalta ma minimum 20% szerokości wiersza,
+     żeby żadna kolumna nie była węższa niż 1/5 dostępnego miejsca. Rząd
+     zostaje jednolinijkowy (nowrap) — zamiast zrzucać kolumnę do nowego
+     wiersza, nadmiar treści w szerszych polach się kurczy/zawija. */
+  .meta-grid-item { flex: 0 1 auto; min-width: 20%; }
   /* Długie pola (Miejsce, Autorstwo) dostają pułap szerokości i zawijają się
      w jego obrębie, zamiast rozciągać wiersz w nieskończoność. */
   .meta-grid-item--wide { flex: 0 1 auto; max-width: 22rem; }
