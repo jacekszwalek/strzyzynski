@@ -27,7 +27,7 @@ var RZEZBY = [
     id: "lawka-prusa",
     nrTrasy: 1,
 
-    slug: { pl: "lawka-prusa", en: "prus-bench" },
+    slug: { pl: "laweczka-prusa", en: "prus-bench" },
 
     tytul: {
       pl: "Ławeczka Bolesława Prusa",
@@ -226,7 +226,7 @@ var RZEZBY = [
     // i na kafelkach zostaje krótkie "Kawiarnia Ewelina" (pole tytul).
     tytulStrony: {
       pl: "Kawiarnia Ewelina – Panna z Rybą",
-      en: "Ewelina Café – The Girl with a Fish"
+      en: "Ewelina Café – The Maiden with a Fish"
     },
 
     rok: null, // DO UZUPEŁNIENIA — rok powstania rzeźby Panna z Rybą nieustalony
