@@ -233,7 +233,8 @@
 
     var btn = document.getElementById("theme-switch-btn");
     if (btn) {
-      btn.addEventListener("click", function () {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault(); // to link z href="#" — nie przewijaj strony do góry
         var current = document.documentElement.getAttribute("data-theme") === "blue" ? "blue" : "default";
         var next = current === "blue" ? "default" : "blue";
         applyTheme(next);
