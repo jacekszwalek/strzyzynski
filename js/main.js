@@ -204,46 +204,6 @@
   }
 
   /* ------------------------------------------------------------------
-   * Przełącznik szaty graficznej (domyślna / niebieska), w stopce
-   * ------------------------------------------------------------------ */
-
-  var THEME_KEY = "naleczow-theme";
-
-  function applyTheme(theme) {
-    var html = document.documentElement;
-    if (theme === "blue") {
-      html.setAttribute("data-theme", "blue");
-    } else {
-      html.removeAttribute("data-theme");
-    }
-    var btn = document.getElementById("theme-switch-btn");
-    if (btn) {
-      btn.setAttribute("aria-pressed", theme === "blue" ? "true" : "false");
-      var label = btn.getAttribute(theme === "blue" ? "data-label-blue" : "data-label-default");
-      if (label) btn.textContent = label;
-    }
-  }
-
-  function initThemeSwitch() {
-    var saved = "default";
-    try {
-      saved = localStorage.getItem(THEME_KEY) || "default";
-    } catch (e) { /* localStorage niedostępny — zostań przy domyślnej szacie */ }
-    applyTheme(saved);
-
-    var btn = document.getElementById("theme-switch-btn");
-    if (btn) {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault(); // to link z href="#" — nie przewijaj strony do góry
-        var current = document.documentElement.getAttribute("data-theme") === "blue" ? "blue" : "default";
-        var next = current === "blue" ? "default" : "blue";
-        applyTheme(next);
-        try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignoruj */ }
-      });
-    }
-  }
-
-  /* ------------------------------------------------------------------
    * Lightbox do zdjęć w treści
    * ------------------------------------------------------------------ */
 
@@ -298,7 +258,6 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initTextSizeSwitch();
-    initThemeSwitch();
     initLightbox();
 
     var tileGrid = document.getElementById("tile-grid");
