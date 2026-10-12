@@ -62,7 +62,7 @@ var RZEZBY = [
     wspolrzedne: [51.2870007258462, 22.208436990572082], // pomiar GPS w terenie, 2026-10-12
 
     media: {
-      typ: "video",
+      typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
       audioSrc: "./audio/lawka-prusa.mp3"
     },
@@ -155,7 +155,7 @@ var RZEZBY = [
     wspolrzedne: [51.28714555955893, 22.21240346246493], // pomiar GPS w terenie, 2026-10-12
 
     media: {
-      typ: "video",
+      typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
       audioSrc: "./audio/drzewo-genealogiczne.mp3"
     },
@@ -261,7 +261,7 @@ var RZEZBY = [
     },
 
     media: {
-      typ: "video",
+      typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
       audioSrc: "./audio/kawiarnia-ewelina.mp3"
     },
@@ -360,7 +360,7 @@ var RZEZBY = [
     wspolrzedne: [51.285452819939685, 22.212785832706324], // pomiar GPS w terenie, 2026-10-12
 
     media: {
-      typ: "video",
+      typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
       audioSrc: "./audio/pomnik-wojtyla.mp3"
     },
