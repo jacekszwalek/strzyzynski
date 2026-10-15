@@ -69,7 +69,7 @@ var RZEZBY = [
     material: { pl: "brąz", en: "bronze" },
 
     autorzy: {
-      pl: "Stanisław Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim (ur. 1955 w Nałęczowie)",
+      pl: "Stanisław Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim",
       en: "<!-- EN TRANSLATION NEEDED -->"
     },
     wspolautorstwoWyeksponowac: true,
@@ -404,13 +404,16 @@ var RZEZBY = [
     rok: 1999, // z transkrypcji nagrania (Zbigniew Strzyżyński)
     dataOdsloniecia: { pl: null, en: null },
 
-    material: { pl: null, en: null }, // DO UZUPEŁNIENIA — materiał nieustalony
+    material: {
+      pl: "głaz narzutowy, płyta odlana z brązu",
+      en: "glacial boulder, plaque cast in bronze"
+    },
 
     autorzy: {
-      pl: null, // DO USTALENIA — czy autorem jest Stanisław Strzyżyński, do potwierdzenia przed publikacją
-      en: null
+      pl: "Stanisław Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim",
+      en: "Stanisław Strzyżyński together with his son Zbigniew Strzyżyński"
     },
-    wspolautorstwoWyeksponowac: false,
+    wspolautorstwoWyeksponowac: true,
 
     lokalizacja: {
       pl: "Przy wyjściu z Parku Zdrojowego",
