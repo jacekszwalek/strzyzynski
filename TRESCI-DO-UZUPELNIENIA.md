@@ -52,17 +52,37 @@ podmienić na złożenie z prawdziwym zdjęciem, gdy będzie dostępne.
 
 ---
 
-## 2. Nagrania — 3 z 4 ZROBIONE, 1 w toku
+## 2. Nagrania
 
-Dla każdej rzeźby: **jedno nagranie** (wideo z YouTube **lub** plik audio MP3)
-plus transkrypcja tekstowa (PL + EN).
+### 2a. Film wprowadzający na stronie startowej — DO DOSTARCZENIA
+
+Decyzja: podstrony poszczególnych rzeźb mają **tylko pliki audio**, bez
+wideo. Jedyne wideo na całej witrynie to **film wprowadzający na stronie
+startowej** (`index.html` / `en/index.html`, sekcja `.video-wrap`) — ten
+film jeszcze nie istnieje, obecnie wyświetla się placeholder
+`VIDEO_ID_PLACEHOLDER`.
+
+Do dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
+YouTube. Po dostarczeniu podmień `VIDEO_ID_PLACEHOLDER` na właściwy
+identyfikator filmu w obu plikach (`index.html` i `en/index.html`) —
+sposób pozyskania identyfikatora opisuje README, sekcja 4 ("Jak wstawić
+film z YouTube"), kroki 1–2; różnica jest tylko taka, że tu podmieniamy
+identyfikator bezpośrednio w `index.html`/`en/index.html`, a nie w polu
+`media` konkretnej rzeźby w `data/rzezby.js`.
+
+### 2b. Nagrania przy rzeźbach — audio, 3 z 4 ZROBIONE, 1 w toku
+
+Dla każdej rzeźby: **plik audio MP3** plus transkrypcja tekstowa (PL + EN).
+Pole `youtubeId` przy każdej rzeźbie w `data/rzezby.js` jest nieużywane
+(`media.typ` ustawione na `"audio"`) — zostaje na wszelki wypadek, ale nie
+trzeba go wypełniać.
 
 | Rzeźba | Status |
 |---|---|
 | Ławeczka Bolesława Prusa | **ZROBIONE** — `audio/laweczka-prusa.mp3` + transkrypcja PL/EN |
 | Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** — `audio/kawiarnia-ewelina.mp3` + transkrypcja PL/EN |
 | Kamień papieski | **ZROBIONE** — `audio/pomnik-wojtyla.mp3` + transkrypcja PL/EN |
-| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebne: nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`, **lub** plik `audio/drzewo-genealogiczne.mp3`) + transkrypcja |
+| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebny plik `audio/drzewo-genealogiczne.mp3` + transkrypcja |
 
 Transkrypcja trafia do pola `transkrypcja: { pl, en }` przy danej rzeźbie
 w `data/rzezby.js` — treść nagrania bez zmian, dozwolone tylko poprawki
