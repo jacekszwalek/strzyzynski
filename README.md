@@ -86,21 +86,21 @@ placeholdery** (rysunki z opisem, co ma tam trafić) — patrz
 
 1. Przygotuj zdjęcie w formacie **WebP** (mniejszy plik) **i** dodatkowo
    **JPG** (dla starszych przeglądarek) — ta sama nazwa, dwa rozszerzenia,
-   np. `lawka-prusa-1.webp` i `lawka-prusa-1.jpg`. Zachowaj proporcje podane
+   np. `laweczka-prusa-1.webp` i `laweczka-prusa-1.jpg`. Zachowaj proporcje podane
    w `TRESCI-DO-UZUPELNIENIA.md` (np. 800×600).
 2. Wgraj oba pliki do katalogu `img/` (patrz punkt 1 — „Add file → Upload
    files").
 3. Otwórz plik `data/rzezby.js` w trybie edycji.
 4. Znajdź właściwe miejsce, np.:
    ```js
-   miniatura: "./img/lawka-prusa-mini.svg",
+   miniatura: "./img/laweczka-prusa-mini.svg",
    ```
    i zmień rozszerzenie z `.svg` na `.webp`:
    ```js
-   miniatura: "./img/lawka-prusa-mini.webp",
+   miniatura: "./img/laweczka-prusa-mini.webp",
    ```
-5. To samo zrób dla zdjęć w opisie, np. `src: "./img/lawka-prusa-1.svg"` →
-   `src: "./img/lawka-prusa-1.webp"`.
+5. To samo zrób dla zdjęć w opisie, np. `src: "./img/laweczka-prusa-1.svg"` →
+   `src: "./img/laweczka-prusa-1.webp"`.
 6. Zapisz zmianę (**Commit changes**) — strona automatycznie znajdzie plik
    JPG jako zapasowy dla starszych przeglądarek (nie trzeba nic więcej
    zmieniać).
@@ -148,7 +148,7 @@ wtedy przycisk „Wolę tylko posłuchać".
 
 1. Przygotuj plik **MP3**.
 2. Wgraj go do katalogu `audio/`, zastępując plik placeholder o tej samej
-   nazwie (np. `lawka-prusa.mp3`) — możesz po prostu wgrać nowy plik o
+   nazwie (np. `laweczka-prusa.mp3`) — możesz po prostu wgrać nowy plik o
    identycznej nazwie, GitHub zapyta, czy chcesz go nadpisać.
 3. Jeśli dana rzeźba ma mieć **tylko audio** (bez wideo), w `data/rzezby.js`
    ustaw:
@@ -156,7 +156,7 @@ wtedy przycisk „Wolę tylko posłuchać".
    media: {
      typ: "audio",
      ...
-     audioSrc: "./audio/lawka-prusa.mp3"
+     audioSrc: "./audio/laweczka-prusa.mp3"
    }
    ```
 4. Odtwarzacz na stronie ma duże przyciski (play/pauza, przewijanie o 15

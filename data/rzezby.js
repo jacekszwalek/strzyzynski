@@ -24,7 +24,7 @@
 
 var RZEZBY = [
   {
-    id: "lawka-prusa",
+    id: "laweczka-prusa",
     nrTrasy: 1,
 
     slug: { pl: "laweczka-prusa", en: "prus-bench" },
@@ -38,6 +38,23 @@ var RZEZBY = [
     tytulStrony: {
       pl: "Ławeczka Bolesława Prusa",
       en: "Bolesław Prus Bench"
+    },
+
+    // Prawdziwa transkrypcja nagrania (od Zbigniewa Strzyżyńskiego) —
+    // jeśli obecna, zastępuje domyślny placeholder "Lorem ipsum" w
+    // sekcji transkrypcji na tej konkretnej podstronie. Sformatowana
+    // (interpunkcja, podział na akapity) na podstawie tekstu dostarczonego
+    // przez właściciela repozytorium — treść słowna bez zmian.
+    // Uwaga: "na Węczowa" / "na Łęczów" / "z brązą" wyglądają na artefakty
+    // dyktowania (zamiast "Nałęczowa" / "Nałęczów" / "z brązu") — zostawione
+    // tak, jak dostarczono, do ewentualnej weryfikacji przez właściciela.
+    transkrypcja: {
+      pl: `<p>Ławeczka Bolesława Prusa powstała w 2002 roku z inicjatywy Haliny Bukowskiej, Prezes Towarzystwa Przyjaciół na Węczowa i kierowniczki Muzeum Bolesława Prusa, przy wsparciu finansowym Rady Miasta na Łęczów i ówczesnego burmistrza Wojciecha Wójcika.</p>
+        <p>Ojciec przygotowywał trzy projekty w gipsie, przedstawiające różne usadowienie na ławce Bolesława Prusa. Wybrano jedną propozycję i następnie wspólnie wykonywaliśmy model w glinie naturalnej wielkości. Ja zajmowałem się wstępnym wykonaniem całości postaci, ojciec zajmował się całą głową — wykonał tą głowę, zajmował się szczegółami.</p>
+        <p>Po wykonaniu tej pracy i akceptacji zamawiających robiliśmy odlewy. Pracowaliśmy nad formami gipsowymi, tych form było około 30. Następnie odlew gipsowy, i ten odlew gipsowy pojechał do odlewni w Rzeszowie, gdzie wykonano pomnik z brązą.</p>
+        <p>Wcześniej ławeczka stała przed Pałacem Małachowskich, tam wtedy mieściło się Muzeum Bolesława Prusa. Natomiast obecnie — w bardzo dobrym miejscu, przy stawie przed sanatorium księcia Józefa.</p>
+        <p>Jeżeli Państwo są w tym miejscu, to warto jeszcze zajrzeć do palmiarni. Tam znajdują się dwa popiersia wykonane przez ojca: Władysława Tatarkiewicza, filozofa, estetyka — pozował on ojcu na jednym z balkonów w sanatorium rolniczym. Druga rzeźba przedstawia dr Wacława Szczepińskiego, bardzo zasłużonej osoby dla Nałęczowa, lekarza naczelnego uzdrowiska.</p>
+        <p>Te i inne rzeźby znajdujące się w palmiarni powstały podczas pleneru rzeźbiarskiego „Postacie Nałęczowa” w 1978 roku.</p>`
     },
 
     rok: 2002,
@@ -70,13 +87,13 @@ var RZEZBY = [
     media: {
       typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/lawka-prusa.mp3"
+      audioSrc: "./audio/laweczka-prusa.mp3"
     },
 
-    miniatura: "./img/lawka-prusa-mini.svg",
+    miniatura: "./img/laweczka-prusa-mini.svg",
     zdjecia: [
       {
-        src: "./img/lawka-prusa-1.svg",
+        src: "./img/laweczka-prusa-1.svg",
         w: 800,
         h: 600,
         alt: {
@@ -89,7 +106,7 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/lawka-prusa-2.svg",
+        src: "./img/laweczka-prusa-2.svg",
         w: 800,
         h: 600,
         alt: {

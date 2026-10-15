@@ -19,9 +19,9 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
-| `lawka-prusa-mini.svg` | 400×300 (4:3) | miniatura na mapie, liście, kafelku strony głównej |
-| `lawka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
-| `lawka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
+| `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura na mapie, liście, kafelku strony głównej |
+| `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
+| `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
 | `drzewo-genealogiczne-mini.svg` | 400×300 | miniatura |
 | `drzewo-genealogiczne-1.svg` | 800×600 | zdjęcie 1 w opisie |
 | `drzewo-genealogiczne-2.svg` | 800×600 | zdjęcie 2 w opisie |
@@ -47,7 +47,7 @@ plus transkrypcja tekstowa.
 
 | Rzeźba | Co dostarczyć |
 |---|---|
-| Ławeczka Bolesława Prusa | Nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`) **lub** plik `audio/lawka-prusa.mp3` + transkrypcja |
+| Ławeczka Bolesława Prusa | Nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`) **lub** plik `audio/laweczka-prusa.mp3` + transkrypcja |
 | Alejka Stanisława Strzyżyńskiego | jw. → `audio/drzewo-genealogiczne.mp3` |
 | Kamień papieski | jw. → `audio/pomnik-wojtyla.mp3` |
 | Panna z rybą (kawiarnia Ewelina) | jw. → `audio/kawiarnia-ewelina.mp3` |
