@@ -1193,6 +1193,11 @@ figure.content-figure figcaption {
   border-radius: var(--radius);
   padding: var(--space-2);
 }
+/* W stopce logotypy mają być małe, nie na całą szerokość — jak w sekcji
+   "Partnerzy i finansowanie" na stronie O projekcie. */
+.footer-funding .funding-logos {
+  width: 24rem;
+}
 
 /* --------------------------------------------------------------------------
    17. Sekcja "O projekcie" — kontakt, partnerzy
