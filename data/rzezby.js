@@ -51,7 +51,13 @@ var RZEZBY = [
         <p>Po wykonaniu tej pracy i akceptacji zamawiających robiliśmy odlewy, pracowaliśmy nad formami gipsowymi — tych form było około 30. Następnie (wykonaliśmy) odlew gipsowy, i ten odlew gipsowy pojechał do odlewni w Rzeszowie, gdzie wykonano pomnik z brązu.</p>
         <p>Wcześniej ławeczka stała przed Pałacem Małachowskich — tam wtedy mieściło się Muzeum Bolesława Prusa, natomiast obecnie — w bardzo dobrym miejscu — przy stawie, przed sanatorium księcia Józefa.</p>
         <p>Jeżeli Państwo są w tym miejscu, to warto jeszcze zajrzeć do palmiarni. Tam znajdują się dwa popiersia wykonane przez ojca: Władysława Tatarkiewicza, filozofa, estetyka — pozował on ojcu na jednym z balkonów w sanatorium rolniczym. Druga rzeźba przedstawia (popiersie) dra Wacława Szczepińskiego, bardzo zasłużonej osoby dla Nałęczowa, lekarza naczelnego uzdrowiska.</p>
-        <p>Te i inne rzeźby znajdujące się w palmiarni powstały podczas pleneru rzeźbiarskiego „Postacie Nałęczowa” w 1978 roku.</p>`
+        <p>Te i inne rzeźby znajdujące się w palmiarni powstały podczas pleneru rzeźbiarskiego „Postacie Nałęczowa” w 1978 roku.</p>`,
+      en: `<p>The Bolesław Prus Bench was created in 2002 on the initiative of Halina Bukowska, president of the Towarzystwo Przyjaciół Nałęczowa (Society of Friends of Nałęczów) and head of the Bolesław Prus Museum, with financial support from the Nałęczów City Council and the then mayor, Wojciech Wójcik.</p>
+        <p>My father prepared three plaster designs showing different ways of seating Bolesław Prus on the bench. One proposal was chosen, and we then worked together on a full-size model in clay. I handled the initial execution of the whole figure, while my father worked on the entire head — he made the head himself and took care of the details.</p>
+        <p>After finishing this work and getting the clients' approval, we made the casts. We worked on plaster moulds — there were about 30 of them. Then (we made) the plaster cast, and that plaster cast travelled to the foundry in Rzeszów, where the monument was cast in bronze.</p>
+        <p>Earlier, the bench stood in front of the Małachowski Palace — that is where the Bolesław Prus Museum was located at the time — while now it stands in a very good spot, by the pond, in front of the Prince Józef Sanatorium.</p>
+        <p>If you happen to be in this spot, it is also worth stopping by the Palm House. There you will find two busts made by my father: one of Władysław Tatarkiewicz, a philosopher and aesthetician, who sat for my father on one of the balconies of the agricultural workers' sanatorium. The other sculpture depicts (a bust) of Dr. Wacław Szczepiński, a man of great merit for Nałęczów, the resort's chief physician.</p>
+        <p>These and other sculptures in the Palm House were created during the sculpture symposium „Figures of Nałęczów" in 1978.</p>`
     },
 
     rok: 2002,
