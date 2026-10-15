@@ -14,7 +14,7 @@ Spis treści:
 5. [Jak wgrać nagranie audio](#5-jak-wgrać-nagranie-audio)
 6. [Jak zmienić tekst](#6-jak-zmienić-tekst)
 7. [Jak dodać nową rzeźbę](#7-jak-dodać-nową-rzeźbę)
-8. [Jak wydrukować tabliczki QR](#8-jak-wydrukować-tabliczki-qr)
+8. [Jak wygenerować kody QR](#8-jak-wygenerować-kody-qr)
 9. [Częste pytania i problemy](#9-częste-pytania-i-problemy)
 
 ---
@@ -242,7 +242,10 @@ najlepiej wykonać z jego pomocą.
 
 ---
 
-## 8. Jak wydrukować tabliczki QR
+## 8. Jak wygenerować kody QR
+
+Kody QR nie są drukowane na tabliczkach przy rzeźbach — rozprowadzamy je
+wyłącznie przez pocztówkę/ulotkę promującą spacer (i opcjonalnie plakat).
 
 1. Upewnij się, że strona jest już opublikowana (punkt 2) i znasz jej adres.
 2. Otwórz plik `qr/base-url.js` w trybie edycji i podmień wartość
@@ -252,23 +255,15 @@ najlepiej wykonać z jego pomocą.
    ```
    **Uwaga:** adres musi kończyć się ukośnikiem `/`.
 3. Zapisz zmianę i poczekaj, aż strona się zaktualizuje (1–2 minuty).
-4. Wejdź na `https://TWOJ-ADRES/qr/tabliczki.html` w przeglądarce.
-5. Kliknij **🖨 Drukuj arkusz** — otworzy się okno drukowania z gotowym
-   układem A4 (bez nagłówka strony, tylko kafelki z kodami).
-6. Każdy kafelek zawiera kod QR (min. 5×5 cm), nazwę rzeźby, dwujęzyczną
-   instrukcję oraz adres strony **zwykłym tekstem** — na wypadek, gdyby ktoś
-   wolał wpisać go ręcznie zamiast skanować.
-
-**Uwaga:** adres zakodowany w samym kodzie QR i adres wydrukowany pod nim
-zwykłym tekstem celowo się nieznacznie różnią (kod prowadzi przez krótkie,
-niewidoczne przekierowanie `-qr.html`). Dzięki temu w Cloudflare Web
-Analytics widać osobno, ile osób faktycznie zeskanowało tabliczkę — a mimo
-to każdy trafia na tę samą, czystą stronę rzeźby.
-
-Jeśli chcesz zapisać same kody QR jako osobne pliki SVG (np. do wysłania do
-drukarni albo umieszczenia w innym projekcie graficznym), użyj
-`qr/generator.html` — tam znajdziesz podgląd wszystkich kodów (PL i EN)
-oraz przycisk **Pobierz wszystkie**.
+4. Wejdź na `https://TWOJ-ADRES/qr/generator.html` w przeglądarce.
+5. Użyj sekcji „Wejście z plakatu / pocztówki", żeby pobrać kod QR
+   prowadzący na stronę główną przez krótkie przekierowanie (dzięki temu
+   w statystykach widać osobno, ile osób weszło ze skanu materiału
+   promocyjnego), albo pobierz dowolny inny kod z sekcji powyżej (np. kod
+   dla konkretnej rzeźby czy wejście bezpośrednio na stronę główną).
+6. Kliknij **Pobierz SVG** przy wybranym kodzie, albo **⬇ Pobierz
+   wszystkie kody SVG (PL + EN)**, żeby zapisać je do wykorzystania w
+   projekcie graficznym pocztówki/ulotki (np. do wysłania do drukarni).
 
 ---
 
