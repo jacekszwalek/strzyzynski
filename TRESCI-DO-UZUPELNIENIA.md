@@ -15,7 +15,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 
 ---
 
-## 1. Zdjęcia — 13 sztuk
+## 1. Zdjęcia — 14 sztuk
 
 Wszystkie trafiają do katalogu `img/`. Format docelowy: WebP + JPG (ten sam
 kadr w obu formatach, ta sama nazwa pliku, różne rozszerzenie) — po dodaniu
@@ -41,10 +41,13 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
 miniatur — nie potrzebuje więc osobnego zdjęcia.
 
-Usunięto z listy: `zbigniew-strzyzynski-avatar.svg` (200×200) — podpis
-"Opowiada Zbigniew Strzyżyński" na podstronach rzeźb jest w obecnym
-designie czysto tekstowy (`.narrator-byline`, bez awatara), więc ten plik
-nie jest już potrzebny.
+**Do dostarczenia (wraca na listę): `zbigniew-strzyzynski-avatar.svg`**
+(200×200, kwadrat) — zdjęcie/awatar Zbigniewa Strzyżyńskiego do podpisu
+"Opowiada Zbigniew Strzyżyński" na podstronach rzeźb. Obecny design jest
+czysto tekstowy (`.narrator-byline`, bez obrazka) — do zmiany: **awatar ma
+się pojawiać tylko w widoku desktopowym, nie na mobile** (wymaga też
+drobnej zmiany w kodzie — dodania obrazka i ukrycia go pod breakpointem
+mobilnym).
 
 Opcjonalnie: `og-cover.jpg` (1200×630) — obecnie wygenerowany prosty
 placeholder tekstowy używany w podglądach na Facebooku/WhatsAppie. Można
