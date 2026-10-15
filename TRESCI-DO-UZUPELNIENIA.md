@@ -1,4 +1,4 @@
-# Treści do uzupełnienia — lista zakupów
+# Treści do uzupełnienia
 
 *Stan na 2026-10-15 — ten dokument jest aktualizowany na bieżąco, w miarę
 jak przesyłane są nowe materiały. Jeśli coś z listy wygląda jako już
@@ -56,37 +56,26 @@ podmienić na złożenie z prawdziwym zdjęciem, gdy będzie dostępne.
 
 ### 2a. Film wprowadzający na stronie startowej — DO DOSTARCZENIA
 
-Decyzja: podstrony poszczególnych rzeźb mają **tylko pliki audio**
-(self-hosted, w katalogu `audio/`), bez wideo. Jedyne wideo na całej
-witrynie to **film wprowadzający na stronie startowej** (`index.html` /
-`en/index.html`, sekcja `.video-wrap`) — ten film jeszcze nie istnieje,
-obecnie wyświetla się placeholder `VIDEO_ID_PLACEHOLDER`.
+Decyzja: podstrony poszczególnych rzeźb mają tylko pliki audio, bez wideo.
+Jedyne wideo na całej witrynie to film wprowadzający na stronie startowej
+— ten film jeszcze nie istnieje. Będzie osadzony z YouTube.
 
-Ten film **będzie z YouTube** (tak jak obecna sekcja `.video-wrap` już to
-zakłada — osadzenie przez `<iframe>` z `youtube-nocookie.com`). Do
-dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
-YouTube. Po dostarczeniu podmień `VIDEO_ID_PLACEHOLDER` na właściwy
-identyfikator filmu w obu plikach (`index.html` i `en/index.html`) —
-sposób pozyskania identyfikatora opisuje README, sekcja 4 ("Jak wstawić
-film z YouTube"), kroki 1–2; różnica jest tylko taka, że tu podmieniamy
-identyfikator bezpośrednio w `index.html`/`en/index.html`, a nie w polu
-`media` konkretnej rzeźby w `data/rzezby.js`.
+Do dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
+YouTube.
 
 ### 2b. Nagrania przy rzeźbach — audio, 3 z 4 ZROBIONE, 1 w toku
 
-Dla każdej rzeźby: **plik audio MP3** plus transkrypcja tekstowa (PL + EN).
+Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 
 | Rzeźba | Status |
 |---|---|
-| Ławeczka Bolesława Prusa | **ZROBIONE** — `audio/laweczka-prusa.mp3` + transkrypcja PL/EN |
-| Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** — `audio/panna-z-ryba.mp3` + transkrypcja PL/EN |
-| Kamień papieski | **ZROBIONE** — `audio/kamien-papieski.mp3` + transkrypcja PL/EN |
-| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebny plik `audio/alejka-strzyzynskiego.mp3` + transkrypcja |
+| Ławeczka Bolesława Prusa | **ZROBIONE** |
+| Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** |
+| Kamień papieski | **ZROBIONE** |
+| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebne nagranie i transkrypcja |
 
-Transkrypcja trafia do pola `transkrypcja: { pl, en }` przy danej rzeźbie
-w `data/rzezby.js` — treść nagrania bez zmian, dozwolone tylko poprawki
-interpunkcji i podział na akapity. Podstrony generują się z tego pola
-automatycznie, bez ręcznej edycji HTML każdej strony.
+Treść transkrypcji wpisujemy bez zmian w stosunku do nagrania — dozwolone
+są tylko poprawki interpunkcji i podział na akapity.
 
 ---
 
@@ -111,6 +100,26 @@ w `data/rzezby.js`.
   - wzbogacenie krótszego opisu redakcyjnego (`opisPelny` w
     `data/rzezby.js`) tymi samymi szczegółami,
   - związki Prusa z Nałęczowem, kontekst literacki.
+- **Alejka Stanisława Strzyżyńskiego / Drzewo genealogiczne**
+  (`alejka-strzyzynskiego/index.html`, adres `/alejka-strzyzynskiego/`) —
+  do dostarczenia:
+  - okoliczności powstania rzeźby,
+  - historia nadania nazwy alei,
+  - kontekst w twórczości artysty,
+  - nagranie i transkrypcja (patrz sekcja 2) — po ich dostarczeniu opis
+    będzie można wzbogacić podobnie jak przy innych rzeźbach,
+  - **decyzja (nie materiał do dostarczenia) — nazewnictwo tego
+    przystanku:** potrzebne potwierdzenie, jak ma być prezentowany ten
+    przystanek — jako "Alejka Stanisława Strzyżyńskiego" czy jako "Drzewo
+    genealogiczne"? Obecnie: nazwa krótka (menu/kafelki) to "Alejka
+    Strzyżyńskiego", nazwa długa (tytuł podstrony) to "Alejka Stanisława
+    Strzyżyńskiego - rzeźba Drzewo genealogiczne". Jacek: uważa, że
+    atrakcją jest rzeźba, a nie sama alejka — do rozważenia zamiana
+    akcentu (np. krótka nazwa "Drzewo genealogiczne", długa z alejką jako
+    kontekstem, albo odwrotnie). Potrzebne są **obie wersje nazwy**:
+    krótka (do menu) i długa (na podstronę, `<title>`/`<h1>`) — w PL
+    i EN. **Tę decyzję trzeba podjąć teraz, przed ustaleniem adresów
+    i wydrukiem kodów QR — później nie powinno się już tego zmieniać.**
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres `/panna-z-ryba/`) —
   rok powstania już potwierdzony (1979, z transkrypcji nagrania). Do
   dostarczenia:
@@ -144,27 +153,6 @@ w `data/rzezby.js`.
 
   (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
   repozytorium.)
-- **Alejka Strzyżyńskiego** (`alejka-strzyzynskiego/index.html`, adres
-  `/alejka-strzyzynskiego/`) — do dostarczenia:
-  - okoliczności powstania rzeźby,
-  - historia nadania nazwy alei,
-  - kontekst w twórczości artysty.
-
-  Czeka też na nagranie i transkrypcję (patrz sekcja 2) — po ich
-  dostarczeniu opis będzie można wzbogacić podobnie jak przy innych
-  rzeźbach.
-- **Decyzja (nie materiał do dostarczenia) — nazewnictwo przystanku nr 2:**
-  potrzebne potwierdzenie, jak ma być prezentowana Alejka Strzyżyńskiego —
-  jako "Alejka Stanisława Strzyżyńskiego" czy jako "Drzewo genealogiczne"?
-  Obecnie: nazwa krótka (menu/kafelki) to "Alejka Strzyżyńskiego", nazwa
-  długa (tytuł podstrony) to "Alejka Stanisława Strzyżyńskiego - rzeźba
-  Drzewo genealogiczne". Jacek: uważa, że atrakcją jest rzeźba, a nie sama
-  alejka — do rozważenia zamiana akcentu (np. krótka nazwa "Drzewo
-  genealogiczne", długa z alejką jako kontekstem, albo odwrotnie).
-  Potrzebne są **obie wersje nazwy**: krótka (do menu) i długa (na
-  podstronę, `<title>`/`<h1>`) — w PL i EN. **Tę decyzję trzeba podjąć
-  teraz, przed ustaleniem adresów i wydrukiem kodów QR — później nie
-  powinno się już tego zmieniać.**
 
 ---
 
