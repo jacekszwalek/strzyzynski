@@ -37,17 +37,10 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 | `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
 | `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe, 4:5) | biogram na stronie głównej |
+| `zbigniew-strzyzynski-avatar.svg` | 200×200 (kwadrat) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst |
 
 Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
 miniatur — nie potrzebuje więc osobnego zdjęcia.
-
-**Do dostarczenia (wraca na listę): `zbigniew-strzyzynski-avatar.svg`**
-(200×200, kwadrat) — zdjęcie/awatar Zbigniewa Strzyżyńskiego do podpisu
-"Opowiada Zbigniew Strzyżyński" na podstronach rzeźb. Obecny design jest
-czysto tekstowy (`.narrator-byline`, bez obrazka) — do zmiany: **awatar ma
-się pojawiać tylko w widoku desktopowym, nie na mobile** (wymaga też
-drobnej zmiany w kodzie — dodania obrazka i ukrycia go pod breakpointem
-mobilnym).
 
 Opcjonalnie: `og-cover.jpg` (1200×630) — obecnie wygenerowany prosty
 placeholder tekstowy używany w podglądach na Facebooku/WhatsAppie. Można

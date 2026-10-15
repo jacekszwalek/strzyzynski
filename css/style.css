@@ -717,6 +717,13 @@ section { margin-bottom: var(--space-6); }
   overflow-wrap: break-word;
   flex: 1 1 auto;
 }
+.narrator-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 /* Karta "Nagranie" na podstronach rzeźb */
 .media-section {
   background: var(--color-accent-tint);
@@ -1001,6 +1008,9 @@ details.transcript .transcript-body { margin-top: var(--space-2); }
   .narrator-byline span:last-child {
     line-height: 1.3;
   }
+  /* Awatar narratora tylko w widoku desktopowym, na życzenie właściciela
+     repozytorium — na mobile zostaje czysty tekst. */
+  .narrator-avatar { display: none; }
 }
 
 /* --------------------------------------------------------------------------
