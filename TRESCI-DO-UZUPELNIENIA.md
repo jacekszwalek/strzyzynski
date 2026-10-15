@@ -27,9 +27,9 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 | `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie (220×165) i kafelek na stronie głównej |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `drzewo-genealogiczne-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
-| `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
-| `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `alejka-strzyzynskiego-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `alejka-strzyzynskiego-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
+| `alejka-strzyzynskiego-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
 | `panna-z-ryba-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
 | `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
@@ -81,7 +81,7 @@ Dla każdej rzeźby: **plik audio MP3** plus transkrypcja tekstowa (PL + EN).
 | Ławeczka Bolesława Prusa | **ZROBIONE** — `audio/laweczka-prusa.mp3` + transkrypcja PL/EN |
 | Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** — `audio/panna-z-ryba.mp3` + transkrypcja PL/EN |
 | Kamień papieski | **ZROBIONE** — `audio/kamien-papieski.mp3` + transkrypcja PL/EN |
-| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebny plik `audio/drzewo-genealogiczne.mp3` + transkrypcja |
+| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebny plik `audio/alejka-strzyzynskiego.mp3` + transkrypcja |
 
 Transkrypcja trafia do pola `transkrypcja: { pl, en }` przy danej rzeźbie
 w `data/rzezby.js` — treść nagrania bez zmian, dozwolone tylko poprawki

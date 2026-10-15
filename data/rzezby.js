@@ -150,7 +150,7 @@ var RZEZBY = [
   },
 
   {
-    id: "drzewo-genealogiczne",
+    id: "alejka-strzyzynskiego",
     nrTrasy: 2,
 
     slug: { pl: "alejka-strzyzynskiego", en: "strzyzynski-alley" },
@@ -193,13 +193,13 @@ var RZEZBY = [
     media: {
       typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/drzewo-genealogiczne.mp3"
+      audioSrc: "./audio/alejka-strzyzynskiego.mp3"
     },
 
-    miniatura: "./img/drzewo-genealogiczne-mini.svg",
+    miniatura: "./img/alejka-strzyzynskiego-mini.svg",
     zdjecia: [
       {
-        src: "./img/drzewo-genealogiczne-1.svg",
+        src: "./img/alejka-strzyzynskiego-1.svg",
         w: 800,
         h: 600,
         alt: {
@@ -212,7 +212,7 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/drzewo-genealogiczne-2.svg",
+        src: "./img/alejka-strzyzynskiego-2.svg",
         w: 800,
         h: 600,
         alt: {
