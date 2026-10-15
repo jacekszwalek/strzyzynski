@@ -18,7 +18,7 @@
   body { padding: var(--space-4) 0; }
   .base-url-box { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
   .base-url-box code { background: var(--color-bg-alt); padding: 0.3em 0.5em; border-radius: 0.25em; font-size: 1.05rem; }
-  .ecl-switch { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+  .ecl-switch { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-2); }
   .ecl-switch label { display: flex; align-items: center; gap: 0.4em; cursor: pointer; }
   .qr-panel-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--space-3); align-items: start; }
   details.info-toggle summary { cursor: pointer; font-weight: 700; color: var(--color-accent); display: inline-block; }
@@ -116,7 +116,7 @@
   <h2>Podgląd kodów — rzeźby</h2>
   <div class="qr-preview-grid" id="qr-preview-grid"></div>
 
-  <div class="qr-tool-panel">
+  <div class="qr-tool-panel" style="margin-top:var(--space-4)">
     <button type="button" class="btn btn--large" id="download-all-btn">⬇ Pobierz wszystkie kody SVG (PL + EN)</button>
     <p id="download-status" aria-live="polite"></p>
   </div>
