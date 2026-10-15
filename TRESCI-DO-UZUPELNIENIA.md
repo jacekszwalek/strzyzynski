@@ -305,37 +305,7 @@ domeny.
 
 ---
 
-## 10. Pola w danych jeszcze bez zastosowania (`data/rzezby.js`)
-
-Trzy pola w danych każdej rzeźby nie są dziś w pełni wykorzystane —
-wyjaśnienie, do czego służą (albo mogłyby służyć), i co warto
-zdecydować:
-
-- **`tonPowazny: false`** — jeśli ustawione na `true` dla danej rzeźby,
-  podstrona dostaje przyciemnioną, bardziej stonowaną kolorystykę oraz
-  dodatkową notkę „To miejsce pamięci — prosimy o zachowanie powagi
-  podczas odwiedzin." Obecnie **wyłączone dla wszystkich czterech
-  rzeźb** — w tym dla Kamienia papieskiego, który jako pomnik
-  upamiętniający wizytę papieża wydaje się najbardziej oczywistym
-  kandydatem. Decyzja do podjęcia: włączyć dla Kamienia papieskiego
-  (albo zostawić wszystkie jak teraz)?
-- **`wspolautorstwoWyeksponowac: true`** — pole jest wypełnione
-  (`true` dla Ławeczki Prusa i Kamienia papieskiego, `false` dla
-  pozostałych dwóch), ale **obecnie nie jest nigdzie odczytywane
-  w kodzie strony** — nie ma żadnego efektu wizualnego. Decyzja do
-  podjęcia: albo dopisać w kodzie, co ma się dziać, gdy jest `true`
-  (np. dodatkowe wyróżnienie współautorstwa w widoku rzeźby), albo
-  usunąć to pole jako nieużywane.
-- **`dataOdsloniecia: { pl: null, en: null }`** — pole istnieje
-  w danych (wypełnione tylko dla Ławeczki Prusa), ale **obecnie nie
-  jest nigdzie odczytywane w kodzie strony** — nie pojawia się na
-  żadnej podstronie. Decyzja do podjęcia: albo dodać je do widoku
-  podstrony (np. do siatki „Rok / Materiał / Miejsce / Autorstwo"),
-  albo usunąć jako nieużywane.
-
----
-
-## 11. Logotypy partnerów
+## 10. Logotypy partnerów
 
 Na stronie „O projekcie" są trzy puste miejsca na logotypy (`.partner-logo-slot`).
 Podmień je na obrazy, gdy będą znane nazwy partnerów/finansujących.
