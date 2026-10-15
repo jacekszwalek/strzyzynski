@@ -129,19 +129,19 @@ var RZEZBY = [
     },
 
     opisKrotki: {
-      pl: "Siedząca postać pisarza w meloniku, z dłonią opartą na książce — jedyne dzieło na trasie, które Stanisław Strzyżyński stworzył wspólnie z synem Zbigniewem.",
-      en: "A seated figure of the writer in a bowler hat, hand resting on a book — the only work on the route that Stanisław Strzyżyński created together with his son Zbigniew."
+      pl: "Siedząca postać pisarza w meloniku, z dłonią opartą na książce — jedno z dwóch dzieł na trasie, które Stanisław Strzyżyński stworzył wspólnie z synem Zbigniewem.",
+      en: "A seated figure of the writer in a bowler hat, hand resting on a book — one of two works on the route that Stanisław Strzyżyński created together with his son Zbigniew."
     },
 
     opisPelny: {
       pl: [
         "Ławeczka Bolesława Prusa stanęła w Parku Zdrojowym w niedzielę 20 października 2002 roku, w 120. rocznicę pierwszego przyjazdu pisarza do Nałęczowa. Brązowa figura przedstawia siedzącego Prusa w charakterystycznym meloniku, z dłonią spoczywającą na książce — jakby na chwilę przerwał lekturę, by odpocząć w cieniu parkowych alei. <!-- DO UZUPEŁNIENIA: okoliczności powstania, fundator, przebieg odsłonięcia -->",
-        "To jedyne dzieło na tej trasie, które Stanisław Strzyżyński wykonał wspólnie z synem Zbigniewem Strzyżyńskim, urodzonym w Nałęczowie w 1955 roku — tym samym, który opowiada o ojcu i jego twórczości w nagraniach towarzyszących temu spacerowi. Słuchając jego głosu przy tej rzeźbie, słyszymy więc relację nie tylko syna, ale i współtwórcy. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
+        "To jedno z dwóch dzieł na tej trasie, które Stanisław Strzyżyński wykonał wspólnie z synem Zbigniewem Strzyżyńskim, urodzonym w Nałęczowie w 1955 roku — tym samym, który opowiada o ojcu i jego twórczości w nagraniach towarzyszących temu spacerowi. Słuchając jego głosu przy tej rzeźbie, słyszymy więc relację nie tylko syna, ale i współtwórcy. Drugim wspólnym dziełem na trasie jest Kamień papieski. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
         "W parku znajdują się dwa upamiętnienia Bolesława Prusa — popiersie oraz ta ławeczka. Nałęczów odwiedzał pisarz wielokrotnie, a uzdrowisko wywarło wpływ na jego twórczość. <!-- DO UZUPEŁNIENIA: związki Prusa z Nałęczowem, kontekst literacki -->"
       ],
       en: [
         "The Bolesław Prus Bench was unveiled in the Spa Park on Sunday, 20 October 2002, on the 120th anniversary of the writer's first visit to Nałęczów. The bronze figure shows Prus seated in his characteristic bowler hat, hand resting on a book — as if he had paused his reading for a moment to rest in the shade of the park's avenues. <!-- DO UZUPEŁNIENIA: okoliczności powstania, fundator, przebieg odsłonięcia -->",
-        "This is the only work on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955 — the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
+        "This is one of two works on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955 — the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. The other joint work on the route is the Papal Stone. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
         "There are two memorials to Bolesław Prus in the park — a bust and this bench. The writer visited Nałęczów many times, and the spa town left its mark on his work. <!-- DO UZUPEŁNIENIA: związki Prusa z Nałęczowem, kontekst literacki -->"
       ]
     },
@@ -364,12 +364,12 @@ var RZEZBY = [
 
     opisPelny: {
       pl: [
-        "Panna z Rybą to rzeźba osadzona w fontannie przed willą „Pod Matką Boską” przy ulicy Lipowej 16, w której dziś mieści się kawiarnia Ewelina. <!-- DO UZUPEŁNIENIA: rok powstania, materiał, okoliczności powstania, opis formy rzeźby -->",
+        "Panna z Rybą to rzeźba osadzona w fontannie przed willą „Pod Matką Boską” przy ulicy Lipowej 16, w której dziś mieści się kawiarnia Ewelina. Powstała w 1979 roku. <!-- DO UZUPEŁNIENIA: materiał, opis formy rzeźby -->",
         "To jedyny punkt tej trasy, przy którym można usiąść, wypić kawę i skorzystać z toalety — dla starszych odwiedzających to praktyczna informacja, nie tylko ciekawostka. Kawiarnia Ewelina jest czynna codziennie. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ],
       en: [
-        "The Maiden with a Fish is a sculpture set in the fountain in front of the \"Pod Matką Boską\" villa at 16 Lipowa Street, now home to Ewelina café. <!-- DO UZUPEŁNIENIA: rok powstania, materiał, okoliczności powstania, opis formy rzeźby -->",
+        "The Maiden with a Fish is a sculpture set in the fountain in front of the \"Pod Matką Boską\" villa at 16 Lipowa Street, now home to Ewelina café. It was created in 1979. <!-- DO UZUPEŁNIENIA: materiał, opis formy rzeźby -->",
         "This is the only stop on this route where you can sit down, have a coffee and use a toilet — for older visitors, that's practical information, not just a curiosity. Ewelina café is open every day. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ]
