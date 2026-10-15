@@ -70,8 +70,8 @@ var RZEZBY = [
     },
 
     lokalizacja: {
-      pl: "Park Zdrojowy, przy Pałacu Małachowskich",
-      en: "Spa Park (Park Zdrojowy), by the Małachowski Palace (Pałac Małachowskich)"
+      pl: "Park Zdrojowy, przy stawie, przed sanatorium im. Księcia Józefa",
+      en: "Spa Park (Park Zdrojowy), by the pond, in front of the Prince Józef Sanatorium"
     },
     adres: "Aleja St. Małachowskiego 3, 24-140 Nałęczów",
 
@@ -143,19 +143,19 @@ var RZEZBY = [
   },
 
   {
-    id: "alejka-strzyzynskiego",
+    id: "aleja-strzyzynskiego",
     nrTrasy: 2,
 
-    slug: { pl: "alejka-strzyzynskiego", en: "strzyzynski-alley" },
+    slug: { pl: "aleja-strzyzynskiego", en: "strzyzynski-alley" },
 
     tytul: {
-      pl: "Alejka Strzyżyńskiego",
+      pl: "Aleja Strzyżyńskiego",
       en: "Strzyżyński Alley"
     },
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
-    // i na kafelkach zostaje krótkie "Alejka Strzyżyńskiego" (pole tytul).
+    // i na kafelkach zostaje krótkie "Aleja Strzyżyńskiego" (pole tytul).
     tytulStrony: {
-      pl: "Alejka Stanisława Strzyżyńskiego - rzeźba Drzewo genealogiczne",
+      pl: "Aleja Stanisława Strzyżyńskiego - rzeźba Drzewo genealogiczne",
       en: "Stanisław Strzyżyński Alley"
     },
 
@@ -184,13 +184,13 @@ var RZEZBY = [
     media: {
       typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/alejka-strzyzynskiego.mp3"
+      audioSrc: "./audio/aleja-strzyzynskiego.mp3"
     },
 
-    miniatura: "./img/alejka-strzyzynskiego-mini.svg",
+    miniatura: "./img/aleja-strzyzynskiego-mini.svg",
     zdjecia: [
       {
-        src: "./img/alejka-strzyzynskiego-1.svg",
+        src: "./img/aleja-strzyzynskiego-1.svg",
         w: 800,
         h: 600,
         alt: {
@@ -203,7 +203,7 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/alejka-strzyzynskiego-2.svg",
+        src: "./img/aleja-strzyzynskiego-2.svg",
         w: 800,
         h: 600,
         alt: {
@@ -229,12 +229,14 @@ var RZEZBY = [
 
     opisPelny: {
       pl: [
-        "Drzewo genealogiczne to abstrakcyjna, organiczna forma rzeźbiarska powstała w 1977 roku, wykonana ze sztucznego kamienia. Rozgałęziający się kształt przywołuje na myśl konar drzewa i jest odczytywany jako symbol więzów rodzinnych, ciągłości pokoleń i splatających się ludzkich losów. <!-- DO UZUPEŁNIENIA: okoliczności powstania, symbolika w interpretacji autora -->",
+        "Drzewo genealogiczne to abstrakcyjna, organiczna forma rzeźbiarska powstała w 1977 roku, wykonana ze sztucznego kamienia. Rozgałęziający się kształt przywołuje na myśl konar drzewa i jest odczytywany jako symbol więzów rodzinnych, ciągłości pokoleń i splatających się ludzkich losów. <!-- DO UZUPEŁNIENIA: symbolika w interpretacji autora -->",
+        "Rzeźba powstała podczas pleneru zorganizowanego przez Jarosława Olejnickiego, prezesa Towarzystwa Przyjaciół Nałęczowa. Wzdłuż alei stoją tablice przedstawiające biografię artysty.",
         "Rzeźba stoi w Alei Stanisława Strzyżyńskiego w Parku Zdrojowym — alei, która nosi imię samego artysty. To szczególny, rzadko spotykany zbieg okoliczności: twórca spaceruje po parku razem z odwiedzającymi, obecny nie tylko w swoich dziełach, ale i w nazwie miejsca. <!-- DO UZUPEŁNIENIA: historia nadania nazwy alei -->",
         "Forma dzieła pozostaje otwarta na interpretację — dla jednych to genealogiczne drzewo rodu, dla innych uniwersalny symbol wzrostu i wzajemnych powiązań. <!-- DO UZUPEŁNIENIA: kontekst w twórczości Strzyżyńskiego, ewentualne inne realizacje o podobnej tematyce -->"
       ],
       en: [
-        "Family Tree is an abstract, organic sculptural form created in 1977, made of artificial stone. Its branching shape evokes the bough of a tree and is read as a symbol of family ties, the continuity of generations, and intertwining human fates. <!-- DO UZUPEŁNIENIA: okoliczności powstania, symbolika w interpretacji autora -->",
+        "Family Tree is an abstract, organic sculptural form created in 1977, made of artificial stone. Its branching shape evokes the bough of a tree and is read as a symbol of family ties, the continuity of generations, and intertwining human fates. <!-- DO UZUPEŁNIENIA: symbolika w interpretacji autora -->",
+        "The sculpture was created during a plein-air sculpture workshop organised by Jarosław Olejnicki, chairman of the Society of Friends of Nałęczów (Towarzystwo Przyjaciół Nałęczowa). Plaques presenting the artist's biography stand along the alley.",
         "The sculpture stands in Stanisław Strzyżyński Alley in the Spa Park — an alley that bears the artist's own name. It is a special, rarely seen coincidence: the creator walks through the park together with visitors, present not only in his works but also in the name of the place. <!-- DO UZUPEŁNIENIA: historia nadania nazwy alei -->",
         "The form of the work remains open to interpretation — for some it is a family's genealogical tree, for others a universal symbol of growth and interconnection. <!-- DO UZUPEŁNIENIA: kontekst w twórczości Strzyżyńskiego, ewentualne inne realizacje o podobnej tematyce -->"
       ]
@@ -299,8 +301,8 @@ var RZEZBY = [
     wspolrzedne: [51.28521977620118, 22.218260265804872], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
 
     infoPraktyczne: {
-      pl: "To jedyny punkt trasy z kawą, toaletą i miejscem do siedzenia. Kawiarnia Ewelina czynna codziennie 10:00–21:00 // GODZINY DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ",
-      en: "This is the only stop on the route with coffee, a toilet and seating. Ewelina café is open daily 10:00–21:00 // HOURS TO VERIFY BEFORE PUBLICATION"
+      pl: "To jedyny punkt trasy z kawą, toaletą i miejscem do siedzenia.",
+      en: "This is the only stop on the route with coffee, a toilet and seating."
     },
 
     media: {
@@ -352,12 +354,12 @@ var RZEZBY = [
     opisPelny: {
       pl: [
         "Panna z Rybą to rzeźba osadzona w fontannie przed willą „Pod Matką Boską” przy ulicy Lipowej 16, w której dziś mieści się kawiarnia Ewelina. Powstała w 1979 roku. <!-- DO UZUPEŁNIENIA: materiał, opis formy rzeźby -->",
-        "To jedyny punkt tej trasy, przy którym można usiąść, wypić kawę i skorzystać z toalety — dla starszych odwiedzających to praktyczna informacja, nie tylko ciekawostka. Kawiarnia Ewelina jest czynna codziennie. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
+        "To jedyny punkt tej trasy, przy którym można usiąść, wypić kawę i skorzystać z toalety — dla starszych odwiedzających to praktyczna informacja, nie tylko ciekawostka.",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ],
       en: [
         "The Maiden with a Fish is a sculpture set in the fountain in front of the \"Pod Matką Boską\" villa at 16 Lipowa Street, now home to Ewelina café. It was created in 1979. <!-- DO UZUPEŁNIENIA: materiał, opis formy rzeźby -->",
-        "This is the only stop on this route where you can sit down, have a coffee and use a toilet — for older visitors, that's practical information, not just a curiosity. Ewelina café is open every day. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
+        "This is the only stop on this route where you can sit down, have a coffee and use a toilet — for older visitors, that's practical information, not just a curiosity.",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ]
     }

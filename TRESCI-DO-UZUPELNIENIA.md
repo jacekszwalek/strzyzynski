@@ -29,9 +29,9 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 | `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie (220×165) i kafelek na stronie głównej |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `alejka-strzyzynskiego-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
-| `alejka-strzyzynskiego-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
-| `alejka-strzyzynskiego-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `aleja-strzyzynskiego-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `aleja-strzyzynskiego-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
+| `aleja-strzyzynskiego-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
 | `panna-z-ryba-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
 | `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
@@ -103,26 +103,24 @@ w `data/rzezby.js`.
   - wzbogacenie krótszego opisu redakcyjnego (`opisPelny` w
     `data/rzezby.js`) tymi samymi szczegółami,
   - związki Prusa z Nałęczowem, kontekst literacki.
-- **Alejka Stanisława Strzyżyńskiego / Drzewo genealogiczne**
-  (`alejka-strzyzynskiego/index.html`, adres `/alejka-strzyzynskiego/`) —
-  do dostarczenia:
-  - okoliczności powstania rzeźby,
+- **Aleja Strzyżyńskiego / Drzewo genealogiczne**
+  (`aleja-strzyzynskiego/index.html`, adres `/aleja-strzyzynskiego/`) —
+  **ZROBIONE, decyzja podjęta:** nazwa krótka (menu/kafelki) i adres
+  podstrony to teraz "Aleja Strzyżyńskiego" / `/aleja-strzyzynskiego/`
+  (wcześniej "Alejka Strzyżyńskiego" / `/alejka-strzyzynskiego/`), nazwa
+  długa (tytuł podstrony) to "Aleja Stanisława Strzyżyńskiego - rzeźba
+  Drzewo genealogiczne". Zmiana obejmuje też pliki (audio, zdjęcia) i
+  wszystkie linki w nawigacji oraz `sitemap.xml`.
+  Dodane fakty (na podstawie informacji od Doroty Strzyżyńskiej): plener,
+  w ramach którego powstała rzeźba, zorganizował Jarosław Olejnicki,
+  prezes Towarzystwa Przyjaciół Nałęczowa, a wzdłuż alei stoją tablice
+  z biografią artysty.
+  Do dalszego dostarczenia:
+  - okoliczności powstania rzeźby (więcej szczegółów niż plener),
   - historia nadania nazwy alei,
   - kontekst w twórczości artysty,
   - nagranie i transkrypcja (patrz sekcja 2) — po ich dostarczeniu opis
-    będzie można wzbogacić podobnie jak przy innych rzeźbach,
-  - **decyzja (nie materiał do dostarczenia) — nazewnictwo tego
-    przystanku:** potrzebne potwierdzenie, jak ma być prezentowany ten
-    przystanek — jako "Alejka Stanisława Strzyżyńskiego" czy jako "Drzewo
-    genealogiczne"? Obecnie: nazwa krótka (menu/kafelki) to "Alejka
-    Strzyżyńskiego", nazwa długa (tytuł podstrony) to "Alejka Stanisława
-    Strzyżyńskiego - rzeźba Drzewo genealogiczne". Jacek: uważa, że
-    atrakcją jest rzeźba, a nie sama alejka — do rozważenia zamiana
-    akcentu (np. krótka nazwa "Drzewo genealogiczne", długa z alejką jako
-    kontekstem, albo odwrotnie). Potrzebne są **obie wersje nazwy**:
-    krótka (do menu) i długa (na podstronę, `<title>`/`<h1>`) — w PL
-    i EN. **Tę decyzję trzeba podjąć teraz, przed ustaleniem adresów
-    i wydrukiem kodów QR — później nie powinno się już tego zmieniać.**
+    będzie można wzbogacić podobnie jak przy innych rzeźbach.
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres `/panna-z-ryba/`) —
   rok powstania już potwierdzony (1979, z transkrypcji nagrania). Do
   dostarczenia:
@@ -139,9 +137,12 @@ w `data/rzezby.js`.
     wspominała już o telefonie, skoro na stronie nie będzie żadnego
     numeru do podania,
   - materiał rzeźby (`material` w danych ma wartość `null`) — nieznany,
-  - historia willi „Pod Matką Boską",
-  - godziny otwarcia kawiarni Ewelina — do zweryfikowania przed
-    publikacją.
+  - historia willi „Pod Matką Boską".
+
+  Godziny otwarcia kawiarni Ewelina — **ZROBIONE, decyzja podjęta**:
+  nie zostały zweryfikowane, więc zgodnie z decyzją właściciela
+  repozytorium ta informacja została usunięta ze strony (nie podajemy
+  niesprawdzonych godzin).
 - **Kamień papieski** (`kamien-papieski/index.html`, adres
   `/kamien-papieski/`) — rok powstania, materiał i autorstwo już
   potwierdzone (transkrypcja nagrania + wiadomość właściciela
@@ -152,7 +153,7 @@ w `data/rzezby.js`.
 - **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) — do
   dostarczenia:
   - rozwinięcie celu projektu,
-  - pełny opis roli Fundacji Dom i Sztuka,
+  - pełny opis roli Fundacji Sztuka i Dom,
   - podziękowania,
   - informacja o finansowaniu,
   - lista źródeł,
@@ -168,7 +169,7 @@ w `data/rzezby.js`.
     formacie ma być logotyp/informacja; czy wymagane jest umieszczenie
     danych kontaktowych (łącznie z numerem telefonu?) — jeśli tak, to
     gdzie (tylko w stopce, czy osobna sekcja) i czy mają to być dane do
-    Fundacji Dom i Sztuka / sztukaidom.com, czy bezpośrednio do
+    Fundacji Sztuka i Dom / sztukaidom.com, czy bezpośrednio do
     Zbigniewa Strzyżyńskiego.
 
   (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
@@ -210,7 +211,6 @@ tłumaczyć, dopóki polski tekst nie powstanie.
 - **Opisy dostępności** (`dostepnosc`) przy wszystkich czterech punktach —
   nawierzchnia, schody, ławki, dojazd wózkiem — obecne opisy to szkic do
   potwierdzenia na miejscu.
-- **Godziny otwarcia kawiarni Ewelina** — przed publikacją.
 
 ---
 
@@ -220,35 +220,35 @@ Wdrożenie na GitHub Pages jest zrobione — strona działa pod
 `https://jacekszwalek.github.io/strzyzynski/`, a ten adres jest już
 wpisany w `qr/base-url.js`, `sitemap.xml` i `robots.txt`.
 
-**Priorytet, decyzja do podjęcia: czy zostajemy przy adresie
-`github.io`, czy kupujemy własną domenę?** Propozycje nazw domeny (do
-wyboru lub zaproponowania własnej):
-- `sladamistrzyzynskiego.pl`
-- `sladamiartysty.pl`
-- `spacerstrzyzynskiego.pl`
-- `spacer.strzyzynski.pl`
+**ZROBIONE, decyzja podjęta: domena `sladamistrzyzynskiego.pl`.**
+`qr/base-url.js` został już podmieniony na ten adres.
 
-Gdy domena zostanie wybrana i kupiona, trzeba: podmienić adres w
-`qr/base-url.js`, `sitemap.xml` i `robots.txt`, oraz skonfigurować ją
-w ustawieniach GitHub Pages repozytorium (plik `CNAME`).
+**Wciąż do zrobienia (poza Claude, krok zewnętrzny):**
+- wykupienie domeny `sladamistrzyzynskiego.pl`,
+- podłączenie jej do GitHub Pages: dodanie pliku `CNAME` w repozytorium
+  (do ustalenia w kolejnym kroku, gdy domena będzie wykupiona) oraz
+  konfiguracja DNS u rejestratora domeny,
+- podmiana adresu w `sitemap.xml` i `robots.txt` — **dopiero gdy domena
+  faktycznie działa**, żeby nie zepsuć wyszukiwania i nawigacji na
+  aktualnie żywej stronie `github.io` w międzyczasie.
 
-**Ta decyzja blokuje projekt kodów QR** (patrz sekcja 7 niżej) — kody QR
-kodują bezpośrednio adres strony, więc ich ostateczny projekt/wydruk nie
-powinien powstać, dopóki adres nie jest już ostatecznie ustalony.
+**Ta decyzja odblokowuje projekt kodów QR** (patrz sekcja 7 niżej) — kody
+QR mogą teraz być projektowane pod docelowy adres.
 
 ---
 
-## 7. Kody QR — projekt zablokowany do czasu dwóch decyzji
+## 7. Kody QR
 
-Zanim kody QR będą gotowe do finalnego zaprojektowania i wydruku,
-potrzebne są **dwie decyzje**:
-1. **Domena/adres strony** (patrz sekcja 6) — każdy kod QR koduje
-   bezpośrednio pełny adres URL; zmiana domeny po wydruku oznacza, że
-   wydrukowane kody przestają działać.
-2. **Finalny adres podstrony Alejka Strzyżyńskiego / Drzewo
-   genealogiczne** (patrz sekcja 3) — ten punkt trasy wciąż czeka na
-   decyzję nazewniczą, od której zależy, czy adres `/alejka-strzyzynskiego/`
-   zostanie, czy się zmieni.
+**ZROBIONE:** obie decyzje blokujące projekt kodów QR zostały podjęte —
+domena (`sladamistrzyzynskiego.pl`, patrz sekcja 6) i finalny adres
+podstrony Aleja Strzyżyńskiego (`/aleja-strzyzynskiego/`, patrz sekcja 3).
+
+**ZROBIONE, decyzja podjęta: tabliczki z kodem QR przy każdej rzeźbie są
+skasowane z planu.** Kody QR będą rozprowadzane wyłącznie przez
+pocztówkę/ulotkę (patrz sekcja 8) — nie będzie fizycznych tabliczek
+z kodem QR montowanych przy rzeźbach w terenie. Teksty na stronie
+głównej ("Jak korzystać ze spaceru") zostały poprawione, żeby nie
+odwoływały się do skanowania kodu przy rzeźbie.
 
 Narzędzie `qr/generator.html` jest już gotowe i rozbudowane o:
 - podgląd i pobieranie kodów QR dla wszystkich rzeźb (PL + EN),

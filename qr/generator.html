@@ -21,18 +21,17 @@
   <h1>Generator kodów QR</h1>
   <p class="content">
     Generuje kody QR (SVG, poziom korekcji błędów H — 30%, odporny na
-    zabrudzenie i wilgoć tabliczki) prowadzące do każdej podstrony rzeźby,
-    osobno dla wersji polskiej i angielskiej. Dane pobierane są z
-    <code>data/rzezby.js</code> — jedynego źródła prawdy.
+    zabrudzenia) prowadzące do każdej podstrony rzeźby, osobno dla wersji
+    polskiej i angielskiej. Dane pobierane są z <code>data/rzezby.js</code>
+    — jedynego źródła prawdy.
   </p>
 
   <div class="qr-tool-panel">
     <h2 style="margin-top:0">Adres bazowy (BASE_URL)</h2>
     <p>
-      Zanim wydrukujesz tabliczki, ustaw stałą <code>QR_BASE_URL</code>
-      w pliku <code>qr/base-url.js</code> na adres Twojej strony po wdrożeniu
-      na GitHub Pages, np. <code>https://twoj-login.github.io/nazwa-repo/</code>.
-      Ta sama wartość jest używana na stronie <code>qr/tabliczki.html</code>.
+      Stała <code>QR_BASE_URL</code> w pliku <code>qr/base-url.js</code>
+      ustawia adres Twojej strony po wdrożeniu na GitHub Pages lub pod
+      własną domeną, np. <code>https://twoj-login.github.io/nazwa-repo/</code>.
       Instrukcja krok po kroku jest w <code>README.md</code>.
     </p>
     <div class="base-url-box">
@@ -57,12 +56,12 @@
   </p>
   <div class="qr-preview-grid" id="qr-homepage-grid"></div>
 
-  <h2>Wejście z plakatu</h2>
+  <h2>Wejście z plakatu / pocztówki</h2>
   <p class="content">
-    Osobny kod QR dla plakatu promującego spacer — prowadzi na stronę
-    główną przez krótkie przekierowanie (tak jak kody na tabliczkach przy
-    rzeźbach), dzięki czemu w statystykach będzie widać osobno, ile osób
-    weszło na stronę zeskanowawszy plakat.
+    Osobny kod QR dla plakatu lub pocztówki promującej spacer — prowadzi
+    na stronę główną przez krótkie przekierowanie, dzięki czemu w
+    statystykach będzie widać osobno, ile osób weszło na stronę
+    zeskanowawszy materiał promocyjny.
   </p>
   <div class="qr-preview-grid" id="qr-poster-grid"></div>
 
