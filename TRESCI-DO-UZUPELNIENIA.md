@@ -99,53 +99,72 @@ dodatkowych szczegółów. Szukaj tego komentarza w plikach `*.html` oraz
 w `data/rzezby.js`.
 
 - **Strona główna** (`index.html`, adres `/`) — biogram Stanisława
-  Strzyżyńskiego, 4 podsekcje: Młodość i wykształcenie, Nałęczów, Twórczość,
-  Poza Nałęczowem.
+  Strzyżyńskiego. Do dostarczenia (opcjonalnie, nie blokuje publikacji):
+  - dodatkowe fakty z okresu studiów,
+  - szczegóły okoliczności przeprowadzki do Nałęczowa,
+  - pełny wykaz najważniejszych realizacji,
+  - więcej kontekstu wokół konkursu na Pomnik Walki i Męczeństwa na Majdanku.
 - **Ławeczka Prusa** (`laweczka-prusa/index.html`, adres `/laweczka-prusa/`)
   — fundator, przebieg prac i szczegóły współpracy ojca i syna są już
   opisane w pełnej transkrypcji nagrania (sekcja „Transkrypcja" na
-  podstronie). Krótszy opis redakcyjny (`opisPelny` w `data/rzezby.js`)
-  nie został jeszcze wzbogacony tymi szczegółami oraz związkami Prusa
-  z Nałęczowem — do ewentualnego uzupełnienia, ale nie blokuje publikacji.
-- **Alejka Strzyżyńskiego** (`alejka-strzyzynskiego/index.html`, adres
-  `/alejka-strzyzynskiego/`) — **priorytet: potrzebne potwierdzenie, jak ma
-  być prezentowany przystanek nr 2 — jako "Alejka Stanisława
-  Strzyżyńskiego" czy jako "Drzewo genealogiczne"?** Obecnie: nazwa krótka
-  (menu/kafelki) to "Alejka Strzyżyńskiego", nazwa długa (tytuł podstrony)
-  to "Alejka Stanisława Strzyżyńskiego - rzeźba Drzewo genealogiczne".
-  Jacek: uważa, że atrakcją jest rzeźba, a nie sama alejka — do rozważenia
-  zamiana akcentu (np. krótka nazwa "Drzewo genealogiczne", długa z alejką
-  jako kontekstem, albo odwrotnie). Potrzebne są **obie wersje nazwy**:
-  krótka (do menu) i długa (na podstronę, `<title>`/`<h1>`) — w PL i EN.
-  **Tę decyzję trzeba podjąć teraz, przed ustaleniem adresów i wydrukiem
-  kodów QR — później nie powinno się już tego zmieniać.** Dodatkowo
-  nadal otwarte: okoliczności powstania, historia nadania nazwy alei,
-  kontekst w twórczości artysty. Czeka też na nagranie
-  i transkrypcję (patrz sekcja 2) — po ich dostarczeniu opis będzie
-  można wzbogacić podobnie jak przy innych rzeźbach.
-- **Panna z rybą** (`panna-z-ryba/index.html`, adres
-  `/panna-z-ryba/`) — rok powstania już potwierdzony (1979, z transkrypcji
-  nagrania). **Materiał rzeźby wciąż nieznany** (`material` w danych ma
-  wartość `null`) — do ustalenia. Historia willi „Pod Matką Boską" wciąż
-  do uzupełnienia, **godziny otwarcia kawiarni do zweryfikowania przed
-  publikacją**. **Priorytet: transkrypcja nagrania (sekcja „Transkrypcja"
-  na tej podstronie, PL i EN) zaprasza do kontaktu telefonicznego w celu
-  umówienia wizyty w pracowni („Zapraszam do kontaktu telefonicznego
-  i umówienia wizyty"), ale na stronie nigdzie nie podano numeru telefonu.
-  Trzeba dostarczyć ogólnodostępny numer i umieścić go w widocznym miejscu
-  na tej podstronie (np. przy transkrypcji albo w sekcji „Informacje
-  praktyczne") — w obu wersjach językowych.**
+  podstronie). Do dostarczenia (opcjonalnie, nie blokuje publikacji):
+  - wzbogacenie krótszego opisu redakcyjnego (`opisPelny` w
+    `data/rzezby.js`) tymi samymi szczegółami,
+  - związki Prusa z Nałęczowem, kontekst literacki.
+- **Panna z rybą** (`panna-z-ryba/index.html`, adres `/panna-z-ryba/`) —
+  rok powstania już potwierdzony (1979, z transkrypcji nagrania). Do
+  dostarczenia:
+  - **priorytet: ogólnodostępny numer telefonu** — transkrypcja nagrania
+    (sekcja „Transkrypcja" na tej podstronie, PL i EN) zaprasza do
+    kontaktu telefonicznego w celu umówienia wizyty w pracowni
+    („Zapraszam do kontaktu telefonicznego i umówienia wizyty"), ale na
+    stronie nigdzie nie podano numeru. Trzeba go umieścić w widocznym
+    miejscu na tej podstronie (np. przy transkrypcji albo w sekcji
+    „Informacje praktyczne") — w obu wersjach językowych,
+  - materiał rzeźby (`material` w danych ma wartość `null`) — nieznany,
+  - historia willi „Pod Matką Boską",
+  - godziny otwarcia kawiarni Ewelina — do zweryfikowania przed
+    publikacją.
 - **Kamień papieski** (`kamien-papieski/index.html`, adres
   `/kamien-papieski/`) — rok powstania, materiał i autorstwo już
   potwierdzone (transkrypcja nagrania + wiadomość właściciela
-  repozytorium). Pozostaje do uzupełnienia: dokładna data i okoliczności
-  pobytu kardynała w Nałęczowie, treść tablicy pamiątkowej, dokładny adres.
-- **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) —
-  rozwinięcie celu projektu, pełny opis roli Fundacji Dom i Sztuka,
-  podziękowania, informacja o finansowaniu,
-  lista źródeł, nazwa i zakres projektu wspomnianego w sekcji „Część
-  większego projektu". Strona nie ma już sekcji kontaktowej (usunięta
-  na prośbę właściciela repozytorium).
+  repozytorium). Do dostarczenia:
+  - dokładna data i okoliczności pobytu kardynała w Nałęczowie,
+  - treść tablicy pamiątkowej,
+  - dokładny adres.
+- **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) — do
+  dostarczenia:
+  - rozwinięcie celu projektu,
+  - pełny opis roli Fundacji Dom i Sztuka,
+  - podziękowania,
+  - informacja o finansowaniu,
+  - lista źródeł,
+  - nazwa i zakres projektu wspomnianego w sekcji „Część większego
+    projektu".
+
+  (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
+  repozytorium.)
+- **Alejka Strzyżyńskiego** (`alejka-strzyzynskiego/index.html`, adres
+  `/alejka-strzyzynskiego/`) — do dostarczenia:
+  - okoliczności powstania rzeźby,
+  - historia nadania nazwy alei,
+  - kontekst w twórczości artysty.
+
+  Czeka też na nagranie i transkrypcję (patrz sekcja 2) — po ich
+  dostarczeniu opis będzie można wzbogacić podobnie jak przy innych
+  rzeźbach.
+- **Decyzja (nie materiał do dostarczenia) — nazewnictwo przystanku nr 2:**
+  potrzebne potwierdzenie, jak ma być prezentowana Alejka Strzyżyńskiego —
+  jako "Alejka Stanisława Strzyżyńskiego" czy jako "Drzewo genealogiczne"?
+  Obecnie: nazwa krótka (menu/kafelki) to "Alejka Strzyżyńskiego", nazwa
+  długa (tytuł podstrony) to "Alejka Stanisława Strzyżyńskiego - rzeźba
+  Drzewo genealogiczne". Jacek: uważa, że atrakcją jest rzeźba, a nie sama
+  alejka — do rozważenia zamiana akcentu (np. krótka nazwa "Drzewo
+  genealogiczne", długa z alejką jako kontekstem, albo odwrotnie).
+  Potrzebne są **obie wersje nazwy**: krótka (do menu) i długa (na
+  podstronę, `<title>`/`<h1>`) — w PL i EN. **Tę decyzję trzeba podjąć
+  teraz, przed ustaleniem adresów i wydrukiem kodów QR — później nie
+  powinno się już tego zmieniać.**
 
 ---
 
