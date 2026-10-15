@@ -42,9 +42,14 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
 miniatur — nie potrzebuje więc osobnego zdjęcia.
 
-Opcjonalnie: `og-cover.jpg` (1200×630) — obecnie wygenerowany prosty
-placeholder tekstowy używany w podglądach na Facebooku/WhatsAppie. Można
-podmienić na złożenie z prawdziwym zdjęciem, gdy będzie dostępne.
+Opcjonalnie: `og-cover.jpg` (1200×630) — to duże zdjęcie, które pojawia
+się automatycznie, gdy ktoś wklei link do tej strony w Messengerze,
+WhatsAppie, Facebooku czy na X/Twitterze — razem z tytułem i krótkim
+opisem, jako podgląd tego, co kryje się pod linkiem (tak jak przy
+wklejaniu linku do artykułu czy filmu). Obecnie jest to prosty,
+wygenerowany placeholder z samym tekstem. Można podmienić na złożenie
+z prawdziwym zdjęciem (np. kolaż kilku rzeźb), gdy będzie dostępne —
+ale strona działa poprawnie i bez tego.
 
 ---
 
