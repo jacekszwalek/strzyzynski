@@ -75,9 +75,6 @@ identyfikator bezpośrednio w `index.html`/`en/index.html`, a nie w polu
 ### 2b. Nagrania przy rzeźbach — audio, 3 z 4 ZROBIONE, 1 w toku
 
 Dla każdej rzeźby: **plik audio MP3** plus transkrypcja tekstowa (PL + EN).
-Pole `youtubeId` przy każdej rzeźbie w `data/rzezby.js` jest nieużywane
-(`media.typ` ustawione na `"audio"`) — zostaje na wszelki wypadek, ale nie
-trzeba go wypełniać.
 
 | Rzeźba | Status |
 |---|---|
