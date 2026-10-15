@@ -172,10 +172,13 @@ tłumaczyć, dopóki polski tekst nie powstanie.
 
 ## 5. Dane do zweryfikowania w terenie
 
-- **Współrzędne wszystkich czterech punktów** pochodzą już z pomiaru GPS
-  w terenie (2026-10-12) — nie wymagają dalszej weryfikacji.
-- **Autorstwo pomnika kardynała Karola Wojtyły** — potwierdzone: Stanisław
-  Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim.
+- **Współrzędne wszystkich czterech punktów** (pole `wspolrzedne` w
+  `data/rzezby.js`) zostały na razie tylko **odczytane z mapy** —
+  **konieczne jest potwierdzenie na żywo, w terenie**, przed wydrukiem
+  kodów QR.
+- **Materiał rzeźby Panna z rybą** — brak informacji (`material` w danych
+  ma wartość `null`). Do ustalenia, najpewniej przez obejrzenie rzeźby na
+  miejscu (patrz też sekcja 3).
 - **Opisy dostępności** (`dostepnosc`) przy wszystkich czterech punktach —
   nawierzchnia, schody, ławki, dojazd wózkiem — obecne opisy to szkic do
   potwierdzenia na miejscu.
