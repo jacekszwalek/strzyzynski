@@ -253,7 +253,7 @@ var RZEZBY = [
   },
 
   {
-    id: "kawiarnia-ewelina",
+    id: "panna-z-ryba",
     nrTrasy: 4,
 
     slug: { pl: "panna-z-ryba", en: "maiden-with-a-fish" },
@@ -319,13 +319,13 @@ var RZEZBY = [
     media: {
       typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/kawiarnia-ewelina.mp3"
+      audioSrc: "./audio/panna-z-ryba.mp3"
     },
 
-    miniatura: "./img/kawiarnia-ewelina-mini.svg",
+    miniatura: "./img/panna-z-ryba-mini.svg",
     zdjecia: [
       {
-        src: "./img/kawiarnia-ewelina-1.svg",
+        src: "./img/panna-z-ryba-1.svg",
         w: 800,
         h: 600,
         alt: {
@@ -338,7 +338,7 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/kawiarnia-ewelina-2.svg",
+        src: "./img/panna-z-ryba-2.svg",
         w: 800,
         h: 600,
         alt: {
@@ -379,7 +379,7 @@ var RZEZBY = [
   },
 
   {
-    id: "pomnik-wojtyla",
+    id: "kamien-papieski",
     nrTrasy: 3,
 
     slug: { pl: "kamien-papieski", en: "papal-stone" },
@@ -443,13 +443,13 @@ var RZEZBY = [
     media: {
       typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/pomnik-wojtyla.mp3"
+      audioSrc: "./audio/kamien-papieski.mp3"
     },
 
-    miniatura: "./img/pomnik-wojtyla-mini.svg",
+    miniatura: "./img/kamien-papieski-mini.svg",
     zdjecia: [
       {
-        src: "./img/pomnik-wojtyla-1.svg",
+        src: "./img/kamien-papieski-1.svg",
         w: 800,
         h: 600,
         alt: {
@@ -462,7 +462,7 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/pomnik-wojtyla-2.svg",
+        src: "./img/kamien-papieski-2.svg",
         w: 800,
         h: 600,
         alt: {
