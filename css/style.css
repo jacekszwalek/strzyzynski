@@ -783,8 +783,26 @@ body.tone-solemn .media-section {
   height: 1.5rem;
 }
 
-/* Natywny <input type="range"> — cienki tor (nieodtworzony odcinek),
-   pełna obsługa klawiatury/dotyku/czytników ekranu bez dodatkowego JS. */
+/* Statyczny tor pod spodem (cały odcinek, nieodtworzony kolor) — osobna
+   warstwa, żeby natywny tor suwaka nie prześwitywał przez nakładkę
+   odtworzonego odcinka (.audio-progress-played) cieńszą, jaśniejszą kreską. */
+.audio-progress-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  height: 0.25rem;
+  border-radius: 999px;
+  background: var(--color-border);
+}
+
+/* Natywny <input type="range"> — pełna obsługa klawiatury/dotyku/czytników
+   ekranu bez dodatkowego JS. Jego własny tor jest przezroczysty (tor
+   widoczny to warstwa .audio-progress-wrap::before pod spodem) — inaczej
+   przebijałby przez ciemną nakładkę odtworzonego odcinka. */
 .audio-progress {
   -webkit-appearance: none;
   appearance: none;
@@ -795,8 +813,8 @@ body.tone-solemn .media-section {
   background: transparent;
   cursor: pointer;
 }
-.audio-progress::-webkit-slider-runnable-track { height: 0.25rem; border-radius: 999px; background: var(--color-border); }
-.audio-progress::-moz-range-track { height: 0.25rem; border-radius: 999px; background: var(--color-border); }
+.audio-progress::-webkit-slider-runnable-track { height: 0.25rem; border-radius: 999px; background: transparent; }
+.audio-progress::-moz-range-track { height: 0.25rem; border-radius: 999px; background: transparent; }
 .audio-progress::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1.3rem; height: 1.3rem;
