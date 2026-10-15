@@ -261,7 +261,23 @@ var RZEZBY = [
       en: "The Maiden with a Fish at Ewelina Café"
     },
 
-    rok: null, // DO UZUPEŁNIENIA — rok powstania rzeźby Panna z Rybą nieustalony
+    // Prawdziwa transkrypcja nagrania (od Zbigniewa Strzyżyńskiego) —
+    // jeśli obecna, zastępuje domyślny placeholder "Lorem ipsum" w
+    // sekcji transkrypcji na tej konkretnej podstronie. Sformatowana
+    // (interpunkcja, podział na akapity) na podstawie tekstu dostarczonego
+    // przez właściciela repozytorium — treść słowna bez zmian.
+    transkrypcja: {
+      pl: `<p>Panna z rybą, umieszczona w fontannie w ogrodzie znanej i lubianej kawiarni Ewelina, powstała w 1979 roku. Zamówiła ją ówczesna właścicielka kawiarni — Ewelina Bartosiewicz. Projekty Panny z rybą ojciec robił już w latach 50-tych. Zachowały się nawet zdjęcia małych, gipsowych projektów.</p>
+        <p>W ogrodzie mogą Państwo zobaczyć też sporo innych rzeźb — zarówno plenerowych, a we wnętrzu portretowych. Wyrzeźbił m.in. też ich właścicielkę Ewelina Bartosiewicz. Znajduje się tam też głowa Władysława Tatarkiewicza, którego rzeźbił z natury — z tej właśnie głowy później wykonywał popiersie o ponadnaturalnej wielkości, które znajduje się w palmiarni w Parku Zdrojowym.</p>
+        <p>Jeżeli Państwo pójdą kawałek dalej, ulicą Lipową, w prawo jest uliczka Bolesława Prusa. Tam znajduje się dom i pracownia Stanisława Strzyżyńskiego.</p>
+        <p>Rzeźby, jeżeli Państwo będą chcieli obejrzeć z bliska, można zobaczyć w pracowni. Zapraszam do kontaktu telefonicznego, umówienia wizyty. Do zobaczenia w pracowni Stanisława Strzyżyńskiego.</p>`,
+      en: `<p>The Maiden with a Fish, placed in the fountain in the garden of the well-known and much-loved Ewelina café, was created in 1979. It was commissioned by the café's owner at the time — Ewelina Bartosiewicz. My father had already made designs for the Maiden with a Fish back in the 1950s. Photographs of the small plaster designs have even survived.</p>
+        <p>In the garden you can also see quite a few other sculptures — both outdoor pieces and, inside, portrait busts. Among others, he also sculpted the owner herself, Ewelina Bartosiewicz. There is also a head of Władysław Tatarkiewicz, whom he sculpted from life — it was from this very head that he later made the larger-than-life bust now in the Palm House in the Spa Park.</p>
+        <p>If you walk a little further along Lipowa Street and turn right, you'll find Bolesław Prus Lane. That is where Stanisław Strzyżyński's house and studio are located.</p>
+        <p>If you would like to see the sculptures up close, you can view them in the studio. You're welcome to get in touch by phone to arrange a visit. See you at Stanisław Strzyżyński's studio.</p>`
+    },
+
+    rok: 1979, // z transkrypcji nagrania (Zbigniew Strzyżyński)
     dataOdsloniecia: { pl: null, en: null },
 
     material: { pl: null, en: null }, // DO UZUPEŁNIENIA — materiał rzeźby Panna z Rybą nieustalony
@@ -367,7 +383,28 @@ var RZEZBY = [
       en: "Papal Stone"
     },
 
-    rok: null, // DO UZUPEŁNIENIA — rok powstania nieustalony
+    // Prawdziwa transkrypcja nagrania (od Zbigniewa Strzyżyńskiego) —
+    // jeśli obecna, zastępuje domyślny placeholder "Lorem ipsum" w
+    // sekcji transkrypcji na tej konkretnej podstronie. Sformatowana
+    // (interpunkcja, podział na akapity) na podstawie tekstu dostarczonego
+    // przez właściciela repozytorium — treść słowna bez zmian.
+    // Uwaga: "kapicy św. Karola Boromeusza" (zamiast "kaplicy", jak wcześniej
+    // w tym samym tekście) wygląda na literówkę — zostawione tak, jak
+    // dostarczono, do ewentualnej weryfikacji.
+    transkrypcja: {
+      pl: `<p>Kamień papieski wraz z tablicą poświęconą pobytom kardynała Karola Wojtyły w Nałęczowie powstał w 1999 roku.</p>
+        <p>Kardynał Karol Wojtyła przyjeżdżał do Nałęczowa w latach 60-tych, ostatni raz był w 1976 roku. Prywatnie mieszkał u księży Salwatorianów, odprawiał mszę w kaplicy św. Karola Boromeusza. Lubił chodzić, spacerować po wąwozach lessowych. Najbardziej ulubionym jego wąwozem był wąwóz łukoszyński, obecnie często zwany potocznie papieskim.</p>
+        <p>Inicjatorem powstania tej tablicy był przewodniczący Rady Miejskiej w Nałęczowie, Tadeusz Adamczyk. Uroczyste odsłonięcie nastąpiło w 21. rocznicę pontyfikatu Jana Pawła II.</p>
+        <p>Stanisław Strzyżyński wykonał kilkadziesiąt figur sakralnych, które można zobaczyć w całej Polsce. W Nałęczowie, obok kapicy św. Karola Boromeusza, znajduje się figura Matki Bożej Róży Duchownej oraz pomnik Maksymiliana Kolbego, który wykonaliśmy wspólnie. Wielkim wyzwaniem dla nas obu było wyrzeźbienie sześciometrowej figury Chrystusa Zbawiciela dla Marka Końskiego, przeznaczonej dla Markotu w Warszawie.</p>
+        <p>Dla ojca sztuka sakralna była bardzo ważna. Całe życie poszukiwał Boga, umacniał wiarę. Miało to dla niego duże znaczenie. Ale tak samo jak i ważny był dla niego człowiek — ten człowiek był w centrum jego zainteresowania. W całej jego twórczości widać człowieka i gdzieś za tym też poszukiwanie Boga.</p>`,
+      en: `<p>The Papal Stone, together with the plaque dedicated to Cardinal Karol Wojtyła's stays in Nałęczów, was created in 1999.</p>
+        <p>Cardinal Karol Wojtyła came to Nałęczów in the 1960s, and was there for the last time in 1976. He stayed privately with the Salvatorian priests and celebrated Mass in the Chapel of St. Charles Borromeo. He liked to walk through the loess ravines. His favourite ravine was the Łukoszyn ravine, now often informally called the Papal Ravine.</p>
+        <p>The initiative to create this plaque came from Tadeusz Adamczyk, chairman of the Nałęczów City Council. The official unveiling took place on the 21st anniversary of John Paul II's pontificate.</p>
+        <p>Stanisław Strzyżyński made several dozen sacred figures that can be seen all over Poland. In Nałęczów, next to the Chapel of St. Charles Borromeo, there is a figure of Our Lady of the Mystical Rose and a monument to Maximilian Kolbe, which we made together. A great challenge for both of us was carving the six-metre figure of Christ the Saviour for Marek Koński, intended for Markot in Warsaw.</p>
+        <p>Sacred art was very important to my father. His whole life, he searched for God, strengthened his faith — that mattered a great deal to him. But the human being was just as important to him — that person was at the centre of his interest. Throughout his work you can see the human being, and somewhere behind that, also the search for God.</p>`
+    },
+
+    rok: 1999, // z transkrypcji nagrania (Zbigniew Strzyżyński)
     dataOdsloniecia: { pl: null, en: null },
 
     material: { pl: null, en: null }, // DO UZUPEŁNIENIA — materiał nieustalony
