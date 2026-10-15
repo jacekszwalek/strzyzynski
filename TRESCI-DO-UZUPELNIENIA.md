@@ -108,8 +108,19 @@ w `data/rzezby.js`.
   nie został jeszcze wzbogacony tymi szczegółami oraz związkami Prusa
   z Nałęczowem — do ewentualnego uzupełnienia, ale nie blokuje publikacji.
 - **Alejka Strzyżyńskiego** (`alejka-strzyzynskiego/index.html`, adres
-  `/alejka-strzyzynskiego/`) — okoliczności powstania, historia nadania
-  nazwy alei, kontekst w twórczości artysty. Czeka też na nagranie
+  `/alejka-strzyzynskiego/`) — **priorytet: potrzebne potwierdzenie, jak ma
+  być prezentowany przystanek nr 2 — jako "Alejka Stanisława
+  Strzyżyńskiego" czy jako "Drzewo genealogiczne"?** Obecnie: nazwa krótka
+  (menu/kafelki) to "Alejka Strzyżyńskiego", nazwa długa (tytuł podstrony)
+  to "Alejka Stanisława Strzyżyńskiego - rzeźba Drzewo genealogiczne".
+  Jacek: uważa, że atrakcją jest rzeźba, a nie sama alejka — do rozważenia
+  zamiana akcentu (np. krótka nazwa "Drzewo genealogiczne", długa z alejką
+  jako kontekstem, albo odwrotnie). Potrzebne są **obie wersje nazwy**:
+  krótka (do menu) i długa (na podstronę, `<title>`/`<h1>`) — w PL i EN.
+  **Tę decyzję trzeba podjąć teraz, przed ustaleniem adresów i wydrukiem
+  kodów QR — później nie powinno się już tego zmieniać.** Dodatkowo
+  nadal otwarte: okoliczności powstania, historia nadania nazwy alei,
+  kontekst w twórczości artysty. Czeka też na nagranie
   i transkrypcję (patrz sekcja 2) — po ich dostarczeniu opis będzie
   można wzbogacić podobnie jak przy innych rzeźbach.
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres
