@@ -270,11 +270,11 @@ var RZEZBY = [
       pl: `<p>Panna z rybą, umieszczona w fontannie w ogrodzie znanej i lubianej kawiarni Ewelina, powstała w 1979 roku. Zamówiła ją ówczesna właścicielka kawiarni — Ewelina Bartosiewicz. Projekty Panny z rybą ojciec robił już w latach 50-tych. Zachowały się też zdjęcia małych, gipsowych projektów rzeźby.</p>
         <p>W ogrodzie mogą Państwo zobaczyć też wiele innych rzeźb — zarówno plenerowych, jak i we wnętrzu portretowych. Wyrzeźbił m.in. właścicielkę, Ewelinę Bartosiewicz. Znajduje się tam też głowa Władysława Tatarkiewicza, którego rzeźbił z natury — z tej właśnie głowy później wykonywał ponadnaturalnej wielkości popiersie, które znajduje się w palmiarni w Parku Zdrojowym.</p>
         <p>Jeżeli Państwo pójdą kawałek dalej, ulicą Lipową, po prawej stronie widoczna będzie uliczka Bolesława Prusa. Tam znajduje się dom i pracownia Stanisława Strzyżyńskiego.</p>
-        <p>Jeżeli będą Państwo chcieli zajrzeć do pracowni i obejrzeć rzeźby z bliska, można zobaczyć je w pracowni. Zapraszam do kontaktu telefonicznego i umówienia wizyty. Do zobaczenia w pracowni Stanisława Strzyżyńskiego.</p>`,
+        <p>Jeżeli będą Państwo chcieli zajrzeć do pracowni i obejrzeć rzeźby z bliska — zapraszam do kontaktu telefonicznego i umówienia wizyty. Do zobaczenia w pracowni Stanisława Strzyżyńskiego.</p>`,
       en: `<p>The Maiden with a Fish, placed in the fountain in the garden of the well-known and much-loved Ewelina café, was created in 1979. It was commissioned by the café's owner at the time — Ewelina Bartosiewicz. My father had already made designs for the Maiden with a Fish back in the 1950s. Photographs of the small plaster designs of the sculpture have also survived.</p>
         <p>In the garden you can also see many other sculptures — both outdoor pieces and, inside, portrait busts. Among others, he sculpted the owner, Ewelina Bartosiewicz. There is also a head of Władysław Tatarkiewicz, whom he sculpted from life — it was from this very head that he later made the larger-than-life bust now in the Palm House in the Spa Park.</p>
         <p>If you walk a little further along Lipowa Street, you'll see Bolesław Prus Lane on the right. That is where Stanisław Strzyżyński's house and studio are located.</p>
-        <p>If you would like to stop by the studio and see the sculptures up close, you can view them in the studio. You're welcome to get in touch by phone and arrange a visit. See you at Stanisław Strzyżyński's studio.</p>`
+        <p>If you would like to stop by the studio and see the sculptures up close — you're welcome to get in touch by phone and arrange a visit. See you at Stanisław Strzyżyński's studio.</p>`
     },
 
     rok: 1979, // z transkrypcji nagrania (Zbigniew Strzyżyński)
