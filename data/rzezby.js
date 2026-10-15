@@ -388,14 +388,11 @@ var RZEZBY = [
     // sekcji transkrypcji na tej konkretnej podstronie. Sformatowana
     // (interpunkcja, podział na akapity) na podstawie tekstu dostarczonego
     // przez właściciela repozytorium — treść słowna bez zmian.
-    // Uwaga: "kapicy św. Karola Boromeusza" (zamiast "kaplicy", jak wcześniej
-    // w tym samym tekście) wygląda na literówkę — zostawione tak, jak
-    // dostarczono, do ewentualnej weryfikacji.
     transkrypcja: {
       pl: `<p>Kamień papieski wraz z tablicą poświęconą pobytom kardynała Karola Wojtyły w Nałęczowie powstał w 1999 roku.</p>
         <p>Kardynał Karol Wojtyła przyjeżdżał do Nałęczowa w latach 60-tych, ostatni raz był w 1976 roku. Prywatnie mieszkał u księży Salwatorianów, odprawiał mszę w kaplicy św. Karola Boromeusza. Lubił chodzić, spacerować po wąwozach lessowych. Najbardziej ulubionym jego wąwozem był wąwóz łukoszyński, obecnie często zwany potocznie papieskim.</p>
         <p>Inicjatorem powstania tej tablicy był przewodniczący Rady Miejskiej w Nałęczowie, Tadeusz Adamczyk. Uroczyste odsłonięcie nastąpiło w 21. rocznicę pontyfikatu Jana Pawła II.</p>
-        <p>Stanisław Strzyżyński wykonał kilkadziesiąt figur sakralnych, które można zobaczyć w całej Polsce. W Nałęczowie, obok kapicy św. Karola Boromeusza, znajduje się figura Matki Bożej Róży Duchownej oraz pomnik Maksymiliana Kolbego, który wykonaliśmy wspólnie. Wielkim wyzwaniem dla nas obu było wyrzeźbienie sześciometrowej figury Chrystusa Zbawiciela dla Marka Końskiego, przeznaczonej dla Markotu w Warszawie.</p>
+        <p>Stanisław Strzyżyński wykonał kilkadziesiąt figur sakralnych, które można zobaczyć w całej Polsce. W Nałęczowie, obok kaplicy św. Karola Boromeusza, znajduje się figura Matki Bożej Róży Duchownej oraz pomnik Maksymiliana Kolbego, który wykonaliśmy wspólnie. Wielkim wyzwaniem dla nas obu było wyrzeźbienie sześciometrowej figury Chrystusa Zbawiciela dla Marka Końskiego, przeznaczonej dla Markotu w Warszawie.</p>
         <p>Dla ojca sztuka sakralna była bardzo ważna. Całe życie poszukiwał Boga, umacniał wiarę. Miało to dla niego duże znaczenie. Ale tak samo jak i ważny był dla niego człowiek — ten człowiek był w centrum jego zainteresowania. W całej jego twórczości widać człowieka i gdzieś za tym też poszukiwanie Boga.</p>`,
       en: `<p>The Papal Stone, together with the plaque dedicated to Cardinal Karol Wojtyła's stays in Nałęczów, was created in 1999.</p>
         <p>Cardinal Karol Wojtyła came to Nałęczów in the 1960s, and was there for the last time in 1976. He stayed privately with the Salvatorian priests and celebrated Mass in the Chapel of St. Charles Borromeo. He liked to walk through the loess ravines. His favourite ravine was the Łukoszyn ravine, now often informally called the Papal Ravine.</p>
