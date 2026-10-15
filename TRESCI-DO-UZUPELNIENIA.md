@@ -1,5 +1,10 @@
 # Treści do uzupełnienia — lista zakupów
 
+*Stan na 2026-10-15 — ten dokument jest aktualizowany na bieżąco, w miarę
+jak przesyłane są nowe materiały. Jeśli coś z listy wygląda jako już
+zrobione na stronie, a wciąż figuruje tutaj jako otwarte — to znaczy, że
+dokument nie został jeszcze zaktualizowany; zgłoś to, żeby poprawić.*
+
 Ten dokument to kompletna lista wszystkiego, co trzeba dostarczyć, żeby
 zamienić szkielet strony w gotową publikację. Pogrupowane po stronach.
 Każdy plik wymieniony niżej ma już swój placeholder w repozytorium (SVG
@@ -10,7 +15,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 
 ---
 
-## 1. Zdjęcia — 14 sztuk
+## 1. Zdjęcia — 13 sztuk
 
 Wszystkie trafiają do katalogu `img/`. Format docelowy: WebP + JPG (ten sam
 kadr w obu formatach, ta sama nazwa pliku, różne rozszerzenie) — po dodaniu
@@ -19,20 +24,27 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
-| `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura na mapie, liście, kafelku strony głównej |
+| `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie (220×165) i kafelek na stronie głównej |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `drzewo-genealogiczne-mini.svg` | 400×300 | miniatura |
-| `drzewo-genealogiczne-1.svg` | 800×600 | zdjęcie 1 w opisie |
-| `drzewo-genealogiczne-2.svg` | 800×600 | zdjęcie 2 w opisie |
-| `kawiarnia-ewelina-mini.svg` | 400×300 | miniatura |
-| `kawiarnia-ewelina-1.svg` | 800×600 | zdjęcie 1 w opisie |
-| `kawiarnia-ewelina-2.svg` | 800×600 | zdjęcie 2 w opisie |
-| `pomnik-wojtyla-mini.svg` | 400×300 | miniatura |
-| `pomnik-wojtyla-1.svg` | 800×600 | zdjęcie 1 w opisie — widok całości pomnika |
-| `pomnik-wojtyla-2.svg` | 800×600 | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
-| `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe) | biogram na stronie głównej |
-| `zbigniew-strzyzynski-avatar.svg` | 200×200 (kwadrat) | podpis "Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby |
+| `drzewo-genealogiczne-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
+| `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `kawiarnia-ewelina-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `kawiarnia-ewelina-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
+| `kawiarnia-ewelina-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `pomnik-wojtyla-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `pomnik-wojtyla-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
+| `pomnik-wojtyla-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
+| `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe, 4:5) | biogram na stronie głównej |
+
+Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
+miniatur — nie potrzebuje więc osobnego zdjęcia.
+
+Usunięto z listy: `zbigniew-strzyzynski-avatar.svg` (200×200) — podpis
+"Opowiada Zbigniew Strzyżyński" na podstronach rzeźb jest w obecnym
+designie czysto tekstowy (`.narrator-byline`, bez awatara), więc ten plik
+nie jest już potrzebny.
 
 Opcjonalnie: `og-cover.jpg` (1200×630) — obecnie wygenerowany prosty
 placeholder tekstowy używany w podglądach na Facebooku/WhatsAppie. Można
@@ -40,21 +52,22 @@ podmienić na złożenie z prawdziwym zdjęciem, gdy będzie dostępne.
 
 ---
 
-## 2. Nagrania — 4 sztuki + transkrypcje
+## 2. Nagrania — 3 z 4 ZROBIONE, 1 w toku
 
 Dla każdej rzeźby: **jedno nagranie** (wideo z YouTube **lub** plik audio MP3)
-plus transkrypcja tekstowa.
+plus transkrypcja tekstowa (PL + EN).
 
-| Rzeźba | Co dostarczyć |
+| Rzeźba | Status |
 |---|---|
-| Ławeczka Bolesława Prusa | Nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`) **lub** plik `audio/laweczka-prusa.mp3` + transkrypcja |
-| Alejka Stanisława Strzyżyńskiego | jw. → `audio/drzewo-genealogiczne.mp3` |
-| Kamień papieski | jw. → `audio/pomnik-wojtyla.mp3` |
-| Panna z rybą (kawiarnia Ewelina) | jw. → `audio/kawiarnia-ewelina.mp3` |
+| Ławeczka Bolesława Prusa | **ZROBIONE** — `audio/laweczka-prusa.mp3` + transkrypcja PL/EN |
+| Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** — `audio/kawiarnia-ewelina.mp3` + transkrypcja PL/EN |
+| Kamień papieski | **ZROBIONE** — `audio/pomnik-wojtyla.mp3` + transkrypcja PL/EN |
+| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebne: nagranie (ID filmu YouTube → `data/rzezby.js`, pole `youtubeId`, obecnie `VIDEO_ID_PLACEHOLDER`, **lub** plik `audio/drzewo-genealogiczne.mp3`) + transkrypcja |
 
-Transkrypcje wklejamy w `<details class="transcript">` na każdej podstronie
-(obecnie placeholder `DO UZUPEŁNIENIA` / `EN TRANSLATION NEEDED`) — patrz
-README, sekcja "Jak wgrać audio / wstawić film z YouTube".
+Transkrypcja trafia do pola `transkrypcja: { pl, en }` przy danej rzeźbie
+w `data/rzezby.js` — treść nagrania bez zmian, dozwolone tylko poprawki
+interpunkcji i podział na akapity. Podstrony generują się z tego pola
+automatycznie, bez ręcznej edycji HTML każdej strony.
 
 ---
 
@@ -70,16 +83,22 @@ w `data/rzezby.js`.
   Strzyżyńskiego, 4 podsekcje: Młodość i wykształcenie, Nałęczów, Twórczość,
   Poza Nałęczowem.
 - **Ławeczka Prusa** (`laweczka-prusa/index.html`, adres `/laweczka-prusa/`)
-  — okoliczności powstania, fundator, przebieg odsłonięcia, szczegóły
-  współpracy ojca i syna, związki Prusa z Nałęczowem.
+  — fundator, przebieg prac i szczegóły współpracy ojca i syna są już
+  opisane w pełnej transkrypcji nagrania (sekcja „Transkrypcja" na
+  podstronie). Krótszy opis redakcyjny (`opisPelny` w `data/rzezby.js`)
+  nie został jeszcze wzbogacony tymi szczegółami oraz związkami Prusa
+  z Nałęczowem — do ewentualnego uzupełnienia, ale nie blokuje publikacji.
 - **Alejka Strzyżyńskiego** (`alejka-strzyzynskiego/index.html`, adres
   `/alejka-strzyzynskiego/`) — okoliczności powstania, historia nadania
-  nazwy alei, kontekst w twórczości artysty.
+  nazwy alei, kontekst w twórczości artysty. Czeka też na nagranie
+  i transkrypcję (patrz sekcja 2) — po ich dostarczeniu opis będzie
+  można wzbogacić podobnie jak przy innych rzeźbach.
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres
-  `/panna-z-ryba/`) — **rok powstania i materiał rzeźby są nieznane
-  i wymagają ustalenia** (obecnie `null` w danych), opis formy rzeźby,
-  historia willi „Pod Matką Boską", **godziny otwarcia kawiarni do
-  zweryfikowania przed publikacją**.
+  `/panna-z-ryba/`) — rok powstania już potwierdzony (1979, z transkrypcji
+  nagrania). **Materiał rzeźby wciąż nieznany** (`material` w danych ma
+  wartość `null`) — do ustalenia. Historia willi „Pod Matką Boską" wciąż
+  do uzupełnienia, **godziny otwarcia kawiarni do zweryfikowania przed
+  publikacją**.
 - **Kamień papieski** (`kamien-papieski/index.html`, adres
   `/kamien-papieski/`) — rok powstania, materiał i autorstwo już
   potwierdzone (transkrypcja nagrania + wiadomość właściciela
@@ -94,20 +113,24 @@ w `data/rzezby.js`.
 
 ---
 
-## 4. Tłumaczenie na angielski
+## 4. Tłumaczenie na angielski — ZROBIONE (w zakresie dostępnych treści)
 
-Wersja angielska (`en/`) ma już przetłumaczony cały interfejs (nawigacja,
-przyciski, nagłówki), ale **treści historyczne — biogram i opisy rzeźb —
-czekają na tłumacza**. W kodzie źródłowym stron (Ctrl+F / "Znajdź na
-stronie") szukaj:
+Interfejs (nawigacja, przyciski, nagłówki), biogram na stronie głównej,
+opisy i transkrypcje rzeźb oraz strona „O projekcie" są już przetłumaczone
+na angielski.
 
-- `<!-- EN TRANSLATION NEEDED -->` — brakujący akapit lub zdanie,
-- tekstu „Photo — caption pending translation" — brakujący opis (`alt`) zdjęcia.
+Pojedyncze `<!-- EN TRANSLATION NEEDED -->`, które wciąż można znaleźć
+w kodzie (`en/about/index.html`, komentarz w nagłówku `data/rzezby.js`),
+**nie oznaczają brakującego tłumaczenia** — oznaczają ten sam otwarty fakt,
+który czeka na ustalenie również w wersji polskiej (patrz sekcje 3 i 5).
+Przykłady: materiał rzeźby Panna z rybą, treść tablicy pamiątkowej przy
+Kamieniu papieskim, podziękowania i informacje o finansowaniu na stronie
+„O projekcie". Gdy taki fakt zostanie dostarczony po polsku, wersję
+angielską warto dopisać przy tej samej okazji.
 
-Dotyczy plików: `en/index.html`, `en/prus-bench/index.html` *(oraz
-pozostałe podstrony rzeźb w `en/`)*, `en/about/index.html`, a także pól
-`en` w `data/rzezby.js` (opisy krótkie/pełne, podpisy zdjęć, dojazd,
-dostępność).
+Jedyny realny wyjątek: **Alejka Stanisława Strzyżyńskiego** nie ma jeszcze
+żadnego nagrania ani transkrypcji (patrz sekcja 2) — więc nie ma też czego
+tłumaczyć, dopóki polski tekst nie powstanie.
 
 ---
 
