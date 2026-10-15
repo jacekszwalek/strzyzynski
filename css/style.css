@@ -1169,7 +1169,39 @@ figure.content-figure figcaption {
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: var(--space-3);
 }
-.footer-admin-note { font-size: 0.85rem; opacity: 0.7; }
+.footer-admin-note { font-size: 0.85rem; }
+
+.footer-funding {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+}
+.footer-funding p { font-size: 0.9rem; margin: 0; text-align: left; }
+
+/* Logotypy dofinansowania (Komitet ds. Pożytku Publicznego / NIW /
+   Międzynarodowy Rok Wolontariatu) — wymagane oznaczenie przy publikacji
+   materiałów sfinansowanych z Funduszu Inicjatyw MRW. Obraz ma białe tło
+   (oficjalne logotypy), stąd kontrastowa "karta" wokół niego. */
+.funding-logos {
+  display: block;
+  width: 100%;
+  max-width: 68rem;
+  height: auto;
+  margin: 0 auto var(--space-2);
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+/* W stopce logotypy mają być małe, nie na całą szerokość — jak w sekcji
+   "Partnerzy i finansowanie" na stronie O projekcie. */
+.footer-funding .funding-logos {
+  width: 24rem;
+  margin: 0;
+}
 
 /* --------------------------------------------------------------------------
    17. Sekcja "O projekcie" — kontakt, partnerzy
@@ -1271,4 +1303,7 @@ figure.content-figure figcaption {
   h2 { font-size: 1.5rem; }
   .container { padding-left: var(--space-2); padding-right: var(--space-2); }
   .bio-section, .tile-grid { gap: var(--space-2); }
+  .footer-funding { grid-template-columns: 1fr; text-align: center; }
+  .footer-funding p { text-align: center; }
+  .footer-funding .funding-logos { width: 100%; max-width: 24rem; min-width: 0; margin: 0 auto; }
 }
