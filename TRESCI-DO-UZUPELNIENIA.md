@@ -81,12 +81,10 @@ w `data/rzezby.js`.
   historia willi „Pod Matką Boską", **godziny otwarcia kawiarni do
   zweryfikowania przed publikacją**.
 - **Kamień papieski** (`kamien-papieski/index.html`, adres
-  `/kamien-papieski/`) — **priorytet: potwierdzić, czy autorem pomnika jest
-  Stanisław Strzyżyński** (pole `autorzy` w `data/rzezby.js` jest obecnie
-  `null` — jeśli to nie jego dzieło, warto to wyraźnie zaznaczyć w opisie,
-  żeby nie przypisywać mu autorstwa). Dodatkowo: rok powstania, materiał,
-  data i okoliczności pobytu kardynała w Nałęczowie, treść tablicy
-  pamiątkowej, dokładny adres.
+  `/kamien-papieski/`) — rok powstania, materiał i autorstwo już
+  potwierdzone (transkrypcja nagrania + wiadomość właściciela
+  repozytorium). Pozostaje do uzupełnienia: dokładna data i okoliczności
+  pobytu kardynała w Nałęczowie, treść tablicy pamiątkowej, dokładny adres.
 - **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) —
   rozwinięcie celu projektu, pełny opis roli Fundacji Dom i Sztuka,
   podziękowania, informacja o finansowaniu,
@@ -117,8 +115,8 @@ dostępność).
 
 - **Współrzędne wszystkich czterech punktów** pochodzą już z pomiaru GPS
   w terenie (2026-10-12) — nie wymagają dalszej weryfikacji.
-- **Autorstwo pomnika kardynała Karola Wojtyły** — patrz punkt 3 wyżej,
-  to najważniejsza otwarta kwestia przed publikacją tego punktu trasy.
+- **Autorstwo pomnika kardynała Karola Wojtyły** — potwierdzone: Stanisław
+  Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim.
 - **Opisy dostępności** (`dostepnosc`) przy wszystkich czterech punktach —
   nawierzchnia, schody, ławki, dojazd wózkiem — obecne opisy to szkic do
   potwierdzenia na miejscu.
