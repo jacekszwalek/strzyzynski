@@ -11,10 +11,10 @@
  * Dzięki temu ten plik wygląda identycznie niezależnie od języka strony,
  * która go wczytuje — nie trzeba go duplikować.
  *
- * Współrzędne (pole wspolrzedne) pochodzą z pomiaru GPS w terenie
- * (2026-10-12). Jeśli przy którymś punkcie pojawi się komentarz
- * "ZWERYFIKOWAĆ W TERENIE", oznacza to współrzędne wciąż namierzone
- * zdalnie, wymagające potwierdzenia przed drukiem tabliczek QR.
+ * Współrzędne (pole wspolrzedne) zostały na razie tylko odczytane z mapy
+ * (2026-10-12) — nie są pomiarem GPS w terenie. Wszystkie wymagają
+ * potwierdzenia na żywo, w terenie, przed drukiem tabliczek QR (patrz
+ * komentarz "WYMAGA POTWIERDZENIA NA MIEJSCU" przy każdym punkcie).
  *
  * Pola tekstowe z placeholderem "<!-- EN TRANSLATION NEEDED -->" to treści
  * historyczne/opisowe czekające na tłumacza. Pola z "<!-- DO UZUPEŁNIENIA -->"
@@ -85,7 +85,7 @@ var RZEZBY = [
       en: "Enter the Spa Park from the side of the Małachowski Palace. The bench stands by the main path, near the pond and the pump room, very close to Strzyżyński Alley (stop 2 on this route). Note: there are two monuments to Bolesław Prus in the park — a bust and this bench with a seated figure — it is easy to confuse the two."
     },
 
-    wspolrzedne: [51.2870007258462, 22.208436990572082], // pomiar GPS w terenie, 2026-10-12
+    wspolrzedne: [51.2870007258462, 22.208436990572082], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
 
     media: {
       typ: "audio",
@@ -188,7 +188,7 @@ var RZEZBY = [
       en: "The sculpture stands along Stanisław Strzyżyński Alley in the Spa Park — an alley named after the artist himself — a few dozen metres from the Prus Bench (stop 1 on this route)."
     },
 
-    wspolrzedne: [51.28714555955893, 22.21240346246493], // pomiar GPS w terenie, 2026-10-12
+    wspolrzedne: [51.28714555955893, 22.21240346246493], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
 
     media: {
       typ: "audio",
@@ -309,7 +309,7 @@ var RZEZBY = [
       en: "From the Spa Park, head towards Lipowa Street. The \"Pod Matką Boską\" villa, home to Ewelina café and the fountain with the sculpture, stands at number 16."
     },
 
-    wspolrzedne: [51.28521977620118, 22.218260265804872], // pomiar GPS w terenie, 2026-10-12
+    wspolrzedne: [51.28521977620118, 22.218260265804872], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
 
     infoPraktyczne: {
       pl: "To jedyny punkt trasy z kawą, toaletą i miejscem do siedzenia. Kawiarnia Ewelina czynna codziennie 10:00–21:00 // GODZINY DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ",
@@ -438,7 +438,7 @@ var RZEZBY = [
       en: "Walking from Strzyżyński Alley (stop 2 on this route) further into the park, the monument with the plaque stands by one of the exits from the Spa Park, towards Ewelina café (stop 4)."
     },
 
-    wspolrzedne: [51.285452819939685, 22.212785832706324], // pomiar GPS w terenie, 2026-10-12
+    wspolrzedne: [51.285452819939685, 22.212785832706324], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
 
     media: {
       typ: "audio",
