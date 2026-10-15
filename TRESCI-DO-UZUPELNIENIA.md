@@ -20,7 +20,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 Wszystkie trafiają do katalogu `img/`. Format docelowy: WebP + JPG (ten sam
 kadr w obu formatach, ta sama nazwa pliku, różne rozszerzenie) — po dodaniu
 podmień w `data/rzezby.js` rozszerzenie z `.svg` na `.webp` przy odpowiednim
-polu (patrz README, sekcja "Jak podmienić zdjęcie").
+polu (patrz README, sekcja "Jak podmienić zdjęcie"). Wyjątek: awatar
+Zbigniewa (`zbigniew-strzyzynski-avatar.png`) to PNG z przezroczystym tłem
+poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
@@ -37,7 +39,7 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 | `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
 | `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe, 4:5) | biogram na stronie głównej |
-| `zbigniew-strzyzynski-avatar.svg` | 200×200 (kwadrat) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst |
+| `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, przezroczyste tło) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to tymczasowy placeholder (nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego) — do podmiany na prawdziwe, bardziej realistyczne zdjęcie.** |
 
 Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
 miniatur — nie potrzebuje więc osobnego zdjęcia.
