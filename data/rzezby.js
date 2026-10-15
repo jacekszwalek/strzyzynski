@@ -61,10 +61,6 @@ var RZEZBY = [
     },
 
     rok: 2002,
-    dataOdsloniecia: {
-      pl: "niedziela, 20 października 2002 — w 120. rocznicę pierwszego przyjazdu Bolesława Prusa do Nałęczowa",
-      en: "Sunday, 20 October 2002 — the 120th anniversary of Bolesław Prus's first visit to Nałęczów"
-    },
 
     material: { pl: "brąz", en: "bronze" },
 
@@ -72,7 +68,6 @@ var RZEZBY = [
       pl: "Stanisław Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim",
       en: "Stanisław Strzyżyński together with his son Zbigniew Strzyżyński"
     },
-    wspolautorstwoWyeksponowac: true,
 
     lokalizacja: {
       pl: "Park Zdrojowy, przy Pałacu Małachowskich",
@@ -144,9 +139,7 @@ var RZEZBY = [
         "This is one of two works on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955 — the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. The other joint work on the route is the Papal Stone. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
         "There are two memorials to Bolesław Prus in the park — a bust and this bench. The writer visited Nałęczów many times, and the spa town left its mark on his work. <!-- DO UZUPEŁNIENIA: związki Prusa z Nałęczowem, kontekst literacki -->"
       ]
-    },
-
-    tonPowazny: false
+    }
   },
 
   {
@@ -167,7 +160,6 @@ var RZEZBY = [
     },
 
     rok: 1977,
-    dataOdsloniecia: { pl: null, en: null },
 
     material: { pl: "sztuczny kamień", en: "artificial stone" },
 
@@ -175,7 +167,6 @@ var RZEZBY = [
       pl: "Stanisław Strzyżyński",
       en: "Stanisław Strzyżyński"
     },
-    wspolautorstwoWyeksponowac: false,
 
     lokalizacja: {
       pl: "Aleja Stanisława Strzyżyńskiego, Park Zdrojowy",
@@ -247,9 +238,7 @@ var RZEZBY = [
         "The sculpture stands in Stanisław Strzyżyński Alley in the Spa Park — an alley that bears the artist's own name. It is a special, rarely seen coincidence: the creator walks through the park together with visitors, present not only in his works but also in the name of the place. <!-- DO UZUPEŁNIENIA: historia nadania nazwy alei -->",
         "The form of the work remains open to interpretation — for some it is a family's genealogical tree, for others a universal symbol of growth and interconnection. <!-- DO UZUPEŁNIENIA: kontekst w twórczości Strzyżyńskiego, ewentualne inne realizacje o podobnej tematyce -->"
       ]
-    },
-
-    tonPowazny: false
+    }
   },
 
   {
@@ -286,7 +275,6 @@ var RZEZBY = [
     },
 
     rok: 1979, // z transkrypcji nagrania (Zbigniew Strzyżyński)
-    dataOdsloniecia: { pl: null, en: null },
 
     material: { pl: null, en: null }, // DO UZUPEŁNIENIA — materiał rzeźby Panna z Rybą nieustalony
 
@@ -294,7 +282,6 @@ var RZEZBY = [
       pl: "Stanisław Strzyżyński",
       en: "Stanisław Strzyżyński"
     },
-    wspolautorstwoWyeksponowac: false,
 
     // Opis strony skupia się na rzeźbie Panna z Rybą (stojącej w fontannie
     // na terenie kawiarni), nie na samej kawiarni.
@@ -373,9 +360,7 @@ var RZEZBY = [
         "This is the only stop on this route where you can sit down, have a coffee and use a toilet — for older visitors, that's practical information, not just a curiosity. Ewelina café is open every day. <!-- GODZINY OTWARCIA DO ZWERYFIKOWANIA PRZED PUBLIKACJĄ -->",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ]
-    },
-
-    tonPowazny: false
+    }
   },
 
   {
@@ -414,7 +399,6 @@ var RZEZBY = [
     },
 
     rok: 1999, // z transkrypcji nagrania (Zbigniew Strzyżyński)
-    dataOdsloniecia: { pl: null, en: null },
 
     material: {
       pl: "głaz narzutowy, płyta odlana z brązu",
@@ -425,7 +409,6 @@ var RZEZBY = [
       pl: "Stanisław Strzyżyński wspólnie z synem Zbigniewem Strzyżyńskim",
       en: "Stanisław Strzyżyński together with his son Zbigniew Strzyżyński"
     },
-    wspolautorstwoWyeksponowac: true,
 
     lokalizacja: {
       pl: "Przy wyjściu z Parku Zdrojowego",
@@ -495,9 +478,7 @@ var RZEZBY = [
         "By one of the exits from the Spa Park stands a monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów — the future Pope John Paul II. The monument was made by Stanisław Strzyżyński together with his son Zbigniew. <!-- DO UZUPEŁNIENIA: dokładna data i okoliczności wizyty, treść tablicy -->",
         "For many visitors, this is a brief stop for reflection before the route continues on to Ewelina café. <!-- DO UZUPEŁNIENIA -->"
       ]
-    },
-
-    tonPowazny: false
+    }
   }
 ];
 

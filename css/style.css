@@ -76,7 +76,6 @@
   --color-border-strong: #8c7a5b;
   --color-focus: #241f19;
   --color-danger: #7a2a1e;
-  --color-solemn-bg: #efece4;    /* delikatnie chłodniejsze tło dla podstron o poważniejszym tonie */
   --color-accent-tint: #e3ead9;  /* jasna zieleń — tło karty "Nagranie" na podstronach rzeźb */
 
   /* Typografia */
@@ -742,11 +741,6 @@ section { margin-bottom: var(--space-6); }
   color: var(--color-accent-brown);
   margin-bottom: var(--space-2);
 }
-body.tone-solemn .media-section {
-  background: var(--color-bg-card);
-  border-color: var(--color-text);
-}
-
 .video-wrap {
   position: relative;
   width: 100%;
@@ -1159,23 +1153,7 @@ figure.content-figure figcaption {
 }
 
 /* --------------------------------------------------------------------------
-   16. Ton poważny (podstrona pomnika AK)
-   -------------------------------------------------------------------------- */
-
-body.tone-solemn { background: var(--color-solemn-bg); }
-body.tone-solemn .site-nav { background: #3a332b; }
-body.tone-solemn .site-nav a[aria-current="page"],
-body.tone-solemn .site-nav a:hover { background: #2a251f; }
-.solemn-notice {
-  border-left: 6px solid var(--color-text);
-  background: var(--color-bg-card);
-  padding: var(--space-3);
-  margin-bottom: var(--space-3);
-  font-style: italic;
-}
-
-/* --------------------------------------------------------------------------
-   17. Stopka
+   16. Stopka
    -------------------------------------------------------------------------- */
 
 .site-footer {
@@ -1193,7 +1171,7 @@ body.tone-solemn .site-nav a:hover { background: #2a251f; }
 }
 
 /* --------------------------------------------------------------------------
-   18. Sekcja "O projekcie" — kontakt, partnerzy
+   17. Sekcja "O projekcie" — kontakt, partnerzy
    -------------------------------------------------------------------------- */
 
 .contact-box {
@@ -1225,7 +1203,7 @@ body.tone-solemn .site-nav a:hover { background: #2a251f; }
 }
 
 /* --------------------------------------------------------------------------
-   19. Strona generatora / arkusza QR (poza @media print poniżej)
+   18. Strona generatora / arkusza QR (poza @media print poniżej)
    -------------------------------------------------------------------------- */
 
 .qr-tool-panel {
@@ -1251,7 +1229,7 @@ body.tone-solemn .site-nav a:hover { background: #2a251f; }
 .qr-preview-card .btn { width: 100%; margin-top: var(--space-1); }
 
 /* --------------------------------------------------------------------------
-   20. Arkusz do druku tabliczek QR
+   19. Arkusz do druku tabliczek QR
    -------------------------------------------------------------------------- */
 
 .print-sheet { max-width: 210mm; margin: 0 auto; padding: var(--space-3); }
@@ -1284,7 +1262,7 @@ body.tone-solemn .site-nav a:hover { background: #2a251f; }
 }
 
 /* --------------------------------------------------------------------------
-   21. Media queries ogólne
+   20. Media queries ogólne
    -------------------------------------------------------------------------- */
 
 @media (max-width: 640px) {
