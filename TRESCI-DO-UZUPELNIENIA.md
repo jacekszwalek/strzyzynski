@@ -56,13 +56,15 @@ podmienić na złożenie z prawdziwym zdjęciem, gdy będzie dostępne.
 
 ### 2a. Film wprowadzający na stronie startowej — DO DOSTARCZENIA
 
-Decyzja: podstrony poszczególnych rzeźb mają **tylko pliki audio**, bez
-wideo. Jedyne wideo na całej witrynie to **film wprowadzający na stronie
-startowej** (`index.html` / `en/index.html`, sekcja `.video-wrap`) — ten
-film jeszcze nie istnieje, obecnie wyświetla się placeholder
-`VIDEO_ID_PLACEHOLDER`.
+Decyzja: podstrony poszczególnych rzeźb mają **tylko pliki audio**
+(self-hosted, w katalogu `audio/`), bez wideo. Jedyne wideo na całej
+witrynie to **film wprowadzający na stronie startowej** (`index.html` /
+`en/index.html`, sekcja `.video-wrap`) — ten film jeszcze nie istnieje,
+obecnie wyświetla się placeholder `VIDEO_ID_PLACEHOLDER`.
 
-Do dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
+Ten film **będzie z YouTube** (tak jak obecna sekcja `.video-wrap` już to
+zakłada — osadzenie przez `<iframe>` z `youtube-nocookie.com`). Do
+dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
 YouTube. Po dostarczeniu podmień `VIDEO_ID_PLACEHOLDER` na właściwy
 identyfikator filmu w obu plikach (`index.html` i `en/index.html`) —
 sposób pozyskania identyfikatora opisuje README, sekcja 4 ("Jak wstawić
