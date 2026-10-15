@@ -39,10 +39,10 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 | `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
 | `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe, 4:5) | biogram na stronie głównej |
-| `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, przezroczyste tło) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to tymczasowy placeholder (nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego) — do podmiany na prawdziwe, bardziej realistyczne zdjęcie.** |
+| `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, biała obwódka, przezroczyste tło poza kołem) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to zbliżenie na twarz z dostarczonego zdjęcia przykładowego — nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego — do podmiany na prawdziwe, docelowe zdjęcie.** |
 
-Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
-miniatur — nie potrzebuje więc osobnego zdjęcia.
+Lista na stronie głównej/mapie (`#location-list`, lista rzeźb pod mapą)
+jest tekstowa, bez miniatur — nie potrzebuje więc osobnego zdjęcia.
 
 Opcjonalnie: `og-cover.jpg` (1200×630) — to duże zdjęcie, które pojawia
 się automatycznie, gdy ktoś wklei link do tej strony w Messengerze,
@@ -126,13 +126,18 @@ w `data/rzezby.js`.
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres `/panna-z-ryba/`) —
   rok powstania już potwierdzony (1979, z transkrypcji nagrania). Do
   dostarczenia:
-  - **priorytet: ogólnodostępny numer telefonu** — transkrypcja nagrania
-    (sekcja „Transkrypcja" na tej podstronie, PL i EN) zaprasza do
-    kontaktu telefonicznego w celu umówienia wizyty w pracowni
+  - **priorytet, decyzja do podjęcia: numer telefonu** — transkrypcja
+    nagrania (sekcja „Transkrypcja" na tej podstronie, PL i EN) zaprasza
+    do kontaktu telefonicznego w celu umówienia wizyty w pracowni
     („Zapraszam do kontaktu telefonicznego i umówienia wizyty"), ale na
-    stronie nigdzie nie podano numeru. Trzeba go umieścić w widocznym
-    miejscu na tej podstronie (np. przy transkrypcji albo w sekcji
-    „Informacje praktyczne") — w obu wersjach językowych,
+    stronie nigdzie nie podano numeru. **Do wyboru jedno z dwóch:**
+    (a) dostarczyć ogólnodostępny numer telefonu i umieścić go w
+    widocznym miejscu na tej podstronie (np. przy transkrypcji albo
+    w sekcji „Informacje praktyczne") — w obu wersjach językowych, albo
+    (b) usunąć to zaproszenie do kontaktu telefonicznego z nagrania —
+    co oznacza też **zmianę transkrypcji** (PL i EN), żeby nie
+    wspominała już o telefonie, skoro na stronie nie będzie żadnego
+    numeru do podania,
   - materiał rzeźby (`material` w danych ma wartość `null`) — nieznany,
   - historia willi „Pod Matką Boską",
   - godziny otwarcia kawiarni Ewelina — do zweryfikowania przed
@@ -152,10 +157,23 @@ w `data/rzezby.js`.
   - informacja o finansowaniu,
   - lista źródeł,
   - nazwa i zakres projektu wspomnianego w sekcji „Część większego
-    projektu".
+    projektu",
+  - **priorytet: warunki uzyskania dotacji na ten projekt** — trzeba
+    dostarczyć, czego dokładnie wymaga dotacja/grant, pod którym projekt
+    powstaje. W szczególności: co dotacja wymaga, żeby znalazło się na
+    stronie (np. logotyp finansującego, informacja o źródle
+    finansowania, konkretne sformułowanie) i gdzie dokładnie — czy ma
+    być widoczne na stronie głównej, czy wystarczy sekcja „O projekcie",
+    czy ma być też w stopce każdej podstrony; jakiej wielkości i w jakim
+    formacie ma być logotyp/informacja; czy wymagane jest umieszczenie
+    danych kontaktowych (łącznie z numerem telefonu?) — jeśli tak, to
+    gdzie (tylko w stopce, czy osobna sekcja) i czy mają to być dane do
+    Fundacji Dom i Sztuka / sztukaidom.com, czy bezpośrednio do
+    Zbigniewa Strzyżyńskiego.
 
   (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
-  repozytorium.)
+  repozytorium — ale patrz punkt wyżej: warunki dotacji mogą wymagać jej
+  przywrócenia w innej formie.)
 
 ---
 
@@ -196,14 +214,128 @@ tłumaczyć, dopóki polski tekst nie powstanie.
 
 ---
 
-## 6. Adresy po wdrożeniu na GitHub Pages — ZROBIONE
+## 6. Domena i adresy
 
-Strona jest opublikowana pod `https://jacekszwalek.github.io/strzyzynski/`.
-Adres jest już wpisany w `qr/base-url.js`, `sitemap.xml` i `robots.txt`.
+Wdrożenie na GitHub Pages jest zrobione — strona działa pod
+`https://jacekszwalek.github.io/strzyzynski/`, a ten adres jest już
+wpisany w `qr/base-url.js`, `sitemap.xml` i `robots.txt`.
+
+**Priorytet, decyzja do podjęcia: czy zostajemy przy adresie
+`github.io`, czy kupujemy własną domenę?** Propozycje nazw domeny (do
+wyboru lub zaproponowania własnej):
+- `sladamistrzyzynskiego.pl`
+- `sladamiartysty.pl`
+- `spacerstrzyzynskiego.pl`
+- `spacer.strzyzynski.pl`
+
+Gdy domena zostanie wybrana i kupiona, trzeba: podmienić adres w
+`qr/base-url.js`, `sitemap.xml` i `robots.txt`, oraz skonfigurować ją
+w ustawieniach GitHub Pages repozytorium (plik `CNAME`).
+
+**Ta decyzja blokuje projekt kodów QR** (patrz sekcja 7 niżej) — kody QR
+kodują bezpośrednio adres strony, więc ich ostateczny projekt/wydruk nie
+powinien powstać, dopóki adres nie jest już ostatecznie ustalony.
 
 ---
 
-## 7. Logotypy partnerów
+## 7. Kody QR — projekt zablokowany do czasu dwóch decyzji
+
+Zanim kody QR będą gotowe do finalnego zaprojektowania i wydruku,
+potrzebne są **dwie decyzje**:
+1. **Domena/adres strony** (patrz sekcja 6) — każdy kod QR koduje
+   bezpośrednio pełny adres URL; zmiana domeny po wydruku oznacza, że
+   wydrukowane kody przestają działać.
+2. **Finalny adres podstrony Alejka Strzyżyńskiego / Drzewo
+   genealogiczne** (patrz sekcja 3) — ten punkt trasy wciąż czeka na
+   decyzję nazewniczą, od której zależy, czy adres `/alejka-strzyzynskiego/`
+   zostanie, czy się zmieni.
+
+Narzędzie `qr/generator.html` jest już gotowe i rozbudowane o:
+- podgląd i pobieranie kodów QR dla wszystkich rzeźb (PL + EN),
+- osobną sekcję z kodem QR wejścia na samą stronę główną (PL + EN),
+- osobną sekcję z kodem QR na plakat (prowadzi przez krótkie
+  przekierowanie, żeby dało się policzyć w statystykach osobno wejścia
+  z plakatu),
+- generator kodu QR dla dowolnego własnego adresu — z wyraźnym
+  ostrzeżeniem, że taki kod nie zadziała, dopóki ktoś nie stworzy
+  faktycznej strony pod tym adresem.
+
+Wszystko w tym narzędziu automatycznie korzysta z adresu ustawionego
+w `qr/base-url.js` — nie trzeba niczego przepisywać ręcznie po zmianie
+domeny.
+
+---
+
+## 8. Materiały promocyjne (druk)
+
+- **Priorytet: zaprojektować ulotkę/pocztówkę promującą inicjatywę
+  i projekt** — materiał do rozdawania/wykładania, promujący wirtualny
+  spacer. Potrzebne ustalenia: format, treść, zdjęcia, kod QR (patrz
+  sekcja 7 — projekt kodu QR jest zablokowany do czasu decyzji
+  o domenie).
+- **Zlecenie wydruku** — gdy projekt ulotki/pocztówki i plakatu będzie
+  gotowy, trzeba zlecić wydruk u drukarni oraz podjąć decyzję
+  o wielkości pierwszego nakładu.
+
+---
+
+## 9. Decyzje projektowe do podjęcia
+
+- **Forma prezentacji przystanków na stronie głównej** — obecnie krótka
+  lista/siatka przystanków na stronie startowej. Do zdecydowania: czy
+  mają to być kafelki ze zdjęciami (jak obecnie), czy numerowane boxy
+  bez zdjęć (prostsze, szybciej się ładują, ale mniej zachęcające
+  wizualnie).
+- **Precyzyjny opis sekcji „Jak korzystać ze spaceru"** (kroki 1, 2,
+  3… na stronie startowej) — obecny opis jest zbyt ogólny. Do
+  uzupełnienia/doprecyzowania:
+  - że kolejność kroków ma znaczenie (np. najpierw obejrzeć film
+    wprowadzający, potem wyruszyć na spacer),
+  - że na stronie głównej jest film wprowadzający (YouTube), a na
+    podstronach poszczególnych rzeźb jest tylko audio (patrz sekcja 2a/2b)
+    — to rozróżnienie warto wprost wytłumaczyć odwiedzającemu, żeby nie
+    szukał filmu przy rzeźbie.
+- **Napis na górze strony (nagłówek/logo serwisu)** — do ustalenia, co
+  ma figurować na samej górze strony, zarówno w wersji mobilnej, jak
+  i desktopowej: sam tekst (nazwa serwisu), grafika/logo, czy jedno
+  i drugie razem.
+- **Favicon** — czy Michał może podpowiedzieć, co umieścić jako favicon
+  (mała ikonka strony widoczna w karcie przeglądarki)? Obecny plik to
+  placeholder.
+
+---
+
+## 10. Pola w danych jeszcze bez zastosowania (`data/rzezby.js`)
+
+Trzy pola w danych każdej rzeźby nie są dziś w pełni wykorzystane —
+wyjaśnienie, do czego służą (albo mogłyby służyć), i co warto
+zdecydować:
+
+- **`tonPowazny: false`** — jeśli ustawione na `true` dla danej rzeźby,
+  podstrona dostaje przyciemnioną, bardziej stonowaną kolorystykę oraz
+  dodatkową notkę „To miejsce pamięci — prosimy o zachowanie powagi
+  podczas odwiedzin." Obecnie **wyłączone dla wszystkich czterech
+  rzeźb** — w tym dla Kamienia papieskiego, który jako pomnik
+  upamiętniający wizytę papieża wydaje się najbardziej oczywistym
+  kandydatem. Decyzja do podjęcia: włączyć dla Kamienia papieskiego
+  (albo zostawić wszystkie jak teraz)?
+- **`wspolautorstwoWyeksponowac: true`** — pole jest wypełnione
+  (`true` dla Ławeczki Prusa i Kamienia papieskiego, `false` dla
+  pozostałych dwóch), ale **obecnie nie jest nigdzie odczytywane
+  w kodzie strony** — nie ma żadnego efektu wizualnego. Decyzja do
+  podjęcia: albo dopisać w kodzie, co ma się dziać, gdy jest `true`
+  (np. dodatkowe wyróżnienie współautorstwa w widoku rzeźby), albo
+  usunąć to pole jako nieużywane.
+- **`dataOdsloniecia: { pl: null, en: null }`** — pole istnieje
+  w danych (wypełnione tylko dla Ławeczki Prusa), ale **obecnie nie
+  jest nigdzie odczytywane w kodzie strony** — nie pojawia się na
+  żadnej podstronie. Decyzja do podjęcia: albo dodać je do widoku
+  podstrony (np. do siatki „Rok / Materiał / Miejsce / Autorstwo"),
+  albo usunąć jako nieużywane.
+
+---
+
+## 11. Logotypy partnerów
 
 Na stronie „O projekcie" są trzy puste miejsca na logotypy (`.partner-logo-slot`).
 Podmień je na obrazy, gdy będą znane nazwy partnerów/finansujących.

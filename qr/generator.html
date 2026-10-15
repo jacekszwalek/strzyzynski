@@ -46,8 +46,49 @@
     <p id="download-status" aria-live="polite"></p>
   </div>
 
-  <h2>Podgląd kodów</h2>
+  <h2>Podgląd kodów — rzeźby</h2>
   <div class="qr-preview-grid" id="qr-preview-grid"></div>
+
+  <h2>Wejście ze strony głównej</h2>
+  <p class="content">
+    Kod QR prowadzący bezpośrednio na stronę główną (adres „czysty", bez
+    przekierowania) — np. do materiałów graficznych, wizytówek, mediów
+    społecznościowych.
+  </p>
+  <div class="qr-preview-grid" id="qr-homepage-grid"></div>
+
+  <h2>Wejście z plakatu</h2>
+  <p class="content">
+    Osobny kod QR dla plakatu promującego spacer — prowadzi na stronę
+    główną przez krótkie przekierowanie (tak jak kody na tabliczkach przy
+    rzeźbach), dzięki czemu w statystykach będzie widać osobno, ile osób
+    weszło na stronę zeskanowawszy plakat.
+  </p>
+  <div class="qr-preview-grid" id="qr-poster-grid"></div>
+
+  <h2>Własny adres (niestandardowy)</h2>
+  <div class="qr-tool-panel">
+    <p style="margin-top:0">
+      <strong>⚠ Uwaga:</strong> ta sekcja generuje kod QR dla adresu, który
+      <strong>sam wpisujesz</strong> — np. na potrzeby materiału drukowanego,
+      dla którego docelowa podstrona jeszcze nie istnieje. Wygenerowany kod
+      <strong>nie będzie działał</strong> (po zeskanowaniu pokaże błąd 404),
+      dopóki ktoś faktycznie nie stworzy strony pod tym adresem w
+      repozytorium i jej nie opublikuje. Użyj tego tylko do wcześniejszego
+      przygotowania grafiki z kodem QR — nie do finalnego druku, zanim
+      strona docelowa nie zadziała.
+    </p>
+    <label for="custom-path-input" style="display:block; margin-bottom:0.3em">
+      Ścieżka po adresie bazowym (bez ukośnika na początku), np.
+      <code>ulotka/</code> lub <code>en/ulotka/</code>:
+    </label>
+    <div class="base-url-box">
+      <code id="custom-base-display"></code>
+      <input type="text" id="custom-path-input" placeholder="ulotka/" style="flex:1; min-width:12rem; padding:0.4em 0.6em; font-size:1rem;">
+      <button type="button" class="btn btn--secondary" id="custom-generate-btn">Generuj kod</button>
+    </div>
+    <div class="qr-preview-grid" id="qr-custom-grid" style="margin-top:var(--space-3)"></div>
+  </div>
 
 </div>
 
@@ -141,11 +182,51 @@
     });
   }
 
+  function renderCard(container, label, url, filename) {
+    var svg = makeSvg(url);
+    var card = document.createElement("div");
+    card.className = "qr-preview-card";
+    card.innerHTML =
+      '<div style="width:12rem;height:12rem;margin:0 auto">' + svg + '</div>' +
+      '<strong>' + label + '</strong>' +
+      '<p style="font-size:0.85rem;word-break:break-all">' + url + '</p>' +
+      '<button type="button" class="btn btn--secondary">Pobierz SVG</button>';
+    card.querySelector("button").addEventListener("click", function () {
+      downloadSvg(filename, svg);
+    });
+    container.appendChild(card);
+  }
+
+  function renderHomepageAndPoster() {
+    var homeGrid = document.getElementById("qr-homepage-grid");
+    renderCard(homeGrid, "Strona główna (PL)", BASE_URL, "qr-strona-glowna-pl.svg");
+    renderCard(homeGrid, "Homepage (EN)", BASE_URL + "en/", "qr-homepage-en.svg");
+
+    var posterGrid = document.getElementById("qr-poster-grid");
+    renderCard(posterGrid, "Plakat → strona główna", BASE_URL + "plakat-qr.html", "qr-plakat.svg");
+  }
+
+  function initCustomGenerator() {
+    document.getElementById("custom-base-display").textContent = BASE_URL;
+    var input = document.getElementById("custom-path-input");
+    var grid = document.getElementById("qr-custom-grid");
+    document.getElementById("custom-generate-btn").addEventListener("click", function () {
+      var path = input.value.trim().replace(/^\/+/, "");
+      if (!path) return;
+      grid.innerHTML = "";
+      var url = BASE_URL + path;
+      var safeFilename = "qr-wlasny-" + path.replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g, "") + ".svg";
+      renderCard(grid, "Własny adres (jeszcze nieistniejący, dopóki nie stworzysz tej strony)", url, safeFilename);
+    });
+  }
+
   if (typeof RZEZBY === "undefined" || typeof QRCode === "undefined") {
     document.getElementById("qr-preview-grid").textContent =
       "Nie udało się wczytać danych rzeźb lub biblioteki QR. Sprawdź, czy pliki data/rzezby.js i vendor/qrcode/qrcode-svg.js istnieją.";
   } else {
     render();
+    renderHomepageAndPoster();
+    initCustomGenerator();
   }
 })();
 </script>
