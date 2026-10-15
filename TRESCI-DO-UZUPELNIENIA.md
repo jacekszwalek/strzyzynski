@@ -30,12 +30,12 @@ polu (patrz README, sekcja "Jak podmienić zdjęcie").
 | `drzewo-genealogiczne-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
 | `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `kawiarnia-ewelina-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
-| `kawiarnia-ewelina-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
-| `kawiarnia-ewelina-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `pomnik-wojtyla-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
-| `pomnik-wojtyla-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
-| `pomnik-wojtyla-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
+| `panna-z-ryba-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
+| `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `kamien-papieski-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
+| `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe, 4:5) | biogram na stronie głównej |
 
 Lista na stronie głównej/mapie (`#location-list`) jest tekstowa, bez
@@ -79,8 +79,8 @@ Dla każdej rzeźby: **plik audio MP3** plus transkrypcja tekstowa (PL + EN).
 | Rzeźba | Status |
 |---|---|
 | Ławeczka Bolesława Prusa | **ZROBIONE** — `audio/laweczka-prusa.mp3` + transkrypcja PL/EN |
-| Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** — `audio/kawiarnia-ewelina.mp3` + transkrypcja PL/EN |
-| Kamień papieski | **ZROBIONE** — `audio/pomnik-wojtyla.mp3` + transkrypcja PL/EN |
+| Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** — `audio/panna-z-ryba.mp3` + transkrypcja PL/EN |
+| Kamień papieski | **ZROBIONE** — `audio/kamien-papieski.mp3` + transkrypcja PL/EN |
 | Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebny plik `audio/drzewo-genealogiczne.mp3` + transkrypcja |
 
 Transkrypcja trafia do pola `transkrypcja: { pl, en }` przy danej rzeźbie
