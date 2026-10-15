@@ -98,7 +98,13 @@ w `data/rzezby.js`.
   nagrania). **Materiał rzeźby wciąż nieznany** (`material` w danych ma
   wartość `null`) — do ustalenia. Historia willi „Pod Matką Boską" wciąż
   do uzupełnienia, **godziny otwarcia kawiarni do zweryfikowania przed
-  publikacją**.
+  publikacją**. **Priorytet: transkrypcja nagrania (sekcja „Transkrypcja"
+  na tej podstronie, PL i EN) zaprasza do kontaktu telefonicznego w celu
+  umówienia wizyty w pracowni („Zapraszam do kontaktu telefonicznego
+  i umówienia wizyty"), ale na stronie nigdzie nie podano numeru telefonu.
+  Trzeba dostarczyć ogólnodostępny numer i umieścić go w widocznym miejscu
+  na tej podstronie (np. przy transkrypcji albo w sekcji „Informacje
+  praktyczne") — w obu wersjach językowych.**
 - **Kamień papieski** (`kamien-papieski/index.html`, adres
   `/kamien-papieski/`) — rok powstania, materiał i autorstwo już
   potwierdzone (transkrypcja nagrania + wiadomość właściciela
