@@ -13,6 +13,8 @@
   body { padding: var(--space-4) 0; }
   .base-url-box { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
   .base-url-box code { background: var(--color-bg-alt); padding: 0.3em 0.5em; border-radius: 0.25em; font-size: 1.05rem; }
+  .ecl-switch { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+  .ecl-switch label { display: flex; align-items: center; gap: 0.4em; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -20,10 +22,9 @@
 
   <h1>Generator kodów QR</h1>
   <p class="content">
-    Generuje kody QR (SVG, poziom korekcji błędów H — 30%, odporny na
-    zabrudzenia) prowadzące do każdej podstrony rzeźby, osobno dla wersji
-    polskiej i angielskiej. Dane pobierane są z <code>data/rzezby.js</code>
-    — jedynego źródła prawdy.
+    Generuje kody QR (SVG) prowadzące do każdej podstrony rzeźby, osobno
+    dla wersji polskiej i angielskiej. Dane pobierane są z
+    <code>data/rzezby.js</code> — jedynego źródła prawdy.
   </p>
 
   <div class="qr-tool-panel">
@@ -37,6 +38,24 @@
     <div class="base-url-box">
       <span>Aktualne <code>BASE_URL</code>:</span>
       <code id="base-url-display"></code>
+    </div>
+  </div>
+
+  <div class="qr-tool-panel">
+    <h2 style="margin-top:0">Poziom korekcji błędów</h2>
+    <p>
+      Te kody QR trafią tylko na ulotkę/pocztówkę i plakat — materiał
+      drukowany, który nie będzie specjalnie brudzony czy wystawiony na
+      wilgoć tak jak tabliczka w terenie. Niższy poziom korekcji błędów
+      wystarczy i daje kod z mniejszą liczbą czarnych kwadratów (łatwiejszy
+      do zeskanowania z mniejszego wydruku). Wybór dotyczy wszystkich
+      kodów generowanych poniżej.
+    </p>
+    <div class="ecl-switch" role="radiogroup" aria-label="Poziom korekcji błędów">
+      <label><input type="radio" name="ecl" value="L"> L — niski (ok. 7%)</label>
+      <label><input type="radio" name="ecl" value="M" checked> M — średni (ok. 15%) — zalecany</label>
+      <label><input type="radio" name="ecl" value="Q"> Q — podwyższony (ok. 25%)</label>
+      <label><input type="radio" name="ecl" value="H"> H — wysoki (ok. 30%)</label>
     </div>
   </div>
 
@@ -99,6 +118,10 @@
   "use strict";
 
   var BASE_URL = QR_BASE_URL;
+  var currentEcl = "M";
+  var currentList = [];
+  var currentSvgCache = {};
+  var lastCustomPath = null;
 
   document.getElementById("base-url-display").textContent = BASE_URL;
 
@@ -120,7 +143,7 @@
       height: 512,
       color: "#000000",
       background: "#ffffff",
-      ecl: "H",
+      ecl: currentEcl,
       container: "svg-viewbox"
     });
     return qr.svg();
@@ -140,13 +163,13 @@
 
   function render() {
     var grid = document.getElementById("qr-preview-grid");
-    var list = targets();
+    currentList = targets();
+    currentSvgCache = {};
     var html = "";
-    var svgCache = {};
 
-    list.forEach(function (t) {
+    currentList.forEach(function (t) {
       var svg = makeSvg(t.url);
-      svgCache[t.filename] = svg;
+      currentSvgCache[t.filename] = svg;
       html +=
         '<div class="qr-preview-card">' +
           '<div style="width:12rem;height:12rem;margin:0 auto">' + svg + '</div>' +
@@ -159,21 +182,23 @@
 
     grid.querySelectorAll("button[data-filename]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        downloadSvg(btn.getAttribute("data-filename"), svgCache[btn.getAttribute("data-filename")]);
+        downloadSvg(btn.getAttribute("data-filename"), currentSvgCache[btn.getAttribute("data-filename")]);
       });
     });
+  }
 
+  function initDownloadAll() {
     document.getElementById("download-all-btn").addEventListener("click", function () {
       var status = document.getElementById("download-status");
       var i = 0;
       function next() {
-        if (i >= list.length) {
-          status.textContent = "Pobrano " + list.length + " plików SVG.";
+        if (i >= currentList.length) {
+          status.textContent = "Pobrano " + currentList.length + " plików SVG.";
           return;
         }
-        var t = list[i];
-        downloadSvg(t.filename, svgCache[t.filename]);
-        status.textContent = "Pobieranie… (" + (i + 1) + " / " + list.length + ")";
+        var t = currentList[i];
+        downloadSvg(t.filename, currentSvgCache[t.filename]);
+        status.textContent = "Pobieranie… (" + (i + 1) + " / " + currentList.length + ")";
         i++;
         setTimeout(next, 400);
       }
@@ -198,24 +223,49 @@
 
   function renderHomepageAndPoster() {
     var homeGrid = document.getElementById("qr-homepage-grid");
+    homeGrid.innerHTML = "";
     renderCard(homeGrid, "Strona główna (PL)", BASE_URL, "qr-strona-glowna-pl.svg");
     renderCard(homeGrid, "Homepage (EN)", BASE_URL + "en/", "qr-homepage-en.svg");
 
     var posterGrid = document.getElementById("qr-poster-grid");
+    posterGrid.innerHTML = "";
     renderCard(posterGrid, "Plakat → strona główna", BASE_URL + "plakat-qr.html", "qr-plakat.svg");
+  }
+
+  function renderCustom() {
+    var grid = document.getElementById("qr-custom-grid");
+    if (!lastCustomPath) return;
+    grid.innerHTML = "";
+    var url = BASE_URL + lastCustomPath;
+    var safeFilename = "qr-wlasny-" + lastCustomPath.replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g, "") + ".svg";
+    renderCard(grid, "Własny adres (jeszcze nieistniejący, dopóki nie stworzysz tej strony)", url, safeFilename);
   }
 
   function initCustomGenerator() {
     document.getElementById("custom-base-display").textContent = BASE_URL;
     var input = document.getElementById("custom-path-input");
-    var grid = document.getElementById("qr-custom-grid");
     document.getElementById("custom-generate-btn").addEventListener("click", function () {
       var path = input.value.trim().replace(/^\/+/, "");
       if (!path) return;
-      grid.innerHTML = "";
-      var url = BASE_URL + path;
-      var safeFilename = "qr-wlasny-" + path.replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g, "") + ".svg";
-      renderCard(grid, "Własny adres (jeszcze nieistniejący, dopóki nie stworzysz tej strony)", url, safeFilename);
+      lastCustomPath = path;
+      renderCustom();
+    });
+  }
+
+  function renderAll() {
+    render();
+    renderHomepageAndPoster();
+    renderCustom();
+  }
+
+  function initEclSwitch() {
+    document.querySelectorAll('input[name="ecl"]').forEach(function (radio) {
+      radio.addEventListener("change", function () {
+        if (radio.checked) {
+          currentEcl = radio.value;
+          renderAll();
+        }
+      });
     });
   }
 
@@ -225,7 +275,9 @@
   } else {
     render();
     renderHomepageAndPoster();
+    initDownloadAll();
     initCustomGenerator();
+    initEclSwitch();
   }
 })();
 </script>
