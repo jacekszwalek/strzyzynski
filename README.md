@@ -244,6 +244,17 @@ najlepiej wykonać z jego pomocą.
 
 ## 8. Jak wygenerować kody QR
 
+**Generator kodów QR:** https://jacekszwalek.github.io/strzyzynski/qr/generator.html
+
+Ten link prowadzi wprost do narzędzia na aktualnym (tymczasowym) adresie
+`github.io` — jest też dostępny ze stopki każdej podstrony ("Generator
+kodów QR (admin)"), żeby łatwo do niego wrócić bez pamiętania adresu.
+**Link w stopce trzeba usunąć przed publikacją strony na docelowym
+adresie** (własnej domenie) — to narzędzie administratora, nie element
+strony dla zwiedzających. W kodzie jest oznaczony komentarzem `USUŃ PRZED
+PUBLIKACJĄ NA DOCELOWYM ADRESIE` w każdym pliku `.html` oraz w szablonie
+stopki w generatorze podstron.
+
 Kody QR nie są drukowane na tabliczkach przy rzeźbach — rozprowadzamy je
 wyłącznie przez pocztówkę/ulotkę promującą spacer (i opcjonalnie plakat).
 
