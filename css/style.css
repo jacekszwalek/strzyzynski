@@ -1169,7 +1169,30 @@ figure.content-figure figcaption {
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: var(--space-3);
 }
-.footer-admin-note { font-size: 0.85rem; opacity: 0.7; }
+.footer-admin-note { font-size: 0.85rem; }
+
+.footer-funding {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+.footer-funding p { font-size: 0.9rem; max-width: 40rem; margin: 0 auto; }
+
+/* Logotypy dofinansowania (Komitet ds. Pożytku Publicznego / NIW /
+   Międzynarodowy Rok Wolontariatu) — wymagane oznaczenie przy publikacji
+   materiałów sfinansowanych z Funduszu Inicjatyw MRW. Obraz ma białe tło
+   (oficjalne logotypy), stąd kontrastowa "karta" wokół niego. */
+.funding-logos {
+  display: block;
+  width: 100%;
+  max-width: 68rem;
+  height: auto;
+  margin: 0 auto var(--space-2);
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
 
 /* --------------------------------------------------------------------------
    17. Sekcja "O projekcie" — kontakt, partnerzy
