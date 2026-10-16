@@ -42,8 +42,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 - Podpowiedź/propozycja favicon strony (sekcja 9).
 
 **Magda**
-- Transkrypcja nagrania przy rzeźbie „Drzewo genealogiczne" (PL + EN) —
-  samo nagranie jest już dostarczone (sekcja 2b).
+- Zastanowić się, czy rozszerzyć nagranie przy rzeźbie „Drzewo
+  genealogiczne" o pozostałą część wypowiedzi — może być już po
+  wydaniu projektu, nie blokuje publikacji (sekcja 2b).
 
 **Dorota**
 - 14 zdjęć rzeźb + prawdziwe zdjęcie Zbigniewa Strzyżyńskiego (sekcja 1).
@@ -146,6 +147,12 @@ Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 
 Treść transkrypcji wpisujemy bez zmian w stosunku do nagrania — dozwolone
 są tylko poprawki interpunkcji i podział na akapity.
+
+**Do rozważenia (Magda), nie blokuje publikacji:** użyte w transkrypcji
+nagranie „Drzewo genealogiczne" to tylko fragment wypowiedzi Zbigniewa
+Strzyżyńskiego — do zastanowienia, czy warto nagranie (i transkrypcję)
+rozszerzyć o pozostałą część wypowiedzi. Może poczekać do czasu po
+wydaniu projektu.
 
 ---
 
