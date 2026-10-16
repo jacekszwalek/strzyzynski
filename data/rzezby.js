@@ -76,7 +76,7 @@ var RZEZBY = [
     adres: "Aleja St. Małachowskiego 3, 24-140 Nałęczów",
 
     dojazd: {
-      pl: "Wejdź do Parku Zdrojowego od strony Pałacu Małachowskich. Ławeczka stoi przy głównej alejce, w pobliżu stawu i pijalni wód, bardzo blisko Alejki Strzyżyńskiego (punkt 2 tej trasy). Uwaga: w parku stoją dwa pomniki Bolesława Prusa — popiersie oraz ta ławeczka z siedzącą postacią — łatwo je pomylić.",
+      pl: "Wejdź do Parku Zdrojowego od strony Pałacu Małachowskich. Ławeczka stoi przy głównej alejce, w pobliżu stawu i pijalni wód, bardzo blisko Alei Strzyżyńskiego (punkt 2 tej trasy). Uwaga: w parku stoją dwa pomniki Bolesława Prusa — popiersie oraz ta ławeczka z siedzącą postacią — łatwo je pomylić.",
       en: "Enter the Spa Park from the side of the Małachowski Palace. The bench stands by the main path, near the pond and the pump room, very close to Strzyżyński Alley (stop 2 on this route). Note: there are two monuments to Bolesław Prus in the park — a bust and this bench with a seated figure — it is easy to confuse the two."
     },
 
@@ -143,20 +143,20 @@ var RZEZBY = [
   },
 
   {
-    id: "aleja-strzyzynskiego",
+    id: "drzewo-genealogiczne",
     nrTrasy: 2,
 
-    slug: { pl: "aleja-strzyzynskiego", en: "strzyzynski-alley" },
+    slug: { pl: "drzewo-genealogiczne", en: "family-tree" },
 
     tytul: {
-      pl: "Aleja Strzyżyńskiego",
-      en: "Strzyżyński Alley"
+      pl: "Drzewo genealogiczne",
+      en: "Family Tree"
     },
     // Pełny tytuł widoczny na samej podstronie (<title> i <h1>) — w menu
-    // i na kafelkach zostaje krótkie "Aleja Strzyżyńskiego" (pole tytul).
+    // i na kafelkach zostaje krótkie "Drzewo genealogiczne" (pole tytul).
     tytulStrony: {
-      pl: "Aleja Stanisława Strzyżyńskiego - rzeźba Drzewo genealogiczne",
-      en: "Stanisław Strzyżyński Alley"
+      pl: "Rzeźba Drzewo genealogiczne w Alei Stanisława Strzyżyńskiego",
+      en: "The Family Tree Sculpture in Stanisław Strzyżyński Alley"
     },
 
     rok: 1977,
@@ -184,13 +184,13 @@ var RZEZBY = [
     media: {
       typ: "audio",
       youtubeId: "VIDEO_ID_PLACEHOLDER",
-      audioSrc: "./audio/aleja-strzyzynskiego.mp3"
+      audioSrc: "./audio/drzewo-genealogiczne.mp3"
     },
 
-    miniatura: "./img/aleja-strzyzynskiego-mini.svg",
+    miniatura: "./img/drzewo-genealogiczne-mini.svg",
     zdjecia: [
       {
-        src: "./img/aleja-strzyzynskiego-1.svg",
+        src: "./img/drzewo-genealogiczne-1.svg",
         w: 800,
         h: 600,
         alt: {
@@ -203,7 +203,7 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/aleja-strzyzynskiego-2.svg",
+        src: "./img/drzewo-genealogiczne-2.svg",
         w: 800,
         h: 600,
         alt: {
@@ -269,11 +269,18 @@ var RZEZBY = [
       pl: `<p>Panna z rybą, umieszczona w fontannie w ogrodzie znanej i lubianej kawiarni Ewelina, powstała w 1979 roku. Zamówiła ją ówczesna właścicielka kawiarni — Ewelina Bartosiewicz. Projekty Panny z rybą ojciec robił już w latach 50-tych. Zachowały się też zdjęcia małych, gipsowych projektów rzeźby.</p>
         <p>W ogrodzie mogą Państwo zobaczyć też wiele innych rzeźb — zarówno plenerowych, jak i we wnętrzu portretowych. Wyrzeźbił m.in. właścicielkę, Ewelinę Bartosiewicz. Znajduje się tam też głowa Władysława Tatarkiewicza, którego rzeźbił z natury — z tej właśnie głowy później wykonywał ponadnaturalnej wielkości popiersie, które znajduje się w palmiarni w Parku Zdrojowym.</p>
         <p>Jeżeli Państwo pójdą kawałek dalej, ulicą Lipową, po prawej stronie widoczna będzie uliczka Bolesława Prusa. Tam znajduje się dom i pracownia Stanisława Strzyżyńskiego.</p>
-        <p>Jeżeli będą Państwo chcieli zajrzeć do pracowni i obejrzeć rzeźby z bliska — zapraszam do kontaktu telefonicznego i umówienia wizyty. Do zobaczenia w pracowni Stanisława Strzyżyńskiego.</p>`,
+        <p>Jeżeli będą Państwo chcieli zajrzeć do pracowni i obejrzeć rzeźby z bliska — zapraszam do kontaktu telefonicznego i umówienia wizyty. Do zobaczenia w pracowni Stanisława Strzyżyńskiego.</p>
+        <p><em>(Numer telefonu do pracowni znajduje się w dalszej części tej strony.)</em></p>`,
       en: `<p>The Maiden with a Fish, placed in the fountain in the garden of the well-known and much-loved Ewelina café, was created in 1979. It was commissioned by the café's owner at the time — Ewelina Bartosiewicz. My father had already made designs for the Maiden with a Fish back in the 1950s. Photographs of the small plaster designs of the sculpture have also survived.</p>
         <p>In the garden you can also see many other sculptures — both outdoor pieces and, inside, portrait busts. Among others, he sculpted the owner, Ewelina Bartosiewicz. There is also a head of Władysław Tatarkiewicz, whom he sculpted from life — it was from this very head that he later made the larger-than-life bust now in the Palm House in the Spa Park.</p>
         <p>If you walk a little further along Lipowa Street, you'll see Bolesław Prus Lane on the right. That is where Stanisław Strzyżyński's house and studio are located.</p>
-        <p>If you would like to stop by the studio and see the sculptures up close — you're welcome to get in touch by phone and arrange a visit. See you at Stanisław Strzyżyński's studio.</p>`
+        <p>If you would like to stop by the studio and see the sculptures up close — you're welcome to get in touch by phone and arrange a visit. See you at Stanisław Strzyżyński's studio.</p>
+        <p><em>(The studio's phone number can be found further down this page.)</em></p>`
+    },
+
+    zaproszenie: {
+      pl: 'Chcesz zobaczyć rzeźby z bliska i zajrzeć do pracowni Stanisława Strzyżyńskiego? Zadzwoń i umów się na wizytę: <span class="phone-number">508 244 607</span>.',
+      en: 'Would you like to see the sculptures up close and visit Stanisław Strzyżyński\'s studio? Call to arrange a visit: <span class="phone-number">508 244 607</span>.'
     },
 
     rok: 1979, // z transkrypcji nagrania (Zbigniew Strzyżyński)
@@ -413,14 +420,14 @@ var RZEZBY = [
     },
 
     lokalizacja: {
-      pl: "Przy wyjściu z Parku Zdrojowego",
-      en: "By an exit from the Spa Park (Park Zdrojowy)"
+      pl: "Przy wschodnim wyjściu z Parku Zdrojowego",
+      en: "By the eastern exit from the Spa Park (Park Zdrojowy)"
     },
-    adres: "Wyjście z Parku Zdrojowego, 24-140 Nałęczów", // DO ZWERYFIKOWANIA — dokładny adres/nazwa ulicy
+    adres: "Wschodnie wyjście z Parku Zdrojowego, 24-140 Nałęczów", // DO ZWERYFIKOWANIA — dokładny adres/nazwa ulicy
 
     dojazd: {
-      pl: "Idąc od Alejki Strzyżyńskiego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy jednym z wyjść z Parku Zdrojowego, w kierunku kawiarni Ewelina (punkt 4).",
-      en: "Walking from Strzyżyński Alley (stop 2 on this route) further into the park, the monument with the plaque stands by one of the exits from the Spa Park, towards Ewelina café (stop 4)."
+      pl: "Idąc od Alei Strzyżyńskiego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy wschodnim wyjściu z Parku Zdrojowego, w kierunku Panny z rybą (punkt 4).",
+      en: "Walking from Strzyżyński Alley (stop 2 on this route) further into the park, the monument with the plaque stands by the eastern exit from the Spa Park, towards The Maiden with a Fish (stop 4)."
     },
 
     wspolrzedne: [51.285452819939685, 22.212785832706324], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU

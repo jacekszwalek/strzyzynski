@@ -1,6 +1,6 @@
 # Treści do uzupełnienia
 
-*Stan na 2026-10-15 — ten dokument jest aktualizowany na bieżąco, w miarę
+*Stan na 2026-10-16 — ten dokument jest aktualizowany na bieżąco, w miarę
 jak przesyłane są nowe materiały. Jeśli coś z listy wygląda jako już
 zrobione na stronie, a wciąż figuruje tutaj jako otwarte — to znaczy, że
 dokument nie został jeszcze zaktualizowany; zgłoś to, żeby poprawić.*
@@ -29,9 +29,9 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 | `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie (220×165) i kafelek na stronie głównej |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `aleja-strzyzynskiego-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
-| `aleja-strzyzynskiego-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
-| `aleja-strzyzynskiego-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `drzewo-genealogiczne-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
+| `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
 | `panna-z-ryba-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
 | `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
@@ -75,7 +75,7 @@ Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 | Ławeczka Bolesława Prusa | **ZROBIONE** |
 | Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** |
 | Kamień papieski | **ZROBIONE** |
-| Alejka Stanisława Strzyżyńskiego | **W TOKU** — wciąż potrzebne nagranie i transkrypcja |
+| Drzewo genealogiczne | **W TOKU** — wciąż potrzebne nagranie i transkrypcja |
 
 Treść transkrypcji wpisujemy bez zmian w stosunku do nagrania — dozwolone
 są tylko poprawki interpunkcji i podział na akapity.
@@ -103,14 +103,18 @@ w `data/rzezby.js`.
   - wzbogacenie krótszego opisu redakcyjnego (`opisPelny` w
     `data/rzezby.js`) tymi samymi szczegółami,
   - związki Prusa z Nałęczowem, kontekst literacki.
-- **Aleja Strzyżyńskiego / Drzewo genealogiczne**
-  (`aleja-strzyzynskiego/index.html`, adres `/aleja-strzyzynskiego/`) —
-  **ZROBIONE, decyzja podjęta:** nazwa krótka (menu/kafelki) i adres
-  podstrony to teraz "Aleja Strzyżyńskiego" / `/aleja-strzyzynskiego/`
-  (wcześniej "Alejka Strzyżyńskiego" / `/alejka-strzyzynskiego/`), nazwa
-  długa (tytuł podstrony) to "Aleja Stanisława Strzyżyńskiego - rzeźba
-  Drzewo genealogiczne". Zmiana obejmuje też pliki (audio, zdjęcia) i
-  wszystkie linki w nawigacji oraz `sitemap.xml`.
+- **Drzewo genealogiczne**
+  (`drzewo-genealogiczne/index.html`, adres `/drzewo-genealogiczne/`) —
+  **ZROBIONE, ostateczna decyzja nazewnicza podjęta:** nazwa krótka
+  (menu/kafelki) i adres podstrony to teraz "Drzewo genealogiczne" /
+  `/drzewo-genealogiczne/` (wcześniej kolejno: "Alejka Strzyżyńskiego" /
+  `/alejka-strzyzynskiego/`, potem "Aleja Strzyżyńskiego" /
+  `/aleja-strzyzynskiego/`), nazwa długa (tytuł podstrony) to "Rzeźba
+  Drzewo genealogiczne w Alei Stanisława Strzyżyńskiego". W opisach i
+  wskazówkach dojazdu alej nadal nazywana jest "Aleją Strzyżyńskiego" —
+  zmienia się tylko nazwa samego przystanku/rzeźby, nie nazwa alei.
+  Zmiana obejmuje też pliki (audio, zdjęcia) i wszystkie linki w
+  nawigacji oraz `sitemap.xml`.
   Dodane fakty (na podstawie informacji od Doroty Strzyżyńskiej): plener,
   w ramach którego powstała rzeźba, zorganizował Jarosław Olejnicki,
   prezes Towarzystwa Przyjaciół Nałęczowa, a wzdłuż alei stoją tablice
@@ -124,18 +128,10 @@ w `data/rzezby.js`.
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres `/panna-z-ryba/`) —
   rok powstania już potwierdzony (1979, z transkrypcji nagrania). Do
   dostarczenia:
-  - **priorytet, decyzja do podjęcia: numer telefonu** — transkrypcja
-    nagrania (sekcja „Transkrypcja" na tej podstronie, PL i EN) zaprasza
-    do kontaktu telefonicznego w celu umówienia wizyty w pracowni
-    („Zapraszam do kontaktu telefonicznego i umówienia wizyty"), ale na
-    stronie nigdzie nie podano numeru. **Do wyboru jedno z dwóch:**
-    (a) dostarczyć ogólnodostępny numer telefonu i umieścić go w
-    widocznym miejscu na tej podstronie (np. przy transkrypcji albo
-    w sekcji „Informacje praktyczne") — w obu wersjach językowych, albo
-    (b) usunąć to zaproszenie do kontaktu telefonicznego z nagrania —
-    co oznacza też **zmianę transkrypcji** (PL i EN), żeby nie
-    wspominała już o telefonie, skoro na stronie nie będzie żadnego
-    numeru do podania,
+  - **ZROBIONE, numer telefonu dodany**: 508 244 607, w nowej sekcji
+    „Zaproszenie do pracowni" tuż pod nagraniem (PL i EN). Na końcu
+    transkrypcji (PL i EN) dodana jest też krótka notka wskazująca, że
+    numer znajduje się w dalszej części strony,
   - materiał rzeźby (`material` w danych ma wartość `null`) — nieznany,
   - historia willi „Pod Matką Boską".
 
@@ -158,23 +154,24 @@ w `data/rzezby.js`.
   - informacja o finansowaniu,
   - lista źródeł,
   - nazwa i zakres projektu wspomnianego w sekcji „Część większego
-    projektu",
-  - **priorytet: warunki uzyskania dotacji na ten projekt** — trzeba
-    dostarczyć, czego dokładnie wymaga dotacja/grant, pod którym projekt
-    powstaje. W szczególności: co dotacja wymaga, żeby znalazło się na
-    stronie (np. logotyp finansującego, informacja o źródle
-    finansowania, konkretne sformułowanie) i gdzie dokładnie — czy ma
-    być widoczne na stronie głównej, czy wystarczy sekcja „O projekcie",
-    czy ma być też w stopce każdej podstrony; jakiej wielkości i w jakim
-    formacie ma być logotyp/informacja; czy wymagane jest umieszczenie
-    danych kontaktowych (łącznie z numerem telefonu?) — jeśli tak, to
-    gdzie (tylko w stopce, czy osobna sekcja) i czy mają to być dane do
-    Fundacji Sztuka i Dom / sztukaidom.com, czy bezpośrednio do
-    Zbigniewa Strzyżyńskiego.
+    projektu".
+
+  **ZROBIONE, warunki dotacji wdrożone na podstawie dokumentu
+  „Niezbędnik Realizatora" (MRW 2026):** zgodnie z opisanym tam
+  obowiązkowym oznaczeniem materiałów ze zdjęciami dodano — w stopce
+  każdej podstrony (PL+EN) oraz w sekcji „Partnerzy i finansowanie" na
+  stronie O projekcie (PL+EN) — logotypy Komitetu ds. Pożytku
+  Publicznego, NIW i Międzynarodowego Roku Wolontariatu 2026, obowiązkowy
+  napis „Sfinansowano ze środków Narodowego Instytutu Wolności…”, pełną
+  nazwę inicjatywy oraz logotypy i nazwy Regionalnych Operatorów Projektu
+  (Bieszczadzki Uniwersytet Ludowy, Sursum Corda, Fundacja Bieszczadzka).
+  **Uwaga: właściciel repozytorium zweryfikuje te wymagania jeszcze raz
+  bezpośrednio w umowie grantowej i może przesłać poprawki** — to, co
+  jest teraz na stronie, opiera się na ogólnym dokumencie dla
+  realizatorów, nie na samej umowie.
 
   (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
-  repozytorium — ale patrz punkt wyżej: warunki dotacji mogą wymagać jej
-  przywrócenia w innej formie.)
+  repozytorium.)
 
 ---
 
@@ -189,12 +186,12 @@ w kodzie (`en/about/index.html`, komentarz w nagłówku `data/rzezby.js`),
 **nie oznaczają brakującego tłumaczenia** — oznaczają ten sam otwarty fakt,
 który czeka na ustalenie również w wersji polskiej (patrz sekcje 3 i 5).
 Przykłady: materiał rzeźby Panna z rybą, treść tablicy pamiątkowej przy
-Kamieniu papieskim, podziękowania i informacje o finansowaniu na stronie
+Kamieniu papieskim, lista źródeł i dodatkowe podziękowania na stronie
 „O projekcie". Gdy taki fakt zostanie dostarczony po polsku, wersję
 angielską warto dopisać przy tej samej okazji.
 
-Jedyny realny wyjątek: **Alejka Stanisława Strzyżyńskiego** nie ma jeszcze
-żadnego nagrania ani transkrypcji (patrz sekcja 2) — więc nie ma też czego
+Jedyny realny wyjątek: **Drzewo genealogiczne** nie ma jeszcze żadnego
+nagrania ani transkrypcji (patrz sekcja 2) — więc nie ma też czego
 tłumaczyć, dopóki polski tekst nie powstanie.
 
 ---
@@ -241,7 +238,7 @@ QR mogą teraz być projektowane pod docelowy adres.
 
 **ZROBIONE:** obie decyzje blokujące projekt kodów QR zostały podjęte —
 domena (`sladamistrzyzynskiego.pl`, patrz sekcja 6) i finalny adres
-podstrony Aleja Strzyżyńskiego (`/aleja-strzyzynskiego/`, patrz sekcja 3).
+podstrony Drzewo genealogiczne (`/drzewo-genealogiczne/`, patrz sekcja 3).
 
 **ZROBIONE, decyzja podjęta: tabliczki z kodem QR przy każdej rzeźbie są
 skasowane z planu.** Kody QR będą rozprowadzane wyłącznie przez
@@ -263,6 +260,14 @@ Narzędzie `qr/generator.html` jest już gotowe i rozbudowane o:
 Wszystko w tym narzędziu automatycznie korzysta z adresu ustawionego
 w `qr/base-url.js` — nie trzeba niczego przepisywać ręcznie po zmianie
 domeny.
+
+**ZROBIONE, naprawiony błąd śledzenia:** kody QR dla poszczególnych
+rzeźb (wersja PL) koniecznie koduje teraz adres `<slug>-qr.html`
+(krótkie przekierowanie), tak jak było ustalone — wcześniej generator
+błędnie kodował bezpośrednio czysty adres `<slug>/`, co omijało stuby
+śledzące i uniemożliwiało odróżnienie w Cloudflare Web Analytics wejść
+ze skanowania kodu od wejść wpisanych wprost. Pod każdym kodem wciąż
+wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
 
 ---
 
@@ -305,7 +310,12 @@ domeny.
 
 ---
 
-## 10. Logotypy partnerów
+## 10. Logotypy partnerów — ZROBIONE
 
-Na stronie „O projekcie" są trzy puste miejsca na logotypy (`.partner-logo-slot`).
-Podmień je na obrazy, gdy będą znane nazwy partnerów/finansujących.
+Dawne puste miejsca na logotypy (`.partner-logo-slot`) zostały zastąpione
+rzeczywistymi obrazami: `img/logotypy-dofinansowanie.png` (Komitet ds.
+Pożytku Publicznego, NIW, Międzynarodowy Rok Wolontariatu 2026) oraz
+`img/logotypy-operatorzy.png` (Bieszczadzki Uniwersytet Ludowy, Sursum
+Corda, Fundacja Bieszczadzka) — patrz sekcja 3, „O projekcie". Jeśli
+umowa grantowa (patrz uwaga w sekcji 3) będzie wymagać innych
+logotypów/układu, trzeba będzie podmienić te pliki.
