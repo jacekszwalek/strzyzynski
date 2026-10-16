@@ -902,6 +902,7 @@ section { margin-bottom: var(--space-6); }
 .audio-btn--seek {
   width: 3rem; height: 3rem;
   font-size: 0.8rem;
+  border-radius: var(--radius-lg);
 }
 .seek-icon { width: 1.8rem; height: 1.8rem; }
 
