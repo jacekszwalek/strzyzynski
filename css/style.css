@@ -967,7 +967,17 @@ details.transcript summary {
   min-height: var(--tap-min);
   display: flex;
   align-items: center;
+  gap: 0.4em;
+  list-style: none;
 }
+details.transcript summary::-webkit-details-marker { display: none; }
+details.transcript summary::before {
+  content: "▸";
+  display: inline-block;
+  font-size: 0.85em;
+  transition: transform 0.15s ease;
+}
+details.transcript[open] summary::before { transform: rotate(90deg); }
 details.transcript .transcript-body { margin-top: var(--space-2); }
 
 /* --------------------------------------------------------------------------
