@@ -27,8 +27,6 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 **Jacek**
 - Wykupienie i podłączenie domeny `sladamistrzyzynskiego.pl` (CNAME, DNS),
   podmiana adresu w `sitemap.xml`/`robots.txt` po jej uruchomieniu (sekcja 6).
-- Ostateczna weryfikacja wymogów logotypów/oznaczeń względem umowy
-  grantowej, nie tylko „Niezbędnika Realizatora" (sekcja 3, sekcja 10).
 - Decyzje projektowe: forma prezentacji przystanków na stronie głównej,
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 
@@ -67,6 +65,10 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
     Fundacji Sztuka i Dom, podziękowania, informacja o finansowaniu.
 - Decyzja: sekcja „Źródła" na stronie O projekcie (PL+EN) — uzupełnić
   konkretnymi źródłami albo usunąć sekcję, jeśli ich nie będzie
+  (sekcja 3).
+- Weryfikacja warunków dofinansowania: sprawdzić, czy strona O projekcie
+  i stopka (logotypy, obowiązkowe napisy) spełniają wymogi dotacji —
+  można przesłać link do strony w obecnym kształcie, niech ocenią
   (sekcja 3).
 - Potwierdzenie w terenie: współrzędne GPS, opisy dostępności (sekcja 5).
 - Decyzja o wielkości pierwszego nakładu ulotki/pocztówki (sekcja 8).
@@ -254,10 +256,11 @@ w `data/rzezby.js`.
   napis „Sfinansowano ze środków Narodowego Instytutu Wolności…”, pełną
   nazwę inicjatywy oraz logotypy i nazwy Regionalnych Operatorów Projektu
   (Bieszczadzki Uniwersytet Ludowy, Sursum Corda, Fundacja Bieszczadzka).
-  **Uwaga (Jacek): właściciel repozytorium zweryfikuje te wymagania jeszcze
-  raz bezpośrednio w umowie grantowej i może przesłać poprawki** — to, co
+  **Do zrobienia (Dorota): weryfikacja warunków dofinansowania.** To, co
   jest teraz na stronie, opiera się na ogólnym dokumencie dla
-  realizatorów, nie na samej umowie.
+  realizatorów, nie na samej umowie grantowej. Zamiast szukać treści
+  umowy, można przesłać link do strony O projekcie w obecnym kształcie
+  i poprosić o ocenę, czy spełnia wymagane warunki dofinansowania.
 
   (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
   repozytorium.)
@@ -416,13 +419,11 @@ wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
 
 ## 10. Logotypy partnerów — ZROBIONE
 
-**Odpowiedzialność: Jacek** (ewentualna korekta po weryfikacji umowy
-grantowej, patrz sekcja 3)
-
 Dawne puste miejsca na logotypy (`.partner-logo-slot`) zostały zastąpione
 rzeczywistymi obrazami: `img/logotypy-dofinansowanie.png` (Komitet ds.
 Pożytku Publicznego, NIW, Międzynarodowy Rok Wolontariatu 2026) oraz
 `img/logotypy-operatorzy.png` (Bieszczadzki Uniwersytet Ludowy, Sursum
 Corda, Fundacja Bieszczadzka) — patrz sekcja 3, „O projekcie". Jeśli
-umowa grantowa (patrz uwaga w sekcji 3) będzie wymagać innych
-logotypów/układu, trzeba będzie podmienić te pliki.
+weryfikacja warunków dofinansowania (patrz sekcja 3, zadanie Doroty)
+wykaże potrzebę innych logotypów/układu, trzeba będzie podmienić te
+pliki.
