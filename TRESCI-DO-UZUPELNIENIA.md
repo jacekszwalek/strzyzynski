@@ -17,7 +17,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 
 - **Jacek** — strona i infrastruktura (kod, hosting, domena, generator QR,
   decyzje techniczne/wizualne na stronie).
-- **Michał** — generowanie/druk kodów QR, ulotki i materiały reklamowe.
+- **Michał** — druk kodów QR, ulotki i materiały reklamowe.
 - **Magda** — film wprowadzający i nagrania audio przy rzeźbach.
 - **Dorota** — materiały źródłowe, nieścisłości i wątpliwości do
   wyjaśnienia, zdjęcia oraz decyzje projektowe do podjęcia.
@@ -33,7 +33,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 
 **Michał**
-- Generowanie/pobranie kodów QR z
+- Pobranie kodów QR z
   [`qr/generator.html`](https://jacekszwalek.github.io/strzyzynski/qr/generator.html)
   do wykorzystania na pocztówce/ulotce (sekcja 7).
 - Projekt ulotki/pocztówki promującej spacer — format, treść, zdjęcia,
@@ -42,8 +42,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 - Podpowiedź/propozycja favicon strony (sekcja 9).
 
 **Magda**
-- Transkrypcja nagrania przy rzeźbie „Drzewo genealogiczne" (PL + EN) —
-  samo nagranie jest już dostarczone (sekcja 2b).
+- Zastanowić się, czy rozszerzyć nagranie przy rzeźbie „Drzewo
+  genealogiczne" o pozostałą część wypowiedzi — może być już po
+  wydaniu projektu, nie blokuje publikacji (sekcja 2b).
 
 **Dorota**
 - 14 zdjęć rzeźb + prawdziwe zdjęcie Zbigniewa Strzyżyńskiego (sekcja 1).
@@ -146,6 +147,12 @@ Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 
 Treść transkrypcji wpisujemy bez zmian w stosunku do nagrania — dozwolone
 są tylko poprawki interpunkcji i podział na akapity.
+
+**Do rozważenia (Magda), nie blokuje publikacji:** użyte w transkrypcji
+nagranie „Drzewo genealogiczne" to tylko fragment wypowiedzi Zbigniewa
+Strzyżyńskiego — do zastanowienia, czy warto nagranie (i transkrypcję)
+rozszerzyć o pozostałą część wypowiedzi. Może poczekać do czasu po
+wydaniu projektu.
 
 ---
 
@@ -328,7 +335,7 @@ QR mogą teraz być projektowane pod docelowy adres.
 ## 7. Kody QR
 
 **Odpowiedzialność: Jacek** (narzędzie generatora — zrobione);
-**Michał** (wygenerowanie/pobranie kodów do wykorzystania na materiałach
+**Michał** (pobranie kodów do wykorzystania na materiałach
 promocyjnych, patrz sekcja 8).
 
 **ZROBIONE:** obie decyzje blokujące projekt kodów QR zostały podjęte —
