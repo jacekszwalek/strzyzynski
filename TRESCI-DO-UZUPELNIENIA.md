@@ -37,7 +37,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   na pocztówce/ulotce (sekcja 7).
 - Projekt ulotki/pocztówki promującej spacer — format, treść, zdjęcia,
   kod QR (sekcja 8).
-- Zlecenie wydruku i decyzja o wielkości nakładu (sekcja 8).
+- Zlecenie wydruku (sekcja 8).
 - Podpowiedź/propozycja favicon strony (sekcja 9).
 
 **Magda**
@@ -48,12 +48,30 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 
 **Dorota**
 - 14 zdjęć rzeźb + prawdziwe zdjęcie Zbigniewa Strzyżyńskiego (sekcja 1).
-- Doprecyzowanie faktów i źródeł w opisach (biogram, Ławeczka Prusa,
-  Drzewo genealogiczne, Panna z rybą, Kamień papieski, O projekcie)
-  (sekcja 3).
+- Doprecyzowanie faktów i źródeł w opisach (sekcja 3):
+  - treści na stronę startową (dodatkowe fakty z okresu studiów,
+    szczegóły okoliczności przeprowadzki do Nałęczowa, pełny wykaz
+    najważniejszych realizacji, więcej kontekstu wokół konkursu na
+    Pomnik Walki i Męczeństwa na Majdanku),
+  - Ławeczka Prusa — wzbogacenie krótszego opisu redakcyjnego
+    (`opisPelny`) o szczegóły z transkrypcji, związki Prusa
+    z Nałęczowem, kontekst literacki,
+  - Drzewo genealogiczne — okoliczności powstania rzeźby (więcej
+    szczegółów niż plener), historia nadania nazwy alei, kontekst
+    w twórczości artysty,
+  - Panna z rybą — materiał rzeźby (nieznany), historia willi „Pod
+    Matką Boską",
+  - Kamień papieski — dokładna data i okoliczności pobytu kardynała
+    w Nałęczowie, treść tablicy pamiątkowej, dokładny adres,
+  - O projekcie — rozwinięcie celu projektu, pełny opis roli
+    Fundacji Sztuka i Dom, podziękowania, informacja o finansowaniu,
+    lista źródeł.
 - Potwierdzenie w terenie: współrzędne GPS, materiał rzeźby Panna
   z rybą, opisy dostępności (sekcja 5).
+- Decyzja o wielkości pierwszego nakładu ulotki/pocztówki (sekcja 8).
 - Decyzja projektowa: napis w nagłówku strony (sekcja 9).
+- Weryfikacja i akceptacja wizualnej części oraz treści po naniesieniu
+  zmian po spacerze wolontariuszek.
 
 ---
 
@@ -342,16 +360,17 @@ wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
 
 ## 8. Materiały promocyjne (druk)
 
-**Odpowiedzialność: Michał**
+**Odpowiedzialność: Michał** (projekt i zlecenie wydruku);
+**Dorota** (decyzja o wielkości nakładu)
 
 - **Priorytet: zaprojektować ulotkę/pocztówkę promującą inicjatywę
   i projekt** — materiał do rozdawania/wykładania, promujący wirtualny
   spacer. Potrzebne ustalenia: format, treść, zdjęcia, kod QR (patrz
   sekcja 7 — projekt kodu QR jest zablokowany do czasu decyzji
   o domenie).
-- **Zlecenie wydruku** — gdy projekt ulotki/pocztówki i plakatu będzie
-  gotowy, trzeba zlecić wydruk u drukarni oraz podjąć decyzję
-  o wielkości pierwszego nakładu.
+- **Zlecenie wydruku** (Michał) — gdy projekt ulotki/pocztówki i plakatu
+  będzie gotowy, trzeba zlecić wydruk u drukarni.
+- **Decyzja o wielkości pierwszego nakładu** (Dorota).
 
 ---
 
