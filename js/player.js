@@ -34,6 +34,8 @@
     var timeDuration = root.querySelector(".audio-time-duration");
     var seekBtns = root.querySelectorAll("[data-seek]");
     var speedBtn = root.querySelector(".audio-speed-toggle");
+    var errorBox = root.querySelector(".audio-load-error");
+    var retryBtn = root.querySelector(".audio-retry-btn");
     var lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "pl";
     var playLabel = lang === "pl" ? "Odtwórz" : "Play";
     var pauseLabel = lang === "pl" ? "Pauza" : "Pause";
@@ -51,6 +53,24 @@
       playedBar.style.width = pct + "%";
     }
 
+    // Niektóre przeglądarki (zwłaszcza mobilne) przywracają poprzedni stan
+    // formularza — w tym suwaka <input type="range"> — przy odświeżeniu
+    // strony albo powrocie z pamięci podręcznej (bfcache), mimo że znacznik
+    // HTML deklaruje value="0". Bez tego resetu suwak i czas potrafią
+    // pokazywać pozycję z poprzedniej wizyty, zanim jakikolwiek plik audio
+    // zdążył się wczytać w bieżącej sesji.
+    function resetUI() {
+      progress.max = "100";
+      progress.value = "0";
+      if (timeCurrent) timeCurrent.textContent = "0:00";
+      if (timeDuration) timeDuration.textContent = "0:00";
+      updatePlayedBar();
+      setPlayIcon(false);
+      if (errorBox) errorBox.hidden = true;
+    }
+
+    resetUI();
+
     playBtn.addEventListener("click", function () {
       if (audio.paused) {
         audio.play();
@@ -64,6 +84,7 @@
     audio.addEventListener("loadedmetadata", function () {
       progress.max = String(Math.floor(audio.duration) || 0);
       if (timeDuration) timeDuration.textContent = formatTime(audio.duration);
+      if (errorBox) errorBox.hidden = true;
     });
 
     audio.addEventListener("timeupdate", function () {
@@ -99,8 +120,27 @@
       });
     }
 
-    setPlayIcon(false);
-    updatePlayedBar();
+    // Plik audio czasem nie wczytuje się za pierwszym razem (słabe
+    // połączenie mobilne, chwilowy brak sieci) — bez tego odtwarzacz
+    // milczał bez żadnego komunikatu. Pokazujemy czytelny błąd z
+    // przyciskiem do ponownej próby zamiast pozostawiać martwe kontrolki.
+    audio.addEventListener("error", function () {
+      if (errorBox) errorBox.hidden = false;
+    });
+
+    if (retryBtn) {
+      retryBtn.addEventListener("click", function () {
+        if (errorBox) errorBox.hidden = true;
+        audio.load();
+      });
+    }
+
+    // Powrót z pamięci podręcznej przeglądarki (np. przycisk Wstecz) nie
+    // uruchamia DOMContentLoaded — bez tego nasłuchu odtwarzacz zostawałby
+    // z zamrożonym, nieaktualnym stanem z poprzedniej wizyty.
+    window.addEventListener("pageshow", function (event) {
+      if (event.persisted) resetUI();
+    });
   }
 
   function initListenOnlyToggle(section) {

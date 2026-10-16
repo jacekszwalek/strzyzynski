@@ -98,7 +98,7 @@
         </audio>
         <div class="audio-progress-row">
           <div class="audio-progress-wrap">
-            <input type="range" class="audio-progress" min="0" max="100" value="0" aria-label="Playback progress">
+            <input type="range" class="audio-progress" min="0" max="100" value="0" autocomplete="off" aria-label="Playback progress">
             <div class="audio-progress-played" aria-hidden="true"></div>
           </div>
           <span class="audio-time"><span class="audio-time-current">0:00</span>/<span class="audio-time-duration">0:00</span></span>
@@ -111,6 +111,10 @@
           </div>
           <button type="button" class="audio-speed-toggle" data-speed="1" aria-label="Playback speed: 1×">1×</button>
         </div>
+        <p class="audio-load-error" role="alert" hidden>
+          The recording could not be loaded (weak internet connection?).
+          <button type="button" class="btn btn--secondary audio-retry-btn">Try again</button>
+        </p>
       </div>
       
       <details class="transcript">

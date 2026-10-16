@@ -94,7 +94,7 @@
         </audio>
         <div class="audio-progress-row">
           <div class="audio-progress-wrap">
-            <input type="range" class="audio-progress" min="0" max="100" value="0" aria-label="Postęp odtwarzania">
+            <input type="range" class="audio-progress" min="0" max="100" value="0" autocomplete="off" aria-label="Postęp odtwarzania">
             <div class="audio-progress-played" aria-hidden="true"></div>
           </div>
           <span class="audio-time"><span class="audio-time-current">0:00</span>/<span class="audio-time-duration">0:00</span></span>
@@ -107,6 +107,10 @@
           </div>
           <button type="button" class="audio-speed-toggle" data-speed="1" aria-label="Prędkość odtwarzania: 1×">1×</button>
         </div>
+        <p class="audio-load-error" role="alert" hidden>
+          Nie udało się wczytać nagrania (słabe połączenie z internetem?).
+          <button type="button" class="btn btn--secondary audio-retry-btn">Spróbuj ponownie</button>
+        </p>
       </div>
       
       <details class="transcript">
