@@ -152,9 +152,12 @@ w `data/rzezby.js`.
   - pełny opis roli Fundacji Sztuka i Dom,
   - podziękowania,
   - informacja o finansowaniu,
-  - lista źródeł,
-  - nazwa i zakres projektu wspomnianego w sekcji „Część większego
-    projektu".
+  - lista źródeł.
+
+  **ZROBIONE, nazwa projektu:** sekcja „Część większego projektu" (PL+EN)
+  uzupełniona o pełną nazwę inicjatywy — „Cyfrowy spacer śladami artysty
+  rzeźbiarza Stanisława Strzyżyńskiego" — tę samą, która figuruje już w
+  sekcji „Partnerzy i finansowanie".
 
   **ZROBIONE, warunki dotacji wdrożone na podstawie dokumentu
   „Niezbędnik Realizatora" (MRW 2026):** zgodnie z opisanym tam
