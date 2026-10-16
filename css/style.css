@@ -741,6 +741,16 @@ section { margin-bottom: var(--space-6); }
   color: var(--color-accent-brown);
   margin-bottom: var(--space-2);
 }
+/* Opcjonalna karta "Zaproszenie do pracowni" (np. Panna z rybą) */
+.invitation-box {
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-accent-brown);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.invitation-box h2 { margin-top: 0; }
+.invitation-box .phone-number { font-weight: 700; font-size: 1.2rem; white-space: nowrap; }
 .video-wrap {
   position: relative;
   width: 100%;
@@ -1189,9 +1199,9 @@ figure.content-figure figcaption {
 .funding-logos {
   display: block;
   width: 100%;
-  max-width: 68rem;
+  max-width: 65ch;
   height: auto;
-  margin: 0 auto var(--space-2);
+  margin: 0 0 var(--space-2) 0;
   background: #ffffff;
   border-radius: var(--radius);
   padding: var(--space-2);

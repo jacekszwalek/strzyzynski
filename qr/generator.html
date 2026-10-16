@@ -159,8 +159,8 @@
     var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
     var list = [];
     items.forEach(function (r) {
-      list.push({ id: r.id, lang: "pl", label: r.tytul.pl, url: BASE_URL + r.slug.pl + "/", filename: "qr-pl-" + r.id + ".svg" });
-      list.push({ id: r.id, lang: "en", label: r.tytul.en.replace(/\s*\(.*\)$/, ""), url: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
+      list.push({ id: r.id, lang: "pl", label: r.tytul.pl, url: BASE_URL + r.slug.pl + "-qr.html", displayUrl: BASE_URL + r.slug.pl + "/", filename: "qr-pl-" + r.id + ".svg" });
+      list.push({ id: r.id, lang: "en", label: r.tytul.en.replace(/\s*\(.*\)$/, ""), url: BASE_URL + "en/" + r.slug.en + "/", displayUrl: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
     });
     return list;
   }
@@ -204,7 +204,7 @@
         '<div class="qr-preview-card">' +
           '<div style="width:12rem;height:12rem;margin:0 auto">' + svg + '</div>' +
           '<strong>' + t.label + ' (' + t.lang.toUpperCase() + ')</strong>' +
-          '<p style="font-size:0.85rem;word-break:break-all">' + t.url + '</p>' +
+          '<p style="font-size:0.85rem;word-break:break-all">' + t.displayUrl + '</p>' +
           '<button type="button" class="btn btn--secondary" data-filename="' + t.filename + '">Pobierz SVG</button>' +
         '</div>';
     });
