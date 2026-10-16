@@ -29,6 +29,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   podmiana adresu w `sitemap.xml`/`robots.txt` po jej uruchomieniu (sekcja 6).
 - Decyzje projektowe: forma prezentacji przystanków na stronie głównej,
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
+- Nie krytyczne: pod filmem wprowadzającym nadal pokazują się
+  automatyczne napisy YouTube, mimo `cc_load_policy=0` — do sprawdzenia
+  w YouTube Studio, nie blokuje publikacji (sekcja 2a).
 
 **Michał**
 - Pobranie kodów QR z
@@ -134,6 +137,16 @@ mobilkę) osadzony na stronie głównej (PL+EN) —
 wariant CSS (`.video-wrap--portrait`, proporcje 9:16, ograniczona
 szerokość), żeby pionowy film nie rozciągał się na pełną szerokość
 strony na dużym ekranie.
+
+**Do zrobienia (Jacek), nie krytyczne, nie blokuje publikacji:** pod
+filmem nadal wyświetlają się automatycznie wygenerowane przez YouTube
+napisy, mimo ustawionego w adresie embed parametru `cc_load_policy=0`.
+Napisy są już wypalone na stałe w samym materiale, więc się dublują.
+Najpewniej wymaga to wyłączenia/usunięcia ścieżki napisów bezpośrednio
+w YouTube Studio przy tym filmie (ustawienie `cc_load_policy` w adresie
+nie wystarcza, jeśli film ma tam ustawione pokazywanie napisów
+domyślnie) — jeszcze nie sprawdzone, które dokładnie ustawienie to
+powoduje.
 
 ### 2b. Nagrania przy rzeźbach — audio i transkrypcje, 4 z 4 ZROBIONE
 
