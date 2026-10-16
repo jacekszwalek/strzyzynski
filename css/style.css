@@ -903,6 +903,7 @@ section { margin-bottom: var(--space-6); }
   width: 3rem; height: 3rem;
   font-size: 0.8rem;
 }
+.seek-icon { width: 1.8rem; height: 1.8rem; }
 
 .audio-btn--play {
   width: 4rem; height: 4rem;
@@ -948,6 +949,7 @@ section { margin-bottom: var(--space-6); }
 @container (max-width: 200px) {
   .audio-controls-center { gap: var(--space-1); }
   .audio-btn--seek { width: 2.5rem; height: 2.5rem; font-size: 0.7rem; }
+  .seek-icon { width: 1.5rem; height: 1.5rem; }
   .audio-btn--play { width: 3.5rem; height: 3.5rem; font-size: 1.3rem; }
 }
 
