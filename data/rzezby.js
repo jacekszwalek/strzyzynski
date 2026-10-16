@@ -279,8 +279,8 @@ var RZEZBY = [
     },
 
     zaproszenie: {
-      pl: 'Chcesz zobaczyć rzeźby z bliska i zajrzeć do pracowni Stanisława Strzyżyńskiego? Zadzwoń i umów się na wizytę: <span class="phone-number">508 244 607</span>.',
-      en: 'Would you like to see the sculptures up close and visit Stanisław Strzyżyński\'s studio? Call to arrange a visit: <span class="phone-number">508 244 607</span>.'
+      pl: 'Chcesz zobaczyć rzeźby z bliska i zajrzeć do pracowni Stanisława Strzyżyńskiego? Zadzwoń i umów się na wizytę: <a class="phone-number" href="tel:+48508244607">+48 508 244 607</a>.',
+      en: 'Would you like to see the sculptures up close and visit Stanisław Strzyżyński\'s studio? Call to arrange a visit: <a class="phone-number" href="tel:+48508244607">+48 508 244 607</a>.'
     },
 
     rok: 1979, // z transkrypcji nagrania (Zbigniew Strzyżyński)
