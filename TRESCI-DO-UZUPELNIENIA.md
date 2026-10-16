@@ -33,8 +33,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 
 **Michał**
-- Generowanie/pobranie kodów QR z `qr/generator.html` do wykorzystania
-  na pocztówce/ulotce (sekcja 7).
+- Generowanie/pobranie kodów QR z
+  [`qr/generator.html`](https://jacekszwalek.github.io/strzyzynski/qr/generator.html)
+  do wykorzystania na pocztówce/ulotce (sekcja 7).
 - Projekt ulotki/pocztówki promującej spacer — format, treść, zdjęcia,
   kod QR (sekcja 8).
 - Zlecenie wydruku (sekcja 8).
@@ -333,7 +334,10 @@ z kodem QR montowanych przy rzeźbach w terenie. Teksty na stronie
 głównej ("Jak korzystać ze spaceru") zostały poprawione, żeby nie
 odwoływały się do skanowania kodu przy rzeźbie.
 
-Narzędzie `qr/generator.html` jest już gotowe i rozbudowane o:
+Narzędzie [`qr/generator.html`](https://jacekszwalek.github.io/strzyzynski/qr/generator.html)
+jest już gotowe (link prowadzi do aktualnego adresu `github.io` — zmieni
+się na `sladamistrzyzynskiego.pl/qr/generator.html`, gdy docelowa domena
+zacznie działać, patrz sekcja 6) i rozbudowane o:
 - podgląd i pobieranie kodów QR dla wszystkich rzeźb (PL + EN),
 - osobną sekcję z kodem QR wejścia na samą stronę główną (PL + EN),
 - osobną sekcję z kodem QR na plakat (prowadzi przez krótkie
