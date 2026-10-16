@@ -68,8 +68,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 - Decyzja: sekcja „Źródła" na stronie O projekcie (PL+EN) — uzupełnić
   konkretnymi źródłami albo usunąć sekcję, jeśli ich nie będzie
   (sekcja 3).
-- Potwierdzenie w terenie: współrzędne GPS, materiał rzeźby Panna
-  z rybą, opisy dostępności (sekcja 5).
+- Potwierdzenie w terenie: współrzędne GPS, opisy dostępności (sekcja 5).
 - Decyzja o wielkości pierwszego nakładu ulotki/pocztówki (sekcja 8).
 - Decyzja projektowa: napis w nagłówku strony (sekcja 9).
 - Weryfikacja i akceptacja wizualnej części oraz treści po naniesieniu
@@ -298,9 +297,6 @@ tłumaczyć, dopóki polski tekst nie powstanie.
   `data/rzezby.js`) zostały na razie tylko **odczytane z mapy** —
   **konieczne jest potwierdzenie na żywo, w terenie**, przed wydrukiem
   kodów QR.
-- **Materiał rzeźby Panna z rybą** — brak informacji (`material` w danych
-  ma wartość `null`). Do ustalenia, najpewniej przez obejrzenie rzeźby na
-  miejscu (patrz też sekcja 3).
 - **Opisy dostępności** (`dostepnosc`) przy wszystkich czterech punktach —
   nawierzchnia, schody, ławki, dojazd wózkiem — obecne opisy to szkic do
   potwierdzenia na miejscu.
