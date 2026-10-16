@@ -762,6 +762,15 @@ section { margin-bottom: var(--space-6); }
 }
 .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
+/* Film nagrany pionowo (np. YouTube Shorts) — węższy kontener, żeby na
+   dużym ekranie nie robił się absurdalnie wysoki przy pełnej szerokości. */
+.video-wrap--portrait {
+  aspect-ratio: 9 / 16;
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .audio-player {
   background: var(--color-bg-card);
   border: 2px solid var(--color-border);

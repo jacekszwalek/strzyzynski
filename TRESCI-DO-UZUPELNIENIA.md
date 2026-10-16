@@ -41,8 +41,6 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 - Podpowiedź/propozycja favicon strony (sekcja 9).
 
 **Magda**
-- Nagranie i montaż filmu wprowadzającego na stronę główną + wgranie
-  na YouTube (sekcja 2a).
 - Nagranie audio i transkrypcja przy rzeźbie „Drzewo genealogiczne" —
   ostatnia z czterech wciąż brakująca (sekcja 2b).
 
@@ -120,16 +118,17 @@ ale strona działa poprawnie i bez tego.
 
 ## 2. Nagrania
 
-### 2a. Film wprowadzający na stronie startowej — DO DOSTARCZENIA
-
-**Odpowiedzialność: Magda**
+### 2a. Film wprowadzający na stronie startowej — ZROBIONE
 
 Decyzja: podstrony poszczególnych rzeźb mają tylko pliki audio, bez wideo.
-Jedyne wideo na całej witrynie to film wprowadzający na stronie startowej
-— ten film jeszcze nie istnieje. Będzie osadzony z YouTube.
+Jedyne wideo na całej witrynie to film wprowadzający na stronie startowej.
 
-Do dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
-YouTube.
+**ZROBIONE:** film wprowadzający (YouTube Shorts, nagrany pionowo pod
+mobilkę) osadzony na stronie głównej (PL+EN) —
+`https://youtube.com/shorts/z0iN41PoBO4`. Kontener wideo dostał osobny
+wariant CSS (`.video-wrap--portrait`, proporcje 9:16, ograniczona
+szerokość), żeby pionowy film nie rozciągał się na pełną szerokość
+strony na dużym ekranie.
 
 ### 2b. Nagrania przy rzeźbach — audio, 3 z 4 ZROBIONE, 1 w toku
 
