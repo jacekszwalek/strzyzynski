@@ -71,6 +71,14 @@
 
     resetUI();
 
+    // Jeśli wczytywanie nie powiodło się jeszcze przed uruchomieniem tego
+    // skryptu (zdarzenie "error" elementu <audio> może wystąpić bardzo
+    // szybko, zanim DOMContentLoaded zdąży podłączyć poniższy nasłuch),
+    // pokaż komunikat od razu — inaczej odtwarzacz zostałby martwy i cichy.
+    if (errorBox && audio.error && audio.readyState === 0) {
+      errorBox.hidden = false;
+    }
+
     playBtn.addEventListener("click", function () {
       if (audio.paused) {
         audio.play();
@@ -93,6 +101,13 @@
       }
       if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
       updatePlayedBar();
+      // Odtwarzanie faktycznie postępuje — ewentualny wcześniejszy błąd
+      // (np. chwilowy zanik sieci w trakcie buforowania) już nie obowiązuje.
+      if (errorBox && !errorBox.hidden) errorBox.hidden = true;
+    });
+
+    audio.addEventListener("canplay", function () {
+      if (errorBox) errorBox.hidden = true;
     });
 
     progress.addEventListener("input", function () {
@@ -124,8 +139,12 @@
     // połączenie mobilne, chwilowy brak sieci) — bez tego odtwarzacz
     // milczał bez żadnego komunikatu. Pokazujemy czytelny błąd z
     // przyciskiem do ponownej próby zamiast pozostawiać martwe kontrolki.
+    // Niektóre przeglądarki (zwłaszcza na słabszym mobilnym połączeniu)
+    // zgłaszają przejściowy błąd w trakcie buforowania, mimo że chwilę
+    // później plik i tak wczytuje się i gra — stąd pokazujemy komunikat
+    // tylko wtedy, gdy nic jeszcze się nie wczytało (readyState 0).
     audio.addEventListener("error", function () {
-      if (errorBox) errorBox.hidden = false;
+      if (errorBox && audio.readyState === 0) errorBox.hidden = false;
     });
 
     if (retryBtn) {
