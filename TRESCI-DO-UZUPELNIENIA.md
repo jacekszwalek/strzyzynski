@@ -6,16 +6,61 @@ zrobione na stronie, a wciąż figuruje tutaj jako otwarte — to znaczy, że
 dokument nie został jeszcze zaktualizowany; zgłoś to, żeby poprawić.*
 
 Ten dokument to kompletna lista wszystkiego, co trzeba dostarczyć, żeby
-zamienić szkielet strony w gotową publikację. Pogrupowane po stronach.
-Każdy plik wymieniony niżej ma już swój placeholder w repozytorium (SVG
-z opisem dla zdjęć, cichy plik MP3 dla audio) — strona działa już teraz,
-tylko z zastępczą treścią.
+zamienić szkielet strony w gotową publikację. Pogrupowane po stronach,
+z przypisaną osobą odpowiedzialną za każde otwarte zadanie.
 
 Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 
 ---
 
+## Podział odpowiedzialności — skrót
+
+- **Jacek** — strona i infrastruktura (kod, hosting, domena, generator QR,
+  decyzje techniczne/wizualne na stronie).
+- **Michał** — generowanie/druk kodów QR, ulotki i materiały reklamowe.
+- **Magda** — film wprowadzający i nagrania audio przy rzeźbach.
+- **Dorota** — materiały źródłowe, nieścisłości i wątpliwości do
+  wyjaśnienia, zdjęcia oraz decyzje projektowe do podjęcia.
+
+### Otwarte zadania per osoba
+
+**Jacek**
+- Wykupienie i podłączenie domeny `sladamistrzyzynskiego.pl` (CNAME, DNS),
+  podmiana adresu w `sitemap.xml`/`robots.txt` po jej uruchomieniu (sekcja 6).
+- Ostateczna weryfikacja wymogów logotypów/oznaczeń względem umowy
+  grantowej, nie tylko „Niezbędnika Realizatora" (sekcja 3, sekcja 10).
+- Decyzje projektowe: forma prezentacji przystanków na stronie głównej,
+  opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
+
+**Michał**
+- Generowanie/pobranie kodów QR z `qr/generator.html` do wykorzystania
+  na pocztówce/ulotce (sekcja 7).
+- Projekt ulotki/pocztówki promującej spacer — format, treść, zdjęcia,
+  kod QR (sekcja 8).
+- Zlecenie wydruku i decyzja o wielkości nakładu (sekcja 8).
+- Podpowiedź/propozycja favicon strony (sekcja 9).
+
+**Magda**
+- Nagranie i montaż filmu wprowadzającego na stronę główną + wgranie
+  na YouTube (sekcja 2a).
+- Nagranie audio i transkrypcja przy rzeźbie „Drzewo genealogiczne" —
+  ostatnia z czterech wciąż brakująca (sekcja 2b).
+
+**Dorota**
+- 14 zdjęć rzeźb + prawdziwe zdjęcie Zbigniewa Strzyżyńskiego (sekcja 1).
+- Doprecyzowanie faktów i źródeł w opisach (biogram, Ławeczka Prusa,
+  Drzewo genealogiczne, Panna z rybą, Kamień papieski, O projekcie)
+  (sekcja 3).
+- Potwierdzenie w terenie: współrzędne GPS, materiał rzeźby Panna
+  z rybą, opisy dostępności (sekcja 5).
+- Decyzja projektowa: napis w nagłówku strony (sekcja 9).
+
+---
+
 ## 1. Zdjęcia — 14 sztuk
+
+**Odpowiedzialność: Dorota** (dostarczenie materiału); wgranie na stronę
+po stronie technicznej robi Jacek.
 
 Wszystkie trafiają do katalogu `img/`. Format docelowy: WebP + JPG (ten sam
 kadr w obu formatach, ta sama nazwa pliku, różne rozszerzenie) — po dodaniu
@@ -59,6 +104,8 @@ ale strona działa poprawnie i bez tego.
 
 ### 2a. Film wprowadzający na stronie startowej — DO DOSTARCZENIA
 
+**Odpowiedzialność: Magda**
+
 Decyzja: podstrony poszczególnych rzeźb mają tylko pliki audio, bez wideo.
 Jedyne wideo na całej witrynie to film wprowadzający na stronie startowej
 — ten film jeszcze nie istnieje. Będzie osadzony z YouTube.
@@ -67,6 +114,9 @@ Do dostarczenia: nagranie wprowadzające do wirtualnego spaceru, wgrane na
 YouTube.
 
 ### 2b. Nagrania przy rzeźbach — audio, 3 z 4 ZROBIONE, 1 w toku
+
+**Odpowiedzialność: Magda** (dot. „Drzewo genealogiczne" — jedyna pozycja
+wciąż otwarta)
 
 Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 
@@ -83,6 +133,9 @@ są tylko poprawki interpunkcji i podział na akapity.
 ---
 
 ## 3. Teksty — biogram i opisy rzeźb (szkic gotowy do redakcji)
+
+**Odpowiedzialność: Dorota** (fakty, źródła, doprecyzowania); weryfikacja
+logotypów/oznaczeń grantowych względem umowy — **Jacek**.
 
 Wszystkie poniższe miejsca są już wypełnione **roboczym szkicem** opartym na
 faktach przekazanych na starcie projektu i oznaczone komentarzem
@@ -119,7 +172,8 @@ w `data/rzezby.js`.
   w ramach którego powstała rzeźba, zorganizował Jarosław Olejnicki,
   prezes Towarzystwa Przyjaciół Nałęczowa, a wzdłuż alei stoją tablice
   z biografią artysty.
-  Do dalszego dostarczenia:
+  Do dalszego dostarczenia (**Dorota**, poza nagraniem — patrz sekcja 2b,
+  to **Magda**):
   - okoliczności powstania rzeźby (więcej szczegółów niż plener),
   - historia nadania nazwy alei,
   - kontekst w twórczości artysty,
@@ -168,8 +222,8 @@ w `data/rzezby.js`.
   napis „Sfinansowano ze środków Narodowego Instytutu Wolności…”, pełną
   nazwę inicjatywy oraz logotypy i nazwy Regionalnych Operatorów Projektu
   (Bieszczadzki Uniwersytet Ludowy, Sursum Corda, Fundacja Bieszczadzka).
-  **Uwaga: właściciel repozytorium zweryfikuje te wymagania jeszcze raz
-  bezpośrednio w umowie grantowej i może przesłać poprawki** — to, co
+  **Uwaga (Jacek): właściciel repozytorium zweryfikuje te wymagania jeszcze
+  raz bezpośrednio w umowie grantowej i może przesłać poprawki** — to, co
   jest teraz na stronie, opiera się na ogólnym dokumencie dla
   realizatorów, nie na samej umowie.
 
@@ -179,6 +233,10 @@ w `data/rzezby.js`.
 ---
 
 ## 4. Tłumaczenie na angielski — ZROBIONE (w zakresie dostępnych treści)
+
+**Odpowiedzialność: brak otwartego zadania** — tłumaczenie nowych faktów
+dogrywa się automatycznie przy okazji dostarczania ich przez Dorotę
+(sekcja 3) i Magdę (sekcja 2b, Drzewo genealogiczne).
 
 Interfejs (nawigacja, przyciski, nagłówki), biogram na stronie głównej,
 opisy i transkrypcje rzeźb oraz strona „O projekcie" są już przetłumaczone
@@ -201,6 +259,8 @@ tłumaczyć, dopóki polski tekst nie powstanie.
 
 ## 5. Dane do zweryfikowania w terenie
 
+**Odpowiedzialność: Dorota**
+
 - **Współrzędne wszystkich czterech punktów** (pole `wspolrzedne` w
   `data/rzezby.js`) zostały na razie tylko **odczytane z mapy** —
   **konieczne jest potwierdzenie na żywo, w terenie**, przed wydrukiem
@@ -215,6 +275,8 @@ tłumaczyć, dopóki polski tekst nie powstanie.
 ---
 
 ## 6. Domena i adresy
+
+**Odpowiedzialność: Jacek**
 
 Wdrożenie na GitHub Pages jest zrobione — strona działa pod
 `https://jacekszwalek.github.io/strzyzynski/`, a ten adres jest już
@@ -238,6 +300,10 @@ QR mogą teraz być projektowane pod docelowy adres.
 ---
 
 ## 7. Kody QR
+
+**Odpowiedzialność: Jacek** (narzędzie generatora — zrobione);
+**Michał** (wygenerowanie/pobranie kodów do wykorzystania na materiałach
+promocyjnych, patrz sekcja 8).
 
 **ZROBIONE:** obie decyzje blokujące projekt kodów QR zostały podjęte —
 domena (`sladamistrzyzynskiego.pl`, patrz sekcja 6) i finalny adres
@@ -276,6 +342,8 @@ wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
 
 ## 8. Materiały promocyjne (druk)
 
+**Odpowiedzialność: Michał**
+
 - **Priorytet: zaprojektować ulotkę/pocztówkę promującą inicjatywę
   i projekt** — materiał do rozdawania/wykładania, promujący wirtualny
   spacer. Potrzebne ustalenia: format, treść, zdjęcia, kod QR (patrz
@@ -289,31 +357,34 @@ wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
 
 ## 9. Decyzje projektowe do podjęcia
 
-- **Forma prezentacji przystanków na stronie głównej** — obecnie krótka
-  lista/siatka przystanków na stronie startowej. Do zdecydowania: czy
-  mają to być kafelki ze zdjęciami (jak obecnie), czy numerowane boxy
-  bez zdjęć (prostsze, szybciej się ładują, ale mniej zachęcające
-  wizualnie).
+- **Forma prezentacji przystanków na stronie głównej** —
+  **Odpowiedzialność: Jacek**. Obecnie krótka lista/siatka przystanków na
+  stronie startowej. Do zdecydowania: czy mają to być kafelki ze
+  zdjęciami (jak obecnie), czy numerowane boxy bez zdjęć (prostsze,
+  szybciej się ładują, ale mniej zachęcające wizualnie).
 - **Precyzyjny opis sekcji „Jak korzystać ze spaceru"** (kroki 1, 2,
-  3… na stronie startowej) — obecny opis jest zbyt ogólny. Do
-  uzupełnienia/doprecyzowania:
+  3… na stronie startowej) — **Odpowiedzialność: Jacek**. Obecny opis
+  jest zbyt ogólny. Do uzupełnienia/doprecyzowania:
   - że kolejność kroków ma znaczenie (np. najpierw obejrzeć film
     wprowadzający, potem wyruszyć na spacer),
   - że na stronie głównej jest film wprowadzający (YouTube), a na
     podstronach poszczególnych rzeźb jest tylko audio (patrz sekcja 2a/2b)
     — to rozróżnienie warto wprost wytłumaczyć odwiedzającemu, żeby nie
     szukał filmu przy rzeźbie.
-- **Napis na górze strony (nagłówek/logo serwisu)** — do ustalenia, co
-  ma figurować na samej górze strony, zarówno w wersji mobilnej, jak
-  i desktopowej: sam tekst (nazwa serwisu), grafika/logo, czy jedno
-  i drugie razem.
-- **Favicon** — czy Michał może podpowiedzieć, co umieścić jako favicon
-  (mała ikonka strony widoczna w karcie przeglądarki)? Obecny plik to
-  placeholder.
+- **Napis na górze strony (nagłówek/logo serwisu)** —
+  **Odpowiedzialność: Dorota**. Do ustalenia, co ma figurować na samej
+  górze strony, zarówno w wersji mobilnej, jak i desktopowej: sam tekst
+  (nazwa serwisu), grafika/logo, czy jedno i drugie razem.
+- **Favicon** — **Odpowiedzialność: Dorota**, z propozycją od Michała.
+  Czy Michał może podpowiedzieć, co umieścić jako favicon (mała ikonka
+  strony widoczna w karcie przeglądarki)? Obecny plik to placeholder.
 
 ---
 
 ## 10. Logotypy partnerów — ZROBIONE
+
+**Odpowiedzialność: Jacek** (ewentualna korekta po weryfikacji umowy
+grantowej, patrz sekcja 3)
 
 Dawne puste miejsca na logotypy (`.partner-logo-slot`) zostały zastąpione
 rzeczywistymi obrazami: `img/logotypy-dofinansowanie.png` (Komitet ds.
