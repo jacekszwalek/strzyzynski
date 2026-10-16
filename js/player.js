@@ -34,8 +34,6 @@
     var timeDuration = root.querySelector(".audio-time-duration");
     var seekBtns = root.querySelectorAll("[data-seek]");
     var speedBtn = root.querySelector(".audio-speed-toggle");
-    var errorBox = root.querySelector(".audio-load-error");
-    var retryBtn = root.querySelector(".audio-retry-btn");
     var lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "pl";
     var playLabel = lang === "pl" ? "Odtwórz" : "Play";
     var pauseLabel = lang === "pl" ? "Pauza" : "Pause";
@@ -66,18 +64,9 @@
       if (timeDuration) timeDuration.textContent = "0:00";
       updatePlayedBar();
       setPlayIcon(false);
-      if (errorBox) errorBox.hidden = true;
     }
 
     resetUI();
-
-    // Jeśli wczytywanie nie powiodło się jeszcze przed uruchomieniem tego
-    // skryptu (zdarzenie "error" elementu <audio> może wystąpić bardzo
-    // szybko, zanim DOMContentLoaded zdąży podłączyć poniższy nasłuch),
-    // pokaż komunikat od razu — inaczej odtwarzacz zostałby martwy i cichy.
-    if (errorBox && audio.error && audio.readyState === 0) {
-      errorBox.hidden = false;
-    }
 
     playBtn.addEventListener("click", function () {
       if (audio.paused) {
@@ -92,7 +81,6 @@
     audio.addEventListener("loadedmetadata", function () {
       progress.max = String(Math.floor(audio.duration) || 0);
       if (timeDuration) timeDuration.textContent = formatTime(audio.duration);
-      if (errorBox) errorBox.hidden = true;
     });
 
     audio.addEventListener("timeupdate", function () {
@@ -101,13 +89,6 @@
       }
       if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
       updatePlayedBar();
-      // Odtwarzanie faktycznie postępuje — ewentualny wcześniejszy błąd
-      // (np. chwilowy zanik sieci w trakcie buforowania) już nie obowiązuje.
-      if (errorBox && !errorBox.hidden) errorBox.hidden = true;
-    });
-
-    audio.addEventListener("canplay", function () {
-      if (errorBox) errorBox.hidden = true;
     });
 
     progress.addEventListener("input", function () {
@@ -132,25 +113,6 @@
         var label = (next === 1 ? "1" : "0.75") + "×";
         speedBtn.textContent = label;
         speedBtn.setAttribute("aria-label", speedLabel + ": " + label);
-      });
-    }
-
-    // Plik audio czasem nie wczytuje się za pierwszym razem (słabe
-    // połączenie mobilne, chwilowy brak sieci) — bez tego odtwarzacz
-    // milczał bez żadnego komunikatu. Pokazujemy czytelny błąd z
-    // przyciskiem do ponownej próby zamiast pozostawiać martwe kontrolki.
-    // Niektóre przeglądarki (zwłaszcza na słabszym mobilnym połączeniu)
-    // zgłaszają przejściowy błąd w trakcie buforowania, mimo że chwilę
-    // później plik i tak wczytuje się i gra — stąd pokazujemy komunikat
-    // tylko wtedy, gdy nic jeszcze się nie wczytało (readyState 0).
-    audio.addEventListener("error", function () {
-      if (errorBox && audio.readyState === 0) errorBox.hidden = false;
-    });
-
-    if (retryBtn) {
-      retryBtn.addEventListener("click", function () {
-        if (errorBox) errorBox.hidden = true;
-        audio.load();
       });
     }
 
