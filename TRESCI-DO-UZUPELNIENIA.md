@@ -69,10 +69,11 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 - Decyzja: sekcja „Źródła" na stronie O projekcie (PL+EN) — uzupełnić
   konkretnymi źródłami albo usunąć sekcję, jeśli ich nie będzie
   (sekcja 3).
-- Weryfikacja warunków dofinansowania: sprawdzić, czy strona O projekcie
-  i stopka (logotypy, obowiązkowe napisy) spełniają wymogi dotacji —
-  można przesłać link do strony w obecnym kształcie, niech ocenią
-  (sekcja 3).
+- Weryfikacja warunków dofinansowania: Jacek sprawdził wymogi dotyczące
+  informacji o finansowaniu i uważa, że są spełnione. Pozostaje:
+  przesłać link do strony w obecnym kształcie (O projekcie i stopka)
+  do finansującego projekt, żeby potwierdził, czy forma jest
+  wystarczająca (sekcja 3).
 - Potwierdzenie w terenie: współrzędne GPS, opisy dostępności (sekcja 5).
 - Decyzja o wielkości pierwszego nakładu ulotki/pocztówki (sekcja 8).
 - Decyzja projektowa: napis w nagłówku strony (sekcja 9).
@@ -269,11 +270,13 @@ w `data/rzezby.js`.
   napis „Sfinansowano ze środków Narodowego Instytutu Wolności…”, pełną
   nazwę inicjatywy oraz logotypy i nazwy Regionalnych Operatorów Projektu
   (Bieszczadzki Uniwersytet Ludowy, Sursum Corda, Fundacja Bieszczadzka).
-  **Do zrobienia (Dorota): weryfikacja warunków dofinansowania.** To, co
-  jest teraz na stronie, opiera się na ogólnym dokumencie dla
-  realizatorów, nie na samej umowie grantowej. Zamiast szukać treści
-  umowy, można przesłać link do strony O projekcie w obecnym kształcie
-  i poprosić o ocenę, czy spełnia wymagane warunki dofinansowania.
+  **Do zrobienia (Dorota): potwierdzenie u finansującego.** To, co jest
+  teraz na stronie, opiera się na ogólnym dokumencie dla realizatorów
+  („Niezbędnik Realizatora"), nie na samej umowie grantowej. **Jacek
+  sprawdził te wymogi i uważa, że są spełnione** — pozostaje przesłać
+  link do strony O projekcie w obecnym kształcie (razem ze stopką)
+  do finansującego projekt i poprosić o potwierdzenie, czy ta forma
+  jest wystarczająca.
 
   (Strona nie ma już sekcji kontaktowej — usunięta na prośbę właściciela
   repozytorium.)
