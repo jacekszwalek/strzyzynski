@@ -134,8 +134,8 @@ Jedyne wideo na całej witrynie to film wprowadzający na stronie startowej.
 
 **ZROBIONE:** film wprowadzający (YouTube Shorts, nagrany pionowo pod
 mobilkę) osadzony na stronie głównej — osobne nagrania dla każdej
-wersji językowej: PL `https://youtube.com/shorts/z0iN41PoBO4`, EN
-`https://youtube.com/shorts/amiOJRqWpm0`. Kontener wideo dostał osobny
+wersji językowej: PL `https://youtube.com/shorts/amiOJRqWpm0`, EN
+`https://youtube.com/shorts/3lmrVAe7QSM`. Kontener wideo dostał osobny
 wariant CSS (`.video-wrap--portrait`, proporcje 9:16, ograniczona
 szerokość), żeby pionowy film nie rozciągał się na pełną szerokość
 strony na dużym ekranie.
