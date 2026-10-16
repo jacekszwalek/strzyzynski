@@ -41,8 +41,8 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 - Podpowiedź/propozycja favicon strony (sekcja 9).
 
 **Magda**
-- Nagranie audio i transkrypcja przy rzeźbie „Drzewo genealogiczne" —
-  ostatnia z czterech wciąż brakująca (sekcja 2b).
+- Transkrypcja nagrania przy rzeźbie „Drzewo genealogiczne" (PL + EN) —
+  samo nagranie jest już dostarczone (sekcja 2b).
 
 **Dorota**
 - 14 zdjęć rzeźb + prawdziwe zdjęcie Zbigniewa Strzyżyńskiego (sekcja 1).
@@ -130,10 +130,10 @@ wariant CSS (`.video-wrap--portrait`, proporcje 9:16, ograniczona
 szerokość), żeby pionowy film nie rozciągał się na pełną szerokość
 strony na dużym ekranie.
 
-### 2b. Nagrania przy rzeźbach — audio, 3 z 4 ZROBIONE, 1 w toku
+### 2b. Nagrania przy rzeźbach — audio 4 z 4 ZROBIONE, 1 transkrypcja w toku
 
-**Odpowiedzialność: Magda** (dot. „Drzewo genealogiczne" — jedyna pozycja
-wciąż otwarta)
+**Odpowiedzialność: Magda** (dot. „Drzewo genealogiczne" — brakuje jeszcze
+transkrypcji)
 
 Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 
@@ -142,7 +142,7 @@ Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 | Ławeczka Bolesława Prusa | **ZROBIONE** |
 | Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** |
 | Kamień papieski | **ZROBIONE** |
-| Drzewo genealogiczne | **W TOKU** — wciąż potrzebne nagranie i transkrypcja |
+| Drzewo genealogiczne | nagranie **ZROBIONE** (1:28, `audio/drzewo-genealogiczne.mp3`), **transkrypcja wciąż potrzebna** (PL + EN) |
 
 Treść transkrypcji wpisujemy bez zmian w stosunku do nagrania — dozwolone
 są tylko poprawki interpunkcji i podział na akapity.
