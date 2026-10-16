@@ -17,7 +17,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 
 - **Jacek** — strona i infrastruktura (kod, hosting, domena, generator QR,
   decyzje techniczne/wizualne na stronie).
-- **Michał** — generowanie/druk kodów QR, ulotki i materiały reklamowe.
+- **Michał** — druk kodów QR, ulotki i materiały reklamowe.
 - **Magda** — film wprowadzający i nagrania audio przy rzeźbach.
 - **Dorota** — materiały źródłowe, nieścisłości i wątpliwości do
   wyjaśnienia, zdjęcia oraz decyzje projektowe do podjęcia.
@@ -33,7 +33,7 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 
 **Michał**
-- Generowanie/pobranie kodów QR z
+- Pobranie kodów QR z
   [`qr/generator.html`](https://jacekszwalek.github.io/strzyzynski/qr/generator.html)
   do wykorzystania na pocztówce/ulotce (sekcja 7).
 - Projekt ulotki/pocztówki promującej spacer — format, treść, zdjęcia,
@@ -335,7 +335,7 @@ QR mogą teraz być projektowane pod docelowy adres.
 ## 7. Kody QR
 
 **Odpowiedzialność: Jacek** (narzędzie generatora — zrobione);
-**Michał** (wygenerowanie/pobranie kodów do wykorzystania na materiałach
+**Michał** (pobranie kodów do wykorzystania na materiałach
 promocyjnych, patrz sekcja 8).
 
 **ZROBIONE:** obie decyzje blokujące projekt kodów QR zostały podjęte —
