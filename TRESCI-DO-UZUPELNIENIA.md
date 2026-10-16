@@ -63,8 +63,10 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   - Kamień papieski — dokładna data i okoliczności pobytu kardynała
     w Nałęczowie, treść tablicy pamiątkowej, dokładny adres,
   - O projekcie — rozwinięcie celu projektu, pełny opis roli
-    Fundacji Sztuka i Dom, podziękowania, informacja o finansowaniu,
-    lista źródeł.
+    Fundacji Sztuka i Dom, podziękowania, informacja o finansowaniu.
+- Decyzja: sekcja „Źródła" na stronie O projekcie (PL+EN) — uzupełnić
+  konkretnymi źródłami albo usunąć sekcję, jeśli ich nie będzie
+  (sekcja 3).
 - Potwierdzenie w terenie: współrzędne GPS, materiał rzeźby Panna
   z rybą, opisy dostępności (sekcja 5).
 - Decyzja o wielkości pierwszego nakładu ulotki/pocztówki (sekcja 8).
@@ -131,10 +133,7 @@ wariant CSS (`.video-wrap--portrait`, proporcje 9:16, ograniczona
 szerokość), żeby pionowy film nie rozciągał się na pełną szerokość
 strony na dużym ekranie.
 
-### 2b. Nagrania przy rzeźbach — audio 4 z 4 ZROBIONE, 1 transkrypcja w toku
-
-**Odpowiedzialność: Magda** (dot. „Drzewo genealogiczne" — brakuje jeszcze
-transkrypcji)
+### 2b. Nagrania przy rzeźbach — audio i transkrypcje, 4 z 4 ZROBIONE
 
 Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 
@@ -143,7 +142,7 @@ Dla każdej rzeźby: plik audio MP3 plus transkrypcja tekstowa (PL + EN).
 | Ławeczka Bolesława Prusa | **ZROBIONE** |
 | Panna z rybą (kawiarnia Ewelina) | **ZROBIONE** |
 | Kamień papieski | **ZROBIONE** |
-| Drzewo genealogiczne | nagranie **ZROBIONE** (1:28, `audio/drzewo-genealogiczne.mp3`), **transkrypcja wciąż potrzebna** (PL + EN) |
+| Drzewo genealogiczne | **ZROBIONE** — nagranie (1:28, `audio/drzewo-genealogiczne.mp3`) i transkrypcja (PL + EN) |
 
 Treść transkrypcji wpisujemy bez zmian w stosunku do nagrania — dozwolone
 są tylko poprawki interpunkcji i podział na akapity.
@@ -223,8 +222,17 @@ w `data/rzezby.js`.
   - rozwinięcie celu projektu,
   - pełny opis roli Fundacji Sztuka i Dom,
   - podziękowania,
-  - informacja o finansowaniu,
-  - lista źródeł.
+  - informacja o finansowaniu.
+
+  **Decyzja do podjęcia: sekcja „Źródła" (PL+EN).** Obecnie zawiera
+  jedną ogólną pozycję („Materiały i wspomnienia udostępnione przez
+  Zbigniewa Strzyżyńskiego") i dwa całkowicie puste miejsca
+  (`<!-- DO UZUPEŁNIENIA -->`) na: publikacje/artykuły/strony instytucji
+  wykorzystane przy opracowaniu opisów oraz źródło danych o pomniku
+  kardynała Karola Wojtyły. Albo uzupełnić te pozycje konkretnymi
+  źródłami, albo — jeśli realnych źródeł do podania nie będzie — usunąć
+  całą sekcję „Źródła" ze strony (PL+EN), żeby nie zostawiać na
+  opublikowanej stronie pustego nagłówka bez treści.
 
   **ZROBIONE, nazwa projektu:** sekcja „Część większego projektu" (PL+EN)
   uzupełniona o pełną nazwę inicjatywy — „Cyfrowy spacer śladami artysty
