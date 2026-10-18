@@ -12,7 +12,6 @@
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="./favicon.ico">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="./css/style.css">
 
 <meta property="og:type" content="website">
@@ -85,42 +84,23 @@
       </details>
     </section>
 
-    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
-      <h2 id="mapa-heading">Mapa spaceru</h2>
-      <p>
-        Kliknij numerowaną pinezkę albo pozycję na liście poniżej, aby zobaczyć podgląd
-        rzeźby i przejść do nagrania. Mapę można też obsłużyć klawiaturą (Tab, Enter).
-      </p>
-
-      <div class="map-wrap" id="map-wrap">
-        <div id="map" class="map-el" role="application" aria-label="Mapa spaceru z czterema numerowanymi punktami"></div>
-        <div class="map-scroll-hint" id="map-scroll-hint" role="button" tabindex="0">
-          Kliknij mapę, aby przybliżać kółkiem myszy
-        </div>
-      </div>
-      <div class="map-fallback" id="map-fallback" hidden>
-        <p>Mapa jest obecnie niedostępna. Poniżej pełna lista punktów spaceru — działa niezależnie od mapy.</p>
-      </div>
-
-      <div class="map-meta">
-        <span id="map-meta"></span>
-        <button type="button" class="btn btn--secondary" id="geolocate-btn">📍 Pokaż moją pozycję</button>
-      </div>
-      <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
-
-      <h3 class="visually-hidden">Lista punktów spaceru</h3>
-      <ul class="location-list" id="location-list" role="list"></ul>
-    </section>
-
-    <section aria-labelledby="kafelki-heading">
+    <section id="kafelki" aria-labelledby="kafelki-heading">
       <h2 id="kafelki-heading" class="visually-hidden">Rzeźby na trasie</h2>
       <div class="tile-carousel">
-        <ul class="tile-grid" id="tile-grid" role="list"></ul>
-        <div class="tile-carousel-controls">
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Poprzednia rzeźba" disabled>
+        <div class="tile-carousel-controls tile-carousel-controls--top">
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Poprzednia rzeźba" aria-controls="tile-grid" disabled>
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Następna rzeźba">
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Następna rzeźba" aria-controls="tile-grid">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <ul class="tile-grid" id="tile-grid" role="list"></ul>
+        <div class="tile-carousel-controls tile-carousel-controls--bottom">
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Poprzednia rzeźba" aria-controls="tile-grid" disabled>
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Następna rzeźba" aria-controls="tile-grid">
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -132,7 +112,7 @@
       <ol class="steps-grid" role="list">
         <li class="step-card">
           <div class="step-number" aria-hidden="true">1</div>
-          <p><strong>Wybierz punkt.</strong> Na mapie, liście lub wśród kafelków powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
+          <p><strong>Wybierz punkt.</strong> Wśród kafelków powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
         </li>
         <li class="step-card">
           <div class="step-number" aria-hidden="true">2</div>
@@ -224,9 +204,7 @@
 </div>
 
 <script src="./data/rzezby.js"></script>
-<script src="./vendor/leaflet/leaflet.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/map.js"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
