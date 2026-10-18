@@ -21,10 +21,6 @@
   .ecl-switch { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-2); }
   .ecl-switch label { display: flex; align-items: center; gap: 0.4em; cursor: pointer; }
   .qr-panel-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--space-3); align-items: start; }
-  /* Mniejszy odstęp między boxami (Adres bazowy / Poziom korekcji błędów)
-     a nagłówkiem "Własny adres" tuż pod nimi — domyślny odstęp h2 jest tu
-     za duży, bo te sekcje są ze sobą ściśle powiązane. */
-  .qr-panel-row + h2 { margin-top: var(--space-3); }
   details.info-toggle summary { cursor: pointer; font-weight: 700; color: var(--color-accent); display: inline-flex; align-items: center; gap: 0.35em; list-style: none; }
   details.info-toggle summary::-webkit-details-marker { display: none; }
   details.info-toggle summary::before { content: "▸"; display: inline-block; font-size: 0.85em; transition: transform 0.15s ease; }
@@ -44,34 +40,6 @@
 
   <div class="qr-panel-row">
     <div class="qr-tool-panel">
-      <h2 style="margin-top:0">Adres bazowy (BASE_URL)</h2>
-      <details class="info-toggle">
-        <summary>info</summary>
-        <p>
-          Stała <code>QR_BASE_URL</code> w pliku <code>qr/base-url.js</code>
-          ustawia adres Twojej strony po wdrożeniu na GitHub Pages lub pod
-          własną domeną, np. <code>https://twoj-login.github.io/nazwa-repo/</code>.
-          Instrukcja krok po kroku jest w <code>README.md</code>.
-        </p>
-        <p>
-          <strong>Chwilowa zmiana adresu</strong> — tylko w tej karcie
-          przeglądarki, do czasu jej odświeżenia. Nie zapisuje się do pliku
-          <code>qr/base-url.js</code>. Przydatne, żeby szybko wygenerować
-          podgląd kodów dla innej domeny.
-        </p>
-      </details>
-      <div class="base-url-box">
-        <span>Aktualne <code>BASE_URL</code>:</span>
-        <code id="base-url-display"></code>
-      </div>
-      <div class="base-url-box" style="margin-top:var(--space-3)">
-        <input type="text" id="base-url-input" placeholder="https://inny-adres.pl/" style="flex:1; min-width:14rem; padding:0.4em 0.6em; font-size:1rem;">
-        <button type="button" class="btn btn--secondary" id="base-url-apply-btn">Zastosuj chwilowo</button>
-      </div>
-      <p id="base-url-apply-status" aria-live="polite" style="font-size:0.85rem"></p>
-    </div>
-
-    <div class="qr-tool-panel">
       <h2 style="margin-top:0">Poziom korekcji błędów</h2>
       <details class="info-toggle">
         <summary>info</summary>
@@ -85,39 +53,39 @@
         </p>
       </details>
       <div class="ecl-switch" role="radiogroup" aria-label="Poziom korekcji błędów">
-        <label><input type="radio" name="ecl" value="L"> L — niski (ok. 7%)</label>
-        <label><input type="radio" name="ecl" value="M" checked> M — średni (ok. 15%) — zalecany</label>
+        <label><input type="radio" name="ecl" value="L" checked> L — niski (ok. 7%)</label>
+        <label><input type="radio" name="ecl" value="M"> M — średni (ok. 15%) — zalecany</label>
         <label><input type="radio" name="ecl" value="Q"> Q — podwyższony (ok. 25%)</label>
         <label><input type="radio" name="ecl" value="H"> H — wysoki (ok. 30%)</label>
       </div>
     </div>
-  </div>
 
-  <h2>Własny adres (niestandardowy)</h2>
-  <div class="qr-tool-panel">
-    <details class="info-toggle">
-      <summary>info</summary>
-      <p>
-        <strong>⚠ Uwaga:</strong> ta sekcja generuje kod QR dla adresu, który
-        <strong>sam wpisujesz</strong> — np. na potrzeby materiału drukowanego,
-        dla którego docelowa podstrona jeszcze nie istnieje. Wygenerowany kod
-        <strong>nie będzie działał</strong> (po zeskanowaniu pokaże błąd 404),
-        dopóki ktoś faktycznie nie stworzy strony pod tym adresem w
-        repozytorium i jej nie opublikuje. Użyj tego tylko do wcześniejszego
-        przygotowania grafiki z kodem QR — nie do finalnego druku, zanim
-        strona docelowa nie zadziała.
-      </p>
-    </details>
-    <label for="custom-path-input" style="display:block; margin-bottom:0.3em">
-      Ścieżka po adresie bazowym (bez ukośnika na początku), np.
-      <code>ulotka/</code> lub <code>en/ulotka/</code>:
-    </label>
-    <div class="base-url-box">
-      <code id="custom-base-display"></code>
-      <input type="text" id="custom-path-input" placeholder="ulotka/" style="flex:1; min-width:12rem; padding:0.4em 0.6em; font-size:1rem;">
-      <button type="button" class="btn btn--secondary" id="custom-generate-btn">Generuj kod</button>
+    <div class="qr-tool-panel">
+      <h2 style="margin-top:0">Własny adres (niestandardowy)</h2>
+      <details class="info-toggle">
+        <summary>info</summary>
+        <p>
+          <strong>⚠ Uwaga:</strong> ta sekcja generuje kod QR dla adresu, który
+          <strong>sam wpisujesz</strong> — np. na potrzeby materiału drukowanego,
+          dla którego docelowa podstrona jeszcze nie istnieje. Wygenerowany kod
+          <strong>nie będzie działał</strong> (po zeskanowaniu pokaże błąd 404),
+          dopóki ktoś faktycznie nie stworzy strony pod tym adresem w
+          repozytorium i jej nie opublikuje. Użyj tego tylko do wcześniejszego
+          przygotowania grafiki z kodem QR — nie do finalnego druku, zanim
+          strona docelowa nie zadziała.
+        </p>
+      </details>
+      <label for="custom-path-input" style="display:block; margin-bottom:0.3em">
+        Ścieżka po adresie bazowym (bez ukośnika na początku), np.
+        <code>ulotka/</code> lub <code>en/ulotka/</code>:
+      </label>
+      <div class="base-url-box">
+        <code id="custom-base-display"></code>
+        <input type="text" id="custom-path-input" placeholder="ulotka/" style="flex:1; min-width:12rem; padding:0.4em 0.6em; font-size:1rem;">
+        <button type="button" class="btn btn--secondary" id="custom-generate-btn">Generuj kod</button>
+      </div>
+      <div class="qr-preview-grid" id="qr-custom-grid" style="margin-top:var(--space-3)"></div>
     </div>
-    <div class="qr-preview-grid" id="qr-custom-grid" style="margin-top:var(--space-3)"></div>
   </div>
 
   <h2>Podgląd kodów — rzeźby</h2>
@@ -155,12 +123,10 @@
   "use strict";
 
   var BASE_URL = QR_BASE_URL;
-  var currentEcl = "M";
+  var currentEcl = "L";
   var currentList = [];
   var currentSvgCache = {};
   var lastCustomPath = null;
-
-  document.getElementById("base-url-display").textContent = BASE_URL;
 
   function targets() {
     var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
@@ -306,21 +272,6 @@
     });
   }
 
-  function initBaseUrlOverride() {
-    var input = document.getElementById("base-url-input");
-    var status = document.getElementById("base-url-apply-status");
-    document.getElementById("base-url-apply-btn").addEventListener("click", function () {
-      var val = input.value.trim();
-      if (!val) return;
-      if (!/\/$/.test(val)) val += "/";
-      BASE_URL = val;
-      document.getElementById("base-url-display").textContent = BASE_URL;
-      document.getElementById("custom-base-display").textContent = BASE_URL;
-      renderAll();
-      status.textContent = "Zastosowano chwilowo: " + BASE_URL + " (do odświeżenia strony — plik qr/base-url.js nie został zmieniony).";
-    });
-  }
-
   if (typeof RZEZBY === "undefined" || typeof QRCode === "undefined") {
     document.getElementById("qr-preview-grid").textContent =
       "Nie udało się wczytać danych rzeźb lub biblioteki QR. Sprawdź, czy pliki data/rzezby.js i vendor/qrcode/qrcode-svg.js istnieją.";
@@ -330,7 +281,6 @@
     initDownloadAll();
     initCustomGenerator();
     initEclSwitch();
-    initBaseUrlOverride();
   }
 })();
 </script>
