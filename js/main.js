@@ -161,9 +161,9 @@
 
   function initTileCarousel(carousel) {
     var track = carousel.querySelector(".tile-grid");
-    var prevBtn = carousel.querySelector(".tile-carousel-btn--prev");
-    var nextBtn = carousel.querySelector(".tile-carousel-btn--next");
-    if (!track || !prevBtn || !nextBtn) return;
+    var prevBtns = carousel.querySelectorAll(".tile-carousel-btn--prev");
+    var nextBtns = carousel.querySelectorAll(".tile-carousel-btn--next");
+    if (!track || !prevBtns.length || !nextBtns.length) return;
 
     function prefersReducedMotion() {
       return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -178,16 +178,22 @@
 
     function updateButtons() {
       var maxScroll = track.scrollWidth - track.clientWidth;
-      prevBtn.disabled = track.scrollLeft <= 1;
-      nextBtn.disabled = track.scrollLeft >= maxScroll - 1;
+      var atStart = track.scrollLeft <= 1;
+      var atEnd = track.scrollLeft >= maxScroll - 1;
+      for (var i = 0; i < prevBtns.length; i++) prevBtns[i].disabled = atStart;
+      for (var j = 0; j < nextBtns.length; j++) nextBtns[j].disabled = atEnd;
     }
 
     function scrollByStep(direction) {
       track.scrollBy({ left: direction * stepWidth(), behavior: prefersReducedMotion() ? "auto" : "smooth" });
     }
 
-    prevBtn.addEventListener("click", function () { scrollByStep(-1); });
-    nextBtn.addEventListener("click", function () { scrollByStep(1); });
+    for (var p = 0; p < prevBtns.length; p++) {
+      prevBtns[p].addEventListener("click", function () { scrollByStep(-1); });
+    }
+    for (var n = 0; n < nextBtns.length; n++) {
+      nextBtns[n].addEventListener("click", function () { scrollByStep(1); });
+    }
 
     var ticking = false;
     track.addEventListener("scroll", function () {
@@ -220,7 +226,7 @@
 
     var prevLabel = lang === "pl" ? "Poprzedni punkt" : "Previous stop";
     var nextLabel = lang === "pl" ? "Następny punkt" : "Next stop";
-    var mapLabel = lang === "pl" ? "Powrót do mapy spaceru" : "Back to the walk map";
+    var mapLabel = lang === "pl" ? "Powrót do listy rzeźb" : "Back to the list of sculptures";
 
     var html = "";
     if (prev) {
@@ -235,7 +241,7 @@
     } else {
       html += '<span></span>';
     }
-    html += '<a class="btn to-map" href="' + homeUrl(lang) + '#mapa">' + mapLabel + '</a>';
+    html += '<a class="btn to-map" href="' + homeUrl(lang) + '#kafelki">' + mapLabel + '</a>';
 
     container.innerHTML = html;
   }

@@ -12,7 +12,6 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="../favicon.ico">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../css/style.css">
 
 <meta property="og:type" content="website">
@@ -87,43 +86,23 @@
       </details>
     </section>
 
-    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
-      <h2 id="mapa-heading">Walk map</h2>
-      <p>
-        Click a numbered pin or an item on the list below to see a preview of
-        the sculpture and open its recording. The map can also be used with a
-        keyboard (Tab, Enter).
-      </p>
-
-      <div class="map-wrap" id="map-wrap">
-        <div id="map" class="map-el" role="application" aria-label="Walk map with four numbered stops"></div>
-        <div class="map-scroll-hint" id="map-scroll-hint" role="button" tabindex="0">
-          Click the map to zoom with the scroll wheel
-        </div>
-      </div>
-      <div class="map-fallback" id="map-fallback" hidden>
-        <p>The map is currently unavailable. Below is the full list of stops on the walk — it works independently of the map.</p>
-      </div>
-
-      <div class="map-meta">
-        <span id="map-meta"></span>
-        <button type="button" class="btn btn--secondary" id="geolocate-btn">📍 Show my location</button>
-      </div>
-      <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
-
-      <h3 class="visually-hidden">List of stops on the walk</h3>
-      <ul class="location-list" id="location-list" role="list"></ul>
-    </section>
-
-    <section aria-labelledby="kafelki-heading">
+    <section id="kafelki" aria-labelledby="kafelki-heading">
       <h2 id="kafelki-heading" class="visually-hidden">Sculptures on the route</h2>
       <div class="tile-carousel">
-        <ul class="tile-grid" id="tile-grid" role="list"></ul>
-        <div class="tile-carousel-controls">
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Previous sculpture" disabled>
+        <div class="tile-carousel-controls tile-carousel-controls--top">
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Previous sculpture" aria-controls="tile-grid" disabled>
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Next sculpture">
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Next sculpture" aria-controls="tile-grid">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <ul class="tile-grid" id="tile-grid" role="list"></ul>
+        <div class="tile-carousel-controls tile-carousel-controls--bottom">
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Previous sculpture" aria-controls="tile-grid" disabled>
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Next sculpture" aria-controls="tile-grid">
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -135,7 +114,7 @@
       <ol class="steps-grid" role="list">
         <li class="step-card">
           <div class="step-number" aria-hidden="true">1</div>
-          <p><strong>Choose a stop.</strong> On the map, the list, or the tiles above — click the sculpture you want to learn more about.</p>
+          <p><strong>Choose a stop.</strong> Among the tiles above — click the sculpture you want to learn more about.</p>
         </li>
         <li class="step-card">
           <div class="step-number" aria-hidden="true">2</div>
@@ -233,9 +212,7 @@
 </div>
 
 <script src="../data/rzezby.js"></script>
-<script src="../vendor/leaflet/leaflet.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/map.js"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>

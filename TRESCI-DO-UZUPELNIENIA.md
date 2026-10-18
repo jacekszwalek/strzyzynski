@@ -114,8 +114,9 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 | `stanislaw-strzyzynski-portret.jpg` | 640×870 (pionowe) | biogram na stronie głównej — **ZROBIONE**, prawdziwe zdjęcie dostarczone przez Jacka |
 | `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, biała obwódka, przezroczyste tło poza kołem) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to zbliżenie na twarz z dostarczonego zdjęcia przykładowego — nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego — do podmiany na prawdziwe, docelowe zdjęcie.** |
 
-Lista na stronie głównej/mapie (`#location-list`, lista rzeźb pod mapą)
-jest tekstowa, bez miniatur — nie potrzebuje więc osobnego zdjęcia.
+Mapa spaceru i lista punktów pod nią zostały usunięte ze strony głównej —
+rzeźby prezentuje teraz wyłącznie karuzela kafelków, więc powyższe
+miniatury (`*-mini.svg`) to jedyne zdjęcia potrzebne do tej sekcji.
 
 Jacek dostarczył też trzy dodatkowe zdjęcia Stanisława Strzyżyńskiego,
 na razie nigdzie na stronie nieużyte — czekają na decyzję, gdzie je

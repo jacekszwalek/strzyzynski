@@ -488,7 +488,7 @@ section { margin-bottom: var(--space-6); }
 .tile-grid::-webkit-scrollbar { display: none; }
 
 .tile-grid > li {
-  flex: 0 0 min(22rem, 88%);
+  flex: 0 0 min(16.5rem, 66%);
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -501,8 +501,9 @@ section { margin-bottom: var(--space-6); }
   display: flex;
   justify-content: center;
   gap: var(--space-3);
-  margin-top: var(--space-3);
 }
+.tile-carousel-controls--top { margin-bottom: var(--space-3); }
+.tile-carousel-controls--bottom { margin-top: var(--space-3); }
 
 .tile-carousel-btn {
   display: flex;
@@ -574,8 +575,6 @@ section { margin-bottom: var(--space-6); }
 /* --------------------------------------------------------------------------
    8. Mapa
    -------------------------------------------------------------------------- */
-
-.map-section { margin-bottom: var(--space-4); }
 
 .map-wrap {
   position: relative;
@@ -700,46 +699,8 @@ section { margin-bottom: var(--space-6); }
 .leaflet-control-attribution { font-size: 0.85rem; }
 .leaflet-control-attribution a { color: var(--color-accent-dark); }
 
-.map-geolocate-status {
-  margin-top: var(--space-2);
-  font-weight: 700;
-}
-
 /* --------------------------------------------------------------------------
-   9. Lista lokalizacji pod mapą (synchronizowana z mapą)
-   -------------------------------------------------------------------------- */
-
-.location-list {
-  list-style: none;
-  margin: var(--space-3) 0 0 0;
-  padding: 0;
-  display: grid;
-  gap: var(--space-2);
-}
-.location-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  width: 100%;
-  text-align: left;
-  background: var(--color-bg-card);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-2);
-  cursor: pointer;
-  color: var(--color-text);
-  text-decoration: none;
-  min-height: var(--tap-min);
-}
-.location-item:hover, .location-item:focus-visible, .location-item.is-active {
-  border-color: var(--color-accent);
-  background: var(--color-bg-alt);
-}
-.location-item .tile-number { position: static; flex-shrink: 0; }
-.location-item .location-text strong { display: block; font-size: 1.1rem; }
-
-/* --------------------------------------------------------------------------
-   10. Odtwarzacz audio (własne, duże kontrolki)
+   9. Odtwarzacz audio (własne, duże kontrolki)
    -------------------------------------------------------------------------- */
 
 .narrator-byline {
