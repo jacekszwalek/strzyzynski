@@ -99,23 +99,31 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
-| `laweczka-prusa-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie (220×165) i kafelek na stronie głównej |
+| `laweczka-prusa-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej (siatka 2×2 na desktopie, jedna kolumna na mobile) |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `drzewo-genealogiczne-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `drzewo-genealogiczne-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej |
 | `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `panna-z-ryba-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `panna-z-ryba-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej |
 | `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `kamien-papieski-mini.svg` | 400×300 (4:3) | miniatura — pineska na mapie i kafelek na stronie głównej |
+| `kamien-papieski-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej |
 | `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
 | `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
-| `stanislaw-strzyzynski-portret.svg` | 480×600 (pionowe, 4:5) | biogram na stronie głównej |
+| `stanislaw-strzyzynski-portret.jpg` | 640×870 (pionowe) | biogram na stronie głównej — **ZROBIONE**, prawdziwe zdjęcie dostarczone przez Jacka |
 | `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, biała obwódka, przezroczyste tło poza kołem) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to zbliżenie na twarz z dostarczonego zdjęcia przykładowego — nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego — do podmiany na prawdziwe, docelowe zdjęcie.** |
 
 Lista na stronie głównej/mapie (`#location-list`, lista rzeźb pod mapą)
 jest tekstowa, bez miniatur — nie potrzebuje więc osobnego zdjęcia.
+
+Jacek dostarczył też trzy dodatkowe zdjęcia Stanisława Strzyżyńskiego,
+na razie nigdzie na stronie nieużyte — czekają na decyzję, gdzie je
+wykorzystać (np. przy opisach rzeźb albo w sekcji biogramu):
+`img/studia.jpg`, `img/w-pracowni.jpg`, `img/z-jezusem.jpg`. Oryginał
+portretu w pełnej rozdzielczości też zostaje w repo jako
+`img/portret.jpg` (na stronie używana jest jego pomniejszona,
+zoptymalizowana wersja — `stanislaw-strzyzynski-portret.jpg`).
 
 Opcjonalnie: `og-cover.jpg` (1200×630) — to duże zdjęcie, które pojawia
 się automatycznie, gdy ktoś wklei link do tej strony w Messengerze,

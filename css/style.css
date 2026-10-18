@@ -474,7 +474,7 @@ section { margin-bottom: var(--space-6); }
 
 .tile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-3);
   list-style: none;
   margin: 0;
@@ -500,7 +500,7 @@ section { margin-bottom: var(--space-6); }
 .tile-img-wrap {
   position: relative;
   background: var(--color-bg-alt);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
 }
 .tile-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
@@ -522,7 +522,7 @@ section { margin-bottom: var(--space-6); }
   border: 2px solid var(--color-bg-card);
 }
 
-.tile-body { padding: var(--space-3); }
+.tile-body { padding: var(--space-4); }
 .tile-body h3 { margin-top: 0; font-size: 1.25rem; }
 .tile-meta {
   font-size: 1rem;
@@ -1335,6 +1335,7 @@ figure.content-figure figcaption {
   h2 { font-size: 1.5rem; }
   .container { padding-left: var(--space-2); padding-right: var(--space-2); }
   .bio-section, .tile-grid { gap: var(--space-2); }
+  .tile-grid { grid-template-columns: 1fr; }
   .footer-funding { grid-template-columns: 1fr; text-align: center; }
   .footer-funding p { text-align: center; }
   .footer-funding .funding-logos { width: 100%; max-width: 24rem; min-width: 0; margin: 0 auto; }
