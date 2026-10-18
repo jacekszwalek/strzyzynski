@@ -522,7 +522,7 @@ section { margin-bottom: var(--space-6); }
   border: 2px solid var(--color-bg-card);
 }
 
-.tile-body { padding: var(--space-4); }
+.tile-body { display: block; padding: var(--space-4); }
 .tile-body h3 { margin-top: 0; font-size: 1.25rem; }
 .tile-meta {
   font-size: 1rem;
