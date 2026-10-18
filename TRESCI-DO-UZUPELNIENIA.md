@@ -25,9 +25,11 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 ### Otwarte zadania per osoba
 
 **Jacek**
-- Domena `sladamistrzyzynskiego.pl` wykupiona, plik `CNAME` w repo
-  gotowy — zostaje konfiguracja DNS w panelu webd.pl i podmiana adresu
-  w `sitemap.xml`/`robots.txt` po jej uruchomieniu (sekcja 6).
+- ZROBIONE: domena `sladamistrzyzynskiego.pl` działa (DNS skonfigurowany
+  w panelu webd.pl, plik `CNAME` w repo, `sitemap.xml`/`robots.txt`
+  zaktualizowane) — patrz sekcja 6. Zostaje do sprawdzenia, czy działa
+  HTTPS (zielona kłódka) i do podjęcia: czy usunąć link do admina
+  (generator kodów QR) ze stopki stron przed szerszą publikacją.
 - Decyzje projektowe: forma prezentacji przystanków na stronie głównej,
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 - Nie krytyczne: pod filmem wprowadzającym nadal pokazują się
@@ -328,33 +330,28 @@ tłumaczyć, dopóki polski tekst nie powstanie.
 
 **Odpowiedzialność: Jacek**
 
-Wdrożenie na GitHub Pages jest zrobione — strona działa pod
-`https://jacekszwalek.github.io/strzyzynski/`, a ten adres jest już
-wpisany w `qr/base-url.js`, `sitemap.xml` i `robots.txt`.
+**ZROBIONE: domena `sladamistrzyzynskiego.pl` działa.** Strona jest
+dostępna pod `https://sladamistrzyzynskiego.pl/` (zamiast dawnego
+`https://jacekszwalek.github.io/strzyzynski/`). Zrobione po kolei:
+- domena wykupiona u rejestratora webd.pl,
+- plik `CNAME` z adresem `sladamistrzyzynskiego.pl` dodany do
+  repozytorium — podłącza domenę do GitHub Pages od strony repo,
+- rekordy DNS w panelu webd.pl skonfigurowane (4 rekordy A na adresy
+  GitHub Pages: `185.199.108.153`, `185.199.109.153`,
+  `185.199.110.153`, `185.199.111.153`),
+- `qr/base-url.js`, `sitemap.xml` i `robots.txt` wskazują już na nowy
+  adres.
 
-**ZROBIONE, decyzja podjęta: domena `sladamistrzyzynskiego.pl`.**
-`qr/base-url.js` został już podmieniony na ten adres. Domena jest już
-wykupiona (u rejestratora webd.pl).
-
-**ZROBIONE:** plik `CNAME` z adresem `sladamistrzyzynskiego.pl` dodany
-do repozytorium (główny katalog) — to podłącza domenę do GitHub Pages
-od strony repozytorium.
-
-**Wciąż do zrobienia (poza Claude, krok zewnętrzny, Jacek):**
-- konfiguracja DNS w panelu webd.pl — dodać rekordy A dla domeny (bez
-  `www`) wskazujące na serwery GitHub Pages:
-  `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
-  `185.199.111.153` (opcjonalnie też rekordy AAAA:
-  `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`,
-  `2606:50c0:8003::153`). Jeśli ma działać też `www.sladamistrzyzynskiego.pl`,
-  dodatkowo rekord CNAME: `www` → `jacekszwalek.github.io`,
-- poczekać na propagację DNS (zwykle od kilku minut do kilkudziesięciu
-  godzin) i na automatyczne wystawienie certyfikatu HTTPS przez GitHub
-  Pages (dzieje się samo, gdy DNS zacznie działać — w ustawieniach
-  repozytorium na GitHub pojawi się wtedy opcja „Enforce HTTPS"),
-- podmiana adresu w `sitemap.xml` i `robots.txt` — **dopiero gdy domena
-  faktycznie działa**, żeby nie zepsuć wyszukiwania i nawigacji na
-  aktualnie żywej stronie `github.io` w międzyczasie.
+**Zostaje do sprawdzenia/zrobienia:**
+- potwierdzić, że działa HTTPS (zielona kłódka w przeglądarce pod
+  `https://sladamistrzyzynskiego.pl/`) — GitHub Pages wystawia
+  certyfikat automatycznie, zwykle krótko po tym jak DNS zacznie
+  działać,
+- w stopce każdej strony jest link administracyjny do generatora
+  kodów QR, wskazujący wciąż na stary adres
+  `jacekszwalek.github.io/strzyzynski/qr/generator.html` (oznaczony w
+  kodzie jako „REMOVE BEFORE PUBLISHING") — do decyzji, czy i kiedy go
+  usunąć przed szerszą publikacją strony.
 
 **Ta decyzja odblokowuje projekt kodów QR** (patrz sekcja 7 niżej) — kody
 QR mogą teraz być projektowane pod docelowy adres.

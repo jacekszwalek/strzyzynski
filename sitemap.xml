@@ -3,81 +3,81 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/"/>
+    <loc>https://sladamistrzyzynskiego.pl/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/"/>
   </url>
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/"/>
-  </url>
-
-  <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/laweczka-prusa/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/laweczka-prusa/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/prus-bench/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/laweczka-prusa/"/>
-  </url>
-  <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/prus-bench/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/laweczka-prusa/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/prus-bench/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/laweczka-prusa/"/>
+    <loc>https://sladamistrzyzynskiego.pl/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/"/>
   </url>
 
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/family-tree/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
+    <loc>https://sladamistrzyzynskiego.pl/laweczka-prusa/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/laweczka-prusa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/prus-bench/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/laweczka-prusa/"/>
   </url>
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/family-tree/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/family-tree/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/drzewo-genealogiczne/"/>
-  </url>
-
-  <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/kamien-papieski/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/papal-stone/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
-  </url>
-  <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/papal-stone/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/papal-stone/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/kamien-papieski/"/>
+    <loc>https://sladamistrzyzynskiego.pl/en/prus-bench/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/laweczka-prusa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/prus-bench/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/laweczka-prusa/"/>
   </url>
 
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/maiden-with-a-fish/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
+    <loc>https://sladamistrzyzynskiego.pl/drzewo-genealogiczne/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/drzewo-genealogiczne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/family-tree/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/drzewo-genealogiczne/"/>
   </url>
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/maiden-with-a-fish/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/maiden-with-a-fish/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/panna-z-ryba/"/>
+    <loc>https://sladamistrzyzynskiego.pl/en/family-tree/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/drzewo-genealogiczne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/family-tree/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/drzewo-genealogiczne/"/>
   </url>
 
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/o-projekcie/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/o-projekcie/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/o-projekcie/"/>
+    <loc>https://sladamistrzyzynskiego.pl/kamien-papieski/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/kamien-papieski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/papal-stone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/kamien-papieski/"/>
   </url>
   <url>
-    <loc>https://jacekszwalek.github.io/strzyzynski/en/about/</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://jacekszwalek.github.io/strzyzynski/o-projekcie/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jacekszwalek.github.io/strzyzynski/en/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacekszwalek.github.io/strzyzynski/o-projekcie/"/>
+    <loc>https://sladamistrzyzynskiego.pl/en/papal-stone/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/kamien-papieski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/papal-stone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/kamien-papieski/"/>
+  </url>
+
+  <url>
+    <loc>https://sladamistrzyzynskiego.pl/panna-z-ryba/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/panna-z-ryba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/maiden-with-a-fish/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/panna-z-ryba/"/>
+  </url>
+  <url>
+    <loc>https://sladamistrzyzynskiego.pl/en/maiden-with-a-fish/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/panna-z-ryba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/maiden-with-a-fish/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/panna-z-ryba/"/>
+  </url>
+
+  <url>
+    <loc>https://sladamistrzyzynskiego.pl/o-projekcie/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/o-projekcie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/o-projekcie/"/>
+  </url>
+  <url>
+    <loc>https://sladamistrzyzynskiego.pl/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sladamistrzyzynskiego.pl/o-projekcie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladamistrzyzynskiego.pl/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sladamistrzyzynskiego.pl/o-projekcie/"/>
   </url>
 
 </urlset>

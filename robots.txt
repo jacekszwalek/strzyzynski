@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jacekszwalek.github.io/strzyzynski/sitemap.xml
+Sitemap: https://sladamistrzyzynskiego.pl/sitemap.xml
