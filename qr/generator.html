@@ -139,10 +139,10 @@
     var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
     var list = [];
     list.push({ id: "start", lang: "pl", label: "Strona główna", url: BASE_URL + "start-qr.html", displayUrl: BASE_URL, filename: "qr-start-pl.svg" });
-    list.push({ id: "start", lang: "en", label: "Home page", url: BASE_URL + "en/start-qr.html", displayUrl: BASE_URL + "en/", filename: "qr-start-en.svg" });
+    list.push({ id: "start", lang: "en", label: "Strona główna", url: BASE_URL + "en/start-qr.html", displayUrl: BASE_URL + "en/", filename: "qr-start-en.svg" });
     items.forEach(function (r) {
       list.push({ id: r.id, lang: "pl", label: r.tytul.pl, url: BASE_URL + r.slug.pl + "-qr.html", displayUrl: BASE_URL + r.slug.pl + "/", filename: "qr-pl-" + r.id + ".svg" });
-      list.push({ id: r.id, lang: "en", label: r.tytul.en.replace(/\s*\(.*\)$/, ""), url: BASE_URL + "en/" + r.slug.en + "/", displayUrl: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
+      list.push({ id: r.id, lang: "en", label: r.tytul.pl, url: BASE_URL + "en/" + r.slug.en + "/", displayUrl: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
     });
     return list;
   }
@@ -174,10 +174,10 @@
   }
 
   function stopCardHtml(t) {
-    var urlLines = '<p style="font-size:0.85rem;word-break:break-all">' + t.url + '</p>';
-    if (t.displayUrl !== t.url) {
-      urlLines += '<p style="font-size:0.85rem;word-break:break-all;margin-top:0.2em">(przekierowuje na: ' + t.displayUrl + ')</p>';
-    }
+    var urlLines = t.displayUrl !== t.url
+      ? t.url + '<br>przekierowuje na:<br>' + t.displayUrl
+      : t.url;
+    urlLines = '<p style="font-size:0.85rem;word-break:break-all">' + urlLines + '</p>';
     return '<div class="qr-preview-card">' +
         '<div style="width:12rem;height:12rem;margin:0 auto">' + currentSvgCache[t.filename] + '</div>' +
         '<strong>' + t.label + '</strong>' +
