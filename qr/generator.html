@@ -21,6 +21,10 @@
   .ecl-switch { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-2); }
   .ecl-switch label { display: flex; align-items: center; gap: 0.4em; cursor: pointer; }
   .qr-panel-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--space-3); align-items: start; }
+  .qr-lang-tabs { display: flex; gap: var(--space-2); border-bottom: 2px solid var(--color-border); margin-bottom: var(--space-3); }
+  .qr-lang-tab { font: inherit; padding: 0.5em 1.25em; border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; color: var(--color-text); }
+  .qr-lang-tab.active { font-weight: 700; color: var(--color-accent); border-bottom-color: var(--color-accent); }
+  .qr-lang-panel h3 { margin-top: var(--space-3); }
   details.info-toggle summary { cursor: pointer; font-weight: 700; color: var(--color-accent); display: inline-flex; align-items: center; gap: 0.35em; list-style: none; }
   details.info-toggle summary::-webkit-details-marker { display: none; }
   details.info-toggle summary::before { content: "▸"; display: inline-block; font-size: 0.85em; transition: transform 0.15s ease; }
@@ -88,21 +92,37 @@
     </div>
   </div>
 
-  <h2>Podgląd kodów — rzeźby</h2>
-  <div class="qr-preview-grid" id="qr-preview-grid"></div>
+  <h2>Kody QR — przystanki i strona główna</h2>
+  <p class="content">
+    Osobno dla wersji polskiej i angielskiej. Każda wersja ma kod do strony
+    głównej — bezpośredni oraz przez „bramkę" <code>start-qr</code> (pozwala
+    policzyć w statystykach wejścia z tego konkretnego materiału osobno od
+    innych) — oraz kod do każdego z czterech przystanków.
+  </p>
+
+  <div class="qr-lang-tabs" role="tablist" aria-label="Wersja językowa">
+    <button type="button" role="tab" id="tab-pl" aria-controls="panel-pl" aria-selected="true" class="qr-lang-tab active">Wersja PL</button>
+    <button type="button" role="tab" id="tab-en" aria-controls="panel-en" aria-selected="false" tabindex="-1" class="qr-lang-tab">Wersja EN</button>
+  </div>
+
+  <div id="panel-pl" role="tabpanel" aria-labelledby="tab-pl" class="qr-lang-panel">
+    <h3>Strona główna</h3>
+    <div class="qr-preview-grid" id="qr-home-pl-grid"></div>
+    <h3>Przystanki</h3>
+    <div class="qr-preview-grid" id="qr-stops-pl-grid"></div>
+  </div>
+
+  <div id="panel-en" role="tabpanel" aria-labelledby="tab-en" class="qr-lang-panel" hidden>
+    <h3>Home page</h3>
+    <div class="qr-preview-grid" id="qr-home-en-grid"></div>
+    <h3>Stops</h3>
+    <div class="qr-preview-grid" id="qr-stops-en-grid"></div>
+  </div>
 
   <div class="qr-tool-panel" style="margin-top:var(--space-4)">
     <button type="button" class="btn btn--large" id="download-all-btn">⬇ Pobierz wszystkie kody SVG (PL + EN)</button>
     <p id="download-status" aria-live="polite"></p>
   </div>
-
-  <h2>Wejście ze strony głównej</h2>
-  <p class="content">
-    Kod QR prowadzący bezpośrednio na stronę główną (adres „czysty", bez
-    przekierowania) — np. do materiałów graficznych, wizytówek, mediów
-    społecznościowych.
-  </p>
-  <div class="qr-preview-grid" id="qr-homepage-grid"></div>
 
   <h2>Wejście z plakatu / pocztówki</h2>
   <p class="content">
@@ -164,30 +184,33 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
   }
 
-  function render() {
-    var grid = document.getElementById("qr-preview-grid");
-    currentList = targets();
-    currentSvgCache = {};
-    var html = "";
+  function stopCardHtml(t) {
+    return '<div class="qr-preview-card">' +
+        '<div style="width:12rem;height:12rem;margin:0 auto">' + currentSvgCache[t.filename] + '</div>' +
+        '<strong>' + t.label + '</strong>' +
+        '<p style="font-size:0.85rem;word-break:break-all">' + t.displayUrl + '</p>' +
+        '<button type="button" class="btn btn--secondary" data-filename="' + t.filename + '">Pobierz SVG</button>' +
+      '</div>';
+  }
 
-    currentList.forEach(function (t) {
-      var svg = makeSvg(t.url);
-      currentSvgCache[t.filename] = svg;
-      html +=
-        '<div class="qr-preview-card">' +
-          '<div style="width:12rem;height:12rem;margin:0 auto">' + svg + '</div>' +
-          '<strong>' + t.label + ' (' + t.lang.toUpperCase() + ')</strong>' +
-          '<p style="font-size:0.85rem;word-break:break-all">' + t.displayUrl + '</p>' +
-          '<button type="button" class="btn btn--secondary" data-filename="' + t.filename + '">Pobierz SVG</button>' +
-        '</div>';
-    });
-    grid.innerHTML = html;
-
+  function renderStopsGrid(gridId, lang) {
+    var grid = document.getElementById(gridId);
+    grid.innerHTML = currentList.filter(function (t) { return t.lang === lang; }).map(stopCardHtml).join("");
     grid.querySelectorAll("button[data-filename]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         downloadSvg(btn.getAttribute("data-filename"), currentSvgCache[btn.getAttribute("data-filename")]);
       });
     });
+  }
+
+  function render() {
+    currentList = targets();
+    currentSvgCache = {};
+    currentList.forEach(function (t) {
+      currentSvgCache[t.filename] = makeSvg(t.url);
+    });
+    renderStopsGrid("qr-stops-pl-grid", "pl");
+    renderStopsGrid("qr-stops-en-grid", "en");
   }
 
   function initDownloadAll() {
@@ -224,12 +247,19 @@
     container.appendChild(card);
   }
 
-  function renderHomepageAndPoster() {
-    var homeGrid = document.getElementById("qr-homepage-grid");
-    homeGrid.innerHTML = "";
-    renderCard(homeGrid, "Strona główna (PL)", BASE_URL, "qr-strona-glowna-pl.svg");
-    renderCard(homeGrid, "Homepage (EN)", BASE_URL + "en/", "qr-homepage-en.svg");
+  function renderHomepageTabs() {
+    var plGrid = document.getElementById("qr-home-pl-grid");
+    plGrid.innerHTML = "";
+    renderCard(plGrid, "Strona główna (bezpośrednio)", BASE_URL, "qr-start-pl-bezposrednio.svg");
+    renderCard(plGrid, "Strona główna — bramka (start-qr)", BASE_URL + "start-qr.html", "qr-start-pl-bramka.svg");
 
+    var enGrid = document.getElementById("qr-home-en-grid");
+    enGrid.innerHTML = "";
+    renderCard(enGrid, "Home page (direct)", BASE_URL + "en/", "qr-start-en-direct.svg");
+    renderCard(enGrid, "Home page — gateway (start-qr)", BASE_URL + "en/start-qr.html", "qr-start-en-gateway.svg");
+  }
+
+  function renderPoster() {
     var posterGrid = document.getElementById("qr-poster-grid");
     posterGrid.innerHTML = "";
     renderCard(posterGrid, "Plakat → strona główna", BASE_URL + "plakat-qr.html", "qr-plakat.svg");
@@ -257,7 +287,8 @@
 
   function renderAll() {
     render();
-    renderHomepageAndPoster();
+    renderHomepageTabs();
+    renderPoster();
     renderCustom();
   }
 
@@ -272,15 +303,43 @@
     });
   }
 
+  function initLangTabs() {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll(".qr-lang-tab"));
+    function activate(tab) {
+      tabs.forEach(function (t) {
+        var selected = t === tab;
+        t.setAttribute("aria-selected", selected ? "true" : "false");
+        t.tabIndex = selected ? 0 : -1;
+        t.classList.toggle("active", selected);
+      });
+      document.querySelectorAll(".qr-lang-panel").forEach(function (panel) {
+        panel.hidden = panel.getAttribute("aria-labelledby") !== tab.id;
+      });
+    }
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { activate(tab); });
+      tab.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          var next = e.key === "ArrowRight" ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+          tabs[next].focus();
+          activate(tabs[next]);
+        }
+      });
+    });
+  }
+
   if (typeof RZEZBY === "undefined" || typeof QRCode === "undefined") {
-    document.getElementById("qr-preview-grid").textContent =
+    document.getElementById("qr-stops-pl-grid").textContent =
       "Nie udało się wczytać danych rzeźb lub biblioteki QR. Sprawdź, czy pliki data/rzezby.js i vendor/qrcode/qrcode-svg.js istnieją.";
   } else {
     render();
-    renderHomepageAndPoster();
+    renderHomepageTabs();
+    renderPoster();
     initDownloadAll();
     initCustomGenerator();
     initEclSwitch();
+    initLangTabs();
   }
 })();
 </script>
