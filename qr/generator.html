@@ -142,7 +142,7 @@
     list.push({ id: "start", lang: "en", label: "Strona główna", url: BASE_URL + "en/start-qr.html", displayUrl: BASE_URL + "en/", filename: "qr-start-en.svg" });
     items.forEach(function (r) {
       list.push({ id: r.id, lang: "pl", label: r.tytul.pl, url: BASE_URL + r.slug.pl + "-qr.html", displayUrl: BASE_URL + r.slug.pl + "/", filename: "qr-pl-" + r.id + ".svg" });
-      list.push({ id: r.id, lang: "en", label: r.tytul.pl, url: BASE_URL + "en/" + r.slug.en + "/", displayUrl: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
+      list.push({ id: r.id, lang: "en", label: r.tytul.pl, url: BASE_URL + "en/" + r.slug.en + "-qr.html", displayUrl: BASE_URL + "en/" + r.slug.en + "/", filename: "qr-en-" + r.id + ".svg" });
     });
     return list;
   }
