@@ -472,14 +472,53 @@ section { margin-bottom: var(--space-6); }
    7. Karty / kafelki rzeźb
    -------------------------------------------------------------------------- */
 
+.tile-carousel { position: relative; }
+
 .tile-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 var(--space-1);
+  scrollbar-width: none;
 }
+.tile-grid::-webkit-scrollbar { display: none; }
+
+.tile-grid > li {
+  flex: 0 0 min(22rem, 88%);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile-grid { scroll-behavior: auto; }
+}
+
+.tile-carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.tile-carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap-min);
+  height: var(--tap-min);
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  cursor: pointer;
+}
+.tile-carousel-btn:hover { background: var(--color-accent-dark); }
+.tile-carousel-btn:focus-visible { box-shadow: var(--focus-ring); }
+.tile-carousel-btn[disabled] { opacity: 0.35; cursor: not-allowed; }
 
 .tile {
   display: block;
@@ -1335,7 +1374,6 @@ figure.content-figure figcaption {
   h2 { font-size: 1.5rem; }
   .container { padding-left: var(--space-2); padding-right: var(--space-2); }
   .bio-section, .tile-grid { gap: var(--space-2); }
-  .tile-grid { grid-template-columns: 1fr; }
   .footer-funding { grid-template-columns: 1fr; text-align: center; }
   .footer-funding p { text-align: center; }
   .footer-funding .funding-logos { width: 100%; max-width: 24rem; min-width: 0; margin: 0 auto; }
