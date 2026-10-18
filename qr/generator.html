@@ -53,8 +53,8 @@
         </p>
       </details>
       <div class="ecl-switch" role="radiogroup" aria-label="Poziom korekcji błędów">
-        <label><input type="radio" name="ecl" value="L" checked> L — niski (ok. 7%) — czyste, niezabrudzone wydruki</label>
-        <label><input type="radio" name="ecl" value="M"> M — średni (ok. 15%) — większość zastosowań drukowanych</label>
+        <label><input type="radio" name="ecl" value="L"> L — niski (ok. 7%) — czyste, niezabrudzone wydruki</label>
+        <label><input type="radio" name="ecl" value="M" checked> M — średni (ok. 15%) — większość zastosowań drukowanych</label>
         <label><input type="radio" name="ecl" value="Q"> Q — podwyższony (ok. 25%) — wydruki narażone na uszkodzenia</label>
         <label><input type="radio" name="ecl" value="H"> H — wysoki (ok. 30%) — trudne warunki, duże zabrudzenia</label>
       </div>
@@ -123,7 +123,7 @@
   "use strict";
 
   var BASE_URL = QR_BASE_URL;
-  var currentEcl = "L";
+  var currentEcl = "M";
   var currentList = [];
   var currentSvgCache = {};
   var lastCustomPath = null;
