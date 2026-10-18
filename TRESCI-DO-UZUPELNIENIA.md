@@ -25,8 +25,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 ### Otwarte zadania per osoba
 
 **Jacek**
-- Wykupienie i podłączenie domeny `sladamistrzyzynskiego.pl` (CNAME, DNS),
-  podmiana adresu w `sitemap.xml`/`robots.txt` po jej uruchomieniu (sekcja 6).
+- Domena `sladamistrzyzynskiego.pl` wykupiona, plik `CNAME` w repo
+  gotowy — zostaje konfiguracja DNS w panelu webd.pl i podmiana adresu
+  w `sitemap.xml`/`robots.txt` po jej uruchomieniu (sekcja 6).
 - Decyzje projektowe: forma prezentacji przystanków na stronie głównej,
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 - Nie krytyczne: pod filmem wprowadzającym nadal pokazują się
@@ -332,13 +333,25 @@ Wdrożenie na GitHub Pages jest zrobione — strona działa pod
 wpisany w `qr/base-url.js`, `sitemap.xml` i `robots.txt`.
 
 **ZROBIONE, decyzja podjęta: domena `sladamistrzyzynskiego.pl`.**
-`qr/base-url.js` został już podmieniony na ten adres.
+`qr/base-url.js` został już podmieniony na ten adres. Domena jest już
+wykupiona (u rejestratora webd.pl).
 
-**Wciąż do zrobienia (poza Claude, krok zewnętrzny):**
-- wykupienie domeny `sladamistrzyzynskiego.pl`,
-- podłączenie jej do GitHub Pages: dodanie pliku `CNAME` w repozytorium
-  (do ustalenia w kolejnym kroku, gdy domena będzie wykupiona) oraz
-  konfiguracja DNS u rejestratora domeny,
+**ZROBIONE:** plik `CNAME` z adresem `sladamistrzyzynskiego.pl` dodany
+do repozytorium (główny katalog) — to podłącza domenę do GitHub Pages
+od strony repozytorium.
+
+**Wciąż do zrobienia (poza Claude, krok zewnętrzny, Jacek):**
+- konfiguracja DNS w panelu webd.pl — dodać rekordy A dla domeny (bez
+  `www`) wskazujące na serwery GitHub Pages:
+  `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
+  `185.199.111.153` (opcjonalnie też rekordy AAAA:
+  `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`,
+  `2606:50c0:8003::153`). Jeśli ma działać też `www.sladamistrzyzynskiego.pl`,
+  dodatkowo rekord CNAME: `www` → `jacekszwalek.github.io`,
+- poczekać na propagację DNS (zwykle od kilku minut do kilkudziesięciu
+  godzin) i na automatyczne wystawienie certyfikatu HTTPS przez GitHub
+  Pages (dzieje się samo, gdy DNS zacznie działać — w ustawieniach
+  repozytorium na GitHub pojawi się wtedy opcja „Enforce HTTPS"),
 - podmiana adresu w `sitemap.xml` i `robots.txt` — **dopiero gdy domena
   faktycznie działa**, żeby nie zepsuć wyszukiwania i nawigacji na
   aktualnie żywej stronie `github.io` w międzyczasie.
