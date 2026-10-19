@@ -2,8 +2,8 @@
  * js/map.js — mapa spaceru (Leaflet + kafelki OpenStreetMap, bez klucza API).
  *
  * Odpowiada za:
- *  - dużą mapę na stronie głównej (numerowane pinezki, trasa, lista pod mapą,
- *    dwukierunkowa synchronizacja, geolokalizacja, dystans/czas spaceru),
+ *  - dużą mapę na stronie głównej (numerowane pinezki, trasa, karuzela listy
+ *    pod mapą, dwukierunkowa synchronizacja, geolokalizacja, dystans/czas),
  *  - mniejszą mapę "Jak dojść" na podstronach rzeźb (jedna wyróżniona pinezka),
  *  - fallback na samą listę, gdy Leaflet się nie załaduje.
  *
@@ -99,6 +99,63 @@
   }
 
   /* ------------------------------------------------------------------
+   * Karuzela listy punktów pod mapą — przewijana swipe'em (natywny
+   * scroll ze scroll-snap) albo strzałkami lewo/prawo. Zwraca uchwyt
+   * do przewinięcia na konkretny punkt (używany przy kliknięciu pinezki).
+   * ------------------------------------------------------------------ */
+
+  function prefersReducedMotion() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function initLocationCarousel(listEl) {
+    var root = listEl.closest(".location-carousel");
+    if (!root) return null;
+    var prevBtn = root.querySelector(".location-carousel-btn--prev");
+    var nextBtn = root.querySelector(".location-carousel-btn--next");
+    if (!prevBtn || !nextBtn) return null;
+
+    function stepWidth() {
+      var firstItem = listEl.querySelector("li");
+      if (!firstItem) return listEl.clientWidth;
+      var gap = parseFloat(getComputedStyle(listEl).columnGap || getComputedStyle(listEl).gap || "0") || 0;
+      return firstItem.getBoundingClientRect().width + gap;
+    }
+    function updateButtons() {
+      var maxScroll = listEl.scrollWidth - listEl.clientWidth;
+      prevBtn.disabled = listEl.scrollLeft <= 1;
+      nextBtn.disabled = listEl.scrollLeft >= maxScroll - 1;
+    }
+    function scrollByStep(direction) {
+      listEl.scrollBy({ left: direction * stepWidth(), behavior: prefersReducedMotion() ? "auto" : "smooth" });
+    }
+
+    prevBtn.addEventListener("click", function () { scrollByStep(-1); });
+    nextBtn.addEventListener("click", function () { scrollByStep(1); });
+
+    var ticking = false;
+    listEl.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        updateButtons();
+        ticking = false;
+      });
+    }, { passive: true });
+
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+
+    return {
+      scrollToItem: function (id) {
+        var el = listEl.querySelector('[data-rzezba-id="' + id + '"]');
+        if (!el) return;
+        el.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", inline: "center", block: "nearest" });
+      }
+    };
+  }
+
+  /* ------------------------------------------------------------------
    * Duża mapa spaceru (strona główna)
    * ------------------------------------------------------------------ */
 
@@ -162,6 +219,8 @@
       if (el) el.classList.toggle("is-active", on);
     }
 
+    var locationCarousel = null;
+
     if (listEl) {
       var L_ = lang();
       listEl.innerHTML = items.map(function (r) {
@@ -169,12 +228,14 @@
         return (
           '<li>' +
             '<a class="location-item" href="' + N.sculptureUrl(r, L_) + '" data-rzezba-id="' + r.id + '">' +
-              '<span class="tile-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
+              '<span class="location-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
               '<span class="location-text"><strong>' + r.tytul[L_] + '</strong>' + opis + '</span>' +
             '</a>' +
           '</li>'
         );
       }).join("");
+
+      locationCarousel = initLocationCarousel(listEl);
 
       items.forEach(function (r) {
         var el = listEl.querySelector('[data-rzezba-id="' + r.id + '"]');
@@ -201,6 +262,9 @@
         el.addEventListener("mouseleave", function () { highlightListItem(r.id, false); });
         el.addEventListener("focus", function () { highlightListItem(r.id, true); });
         el.addEventListener("blur", function () { highlightListItem(r.id, false); });
+      });
+      marker.on("click", function () {
+        if (locationCarousel) locationCarousel.scrollToItem(r.id);
       });
     });
 
@@ -280,12 +344,13 @@
       return (
         '<li>' +
           '<a class="location-item" href="' + N.sculptureUrl(r, L_) + '">' +
-            '<span class="tile-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
+            '<span class="location-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
             '<span class="location-text"><strong>' + r.tytul[L_] + '</strong>' + opis + '</span>' +
           '</a>' +
         '</li>'
       );
     }).join("");
+    initLocationCarousel(listEl);
   }
 
   /* ------------------------------------------------------------------

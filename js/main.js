@@ -1,8 +1,8 @@
 /**
  * js/main.js — wspólne funkcje dla wszystkich stron: rozwiązywanie ścieżek
  * (PL w katalogu głównym / EN w /en/), przełącznik rozmiaru czcionki,
- * renderowanie kafelków rzeźb i nawigacji prev/next na podstawie
- * data/rzezby.js, lightbox do zdjęć.
+ * renderowanie nawigacji prev/next na podstawie data/rzezby.js, lightbox
+ * do zdjęć.
  *
  * Ładowany jako zwykły <script> (nie moduł), żeby strona działała też
  * po otwarciu pliku z dysku (file://), bez serwera i bez fetch().
@@ -88,23 +88,6 @@
   window.Naleczow.homeUrl = homeUrl;
   window.Naleczow.aboutUrl = aboutUrl;
 
-  var L10N = {
-    pl: {
-      openView: "Zobacz i posłuchaj",
-      year: "Rok",
-      toBeCompleted: "do uzupełnienia"
-    },
-    en: {
-      openView: "Watch and listen",
-      year: "Year",
-      toBeCompleted: "to be completed"
-    }
-  };
-
-  function t() {
-    return L10N[getCurrentLang()];
-  }
-
   function escapeHtml(str) {
     if (str === null || str === undefined) return "";
     return String(str)
@@ -112,102 +95,6 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
-  }
-
-  /* ------------------------------------------------------------------
-   * Kafelki rzeźb (strona główna)
-   * ------------------------------------------------------------------ */
-
-  function renderTileGrid(container) {
-    if (!container || typeof RZEZBY === "undefined") return;
-    var lang = getCurrentLang();
-    var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
-    var total = items.length;
-    var html = items.map(function (r, idx) {
-      var href = sculptureUrl(r, lang);
-      var img = resolveAsset(r.miniatura);
-      var title = escapeHtml(r.tytul[lang]);
-      var rok = r.rok ? r.rok : t().toBeCompleted;
-      var material = r.material && r.material[lang] ? r.material[lang] : "";
-      var meta = rok + (material ? " · " + escapeHtml(material) : "");
-      var opis = escapeHtml((r.opisKrotki && r.opisKrotki[lang]) || "");
-      var slideLabel = lang === "pl" ? (idx + 1) + " z " + total : (idx + 1) + " of " + total;
-      return (
-        '<li aria-label="' + slideLabel + '">' +
-          '<a class="tile" href="' + href + '" data-rzezba-id="' + r.id + '">' +
-            '<span class="tile-img-wrap">' +
-              '<img src="' + img + '" alt="" width="400" height="300" loading="lazy">' +
-              '<span class="tile-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
-            '</span>' +
-            '<span class="tile-body">' +
-              '<span class="tile-meta">' + meta + '</span>' +
-              '<h3>' + title + '</h3>' +
-              '<p>' + opis + '</p>' +
-            '</span>' +
-          '</a>' +
-        '</li>'
-      );
-    }).join("");
-    container.innerHTML = html;
-  }
-
-  /* ------------------------------------------------------------------
-   * Karuzela kafelków rzeźb (strona główna) — przewijana swipe'em
-   * (natywny scroll ze scroll-snap, więc działa też bez JS) albo
-   * strzałkami lewo/prawo. Karty zostają zwykłymi elementami w
-   * naturalnej kolejności tabulacji — klawiatura i czytniki ekranu
-   * dostają się do nich bez żadnej specjalnej obsługi.
-   * ------------------------------------------------------------------ */
-
-  function initTileCarousel(carousel) {
-    var track = carousel.querySelector(".tile-grid");
-    var prevBtns = carousel.querySelectorAll(".tile-carousel-btn--prev");
-    var nextBtns = carousel.querySelectorAll(".tile-carousel-btn--next");
-    if (!track || !prevBtns.length || !nextBtns.length) return;
-
-    function prefersReducedMotion() {
-      return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    }
-
-    function stepWidth() {
-      var firstItem = track.querySelector("li");
-      if (!firstItem) return track.clientWidth;
-      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "0") || 0;
-      return firstItem.getBoundingClientRect().width + gap;
-    }
-
-    function updateButtons() {
-      var maxScroll = track.scrollWidth - track.clientWidth;
-      var atStart = track.scrollLeft <= 1;
-      var atEnd = track.scrollLeft >= maxScroll - 1;
-      for (var i = 0; i < prevBtns.length; i++) prevBtns[i].disabled = atStart;
-      for (var j = 0; j < nextBtns.length; j++) nextBtns[j].disabled = atEnd;
-    }
-
-    function scrollByStep(direction) {
-      track.scrollBy({ left: direction * stepWidth(), behavior: prefersReducedMotion() ? "auto" : "smooth" });
-    }
-
-    for (var p = 0; p < prevBtns.length; p++) {
-      prevBtns[p].addEventListener("click", function () { scrollByStep(-1); });
-    }
-    for (var n = 0; n < nextBtns.length; n++) {
-      nextBtns[n].addEventListener("click", function () { scrollByStep(1); });
-    }
-
-    var ticking = false;
-    track.addEventListener("scroll", function () {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(function () {
-        updateButtons();
-        ticking = false;
-      });
-    }, { passive: true });
-
-    window.addEventListener("resize", updateButtons);
-
-    updateButtons();
   }
 
   /* ------------------------------------------------------------------
@@ -336,12 +223,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     initTextSizeSwitch();
     initLightbox();
-
-    var tileGrid = document.getElementById("tile-grid");
-    if (tileGrid) renderTileGrid(tileGrid);
-
-    var tileCarousel = document.querySelector(".tile-carousel");
-    if (tileGrid && tileCarousel) initTileCarousel(tileCarousel);
 
     var routeNav = document.getElementById("route-nav");
     if (routeNav) renderRouteNav(routeNav);

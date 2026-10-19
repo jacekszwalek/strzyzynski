@@ -173,8 +173,8 @@ wtedy przycisk „Wolę tylko posłuchać".
 ## 6. Jak zmienić tekst
 
 Większość tekstów (opisy rzeźb, biogram, informacje praktyczne) leży w pliku
-`data/rzezby.js` — to jedno miejsce, z którego strona pobiera dane dla mapy,
-kafelków i podstron. Format to zwykły tekst w cudzysłowie, np.:
+`data/rzezby.js` — to jedno miejsce, z którego strona pobiera dane dla mapy
+i podstron. Format to zwykły tekst w cudzysłowie, np.:
 
 ```js
 opisKrotki: {
@@ -234,9 +234,9 @@ najlepiej wykonać z jego pomocą.
    `<li><a href="./nowa-rzezba/">Nowa rzeźba</a></li>` na stronach w
    katalogu głównym, albo `<li><a href="../nowa-rzezba/">...</a></li>` z
    wnętrza innej podstrony rzeźby (bo ta jest już w swoim katalogu).
-5. Mapa, kafelki na stronie głównej i przyciski „poprzedni/następny punkt"
-   **zaktualizują się same** — są generowane automatycznie na podstawie
-   `data/rzezby.js`.
+5. Mapa (łącznie z karuzelą listy punktów pod nią) i przyciski
+   „poprzedni/następny punkt" **zaktualizują się same** — są generowane
+   automatycznie na podstawie `data/rzezby.js`.
 6. Dodaj zdjęcia i nagranie zgodnie z punktami 3–5 powyżej.
 7. Wygeneruj nowy kod QR — patrz punkt 8.
 
