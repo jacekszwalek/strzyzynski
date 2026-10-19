@@ -12,6 +12,7 @@
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="./favicon.ico">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="./css/style.css">
 
 <meta property="og:type" content="website">
@@ -84,6 +85,33 @@
       </details>
     </section>
 
+    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
+      <h2 id="mapa-heading">Mapa spaceru</h2>
+      <p>
+        Kliknij numerowaną pinezkę albo pozycję na liście poniżej, aby zobaczyć podgląd
+        rzeźby i przejść do nagrania. Mapę można też obsłużyć klawiaturą (Tab, Enter).
+      </p>
+
+      <div class="map-wrap" id="map-wrap">
+        <div id="map" class="map-el" role="application" aria-label="Mapa spaceru z czterema numerowanymi punktami"></div>
+        <div class="map-scroll-hint" id="map-scroll-hint" role="button" tabindex="0">
+          Kliknij mapę, aby przybliżać kółkiem myszy
+        </div>
+      </div>
+      <div class="map-fallback" id="map-fallback" hidden>
+        <p>Mapa jest obecnie niedostępna. Poniżej pełna lista punktów spaceru — działa niezależnie od mapy.</p>
+      </div>
+
+      <div class="map-meta">
+        <span id="map-meta"></span>
+        <button type="button" class="btn btn--secondary" id="geolocate-btn">📍 Pokaż moją pozycję</button>
+      </div>
+      <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
+
+      <h3 class="visually-hidden">Lista punktów spaceru</h3>
+      <ul class="location-list" id="location-list" role="list"></ul>
+    </section>
+
     <section id="kafelki" aria-labelledby="kafelki-heading">
       <h2 id="kafelki-heading" class="visually-hidden">Rzeźby na trasie</h2>
       <div class="tile-carousel">
@@ -112,7 +140,7 @@
       <ol class="steps-grid" role="list">
         <li class="step-card">
           <div class="step-number" aria-hidden="true">1</div>
-          <p><strong>Wybierz punkt.</strong> Wśród kafelków powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
+          <p><strong>Wybierz punkt.</strong> Na mapie, liście lub wśród kafelków powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
         </li>
         <li class="step-card">
           <div class="step-number" aria-hidden="true">2</div>
@@ -204,7 +232,9 @@
 </div>
 
 <script src="./data/rzezby.js"></script>
+<script src="./vendor/leaflet/leaflet.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/map.js"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>

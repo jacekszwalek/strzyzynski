@@ -226,7 +226,7 @@
 
     var prevLabel = lang === "pl" ? "Poprzedni punkt" : "Previous stop";
     var nextLabel = lang === "pl" ? "Następny punkt" : "Next stop";
-    var mapLabel = lang === "pl" ? "Powrót do listy rzeźb" : "Back to the list of sculptures";
+    var mapLabel = lang === "pl" ? "Powrót do mapy spaceru" : "Back to the walk map";
 
     var html = "";
     if (prev) {
@@ -241,7 +241,7 @@
     } else {
       html += '<span></span>';
     }
-    html += '<a class="btn to-map" href="' + homeUrl(lang) + '#kafelki">' + mapLabel + '</a>';
+    html += '<a class="btn to-map" href="' + homeUrl(lang) + '#mapa">' + mapLabel + '</a>';
 
     container.innerHTML = html;
   }
