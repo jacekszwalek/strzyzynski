@@ -109,26 +109,13 @@
       <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
 
       <h3 class="visually-hidden">Lista punktów spaceru</h3>
-      <ul class="location-list" id="location-list" role="list"></ul>
-    </section>
-
-    <section id="kafelki" aria-labelledby="kafelki-heading">
-      <h2 id="kafelki-heading" class="visually-hidden">Rzeźby na trasie</h2>
-      <div class="tile-carousel">
-        <div class="tile-carousel-controls tile-carousel-controls--top">
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Poprzednia rzeźba" aria-controls="tile-grid" disabled>
+      <div class="location-carousel">
+        <ul class="location-list" id="location-list" role="list"></ul>
+        <div class="location-carousel-controls">
+          <button type="button" class="location-carousel-btn location-carousel-btn--prev" aria-label="Poprzedni punkt" aria-controls="location-list" disabled>
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Następna rzeźba" aria-controls="tile-grid">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-        <ul class="tile-grid" id="tile-grid" role="list"></ul>
-        <div class="tile-carousel-controls tile-carousel-controls--bottom">
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--prev" aria-label="Poprzednia rzeźba" aria-controls="tile-grid" disabled>
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button type="button" class="tile-carousel-btn tile-carousel-btn--next" aria-label="Następna rzeźba" aria-controls="tile-grid">
+          <button type="button" class="location-carousel-btn location-carousel-btn--next" aria-label="Następny punkt" aria-controls="location-list">
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -140,7 +127,7 @@
       <ol class="steps-grid" role="list">
         <li class="step-card">
           <div class="step-number" aria-hidden="true">1</div>
-          <p><strong>Wybierz punkt.</strong> Na mapie, liście lub wśród kafelków powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
+          <p><strong>Wybierz punkt.</strong> Na mapie lub liście powyżej — kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
         </li>
         <li class="step-card">
           <div class="step-number" aria-hidden="true">2</div>

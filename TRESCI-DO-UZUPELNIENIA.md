@@ -99,23 +99,24 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
-| `laweczka-prusa-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej (siatka 2×2 na desktopie, jedna kolumna na mobile) |
+| `laweczka-prusa-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy na stronie głównej (po kliknięciu pinezki) |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `drzewo-genealogiczne-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej |
+| `drzewo-genealogiczne-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy |
 | `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `panna-z-ryba-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej |
+| `panna-z-ryba-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy |
 | `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `kamien-papieski-mini.svg` | 300×400 (pionowe, 3:4) | kafelek na stronie głównej |
+| `kamien-papieski-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy |
 | `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
 | `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.jpg` | 640×870 (pionowe) | biogram na stronie głównej — **ZROBIONE**, prawdziwe zdjęcie dostarczone przez Jacka |
 | `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, biała obwódka, przezroczyste tło poza kołem) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to zbliżenie na twarz z dostarczonego zdjęcia przykładowego — nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego — do podmiany na prawdziwe, docelowe zdjęcie.** |
 
-Lista na stronie głównej/mapie (`#location-list`, lista rzeźb pod mapą)
-jest tekstowa, bez miniatur — nie potrzebuje więc osobnego zdjęcia.
+Karuzela punktów pod mapą na stronie głównej (`#location-list`) jest
+tekstowa, bez miniatur — zdjęcia pojawiają się tylko w dymku mapy po
+kliknięciu pinezki (zobacz wiersze „miniaturka w dymku mapy" wyżej).
 
 Jacek dostarczył też trzy dodatkowe zdjęcia Stanisława Strzyżyńskiego,
 na razie nigdzie na stronie nieużyte — czekają na decyzję, gdzie je
@@ -428,11 +429,10 @@ wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
 
 ## 9. Decyzje projektowe do podjęcia
 
-- **Forma prezentacji przystanków na stronie głównej** —
-  **Odpowiedzialność: Jacek**. Obecnie krótka lista/siatka przystanków na
-  stronie startowej. Do zdecydowania: czy mają to być kafelki ze
-  zdjęciami (jak obecnie), czy numerowane boxy bez zdjęć (prostsze,
-  szybciej się ładują, ale mniej zachęcające wizualnie).
+- **Forma prezentacji przystanków na stronie głównej** — **ZROBIONE**.
+  Przystanki prezentuje numerowana karuzela punktów pod mapą (bez zdjęć —
+  miniaturki pojawiają się w dymku mapy po kliknięciu pinezki), ze
+  strzałkami nawigacyjnymi i dwukierunkową synchronizacją z mapą.
 - **Precyzyjny opis sekcji „Jak korzystać ze spaceru"** (kroki 1, 2,
   3… na stronie startowej) — **Odpowiedzialność: Jacek**. Obecny opis
   jest zbyt ogólny. Do uzupełnienia/doprecyzowania:
