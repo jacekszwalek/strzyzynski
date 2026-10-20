@@ -196,11 +196,14 @@ dodatkowych szczegółów. Szukaj tego komentarza w plikach `*.html` oraz
 w `data/rzezby.js`.
 
 - **Strona główna** (`index.html`, adres `/`) — biogram Stanisława
-  Strzyżyńskiego. Do dostarczenia (opcjonalnie, nie blokuje publikacji):
-  - dodatkowe fakty z okresu studiów,
-  - szczegóły okoliczności przeprowadzki do Nałęczowa,
-  - pełny wykaz najważniejszych realizacji,
-  - więcej kontekstu wokół konkursu na Pomnik Walki i Męczeństwa na Majdanku.
+  Strzyżyńskiego. **ZROBIONE (wersja PL)** — treść nadpisana danymi z
+  przesłanej przez Dorotę skorygowanej biografii
+  (`Biografia_Stanislaw_Strzyzynski_korekta.docx`): pełny wykaz
+  realizacji, kontekst konkursu na Pomnik Walki i Męczeństwa na
+  Majdanku, nowa sekcja „Nagrody i odznaczenia" oraz informacja o
+  nazwaniu alei w czerwcu 2026. **Do zrobienia:** przetłumaczyć te same
+  zmiany na wersję angielską (`en/index.html`), która wciąż ma starszą,
+  krótszą treść bez tej sekcji.
 - **Ławeczka Prusa** (`laweczka-prusa/index.html`, adres `/laweczka-prusa/`)
   — fundator, przebieg prac i szczegóły współpracy ojca i syna są już
   opisane w pełnej transkrypcji nagrania (sekcja „Transkrypcja" na
