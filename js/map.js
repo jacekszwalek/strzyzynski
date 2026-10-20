@@ -206,11 +206,26 @@
     items.forEach(function (r) {
       var marker = L.marker(r.wspolrzedne, { icon: numberedIcon(r.nrTrasy), keyboard: true, title: r.tytul[lang()] })
         .addTo(map)
-        .bindPopup(popupHtml(r), { maxWidth: 300 });
+        .bindPopup(popupHtml(r), { maxWidth: 300, autoPan: false });
       markers[r.id] = marker;
     });
 
     map.fitBounds(L.latLngBounds(points), { padding: [40, 40] });
+
+    /* ---- Dymek: na mobile przesuń widok tak, żeby popup nie nachodził na
+       przyciski zoom (+/-) w lewym górnym rogu ---- */
+
+    map.on("popupopen", function (e) {
+      if (window.innerWidth > 640) return;
+      var popupLatLng = e.popup.getLatLng();
+      if (!popupLatLng) return;
+      var offsetY = 100;
+      var zoom = map.getZoom();
+      var beforePoint = map.project(popupLatLng, zoom);
+      var targetPoint = beforePoint.subtract([0, offsetY]);
+      var targetLatLng = map.unproject(targetPoint, zoom);
+      map.panTo(targetLatLng, { animate: true });
+    });
 
     /* ---- Lista pod mapą + dwukierunkowa synchronizacja ---- */
 
