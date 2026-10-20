@@ -3,7 +3,7 @@
  *
  * Odpowiada za:
  *  - dużą mapę na stronie głównej (numerowane pinezki, trasa, karuzela listy
- *    pod mapą, dwukierunkowa synchronizacja, geolokalizacja, dystans/czas),
+ *    pod mapą, dwukierunkowa synchronizacja, geolokalizacja),
  *  - mniejszą mapę "Jak dojść" na podstronach rzeźb (jedna wyróżniona pinezka),
  *  - fallback na samą listę, gdy Leaflet się nie załaduje.
  *
@@ -33,15 +33,6 @@
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
     return R * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
-  }
-
-  function computeRouteStats(points) {
-    var totalKm = 0;
-    for (var i = 1; i < points.length; i++) {
-      totalKm += haversineKm(points[i - 1], points[i]);
-    }
-    var minutes = Math.round((totalKm / 4) * 60); // ~4 km/h pieszo
-    return { km: totalKm, minutes: minutes };
   }
 
   /* ------------------------------------------------------------------
@@ -122,6 +113,7 @@
     if (!root) return null;
     var prevBtn = root.querySelector(".location-carousel-btn--prev");
     var nextBtn = root.querySelector(".location-carousel-btn--next");
+    var controls = root.querySelector(".location-carousel-controls");
     if (!prevBtn || !nextBtn) return null;
 
     function stepWidth() {
@@ -132,6 +124,11 @@
     }
     function updateButtons() {
       var maxScroll = listEl.scrollWidth - listEl.clientWidth;
+      var needsScroll = maxScroll > 1;
+      // Strzałki tylko wtedy, gdy jest co przewijać (np. desktop, na którym
+      // wszystkie punkty mieszczą się w jednym rzędzie, ich nie potrzebuje).
+      if (controls) controls.hidden = !needsScroll;
+      if (!needsScroll) return;
       prevBtn.disabled = listEl.scrollLeft <= 1;
       nextBtn.disabled = listEl.scrollLeft >= maxScroll - 1;
     }
@@ -172,7 +169,6 @@
     var mapEl = document.getElementById("map");
     var mapWrap = document.getElementById("map-wrap");
     var listEl = document.getElementById("location-list");
-    var metaEl = document.getElementById("map-meta");
     var geoBtn = document.getElementById("geolocate-btn");
     var geoStatus = document.getElementById("geolocate-status");
 
@@ -305,20 +301,6 @@
         openStopPopup(marker);
       });
     });
-
-    /* ---- Dystans i czas ---- */
-
-    if (metaEl) {
-      var stats = computeRouteStats(points);
-      var L2 = lang();
-      var distText = stats.km < 1
-        ? Math.round(stats.km * 1000) + " m"
-        : stats.km.toFixed(1).replace(".", L2 === "pl" ? "," : ".") + " km";
-      var label = L2 === "pl"
-        ? "Cała trasa: ok. " + distText + ", ok. " + stats.minutes + " min pieszo (szacunek, do potwierdzenia)"
-        : "Whole route: approx. " + distText + ", approx. " + stats.minutes + " min on foot (estimate, to be confirmed)";
-      metaEl.textContent = label;
-    }
 
     /* ---- Pierwsze kliknięcie mapy włącza zoom kółkiem myszy (cicho,
        bez banera — chroni przed niezamierzonym przybliżaniem podczas
