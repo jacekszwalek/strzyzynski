@@ -252,8 +252,10 @@
         return (
           '<li>' +
             '<a class="location-item" href="' + N.sculptureUrl(r, L_) + '" data-rzezba-id="' + r.id + '">' +
-              '<span class="location-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
-              '<span class="location-body">' +
+              '<span class="location-dot-row">' +
+                '<span class="location-dot" aria-hidden="true">' + r.nrTrasy + '</span>' +
+              '</span>' +
+              '<span class="location-card">' +
                 '<span class="location-title">' + r.tytul[L_] + '</span>' +
                 '<span class="location-desc">' + opis + '</span>' +
               '</span>' +
@@ -371,8 +373,10 @@
       return (
         '<li>' +
           '<a class="location-item" href="' + N.sculptureUrl(r, L_) + '">' +
-            '<span class="location-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
-            '<span class="location-body">' +
+            '<span class="location-dot-row">' +
+              '<span class="location-dot" aria-hidden="true">' + r.nrTrasy + '</span>' +
+            '</span>' +
+            '<span class="location-card">' +
               '<span class="location-title">' + r.tytul[L_] + '</span>' +
               '<span class="location-desc">' + opis + '</span>' +
             '</span>' +
