@@ -113,7 +113,7 @@ var RZEZBY = [
         },
         podpis: {
           pl: "Ławeczka Bolesława Prusa",
-          en: "Detail of the sculpture — hand on a book <!-- DO UZUPEŁNIENIA -->"
+          en: "The Bolesław Prus Bench"
         }
       }
     ],
@@ -181,7 +181,7 @@ var RZEZBY = [
 
     autorzy: {
       pl: "Stanisław Strzyżyński, współpraca Zbigniew Strzyżyński",
-      en: "Stanisław Strzyżyński"
+      en: "Stanisław Strzyżyński, in collaboration with Zbigniew Strzyżyński"
     },
 
     lokalizacja: {
@@ -192,7 +192,7 @@ var RZEZBY = [
 
     dojazd: {
       pl: "Rzeźba stoi przy Alei Stanisława Strzyżyńskiego, kilkaset metrów od Ławeczki Prusa.",
-      en: "The sculpture stands along Stanisław Strzyżyński Alley in the Spa Park — an alley named after the artist himself — a few dozen metres from the Prus Bench (stop 1 on this route)."
+      en: "The sculpture stands by Stanisław Strzyżyński Alley, a few hundred metres from the Prus Bench."
     },
 
     wspolrzedne: [51.28714555955893, 22.21240346246493], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
@@ -250,10 +250,9 @@ var RZEZBY = [
         "Rzeźba stoi przy Alei Stanisława Strzyżyńskiego w Parku Zdrojowym."
       ],
       en: [
-        "Family Tree is an abstract, organic sculptural form created in 1977, made of artificial stone. Its branching shape evokes the bough of a tree and is read as a symbol of family ties, the continuity of generations, and intertwining human fates. <!-- DO UZUPEŁNIENIA: symbolika w interpretacji autora -->",
-        "The sculpture was created during a plein-air sculpture workshop organised by Jarosław Olejnicki, chairman of the Society of Friends of Nałęczów (Towarzystwo Przyjaciół Nałęczowa). Plaques presenting the artist's biography stand along the alley.",
-        "The sculpture stands in Stanisław Strzyżyński Alley in the Spa Park — an alley that bears the artist's own name. It is a special, rarely seen coincidence: the creator walks through the park together with visitors, present not only in his works but also in the name of the place. <!-- DO UZUPEŁNIENIA: historia nadania nazwy alei -->",
-        "The form of the work remains open to interpretation — for some it is a family's genealogical tree, for others a universal symbol of growth and interconnection. <!-- DO UZUPEŁNIENIA: kontekst w twórczości Strzyżyńskiego, ewentualne inne realizacje o podobnej tematyce -->"
+        "Family Tree is an abstract, organic sculptural form created in 1977, made of artificial stone. The sculpture's oval shape symbolises a seed from which new life sprouts. The whole, resembling a branching tree, can be read as a symbol of family bonds, the continuity of generations, and intertwining human fates.",
+        "The sculpture was created during a plein-air sculpture workshop organised by Stanisław Strzyżyński and Jarosław Olejnicki, chairman of the Society of Friends of Nałęczów (Towarzystwo Przyjaciół Nałęczowa). Plaques presenting the artist's biography stand along the alley.",
+        "The sculpture stands by Stanisław Strzyżyński Alley in the Spa Park."
       ]
     }
   },
@@ -360,12 +359,12 @@ var RZEZBY = [
 
     dostepnosc: {
       pl: "Teren przed willą częściowo utwardzony. // DO ZWERYFIKOWANIA W TERENIE",
-      en: "The area in front of the villa is partially paved. The café offers seating and a toilet inside the building. // TO VERIFY ON SITE"
+      en: "The area in front of the villa is partially paved. // TO VERIFY ON SITE"
     },
 
     opisKrotki: {
       pl: "Rzeźba w fontannie przed willą „Pod Matką Boską”, w której mieści się kawiarnia Ewelina.",
-      en: "A sculpture in the fountain in front of the \"Pod Matką Boską\" villa — and the only stop on the route with coffee, a toilet and a place to rest."
+      en: "A sculpture in the fountain in front of the \"Pod Matką Boską\" villa, home to the Ewelina café."
     },
 
     opisPelny: {
@@ -375,7 +374,6 @@ var RZEZBY = [
       ],
       en: [
         "The Maiden with a Fish is a sculpture set in the fountain in front of the \"Pod Matką Boską\" villa at 16 Lipowa Street, now home to Ewelina café. It was created in 1979. <!-- DO UZUPEŁNIENIA: materiał, opis formy rzeźby -->",
-        "This is the only stop on this route where you can sit down, have a coffee and use a toilet — for older visitors, that's practical information, not just a curiosity.",
         "<!-- DO UZUPEŁNIENIA: historia willi „Pod Matką Boską”, jej rola w uzdrowiskowej zabudowie Nałęczowa -->"
       ]
     }
@@ -425,7 +423,7 @@ var RZEZBY = [
 
     autorzy: {
       pl: "Stanisław i Zbigniew Strzyżyńscy",
-      en: "Stanisław Strzyżyński together with his son Zbigniew Strzyżyński"
+      en: "Stanisław and Zbigniew Strzyżyński"
     },
 
     lokalizacja: {
@@ -436,7 +434,7 @@ var RZEZBY = [
 
     dojazd: {
       pl: "Idąc do Alei Stanisława Strzyżyńskiego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy wschodnim wyjściu z Parku Zdrojowego, w kierunku Panny z rybą (punkt 4).",
-      en: "Walking from Strzyżyński Alley (stop 2 on this route) further into the park, the monument with the plaque stands by the eastern exit from the Spa Park, towards The Maiden with a Fish (stop 4)."
+      en: "Walking to Stanisław Strzyżyński Alley (stop 2 on this route) further into the park, the monument with the plaque stands by the eastern exit from the Spa Park, towards The Maiden with a Fish (stop 4)."
     },
 
     wspolrzedne: [51.285452819939685, 22.212785832706324], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
