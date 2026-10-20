@@ -200,7 +200,7 @@
       img.style.cursor = "zoom-in";
       img.setAttribute("tabindex", "0");
       img.setAttribute("role", "button");
-      img.setAttribute("aria-label", (img.alt || "") + (getCurrentLang() === "pl" ? " — powiększ" : " — enlarge"));
+      img.setAttribute("aria-label", (img.alt || "") + (getCurrentLang() === "pl" ? " - powiększ" : " — enlarge"));
       img.addEventListener("click", function () { open(img.src, img.alt); });
       img.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {
