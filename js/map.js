@@ -76,12 +76,21 @@
     var img = N.resolveAsset(r.miniatura);
     var href = N.sculptureUrl(r, L_);
     var rok = r.rok || "";
+    var material = r.material && r.material[L_] ? r.material[L_] : "";
+    var meta = rok + (material ? " · " + material : "");
     var btnLabel = L_ === "pl" ? "Zobacz i posłuchaj" : "Watch and listen";
     return (
-      '<img class="popup-img" src="' + img + '" alt="" width="220" height="165" loading="lazy">' +
-      '<p class="popup-meta">' + r.nrTrasy + ". " + (rok ? rok : "") + "</p>" +
-      '<p class="popup-title">' + r.tytul[L_] + "</p>" +
-      '<a class="btn btn--block" href="' + href + '">' + btnLabel + "</a>"
+      '<a class="popup-card" href="' + href + '">' +
+        '<span class="popup-img-wrap">' +
+          '<img class="popup-img" src="' + img + '" alt="" width="72" height="96" loading="lazy">' +
+          '<span class="popup-number" aria-hidden="true">' + r.nrTrasy + '</span>' +
+        '</span>' +
+        '<span class="popup-body">' +
+          '<span class="popup-meta">' + meta + '</span>' +
+          '<span class="popup-title">' + r.tytul[L_] + '</span>' +
+          '<span class="popup-link">' + btnLabel + ' &rarr;</span>' +
+        '</span>' +
+      '</a>'
     );
   }
 
@@ -197,7 +206,7 @@
     items.forEach(function (r) {
       var marker = L.marker(r.wspolrzedne, { icon: numberedIcon(r.nrTrasy), keyboard: true, title: r.tytul[lang()] })
         .addTo(map)
-        .bindPopup(popupHtml(r), { maxWidth: 280 });
+        .bindPopup(popupHtml(r), { maxWidth: 300 });
       markers[r.id] = marker;
     });
 
