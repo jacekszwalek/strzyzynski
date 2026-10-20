@@ -504,6 +504,7 @@ section { margin-bottom: var(--space-6); }
   gap: var(--space-3);
   margin-top: var(--space-3);
 }
+.location-carousel-controls[hidden] { display: none; }
 
 .location-carousel-btn {
   display: flex;
@@ -646,11 +647,9 @@ section { margin-bottom: var(--space-6); }
   flex-wrap: wrap;
   gap: var(--space-3);
   align-items: center;
-  justify-content: space-between;
   margin-top: var(--space-2);
   font-size: 1.05rem;
 }
-.map-meta .map-distance { font-weight: 700; color: var(--color-accent-brown); }
 
 /* Numerowane pinezki Leaflet (44px+) */
 .marker-pin {
