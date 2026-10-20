@@ -175,7 +175,6 @@
     var metaEl = document.getElementById("map-meta");
     var geoBtn = document.getElementById("geolocate-btn");
     var geoStatus = document.getElementById("geolocate-status");
-    var scrollHint = document.getElementById("map-scroll-hint");
 
     if (!mapEl || typeof RZEZBY === "undefined") return;
 
@@ -227,6 +226,15 @@
       map.panTo(targetLatLng, { animate: true });
     });
 
+    // Otwiera popup danego markera, zawsze "na nowo" — Leaflet nie odpala
+    // "popupopen" przy ponownym otwarciu już otwartego popupu, więc samo
+    // openPopup() na wybranym ponownie przystanku nie przeliczyłoby na
+    // nowo przesunięcia widoku (mobile) i zostawało w złej pozycji.
+    function openStopPopup(marker) {
+      if (marker.isPopupOpen()) marker.closePopup();
+      marker.openPopup();
+    }
+
     /* ---- Lista pod mapą + dwukierunkowa synchronizacja ---- */
 
     function highlightMarker(id, on) {
@@ -276,8 +284,8 @@
         el.addEventListener("click", function (e) {
           e.preventDefault();
           var marker = markers[r.id];
-          map.setView(r.wspolrzedne, Math.max(map.getZoom(), 17));
-          marker.openPopup();
+          map.setView(r.wspolrzedne, Math.max(map.getZoom(), 17), { animate: false });
+          openStopPopup(marker);
         });
       });
     }
@@ -294,6 +302,7 @@
       });
       marker.on("click", function () {
         if (locationCarousel) locationCarousel.scrollToItem(r.id);
+        openStopPopup(marker);
       });
     });
 
@@ -311,16 +320,13 @@
       metaEl.textContent = label;
     }
 
-    /* ---- Kliknij, aby przybliżać (scrollWheelZoom) ---- */
+    /* ---- Pierwsze kliknięcie mapy włącza zoom kółkiem myszy (cicho,
+       bez banera — chroni przed niezamierzonym przybliżaniem podczas
+       scrollowania strony) ---- */
 
-    if (scrollHint) {
-      var enableScroll = function () {
-        map.scrollWheelZoom.enable();
-        scrollHint.hidden = true;
-      };
-      scrollHint.addEventListener("click", enableScroll);
-      mapEl.addEventListener("click", enableScroll, { once: true });
-    }
+    mapEl.addEventListener("click", function () {
+      map.scrollWheelZoom.enable();
+    }, { once: true });
 
     /* ---- Geolokalizacja ---- */
 
