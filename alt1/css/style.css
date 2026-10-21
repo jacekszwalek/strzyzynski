@@ -619,7 +619,7 @@ figure.content-figure figcaption { margin-top: var(--space-1); font-size: 0.95re
 .foundation-link-btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .foundation-link-btn:visited { color: var(--ink); }
 .foundation-link-btn:hover:visited { color: var(--bg); }
-.foundation-link-btn svg { display: block; width: 18px; height: 18px; }
+.foundation-link-btn svg { display: block; width: 30px; height: 30px; }
 
 .partner-logos { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-top: var(--space-2); }
 .partner-logo-slot {
