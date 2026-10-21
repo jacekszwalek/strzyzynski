@@ -651,6 +651,14 @@ figure.content-figure figcaption { margin-top: var(--space-1); font-size: 0.95re
 .footer-grid a { color: var(--ink-soft); font-weight: 400; display: block; margin-bottom: 0.4rem; }
 .footer-grid a:hover { color: var(--accent); }
 
+/* .footer-grid a (wyżej) ustawia kolor/display/margines dla wszystkich
+   linków w stopce - trzeba to cofnąć dla przycisków-ikon social media
+   (.foundation-link-btn to też <a>), inaczej ikony w stopce wyglądają
+   inaczej niż te same ikony na stronie "O projekcie" (przyciemniony
+   kolor ink-soft zamiast ink, brak wyśrodkowania bez display: flex). */
+.footer-grid .foundation-link-btn { display: flex; color: var(--ink); font-weight: 400; margin-bottom: 0; }
+.footer-grid .foundation-link-btn:hover { color: var(--bg); }
+
 .footer-funding { margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: var(--space-3); align-items: center; }
 .footer-funding p { font-size: 0.85rem; margin: 0; color: var(--ink-soft); }
 
