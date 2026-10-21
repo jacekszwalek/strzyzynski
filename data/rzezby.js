@@ -112,8 +112,8 @@ var RZEZBY = [
           en: "Close-up of the Bolesław Prus monument's face, in a bowler hat and glasses"
         },
         podpis: {
-          pl: "Ławeczka Bolesława Prusa",
-          en: "The Bolesław Prus Bench"
+          pl: "Zbliżenie na wyrzeźbioną twarz Bolesława Prusa",
+          en: "Close-up of the sculpted face of Bolesław Prus"
         }
       }
     ],
