@@ -1,6 +1,6 @@
 # Treści do uzupełnienia
 
-*Stan na 2026-10-16 — ten dokument jest aktualizowany na bieżąco, w miarę
+*Stan na 2026-10-21 — ten dokument jest aktualizowany na bieżąco, w miarę
 jak przesyłane są nowe materiały. Jeśli coś z listy wygląda jako już
 zrobione na stronie, a wciąż figuruje tutaj jako otwarte — to znaczy, że
 dokument nie został jeszcze zaktualizowany; zgłoś to, żeby poprawić.*
@@ -27,9 +27,9 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
 **Jacek**
 - ZROBIONE: domena `sladamistrzyzynskiego.pl` działa (DNS skonfigurowany
   w panelu webd.pl, plik `CNAME` w repo, `sitemap.xml`/`robots.txt`
-  zaktualizowane) — patrz sekcja 6. Zostaje do sprawdzenia, czy działa
-  HTTPS (zielona kłódka) i do podjęcia: czy usunąć link do admina
-  (generator kodów QR) ze stopki stron przed szerszą publikacją.
+  zaktualizowane) — patrz sekcja 6. ZROBIONE: link do generatora kodów QR
+  usunięty ze stopki wszystkich stron (decyzja podjęta i wykonana).
+  Zostaje do sprawdzenia: czy działa HTTPS (zielona kłódka).
 - Decyzje projektowe: forma prezentacji przystanków na stronie głównej,
   opis sekcji „Jak korzystać ze spaceru" (sekcja 9).
 - Nie krytyczne: pod filmem wprowadzającym nadal pokazują się
@@ -51,27 +51,41 @@ Jak podmienić poszczególne elementy krok po kroku opisuje `README.md`.
   wydaniu projektu, nie blokuje publikacji (sekcja 2b).
 
 **Dorota**
-- 14 zdjęć rzeźb + prawdziwe zdjęcie Zbigniewa Strzyżyńskiego (sekcja 1).
-- Doprecyzowanie faktów i źródeł w opisach (sekcja 3):
+- ZROBIONE: 14 zdjęć rzeźb dostarczone i umieszczone na stronie
+  (miniatury w dymku mapy + zdjęcia w opisach każdej podstrony, patrz
+  sekcja 1). Zostaje tylko: prawdziwe zdjęcie Zbigniewa Strzyżyńskiego
+  do awatara (sekcja 1) — wciąż placeholder.
+- Doprecyzowanie faktów i źródeł w opisach (sekcja 3) — część już
+  dostarczona i wdrożona przez właściciela repozytorium (treść
+  edytorska poprawiona w PL i zsynchronizowana z EN), reszta zostaje
+  otwarta:
   - treści na stronę startową (dodatkowe fakty z okresu studiów,
     szczegóły okoliczności przeprowadzki do Nałęczowa, pełny wykaz
     najważniejszych realizacji, więcej kontekstu wokół konkursu na
-    Pomnik Walki i Męczeństwa na Majdanku),
+    Pomnik Walki i Męczeństwa na Majdanku) — nadal otwarte,
   - Ławeczka Prusa — wzbogacenie krótszego opisu redakcyjnego
-    (`opisPelny`) o szczegóły z transkrypcji, związki Prusa
-    z Nałęczowem, kontekst literacki,
-  - Drzewo genealogiczne — okoliczności powstania rzeźby (więcej
-    szczegółów niż plener), historia nadania nazwy alei, kontekst
-    w twórczości artysty,
-  - Panna z rybą — materiał rzeźby (nieznany), historia willi „Pod
-    Matką Boską",
-  - Kamień papieski — dokładna data i okoliczności pobytu kardynała
-    w Nałęczowie, treść tablicy pamiątkowej, dokładny adres,
-  - O projekcie — rozwinięcie celu projektu, pełny opis roli
-    Fundacji Sztuka i Dom, podziękowania, informacja o finansowaniu.
-- Decyzja: sekcja „Źródła" na stronie O projekcie (PL+EN) — uzupełnić
-  konkretnymi źródłami albo usunąć sekcję, jeśli ich nie będzie
-  (sekcja 3).
+    (`opisPelny`) o okoliczności powstania/fundatora, szczegóły
+    współpracy ojca i syna, związki Prusa z Nałęczowem, kontekst
+    literacki — nadal otwarte,
+  - Drzewo genealogiczne — **ZROBIONE**: opis (`opisPelny`) przepisany
+    na ostateczną treść (symbolika, współorganizacja pleneru,
+    lokalizacja), bez otwartych `DO UZUPEŁNIENIA`,
+  - Panna z rybą — **ZROBIONE: materiał rzeźby ustalony** (sztuczny
+    marmur). Nadal otwarte: historia willi „Pod Matką Boską",
+  - Kamień papieski — **częściowo zrobione**: lokalizacja uzupełniona
+    o „w pobliżu Pałacu Małachowskich". Nadal otwarte: dokładna data
+    i okoliczności pobytu kardynała w Nałęczowie, treść tablicy
+    pamiątkowej, dokładny adres/nazwa ulicy,
+  - O projekcie — **ZROBIONE**: Cel, Podziękowania (z imionami
+    wolontariuszek) i informacja o finansowaniu gotowe. Nadal otwarte:
+    pełny opis roli Fundacji Sztuka i Dom w sekcji „Kto tworzy ten
+    projekt".
+- **ZROBIONE, decyzja podjęta: sekcja „Źródła"** na stronie O projekcie
+  (PL+EN) — usunięta ze strony (nie uzupełniana konkretnymi źródłami).
+- **ZROBIONE: logo i social media Fundacji Sztuka i Dom** dodane na
+  stronie O projekcie/About (PL+EN) — logo w sekcji „Kto tworzy ten
+  projekt", linki do strony WWW, Facebooka i Instagrama jako graficzne
+  ikony dopasowane do stylistyki strony.
 - Weryfikacja warunków dofinansowania: Jacek sprawdził wymogi dotyczące
   informacji o finansowaniu i uważa, że są spełnione. Pozostaje:
   przesłać link do strony w obecnym kształcie (O projekcie i stopka)
@@ -225,26 +239,21 @@ w `data/rzezby.js`.
   zmienia się tylko nazwa samego przystanku/rzeźby, nie nazwa alei.
   Zmiana obejmuje też pliki (audio, zdjęcia) i wszystkie linki w
   nawigacji oraz `sitemap.xml`.
-  Dodane fakty (na podstawie informacji od Doroty Strzyżyńskiej): plener,
-  w ramach którego powstała rzeźba, zorganizował Jarosław Olejnicki,
-  prezes Towarzystwa Przyjaciół Nałęczowa, a wzdłuż alei stoją tablice
-  z biografią artysty.
-  Do dalszego dostarczenia (**Dorota**, poza nagraniem — patrz sekcja 2b,
-  to **Magda**):
-  - okoliczności powstania rzeźby (więcej szczegółów niż plener),
-  - historia nadania nazwy alei,
-  - kontekst w twórczości artysty,
-  - nagranie i transkrypcja (patrz sekcja 2) — po ich dostarczeniu opis
-    będzie można wzbogacić podobnie jak przy innych rzeźbach.
+  **ZROBIONE, opis (`opisPelny`) przepisany na ostateczną treść:**
+  symbolika rzeźby (owalny kształt jako ziarno, z którego kiełkuje
+  nowe życie), współorganizacja pleneru przez Stanisława Strzyżyńskiego
+  i Jarosława Olejnickiego (prezesa Towarzystwa Przyjaciół Nałęczowa,
+  wzdłuż alei stoją tablice z jego biografią), lokalizacja przy Alei
+  Stanisława Strzyżyńskiego. Bez otwartych `DO UZUPEŁNIENIA` w opisie.
+  Nagranie i transkrypcja — **ZROBIONE** (patrz sekcja 2b).
 - **Panna z rybą** (`panna-z-ryba/index.html`, adres `/panna-z-ryba/`) —
-  rok powstania już potwierdzony (1979, z transkrypcji nagrania). Do
-  dostarczenia:
+  rok powstania już potwierdzony (1979, z transkrypcji nagrania).
   - **ZROBIONE, numer telefonu dodany**: 508 244 607, w nowej sekcji
     „Zaproszenie do pracowni" tuż pod nagraniem (PL i EN). Na końcu
     transkrypcji (PL i EN) dodana jest też krótka notka wskazująca, że
     numer znajduje się w dalszej części strony,
-  - materiał rzeźby (`material` w danych ma wartość `null`) — nieznany,
-  - historia willi „Pod Matką Boską".
+  - **ZROBIONE, materiał ustalony:** sztuczny marmur (PL i EN),
+  - Nadal otwarte: historia willi „Pod Matką Boską".
 
   Godziny otwarcia kawiarni Ewelina — **ZROBIONE, decyzja podjęta**:
   nie zostały zweryfikowane, więc zgodnie z decyzją właściciela
@@ -253,31 +262,32 @@ w `data/rzezby.js`.
 - **Kamień papieski** (`kamien-papieski/index.html`, adres
   `/kamien-papieski/`) — rok powstania, materiał i autorstwo już
   potwierdzone (transkrypcja nagrania + wiadomość właściciela
-  repozytorium). Do dostarczenia:
+  repozytorium). **ZROBIONE:** lokalizacja uzupełniona o „w pobliżu
+  Pałacu Małachowskich" (PL i EN). Nadal otwarte:
   - dokładna data i okoliczności pobytu kardynała w Nałęczowie,
   - treść tablicy pamiątkowej,
-  - dokładny adres.
-- **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) — do
-  dostarczenia:
-  - rozwinięcie celu projektu,
-  - pełny opis roli Fundacji Sztuka i Dom,
-  - podziękowania,
-  - informacja o finansowaniu.
+  - dokładny adres/nazwa ulicy.
+- **O projekcie** (`o-projekcie/index.html`, adres `/o-projekcie/`) —
+  **ZROBIONE:**
+  - rozwinięcie celu projektu (sekcja „Cel projektu"),
+  - podziękowania (dla Zbigniewa Strzyżyńskiego i wolontariuszek
+    Fundacji, z imionami),
+  - informacja o finansowaniu,
+  - logo Fundacji Sztuka i Dom oraz linki (strona WWW, Facebook,
+    Instagram) jako graficzne ikony w sekcji „Kto tworzy ten projekt".
 
-  **Decyzja do podjęcia: sekcja „Źródła" (PL+EN).** Obecnie zawiera
-  jedną ogólną pozycję („Materiały i wspomnienia udostępnione przez
-  Zbigniewa Strzyżyńskiego") i dwa całkowicie puste miejsca
-  (`<!-- DO UZUPEŁNIENIA -->`) na: publikacje/artykuły/strony instytucji
-  wykorzystane przy opracowaniu opisów oraz źródło danych o pomniku
-  kardynała Karola Wojtyły. Albo uzupełnić te pozycje konkretnymi
-  źródłami, albo — jeśli realnych źródeł do podania nie będzie — usunąć
-  całą sekcję „Źródła" ze strony (PL+EN), żeby nie zostawiać na
-  opublikowanej stronie pustego nagłówka bez treści.
+  Nadal otwarte: pełny opis roli Fundacji Sztuka i Dom (skład zespołu,
+  historia współpracy) w tej samej sekcji.
 
-  **ZROBIONE, nazwa projektu:** sekcja „Część większego projektu" (PL+EN)
-  uzupełniona o pełną nazwę inicjatywy — „Cyfrowy spacer śladami artysty
-  rzeźbiarza Stanisława Strzyżyńskiego" — tę samą, która figuruje już w
-  sekcji „Partnerzy i finansowanie".
+  **ZROBIONE, decyzja podjęta: sekcja „Źródła" (PL+EN) usunięta ze
+  strony** — nie było konkretnych źródeł do podania, więc sekcja
+  (pusty nagłówek + dwa `<!-- DO UZUPEŁNIENIA -->`) została całkiem
+  skasowana zamiast zostać uzupełniona.
+
+  **ZROBIONE, decyzja podjęta: sekcja „Część większego projektu" (PL+EN)
+  usunięta ze strony** — treść się powtarzała z sekcją „Partnerzy
+  i finansowanie" (ta sama pełna nazwa inicjatywy), więc całą sekcję
+  usunięto zamiast ją zostawiać.
 
   **ZROBIONE, warunki dotacji wdrożone na podstawie dokumentu
   „Niezbędnik Realizatora" (MRW 2026):** zgodnie z opisanym tam
@@ -301,28 +311,33 @@ w `data/rzezby.js`.
 
 ---
 
-## 4. Tłumaczenie na angielski — ZROBIONE (w zakresie dostępnych treści)
+## 4. Tłumaczenie na angielski — prawie ZROBIONE, jedna luka otwarta
 
-**Odpowiedzialność: brak otwartego zadania** — tłumaczenie nowych faktów
-dogrywa się automatycznie przy okazji dostarczania ich przez Dorotę
-(sekcja 3) i Magdę (sekcja 2b, Drzewo genealogiczne).
+**Odpowiedzialność: Jacek** — przetłumaczyć rozszerzoną treść biogramu
+na stronie głównej (patrz niżej). Poza tym: brak otwartego zadania —
+tłumaczenie nowych faktów dogrywa się automatycznie przy okazji
+dostarczania ich przez Dorotę (sekcja 3).
 
-Interfejs (nawigacja, przyciski, nagłówki), biogram na stronie głównej,
-opisy i transkrypcje rzeźb oraz strona „O projekcie" są już przetłumaczone
-na angielski.
+Interfejs (nawigacja, przyciski, nagłówki), opisy i transkrypcje rzeźb
+oraz strona „O projekcie" są już przetłumaczone na angielski i na
+bieżąco synchronizowane z poprawkami edytorskimi wprowadzanymi po
+polsku.
+
+**Otwarta luka: biogram Stanisława Strzyżyńskiego na stronie głównej.**
+Wersja polska (`index.html`) ma pięć sekcji biogramu, łącznie z sekcją
+„Nagrody i odznaczenia" dodaną przy ostatniej korekcie treści. Wersja
+angielska (`en/index.html`) wciąż ma starszą, krótszą treść — tylko
+cztery sekcje, bez odpowiednika „Nagrody i odznaczenia" — do
+przetłumaczenia i dogrania.
 
 Pojedyncze `<!-- EN TRANSLATION NEEDED -->`, które wciąż można znaleźć
 w kodzie (`en/about/index.html`, komentarz w nagłówku `data/rzezby.js`),
 **nie oznaczają brakującego tłumaczenia** — oznaczają ten sam otwarty fakt,
 który czeka na ustalenie również w wersji polskiej (patrz sekcje 3 i 5).
-Przykłady: materiał rzeźby Panna z rybą, treść tablicy pamiątkowej przy
-Kamieniu papieskim, lista źródeł i dodatkowe podziękowania na stronie
-„O projekcie". Gdy taki fakt zostanie dostarczony po polsku, wersję
-angielską warto dopisać przy tej samej okazji.
-
-Jedyny realny wyjątek: **Drzewo genealogiczne** nie ma jeszcze żadnego
-nagrania ani transkrypcji (patrz sekcja 2) — więc nie ma też czego
-tłumaczyć, dopóki polski tekst nie powstanie.
+Przykłady: historia willi „Pod Matką Boską" przy Pannie z rybą, treść
+tablicy pamiątkowej przy Kamieniu papieskim, pełny opis roli Fundacji
+na stronie „O projekcie". Gdy taki fakt zostanie dostarczony po polsku,
+wersję angielską warto dopisać przy tej samej okazji.
 
 ---
 
@@ -356,16 +371,16 @@ dostępna pod `https://sladamistrzyzynskiego.pl/` (zamiast dawnego
 - `qr/base-url.js`, `sitemap.xml` i `robots.txt` wskazują już na nowy
   adres.
 
-**Zostaje do sprawdzenia/zrobienia:**
+**ZROBIONE:** link administracyjny do generatora kodów QR usunięty ze
+stopki wszystkich stron (PL+EN) — narzędzie `qr/generator.html` samo
+w sobie zostaje w repo (patrz sekcja 7, nadal używane przez Michała do
+pobierania kodów), zniknął tylko publiczny link do niego w stopce.
+
+**Zostaje do sprawdzenia:**
 - potwierdzić, że działa HTTPS (zielona kłódka w przeglądarce pod
   `https://sladamistrzyzynskiego.pl/`) — GitHub Pages wystawia
   certyfikat automatycznie, zwykle krótko po tym jak DNS zacznie
-  działać,
-- w stopce każdej strony jest link administracyjny do generatora
-  kodów QR, wskazujący wciąż na stary adres
-  `jacekszwalek.github.io/strzyzynski/qr/generator.html` (oznaczony w
-  kodzie jako „REMOVE BEFORE PUBLISHING") — do decyzji, czy i kiedy go
-  usunąć przed szerszą publikacją strony.
+  działać.
 
 **Ta decyzja odblokowuje projekt kodów QR** (patrz sekcja 7 niżej) — kody
 QR mogą teraz być projektowane pod docelowy adres.
@@ -438,15 +453,9 @@ wyświetla się czysty, docelowy adres (wygodny do ręcznego wpisania).
   Przystanki prezentuje numerowana karuzela punktów pod mapą (bez zdjęć —
   miniaturki pojawiają się w dymku mapy po kliknięciu pinezki), ze
   strzałkami nawigacyjnymi i dwukierunkową synchronizacją z mapą.
-- **Precyzyjny opis sekcji „Jak korzystać ze spaceru"** (kroki 1, 2,
-  3… na stronie startowej) — **Odpowiedzialność: Jacek**. Obecny opis
-  jest zbyt ogólny. Do uzupełnienia/doprecyzowania:
-  - że kolejność kroków ma znaczenie (np. najpierw obejrzeć film
-    wprowadzający, potem wyruszyć na spacer),
-  - że na stronie głównej jest film wprowadzający (YouTube), a na
-    podstronach poszczególnych rzeźb jest tylko audio (patrz sekcja 2a/2b)
-    — to rozróżnienie warto wprost wytłumaczyć odwiedzającemu, żeby nie
-    szukał filmu przy rzeźbie.
+- **Opis sekcji „Jak korzystać ze spaceru"** (kroki 1, 2, 3… na stronie
+  startowej) — **ZROBIONE**, zaakceptowane przez właściciela
+  repozytorium.
 - **Napis na górze strony (nagłówek/logo serwisu)** —
   **Odpowiedzialność: Dorota**. Do ustalenia, co ma figurować na samej
   górze strony, zarówno w wersji mobilnej, jak i desktopowej: sam tekst

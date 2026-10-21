@@ -1249,7 +1249,6 @@ figure.content-figure figcaption {
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: var(--space-3);
 }
-.footer-admin-note { font-size: 0.85rem; }
 
 .footer-funding {
   margin-top: var(--space-4);
