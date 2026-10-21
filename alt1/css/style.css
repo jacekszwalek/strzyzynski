@@ -215,6 +215,14 @@ section { margin-bottom: var(--space-6); }
 }
 .lang-switch:hover { background: var(--ink); color: var(--bg); }
 
+.nav-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: var(--tap-min); height: var(--tap-min); border-radius: 50%;
+  border: 1.5px solid var(--ink); background: transparent; padding: 0;
+  cursor: pointer; color: var(--ink); flex-shrink: 0;
+}
+.nav-toggle:hover { background: var(--ink); color: var(--bg); }
+
 .site-nav { background: var(--bg); border-top: 1px solid var(--line); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .site-nav a {
@@ -228,12 +236,19 @@ section { margin-bottom: var(--space-6); }
 
 @media (max-width: 760px) {
   .nav-step { display: inline; }
+  .header-tools { justify-content: flex-end; }
   .site-nav ul { flex-direction: column; flex-wrap: nowrap; gap: 0; overflow-x: visible; padding-bottom: 0; }
   .site-nav li { border-top: 1px solid var(--line); }
   .site-nav li:first-child { border-top: none; }
   .site-nav a { width: 100%; font-size: 1rem; border-bottom: none; }
   .site-nav a[aria-current="page"] { border-bottom: none; border-left: 3px solid var(--accent); padding-left: calc(var(--space-2) - 3px); }
   .header-top { flex-direction: column; align-items: stretch; }
+
+  /* Menu kompaktowe: domyślnie (bez JS) w pełni widoczne — pełnoprawny
+     fallback. Z JS-em zwija się za przyciskiem-hamburgerem, żeby
+     zajmować jak najmniej miejsca na telefonie. */
+  html.js .nav-toggle { display: flex; }
+  html.js .site-nav[data-collapsed="true"] { display: none; }
 }
 
 /* --------------------------------------------------------------------------
@@ -309,6 +324,13 @@ section { margin-bottom: var(--space-6); }
 .intro-grid { display: flex; gap: var(--space-5); align-items: flex-start; flex-wrap: wrap; }
 .intro-copy { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
 .intro-video { flex: 0 1 360px; min-width: 260px; }
+
+/* Mobile: wideo nad transkrypcją (w ramach kolumny intro-copy, która
+   następuje zaraz po wideo) — na desktopie układ zostaje bez zmian. */
+@media (max-width: 760px) {
+  .intro-grid { flex-direction: column; }
+  .intro-video { order: -1; }
+}
 .video-wrap {
   position: relative; width: 100%; aspect-ratio: 9 / 16; max-width: 22rem;
   background: #000; border-radius: var(--radius-lg); overflow: hidden;
@@ -451,6 +473,14 @@ details.transcript .transcript-body p:last-child { margin-bottom: 0; }
 
 .location-item { display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; text-align: center; color: var(--ink); text-decoration: none; }
 .location-dot-row { position: relative; width: 100%; display: flex; justify-content: center; margin-bottom: var(--space-2); }
+.location-dot-row::before, .location-dot-row::after {
+  content: ""; position: absolute; top: 50%; height: 3px; background: var(--line-strong);
+  transform: translateY(-50%); z-index: 0;
+}
+.location-dot-row::before { left: calc(-1 * var(--space-3) / 2); right: 50%; }
+.location-dot-row::after { left: 50%; right: calc(-1 * var(--space-3) / 2); }
+.location-list > li:first-child .location-dot-row::before { display: none; }
+.location-list > li:last-child .location-dot-row::after { display: none; }
 .location-dot {
   position: relative; z-index: 1; width: 1.9rem; height: 1.9rem; display: flex; align-items: center; justify-content: center;
   background: var(--accent); color: var(--ink-on-accent); border-radius: 50%; font-weight: 700; font-size: 0.9rem; border: 3px solid var(--bg-alt);
