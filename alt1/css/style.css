@@ -228,8 +228,11 @@ section { margin-bottom: var(--space-6); }
 
 @media (max-width: 760px) {
   .nav-step { display: inline; }
-  .site-nav ul { gap: var(--space-2) var(--space-3); overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
-  .site-nav a { white-space: nowrap; font-size: 0.92rem; }
+  .site-nav ul { flex-direction: column; flex-wrap: nowrap; gap: 0; overflow-x: visible; padding-bottom: 0; }
+  .site-nav li { border-top: 1px solid var(--line); }
+  .site-nav li:first-child { border-top: none; }
+  .site-nav a { width: 100%; font-size: 1rem; border-bottom: none; }
+  .site-nav a[aria-current="page"] { border-bottom: none; border-left: 3px solid var(--accent); padding-left: calc(var(--space-2) - 3px); }
   .header-top { flex-direction: column; align-items: stretch; }
 }
 
@@ -461,7 +464,7 @@ details.transcript .transcript-body p:last-child { margin-bottom: 0; }
    11. Podstrona rzeźby — odznaka, metadane, media, treść
    -------------------------------------------------------------------------- */
 
-.content-main { padding: var(--space-5) 0 var(--space-4); }
+.content-main { padding-top: var(--space-5); padding-bottom: var(--space-4); }
 
 .route-badge-row { display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2); }
 .route-badge-number {
