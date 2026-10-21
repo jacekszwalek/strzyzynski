@@ -1322,7 +1322,11 @@ figure.content-figure figcaption {
 }
 .foundation-link-btn:hover { background: var(--color-accent-dark); }
 .foundation-link-btn:focus-visible { box-shadow: var(--focus-ring); }
-.foundation-link-btn svg { display: block; }
+.foundation-link-btn svg { display: block; width: 30px; height: 30px; }
+/* Facebook (drugi link na liście: strona WWW, Facebook, Instagram) ma
+   wizualnie "cięższą" ikonę niż pozostałe dwie, więc dostaje nieco
+   większy rozmiar, żeby wyglądać spójnie obok nich. */
+.foundation-links li:nth-child(2) svg { width: 34px; height: 34px; }
 /* .site-footer a { color: var(--color-accent); } ma wyższą specyficzność
    (klasa + element) niż samo .foundation-link-btn (tylko klasa), więc
    bez tej reguły ikony w stopce są niewidoczne — zielony obrys na
