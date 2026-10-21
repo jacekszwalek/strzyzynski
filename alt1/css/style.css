@@ -512,6 +512,14 @@ details.transcript .transcript-body p:last-child { margin-bottom: 0; }
 .meta-grid-label { display: block; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.2rem; }
 .meta-grid-value { display: block; font-size: 1.05rem; color: var(--ink); }
 
+/* Desktop: Rok/Materiał/Miejsce/Autorzy jako siatka 2x2 (Miejsce i Autorzy
+   przestają zajmować pełną szerokość). Mobile zostaje bez zmian - .meta-grid
+   trzyma swoją bazową regułę repeat(2, 1fr) z Miejsce/Autorzy na pełną
+   szerokość (.meta-grid-item--wide), tak jak dotychczas. */
+@media (min-width: 761px) {
+  .meta-grid-item--wide { grid-column: auto; }
+}
+
 .media-section {
   background: var(--bg-alt); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4);
   margin: var(--space-4) 0; display: flex; flex-direction: column; gap: var(--space-2);
