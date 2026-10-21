@@ -135,6 +135,15 @@
   var currentSvgCache = {};
   var lastCustomPath = null;
 
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function linkHtml(url) {
+    var safe = escapeHtml(url);
+    return '<a href="' + safe + '" target="_blank" rel="noopener">' + safe + '</a>';
+  }
+
   function targets() {
     var items = RZEZBY.slice().sort(function (a, b) { return a.nrTrasy - b.nrTrasy; });
     var list = [];
@@ -175,8 +184,8 @@
 
   function stopCardHtml(t) {
     var urlLines = t.displayUrl !== t.url
-      ? t.url + '<br>przekierowuje na:<br>' + t.displayUrl
-      : t.url;
+      ? linkHtml(t.url) + '<br>przekierowuje na:<br>' + linkHtml(t.displayUrl)
+      : linkHtml(t.url);
     urlLines = '<p style="font-size:0.85rem;word-break:break-all">' + urlLines + '</p>';
     return '<div class="qr-preview-card">' +
         '<div style="width:12rem;height:12rem;margin:0 auto">' + currentSvgCache[t.filename] + '</div>' +
@@ -232,7 +241,7 @@
     card.innerHTML =
       '<div style="width:12rem;height:12rem;margin:0 auto">' + svg + '</div>' +
       '<strong>' + label + '</strong>' +
-      '<p style="font-size:0.85rem;word-break:break-all">' + url + '</p>' +
+      '<p style="font-size:0.85rem;word-break:break-all">' + linkHtml(url) + '</p>' +
       '<button type="button" class="btn btn--secondary">Pobierz SVG</button>';
     card.querySelector("button").addEventListener("click", function () {
       downloadSvg(filename, svg);
