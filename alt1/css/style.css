@@ -520,28 +520,21 @@ details.transcript .transcript-body p:last-child { margin-bottom: 0; }
 
 .transcript-heading { display: none; font-size: 1rem; font-weight: 700; color: var(--ink); margin: 0 0 var(--space-1) 0; }
 
-/* Desktop: transkrypcja po lewej (zawsze widoczna, przewijana), player po
-   prawej - ten sam wzorzec dwukolumnowy co sekcja "Wprowadzenie" na stronie
-   głównej. Kolejność w HTML (player, potem transkrypcja) zostaje jak jest -
-   na mobile to już poprawna kolejność; na desktopie tylko "order" wizualnie
-   przenosi transkrypcję przed player. */
+/* Desktop: transkrypcja po lewej (domyślnie zwinięta - zwykła karta <details>
+   z klikalnym "Rozwiń transkrypcję", tak jak na mobile, bez przewijania
+   wewnątrz karty), player po prawej - ten sam wzorzec dwukolumnowy co sekcja
+   "Wprowadzenie" na stronie głównej. Kolejność w HTML (player, potem
+   transkrypcja) zostaje jak jest - na mobile to już poprawna kolejność; na
+   desktopie tylko "order" wizualnie przenosi transkrypcję przed player.
+   align-items: stretch wyrównuje wysokość obu kolumn do wyższej z nich
+   (karta transkrypcji rozciąga się do wysokości playera). */
 @media (min-width: 761px) {
-  .media-grid { display: flex; gap: var(--space-4); align-items: flex-start; }
-  .media-transcript { flex: 1 1 560px; min-width: 0; order: -1; }
+  .media-grid { display: flex; gap: var(--space-4); align-items: stretch; }
+  .media-transcript { flex: 1 1 560px; min-width: 0; order: -1; display: flex; }
   .media-player-col { flex: 0 1 380px; min-width: 280px; }
 
-  /* Zawsze-otwarty wygląd (nagłówek zamiast <summary>, karta transkrypcji
-     zamiast karty <details>) wymaga JS - patrz alt1/js/transcript-desktop.js:
-     samo CSS nie potrafi wymusić stanu "open" na <details>. Bez JS
-     (html bez klasy "js") zostaje więc w pełni działający, kliknięty
-     fallback: widoczne "Rozwiń transkrypcję", zwykła karta <details>. */
-  html.js .transcript-heading { display: block; }
-  html.js details.transcript { border: none; background: transparent; padding: 0; margin-top: 0; }
-  html.js details.transcript summary { display: none; }
-  html.js details.transcript .transcript-body {
-    display: block; margin-top: 0; max-height: 420px; overflow-y: auto;
-    background: var(--bg-card); border-radius: var(--radius); padding: var(--space-3) var(--space-4);
-  }
+  .media-transcript details.transcript { display: flex; flex-direction: column; width: 100%; }
+  .media-transcript details.transcript .transcript-body { flex: 1 1 auto; }
 }
 
 .audio-player { background: var(--bg-card); border-radius: var(--radius); padding: var(--space-3); container-type: inline-size; }
