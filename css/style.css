@@ -1323,6 +1323,11 @@ figure.content-figure figcaption {
 .foundation-link-btn:hover { background: var(--color-accent-dark); }
 .foundation-link-btn:focus-visible { box-shadow: var(--focus-ring); }
 .foundation-link-btn svg { display: block; }
+/* .site-footer a { color: var(--color-accent); } ma wyższą specyficzność
+   (klasa + element) niż samo .foundation-link-btn (tylko klasa), więc
+   bez tej reguły ikony w stopce są niewidoczne — zielony obrys na
+   zielonym tle zamiast białego. */
+.site-footer .foundation-link-btn { color: var(--color-text-on-accent); }
 
 .partner-logos {
   display: flex;
