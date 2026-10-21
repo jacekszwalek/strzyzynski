@@ -589,7 +589,7 @@ section { margin-bottom: var(--space-6); }
 }
 
 .location-title { display: block; font-family: var(--font-serif); font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
-.location-desc { display: block; font-size: 0.9rem; line-height: 1.45; }
+.location-desc { display: block; font-size: 1.125rem; line-height: 1.45; }
 
 /* --------------------------------------------------------------------------
    8. Mapa
