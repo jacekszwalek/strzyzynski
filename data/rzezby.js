@@ -88,7 +88,7 @@ var RZEZBY = [
       audioSrc: "./audio/laweczka-prusa.mp3"
     },
 
-    miniatura: "./img/laweczka-prusa-mini.svg",
+    miniatura: "./img/laweczka-prusa-mini.jpg",
     zdjecia: [
       {
         src: "./img/laweczka-prusa-1.svg",
@@ -203,7 +203,7 @@ var RZEZBY = [
       audioSrc: "./audio/drzewo-genealogiczne.mp3"
     },
 
-    miniatura: "./img/drzewo-genealogiczne-mini.svg",
+    miniatura: "./img/drzewo-genealogiczne-mini.jpg",
     zdjecia: [
       {
         src: "./img/drzewo-genealogiczne-1.svg",
@@ -327,7 +327,7 @@ var RZEZBY = [
       audioSrc: "./audio/panna-z-ryba.mp3"
     },
 
-    miniatura: "./img/panna-z-ryba-mini.svg",
+    miniatura: "./img/panna-z-ryba-mini.jpg",
     zdjecia: [
       {
         src: "./img/panna-z-ryba-1.svg",
@@ -445,7 +445,7 @@ var RZEZBY = [
       audioSrc: "./audio/kamien-papieski.mp3"
     },
 
-    miniatura: "./img/kamien-papieski-mini.svg",
+    miniatura: "./img/kamien-papieski-mini.jpg",
     zdjecia: [
       {
         src: "./img/kamien-papieski-1.svg",
