@@ -68,7 +68,7 @@
     var href = N.sculptureUrl(r, L_);
     var rok = r.rok || "";
     var material = r.material && r.material[L_] ? r.material[L_] : "";
-    var meta = rok + (material ? " · " + material : "");
+    var meta = rok + (material ? " · " + material.replace(", ", ",<br>") : "");
     var btnLabel = L_ === "pl" ? "Zobacz i posłuchaj" : "Watch and listen";
     return (
       '<a class="popup-card" href="' + href + '">' +
