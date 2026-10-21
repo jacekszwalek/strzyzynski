@@ -100,17 +100,19 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
 | `laweczka-prusa-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy na stronie głównej (po kliknięciu pinezki) — **ZROBIONE**, prawdziwe zdjęcie, przycięte z dostarczonego kadru |
-| `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
-| `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
+| `laweczka-prusa-1.jpg` | 1024×768 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie — **ZROBIONE**, prawdziwe zdjęcie |
+| `laweczka-prusa-2.jpg` | 733×1100 (pionowe) | podstrona rzeźby — drugie zdjęcie w opisie — **ZROBIONE**, zbliżenie na twarz pomnika |
 | `drzewo-genealogiczne-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy — **ZROBIONE**, przycięte z poziomego kadru dostarczonego przez Jacka |
-| `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
-| `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `drzewo-genealogiczne-1.jpg` | 1024×683 (4:3) | zdjęcie 1 w opisie — **ZROBIONE**, prawdziwe zdjęcie |
+| `drzewo-genealogiczne-2.jpg` | 785×1100 (pionowe) | zdjęcie 2 w opisie — **ZROBIONE**, detal faktury |
+| `drzewo-genealogiczne-3.jpg` | 785×1100 (pionowe) | zdjęcie 3 w opisie — **ZROBIONE**, jeden z zachowanych projektów rzeźby w pracowni |
 | `panna-z-ryba-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy — **ZROBIONE**, przycięte z dostarczonego kadru |
-| `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
-| `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
+| `panna-z-ryba-1.jpg` | 733×1100 (pionowe) | zdjęcie 1 w opisie — **ZROBIONE**, prawdziwe zdjęcie |
+| `panna-z-ryba-2.jpg` | 733×1100 (pionowe) | zdjęcie 2 w opisie — **ZROBIONE**, detal twarzy i ryby |
+| `panna-z-ryba-3.jpg` | 825×1100 (pionowe) | zdjęcie 3 w opisie — **ZROBIONE**, detal z profilu |
 | `kamien-papieski-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy — **ZROBIONE**, przycięte z dostarczonego kadru |
-| `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
-| `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
+| `kamien-papieski-1.jpg` | 825×1100 (pionowe) | zdjęcie 1 w opisie — widok całości pomnika — **ZROBIONE**, prawdziwe zdjęcie |
+| `kamien-papieski-2.jpg` | 1024×768 (4:3) | zdjęcie 2 w opisie — zbliżenie na herb papieski i tablicę pamiątkową — **ZROBIONE**, prawdziwe zdjęcie |
 | `stanislaw-strzyzynski-portret.jpg` | 640×870 (pionowe) | biogram na stronie głównej — **ZROBIONE**, prawdziwe zdjęcie dostarczone przez Jacka |
 | `zbigniew-strzyzynski-avatar.png` | 200×200 (okrągłe, biała obwódka, przezroczyste tło poza kołem) | podpis „Opowiada Zbigniew Strzyżyński" na każdej podstronie rzeźby — widoczny tylko w widoku desktopowym, na mobile zostaje czysty tekst. **Obecne zdjęcie to zbliżenie na twarz z dostarczonego zdjęcia przykładowego — nie jest to prawdziwe zdjęcie Zbigniewa Strzyżyńskiego — do podmiany na prawdziwe, docelowe zdjęcie.** |
 

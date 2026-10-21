@@ -91,9 +91,9 @@ var RZEZBY = [
     miniatura: "./img/laweczka-prusa-mini.jpg",
     zdjecia: [
       {
-        src: "./img/laweczka-prusa-1.svg",
-        w: 800,
-        h: 600,
+        src: "./img/laweczka-prusa-1.jpg",
+        w: 1024,
+        h: 768,
         alt: {
           pl: "Ławeczka Bolesława Prusa w Parku Zdrojowym w Nałęczowie - siedząca postać pisarza w meloniku",
           en: "The Bolesław Prus Bench in the Spa Park in Nałęczów — a seated figure of the writer in a bowler hat"
@@ -104,12 +104,12 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/laweczka-prusa-2.svg",
-        w: 800,
-        h: 600,
+        src: "./img/laweczka-prusa-2.jpg",
+        w: 733,
+        h: 1100,
         alt: {
-          pl: "Zbliżenie na dłoń Bolesława Prusa opartą na książce",
-          en: "Close-up of Bolesław Prus's hand resting on a book"
+          pl: "Zbliżenie na twarz pomnika Bolesława Prusa w meloniku i okularach",
+          en: "Close-up of the Bolesław Prus monument's face, in a bowler hat and glasses"
         },
         podpis: {
           pl: "Ławeczka Bolesława Prusa",
@@ -206,29 +206,42 @@ var RZEZBY = [
     miniatura: "./img/drzewo-genealogiczne-mini.jpg",
     zdjecia: [
       {
-        src: "./img/drzewo-genealogiczne-1.svg",
-        w: 800,
-        h: 600,
+        src: "./img/drzewo-genealogiczne-1.jpg",
+        w: 1024,
+        h: 683,
         alt: {
           pl: "Drzewo genealogiczne - abstrakcyjna, organiczna forma rzeźbiarska w Alei Stanisława Strzyżyńskiego",
           en: "Family Tree — an abstract, organic sculptural form in Stanisław Strzyżyński Alley"
         },
         podpis: {
-          pl: "Drzewo genealogiczne, sztuczny kamień, 1977 <!-- DO UZUPEŁNIENIA -->",
-          en: "Family Tree, artificial stone, 1977 <!-- DO UZUPEŁNIENIA -->"
+          pl: "Drzewo genealogiczne, sztuczny kamień, 1977",
+          en: "Family Tree, artificial stone, 1977"
         }
       },
       {
-        src: "./img/drzewo-genealogiczne-2.svg",
-        w: 800,
-        h: 600,
+        src: "./img/drzewo-genealogiczne-2.jpg",
+        w: 785,
+        h: 1100,
         alt: {
           pl: "Zbliżenie na fakturę rzeźby Drzewo genealogiczne",
           en: "Close-up of the texture of the Family Tree sculpture"
         },
         podpis: {
-          pl: "Detal faktury sztucznego kamienia <!-- DO UZUPEŁNIENIA -->",
-          en: "Detail of the artificial stone's texture <!-- DO UZUPEŁNIENIA -->"
+          pl: "Detal faktury rzeźby",
+          en: "Detail of the sculpture's texture"
+        }
+      },
+      {
+        src: "./img/drzewo-genealogiczne-3.jpg",
+        w: 785,
+        h: 1100,
+        alt: {
+          pl: "Mniejszy model rzeźby Drzewo genealogiczne sfotografowany w pracowni",
+          en: "A smaller model of the Family Tree sculpture photographed in the studio"
+        },
+        podpis: {
+          pl: "Jeden z zachowanych projektów rzeźby, w pracowni artysty",
+          en: "One of the surviving studio designs for the sculpture"
         }
       }
     ],
@@ -330,29 +343,42 @@ var RZEZBY = [
     miniatura: "./img/panna-z-ryba-mini.jpg",
     zdjecia: [
       {
-        src: "./img/panna-z-ryba-1.svg",
-        w: 800,
-        h: 600,
+        src: "./img/panna-z-ryba-1.jpg",
+        w: 733,
+        h: 1100,
         alt: {
           pl: "Rzeźba Panna z Rybą w fontannie przed willą Pod Matką Boską",
           en: "The Maiden with a Fish sculpture in the fountain in front of the Pod Matką Boską villa"
         },
         podpis: {
-          pl: "Panna z Rybą w fontannie przed kawiarnią Ewelina <!-- DO UZUPEŁNIENIA -->",
-          en: "The Maiden with a Fish in the fountain in front of Ewelina café <!-- DO UZUPEŁNIENIA -->"
+          pl: "Panna z Rybą w fontannie przed kawiarnią Ewelina",
+          en: "The Maiden with a Fish in the fountain in front of Ewelina café"
         }
       },
       {
-        src: "./img/panna-z-ryba-2.svg",
-        w: 800,
-        h: 600,
+        src: "./img/panna-z-ryba-2.jpg",
+        w: 733,
+        h: 1100,
         alt: {
-          pl: "Ogródek kawiarni Ewelina przed willą Pod Matką Boską",
-          en: "The garden of Ewelina café in front of the Pod Matką Boską villa"
+          pl: "Zbliżenie na twarz Panny z postacią ryby",
+          en: "Close-up of the Maiden's face and the fish figure"
         },
         podpis: {
-          pl: "Kawiarnia Ewelina, ul. Lipowa 16 <!-- DO UZUPEŁNIENIA -->",
-          en: "Ewelina café, 16 Lipowa Street <!-- DO UZUPEŁNIENIA -->"
+          pl: "Detal rzeźby - twarz i ryba",
+          en: "Sculpture detail - face and fish"
+        }
+      },
+      {
+        src: "./img/panna-z-ryba-3.jpg",
+        w: 825,
+        h: 1100,
+        alt: {
+          pl: "Zbliżenie na rzeźbę Panny z rybą z profilu",
+          en: "Close-up profile view of the Maiden with a Fish sculpture"
+        },
+        podpis: {
+          pl: "Detal rzeźby - ujęcie z profilu",
+          en: "Sculpture detail - profile view"
         }
       }
     ],
@@ -448,9 +474,9 @@ var RZEZBY = [
     miniatura: "./img/kamien-papieski-mini.jpg",
     zdjecia: [
       {
-        src: "./img/kamien-papieski-1.svg",
-        w: 800,
-        h: 600,
+        src: "./img/kamien-papieski-1.jpg",
+        w: 825,
+        h: 1100,
         alt: {
           pl: "Pomnik z tablicą upamiętniającą pobyt kardynała Karola Wojtyły w Nałęczowie, przy wyjściu z Parku Zdrojowego",
           en: "A monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów, by an exit from the Spa Park"
@@ -461,16 +487,16 @@ var RZEZBY = [
         }
       },
       {
-        src: "./img/kamien-papieski-2.svg",
-        w: 800,
-        h: 600,
+        src: "./img/kamien-papieski-2.jpg",
+        w: 1024,
+        h: 768,
         alt: {
-          pl: "Zbliżenie na tablicę pamiątkową przy pomniku kardynała Karola Wojtyły",
-          en: "Close-up of the commemorative plaque by the monument to Cardinal Karol Wojtyła"
+          pl: "Zbliżenie na herb papieski i tablicę pamiątkową przy pomniku kardynała Karola Wojtyły",
+          en: "Close-up of the papal coat of arms and commemorative plaque by the monument to Cardinal Karol Wojtyła"
         },
         podpis: {
-          pl: "Treść tablicy pamiątkowej <!-- DO UZUPEŁNIENIA -->",
-          en: "Text of the commemorative plaque <!-- DO UZUPEŁNIENIA -->"
+          pl: "Herb papieski i tablica pamiątkowa",
+          en: "The papal coat of arms and commemorative plaque"
         }
       }
     ],
