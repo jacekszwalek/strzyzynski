@@ -191,8 +191,8 @@ var RZEZBY = [
     adres: "Aleja Stanisława Strzyżyńskiego, 24-140 Nałęczów",
 
     dojazd: {
-      pl: "Rzeźba stoi przy Alei Stanisława Strzyżyńskiego, kilkaset metrów od Ławeczki Prusa.",
-      en: "The sculpture stands by Stanisław Strzyżyński Alley, a few hundred metres from the Prus Bench."
+      pl: "Rzeźba stoi przy Alei Stanisława Strzyżyńskiego, ok. 250 metrów od Ławeczki Prusa.",
+      en: "The sculpture stands by Stanisław Strzyżyński Alley, approx. 250 metres from the Prus Bench."
     },
 
     wspolrzedne: [51.28714555955893, 22.21240346246493], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
