@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pl" data-root="../../" data-lang-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drzewo genealogiczne — ALT1 (projekt redesignu)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<header class="site-header">
+  <div class="container header-top">
+    <p class="site-title">
+      <a href="../">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisława Strzyżyńskiego</span>
+      </a>
+    </p>
+    <div class="header-tools">
+      <div class="text-size-switch" role="group" aria-label="Rozmiar tekstu">
+        <button type="button" data-scale="100" aria-pressed="true">A</button>
+        <button type="button" data-scale="125" aria-pressed="false">A+</button>
+        <button type="button" data-scale="150" aria-pressed="false">A++</button>
+      </div>
+      <a class="lang-switch" href="#" hreflang="en" lang="en" aria-disabled="true">EN</a>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <div class="container">
+      <ul role="list">
+        <li><a href="../">Start</a></li>
+        <li><a href="../laweczka-prusa/"><span class="nav-step">1.</span> Ławeczka Prusa</a></li>
+        <li><a href="../drzewo-genealogiczne/" aria-current="page"><span class="nav-step">2.</span> Drzewo genealogiczne</a></li>
+        <li><a href="../kamien-papieski/"><span class="nav-step">3.</span> Kamień Papieski</a></li>
+        <li><a href="../panna-z-ryba/"><span class="nav-step">4.</span> Panna z rybą</a></li>
+        <li><a href="../o-projekcie/">O projekcie</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container content-main">
+
+    <div class="route-badge-row">
+      <span class="route-badge-number" aria-hidden="true">2</span>
+      <span class="route-badge-label">Punkt trasy 2 / 4</span>
+    </div>
+    <h1>Rzeźba Drzewo genealogiczne w Alei Stanisława Strzyżyńskiego</h1>
+    <div class="meta-grid">
+      <div class="meta-grid-item">
+        <span class="meta-grid-label">Rok</span>
+        <span class="meta-grid-value">1977</span>
+      </div>
+      <div class="meta-grid-item">
+        <span class="meta-grid-label">Materiał</span>
+        <span class="meta-grid-value">sztuczny kamień</span>
+      </div>
+      <div class="meta-grid-item meta-grid-item--wide">
+        <span class="meta-grid-label">Miejsce</span>
+        <span class="meta-grid-value">Aleja Stanisława Strzyżyńskiego, Park Zdrojowy</span>
+      </div>
+      <div class="meta-grid-item meta-grid-item--wide">
+        <span class="meta-grid-label">Autor</span>
+        <span class="meta-grid-value">Stanisław Strzyżyński, współpraca Zbigniew Strzyżyński</span>
+      </div>
+    </div>
+
+    <section class="media-section" aria-labelledby="nagranie-heading">
+      <span class="media-section-label">Nagranie</span>
+      <h2 id="nagranie-heading" class="visually-hidden">Nagranie</h2>
+      <div class="narrator-byline">
+        <img class="narrator-avatar" src="../../img/zbigniew-strzyzynski-avatar.png" alt="" width="48" height="48" loading="lazy">
+        <span>Opowiada Zbigniew Strzyżyński, syn artysty</span>
+      </div>
+      <div class="audio-player">
+        <audio class="audio-el" preload="metadata" controls src="../../audio/drzewo-genealogiczne.mp3">
+          Twoja przeglądarka nie obsługuje odtwarzania audio. <a href="../../audio/drzewo-genealogiczne.mp3">Pobierz plik MP3</a>.
+        </audio>
+        <div class="audio-progress-row">
+          <div class="audio-progress-wrap">
+            <input type="range" class="audio-progress" min="0" max="100" value="0" autocomplete="off" aria-label="Postęp odtwarzania">
+            <div class="audio-progress-played" aria-hidden="true"></div>
+          </div>
+          <span class="audio-time"><span class="audio-time-current">0:00</span>/<span class="audio-time-duration">0:00</span></span>
+        </div>
+        <div class="audio-controls-row">
+          <div class="audio-controls-center">
+            <button type="button" class="audio-btn audio-btn--seek" data-seek="-10" aria-label="Cofnij 10 sekund"><svg class="seek-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M 18.495 16.75 A 7.5 7.5 0 1 0 5.505 16.75" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <polygon points="6.505,18.482 3.796,17.39 6.914,15.59" fill="currentColor" />
+            <text x="12" y="13.5" font-size="8.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="middle">10</text>
+          </svg></button>
+            <button type="button" class="audio-btn audio-btn--play" aria-label="Odtwórz">▶</button>
+            <button type="button" class="audio-btn audio-btn--seek" data-seek="10" aria-label="Przewiń 10 sekund"><svg class="seek-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M 5.505 16.75 A 7.5 7.5 0 1 1 18.495 16.75" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <polygon points="17.495,18.482 20.204,17.39 17.086,15.59" fill="currentColor" />
+            <text x="12" y="13.5" font-size="8.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="middle">10</text>
+          </svg></button>
+          </div>
+        </div>
+      </div>
+
+      <details class="transcript">
+        <summary>Rozwiń transkrypcję</summary>
+        <div class="transcript-body"><p>Rzeźba plenerowa Drzewo genealogiczne powstała w 1977 roku w ramach pleneru rzeźbiarskiego, który ojciec organizował wspólnie z Jarosławem Olejnickim, artystą malarzem.</p>
+        <p>Rzeźba symbolizuje powstanie życia. Z owalnej formy wyłaniają się zgeometryzowane kształty, symbolizujące ludzi i powstawanie nowego życia, wyrastającego jednak z pewnej podstawy, z dziedzictwa poprzednich pokoleń.</p>
+        <p>Zachowało się kilkanaście projektów rzeźby Drzewo genealogiczne. Tę rzeźbę wykonywaliśmy razem, w naszym ogrodzie, obok pracowni. Wykonywaliśmy model z gliny, a następnie odlew w sztucznym kamieniu. Miejsce dla rzeźby ojciec wybrał sam, szukając w parku najlepszego otoczenia. Jest ona usadowiona na tle świerków, przy alei.</p>
+        <p>Z naszej inicjatywy Rada Miejska podjęła uchwałę o nadaniu tej alei imienia Stanisława Strzyżyńskiego. Uroczyste otwarcie odbyło się w czerwcu 2026 roku. Jest to ważny moment uczczenia pamięci ojca i początek dostrzegania artystów związanych z Nałęczowem.</p></div>
+      </details>
+    </section>
+
+    <p>Drzewo genealogiczne to abstrakcyjna, organiczna forma rzeźbiarska powstała w 1977 roku, wykonana ze sztucznego kamienia. Owalny kształt rzeźby symbolizuje ziarno, z którego kiełkuje nowe życie. Całość przypominająca rozgałęziające się drzewo można odczytać jako symbol więzi rodzinnych, ciągłości pokoleń i splatających się losów ludzkich.</p>
+    <figure class="content-figure">
+      <img src="../../img/drzewo-genealogiczne-1.jpg" alt="Drzewo genealogiczne - abstrakcyjna, organiczna forma rzeźbiarska w Alei Stanisława Strzyżyńskiego" width="1024" height="683" loading="lazy">
+      <figcaption>Drzewo genealogiczne, sztuczny kamień, 1977</figcaption>
+    </figure>
+    <p>Rzeźba powstała podczas pleneru zorganizowanego przez Stanisława Strzyżyńskiego i Jarosława Olejnickiego, prezesa Towarzystwa Przyjaciół Nałęczowa. Wzdłuż alei stoją tablice przedstawiające biografię artysty.</p>
+    <figure class="content-figure">
+      <img src="../../img/drzewo-genealogiczne-2.jpg" alt="Zbliżenie na fakturę rzeźby Drzewo genealogiczne" width="785" height="1100" loading="lazy">
+      <figcaption>Detal faktury rzeźby</figcaption>
+    </figure>
+    <p>Rzeźba stoi przy Alei Stanisława Strzyżyńskiego w Parku Zdrojowym.</p>
+    <figure class="content-figure">
+      <img src="../../img/drzewo-genealogiczne-3.jpg" alt="Mniejszy model rzeźby Drzewo genealogiczne sfotografowany w pracowni" width="785" height="1100" loading="lazy">
+      <figcaption>Jeden z zachowanych projektów rzeźby, w pracowni artysty</figcaption>
+    </figure>
+
+    <section class="how-to-get-box" aria-labelledby="jak-dojsc-heading">
+      <h2 id="jak-dojsc-heading">Jak dojść</h2>
+      <div id="mini-map-wrap" class="map-wrap">
+        <div id="mini-map" class="map-el map-el--mini" data-rzezba-id="drzewo-genealogiczne" role="application" aria-label="Mapa dojścia"></div>
+        <div class="map-scroll-hint" hidden>Kliknij mapę, aby przybliżać</div>
+      </div>
+      <div class="map-fallback" hidden><p>Mini-mapa jest obecnie niedostępna.</p></div>
+      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.28714555955893,22.21240346246493">Otwórz nawigację ↗</a>
+
+      <div class="field">
+        <span class="field-label">Lokalizacja</span>
+        <span>Aleja Stanisława Strzyżyńskiego, 24-140 Nałęczów</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Dojście</span>
+        <span>Rzeźba stoi przy Alei Stanisława Strzyżyńskiego, kilkaset metrów od Ławeczki Prusa.</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Dostępność</span>
+        <span>Utwardzona alejka parkowa, teren płaski, bez schodów.</span>
+      </div>
+    </section>
+
+    <nav class="route-nav" id="route-nav" data-current="drzewo-genealogiczne" aria-label="Nawigacja po trasie"></nav>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>Wirtualny spacer śladami rzeźb. Ta strona jest częścią projektu realizowanego przez Fundację Sztuka i Dom.</p>
+    </div>
+    <div>
+      <span class="footer-col-label">Spacer</span>
+      <a href="../laweczka-prusa/">Ławeczka Prusa</a>
+      <a href="../drzewo-genealogiczne/">Drzewo genealogiczne</a>
+      <a href="../kamien-papieski/">Kamień Papieski</a>
+      <a href="../panna-z-ryba/">Panna z rybą</a>
+    </div>
+    <div>
+      <span class="footer-col-label">Fundacja</span>
+      <a href="../o-projekcie/">O projekcie</a>
+      <ul role="list" class="foundation-links" style="margin-top: 0.5rem;">
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-funding">
+    <p>
+      Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
+      Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
+      Międzynarodowego Roku Wolontariatu.
+    </p>
+    <img class="funding-logos" src="../../img/logotypy-dofinansowanie.png" alt="Logotypy: Komitet do spraw Pożytku Publicznego, Narodowy Instytut Wolności (NIW), Międzynarodowy Rok Wolontariatu 2026" width="1650" height="432" loading="lazy">
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Zamknij powiększone zdjęcie">✕</button>
+  <img src="" alt="">
+</div>
+
+<script src="../../data/rzezby.js"></script>
+<script src="../../vendor/leaflet/leaflet.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/map.js"></script>
+<script src="../../js/player.js"></script>
+</body>
+</html>
