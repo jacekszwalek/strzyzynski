@@ -76,8 +76,8 @@ var RZEZBY = [
     adres: "Aleja St. Małachowskiego 3, 24-140 Nałęczów",
 
     dojazd: {
-      pl: "Wejdź do Parku Zdrojowego od strony Pałacu Małachowskich. Ławeczka stoi przy głównej alejce, w pobliżu stawu i pijalni wód, bardzo blisko Alei Strzyżyńskiego (punkt 2 tej trasy).",
-      en: "Enter the Spa Park from the side of the Małachowski Palace. The bench stands by the main path, near the pond and the pump room, very close to Strzyżyński Alley (stop 2 on this route)."
+      pl: "Wejdź do Parku Zdrojowego od strony Pałacu Małachowskich. Ławeczka stoi przy głównej alejce, w pobliżu stawu i pijalni wód, niedaleko Alei Stanisława Strzyżyńskiego (punkt 2 tej trasy).",
+      en: "Enter the Spa Park from the side of the Małachowski Palace. The bench stands by the main path, near the pond and the pump room, not far from Stanisław Strzyżyński Alley (stop 2 on this route)."
     },
 
     wspolrzedne: [51.2870007258462, 22.208436990572082], // współrzędne odczytane z mapy, 2026-10-12 — WYMAGA POTWIERDZENIA NA MIEJSCU
