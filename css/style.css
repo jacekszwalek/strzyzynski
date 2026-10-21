@@ -1332,6 +1332,13 @@ figure.content-figure figcaption {
    bez tej reguły ikony w stopce są niewidoczne — zielony obrys na
    zielonym tle zamiast białego. */
 .site-footer .foundation-link-btn { color: var(--color-text-on-accent); }
+/* a:visited (klasa + element, 0,1,1) ma wyższą specyficzność niż samo
+   .foundation-link-btn (tylko klasa, 0,1,0) poza stopką — jeśli
+   odwiedzający ma już w historii przeglądarki odwiedzony dany link
+   (np. facebook.com, co dotyczy niemal każdego), ikona dostaje kolor
+   taki sam jak tło koła i znika. .foundation-link-btn:visited (0,2,0)
+   przywraca biały kolor niezależnie od stanu odwiedzenia linku. */
+.foundation-link-btn:visited { color: var(--color-text-on-accent); }
 
 .partner-logos {
   display: flex;
