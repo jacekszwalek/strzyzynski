@@ -521,20 +521,23 @@ details.transcript .transcript-body p:last-child { margin-bottom: 0; }
 .transcript-heading { display: none; font-size: 1rem; font-weight: 700; color: var(--ink); margin: 0 0 var(--space-1) 0; }
 
 /* Desktop: transkrypcja po lewej (domyślnie zwinięta - zwykła karta <details>
-   z klikalnym "Rozwiń transkrypcję", tak jak na mobile, bez przewijania
-   wewnątrz karty), player po prawej - ten sam wzorzec dwukolumnowy co sekcja
-   "Wprowadzenie" na stronie głównej. Kolejność w HTML (player, potem
+   z klikalnym "Rozwiń transkrypcję", tak jak na mobile i na stronie głównej,
+   bez przewijania wewnątrz karty), player po prawej - dokładnie ten sam
+   wzorzec dwukolumnowy (align-items: flex-start) co sekcja "Wprowadzenie"
+   na stronie głównej (.intro-grid). Kolejność w HTML (player, potem
    transkrypcja) zostaje jak jest - na mobile to już poprawna kolejność; na
    desktopie tylko "order" wizualnie przenosi transkrypcję przed player.
-   align-items: stretch wyrównuje wysokość obu kolumn do wyższej z nich
-   (karta transkrypcji rozciąga się do wysokości playera). */
+   margin-top: 0 na karcie transkrypcji wyrównuje jej górną krawędź z górną
+   krawędzią karty playera (domyślny margin-top na details.transcript jest
+   pomyślany na sytuacje, gdy nad nią jest inny element w tej samej kolumnie,
+   np. narrator-byline na stronie głównej - tutaj kolumna zaczyna się od razu
+   od karty, więc margines trzeba wyzerować). */
 @media (min-width: 761px) {
-  .media-grid { display: flex; gap: var(--space-4); align-items: stretch; }
-  .media-transcript { flex: 1 1 560px; min-width: 0; order: -1; display: flex; }
+  .media-grid { display: flex; gap: var(--space-4); align-items: flex-start; }
+  .media-transcript { flex: 1 1 560px; min-width: 0; order: -1; }
   .media-player-col { flex: 0 1 380px; min-width: 280px; }
 
-  .media-transcript details.transcript { display: flex; flex-direction: column; width: 100%; }
-  .media-transcript details.transcript .transcript-body { flex: 1 1 auto; }
+  .media-transcript details.transcript { margin-top: 0; }
 }
 
 .audio-player { background: var(--bg-card); border-radius: var(--radius); padding: var(--space-3); container-type: inline-size; }
