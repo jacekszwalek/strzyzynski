@@ -1295,6 +1295,13 @@ figure.content-figure figcaption {
 }
 .contact-box .btn { flex: 1 1 14rem; }
 
+.foundation-logo {
+  display: block;
+  width: 9rem;
+  height: auto;
+  margin: 0 0 var(--space-3) 0;
+}
+
 .foundation-links {
   display: flex;
   flex-wrap: wrap;

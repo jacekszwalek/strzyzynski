@@ -99,16 +99,16 @@ poza kołem — ta sama zasada formatu nie ma tu zastosowania.
 
 | Plik (placeholder) | Proporcje | Gdzie się pojawia |
 |---|---|---|
-| `laweczka-prusa-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy na stronie głównej (po kliknięciu pinezki) |
+| `laweczka-prusa-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy na stronie głównej (po kliknięciu pinezki) — **ZROBIONE**, prawdziwe zdjęcie, przycięte z dostarczonego kadru |
 | `laweczka-prusa-1.svg` | 800×600 (4:3) | podstrona rzeźby — pierwsze zdjęcie w opisie |
 | `laweczka-prusa-2.svg` | 800×600 (4:3) | podstrona rzeźby — drugie zdjęcie w opisie |
-| `drzewo-genealogiczne-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy |
+| `drzewo-genealogiczne-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy — **ZROBIONE**, przycięte z poziomego kadru dostarczonego przez Jacka |
 | `drzewo-genealogiczne-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `drzewo-genealogiczne-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `panna-z-ryba-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy |
+| `panna-z-ryba-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy — **ZROBIONE**, przycięte z dostarczonego kadru |
 | `panna-z-ryba-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie |
 | `panna-z-ryba-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie |
-| `kamien-papieski-mini.svg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy |
+| `kamien-papieski-mini.jpg` | 300×400 (pionowe, 3:4) | miniaturka w dymku mapy — **ZROBIONE**, przycięte z dostarczonego kadru |
 | `kamien-papieski-1.svg` | 800×600 (4:3) | zdjęcie 1 w opisie — widok całości pomnika |
 | `kamien-papieski-2.svg` | 800×600 (4:3) | zdjęcie 2 w opisie — zbliżenie na tablicę pamiątkową |
 | `stanislaw-strzyzynski-portret.jpg` | 640×870 (pionowe) | biogram na stronie głównej — **ZROBIONE**, prawdziwe zdjęcie dostarczone przez Jacka |
