@@ -237,9 +237,9 @@ section { margin-bottom: var(--space-6); }
   .header-top { flex-direction: column; align-items: stretch; }
 
   /* Menu zawsze rozwinięte (bez przycisku-hamburgera) - ograniczone do
-     60% wysokości ekranu, z przewijaniem wewnątrz listy, gdyby pozycji
+     45% wysokości ekranu, z przewijaniem wewnątrz listy, gdyby pozycji
      było więcej niż się mieści. */
-  .site-nav { max-height: 60vh; overflow-y: auto; }
+  .site-nav { max-height: 45vh; overflow-y: auto; }
 }
 
 /* --------------------------------------------------------------------------
