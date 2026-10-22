@@ -200,6 +200,12 @@ section { margin-bottom: var(--space-6); }
 
 .header-tools { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
 
+/* .text-size-compact wraps the toggle + the real switch. On desktop (and on
+   mobile without JS) it is a no-op wrapper: the toggle stays hidden and the
+   switch renders exactly as before, so this is a pure no-visual-change base. */
+.text-size-compact { display: contents; }
+.text-size-toggle { display: none; }
+
 .text-size-switch { display: flex; align-items: center; gap: 0.4em; font-size: 0.85rem; font-weight: 700; }
 .text-size-switch button {
   font-family: var(--font-sans); font-weight: 700; background: none; color: var(--ink-soft);
@@ -242,7 +248,42 @@ section { margin-bottom: var(--space-6); }
   .site-nav li:first-child { border-top: none; }
   .site-nav a { width: 100%; font-size: 1rem; border-bottom: none; }
   .site-nav a[aria-current="page"] { border-bottom: none; border-left: 3px solid var(--accent); padding-left: calc(var(--space-2) - 3px); }
-  .header-top { flex-direction: column; align-items: stretch; }
+
+  /* Kompaktowy nagłówek mobilny (jeden wiersz): tytuł po lewej, skupisko
+     kontrolek (rozmiar czcionki / EN / hamburger) po prawej. Tytuł się
+     obcina wielokropkiem, gdy kontrolki potrzebują więcej miejsca (np. gdy
+     pasek rozmiaru czcionki jest rozwinięty) - to jest zamierzone. */
+  .header-top { flex-direction: row; align-items: center; flex-wrap: nowrap; }
+  .site-title { flex: 1 1 auto; min-width: 0; }
+  .site-title-main, .site-title .site-title-sub {
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .header-tools { flex-wrap: nowrap; flex-shrink: 0; gap: 0.5rem; }
+
+  /* Przycisk "Aa" zwijający przełącznik rozmiaru czcionki do okrągłego
+     przycisku, który rozwija się w pasek z A / A+ / A++ po kliknięciu.
+     Bez JS: .text-size-compact jest nadal "display:contents" (z bazowej
+     reguły), więc przełącznik pokazuje się normalnie, tak jak dziś -
+     pełnoprawny fallback. */
+  html.js .text-size-compact {
+    display: inline-flex; position: relative; flex-shrink: 0;
+    height: 2.25rem; width: 2.25rem; border-radius: 999px;
+    border: 1.5px solid var(--ink); background: var(--bg);
+    overflow: hidden; transition: width 220ms ease;
+  }
+  html.js .text-size-toggle {
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; inset: 0; margin: 0; padding: 0; border: none; background: none;
+    font-family: var(--font-sans); font-weight: 700; font-size: 0.78rem; color: var(--ink);
+    cursor: pointer; transition: opacity 150ms ease;
+  }
+  html.js .text-size-compact[data-expanded="true"] .text-size-toggle { opacity: 0; pointer-events: none; }
+  html.js .text-size-switch {
+    position: absolute; inset: 0; width: max-content;
+    justify-content: center; padding: 0 0.65rem; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity 150ms ease;
+  }
+  html.js .text-size-compact[data-expanded="true"] .text-size-switch { opacity: 1; pointer-events: auto; }
 
   /* Menu zwijane za przyciskiem-hamburgerem (domyślnie bez JS: w pełni
      widoczne - pełnoprawny fallback). Z JS-em domyślnie też rozwinięte

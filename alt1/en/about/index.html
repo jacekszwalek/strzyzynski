@@ -20,10 +20,13 @@
       </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Text size">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Text size">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
       <a class="lang-switch" href="../../o-projekcie/" hreflang="pl" lang="pl">PL</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
@@ -162,5 +165,6 @@
 <script src="../../../data/rzezby.js"></script>
 <script src="../../../js/main.js"></script>
 <script src="../../js/nav.js"></script>
+<script src="../../js/text-size-toggle.js"></script>
 </body>
 </html>
