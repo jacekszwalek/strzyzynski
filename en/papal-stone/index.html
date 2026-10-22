@@ -30,18 +30,27 @@
 <header class="site-header">
   <div class="container header-top">
     <p class="site-title">
-      <a href="../">Nałęczów<span class="site-title-sub">Stanisław Strzyżyński, a virtual walk</span></a>
+      <a href="../">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisław Strzyżyński</span>
+      </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Text size">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Text size">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
-      <a class="lang-switch" href="../../kamien-papieski/" hreflang="pl" lang="pl">Polski</a>
+      <a class="lang-switch" href="../../kamien-papieski/" hreflang="pl" lang="pl">PL</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="site-nav" aria-label="Main navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
     <div class="container">
       <ul role="list">
         <li><a href="../">Home</a></li>
@@ -56,7 +65,7 @@
 </header>
 
 <main id="main">
-  <div class="container">
+  <div class="container content-main">
 
     <div class="route-badge-row">
       <span class="route-badge-number" aria-hidden="true">3</span>
@@ -74,7 +83,7 @@
       </div>
       <div class="meta-grid-item meta-grid-item--wide">
         <span class="meta-grid-label">Location</span>
-        <span class="meta-grid-value">By the eastern exit from the Spa Park (Park Zdrojowy)</span>
+        <span class="meta-grid-value">By the eastern exit from the Spa Park</span>
       </div>
       <div class="meta-grid-item meta-grid-item--wide">
         <span class="meta-grid-label">Authors</span>
@@ -89,9 +98,8 @@
         <img class="narrator-avatar" src="../../img/zbigniew-strzyzynski-avatar.png" alt="" width="48" height="48" loading="lazy">
         <span>Narrated by Zbigniew Strzyżyński, the artist's son</span>
       </div>
-      <div class="video-wrap" hidden>
-        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_PLACEHOLDER?cc_load_policy=0&loop=0" title="Papal Stone" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <div class="media-grid">
+      <div class="media-player-col">
       <div class="audio-player">
         <audio class="audio-el" preload="metadata" controls src="../../audio/kamien-papieski.mp3">
           Your browser does not support audio playback. <a href="../../audio/kamien-papieski.mp3">Download the MP3 file</a>.
@@ -117,33 +125,34 @@
             <text x="12" y="13.5" font-size="8.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="middle">10</text>
           </svg></button>
           </div>
-          
         </div>
       </div>
-      
+      </div>
+
+      <div class="media-transcript">
+      <h3 class="transcript-heading" id="transcript-heading">Transcript</h3>
       <details class="transcript">
         <summary>Expand the transcript</summary>
-        <div class="transcript-body"><p>The Papal Stone, together with the plaque dedicated to Cardinal Karol Wojtyła's stays in Nałęczów, was created in 1999.</p>
+        <div class="transcript-body" tabindex="0" role="region" aria-labelledby="transcript-heading"><p>The Papal Stone, together with the plaque dedicated to Cardinal Karol Wojtyła's stays in Nałęczów, was created in 1999.</p>
         <p>Cardinal Karol Wojtyła came to Nałęczów in the 1960s, and was here for the last time in 1976. He stayed privately with the Salvatorian priests and celebrated Mass in the Chapel of St. Charles Borromeo. He liked to walk through the loess ravines. His favourite ravine was the Łukoszyn ravine, now often informally called the Papal Ravine.</p>
         <p>The initiative to create this plaque came from Tadeusz Adamczyk, chairman of the Nałęczów City Council. The official unveiling took place on the 21st anniversary of John Paul II's pontificate.</p>
         <p>Stanisław Strzyżyński also made several dozen sacred figures that can be seen all over Poland. In Nałęczów, next to the Chapel of St. Charles Borromeo, there is a figure of Our Lady of the Mystical Rose and a monument to Maximilian Kolbe, which we made together. A great challenge for both of us was carving the six-metre figure of Christ the Saviour for Marek Kotański, intended for Markot in Warsaw.</p>
         <p>Sacred art was very important to my father. His whole life, he searched for God and strengthened his faith, which mattered a great deal to him. The human being was just as important to him and was at the centre of his interest, throughout his work you can see the human being, and behind that person, the search for God.</p></div>
       </details>
+      </div>
+      </div>
     </section>
 
-    
-
-    <p>By one of the exits from the Spa Park stands a monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów, the future Pope John Paul II. The monument was made by Stanisław Strzyżyński together with his son Zbigniew. <!-- DO UZUPEŁNIENIA: dokładna data i okoliczności wizyty, treść tablicy --></p>
-<figure class="content-figure">
-          <img src="../../img/kamien-papieski-1.jpg" alt="A monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów, by an exit from the Spa Park" width="825" height="1100" loading="lazy">
-          <figcaption>The monument to Cardinal Karol Wojtyła, glacial boulder, 1999</figcaption>
-        </figure>
-<p>For many visitors, this is a brief stop for reflection before the route continues on to Ewelina café. <!-- DO UZUPEŁNIENIA --></p>
-<figure class="content-figure">
-          <img src="../../img/kamien-papieski-2.jpg" alt="Close-up of the papal coat of arms and commemorative plaque by the monument to Cardinal Karol Wojtyła" width="1024" height="768" loading="lazy">
-          <figcaption>The papal coat of arms and commemorative plaque</figcaption>
-        </figure>
-
+    <p>By one of the exits from the Spa Park stands a monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów, the future Pope John Paul II. The monument was made by Stanisław Strzyżyński together with his son Zbigniew.</p>
+    <figure class="content-figure">
+      <img src="../../img/kamien-papieski-1.jpg" alt="A monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów, by an exit from the Spa Park" width="825" height="1100" loading="lazy">
+      <figcaption>The monument to Cardinal Karol Wojtyła, glacial boulder, 1999</figcaption>
+    </figure>
+    <p>For many visitors, this is a brief stop for reflection before the route continues on to Ewelina café.</p>
+    <figure class="content-figure">
+      <img src="../../img/kamien-papieski-2.jpg" alt="Close-up of the papal coat of arms and commemorative plaque by the monument to Cardinal Karol Wojtyła" width="1024" height="768" loading="lazy">
+      <figcaption>The papal coat of arms and commemorative plaque</figcaption>
+    </figure>
 
     <section class="how-to-get-box" aria-labelledby="jak-dojsc-heading">
       <h2 id="jak-dojsc-heading">How to get there</h2>
@@ -152,17 +161,16 @@
         <div class="map-scroll-hint" hidden>Click the map to zoom</div>
       </div>
       <div class="map-fallback" hidden><p>The mini-map is currently unavailable.</p></div>
-      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.285452819939685,22.212785832706324">Open navigation ↗</a>
+      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.285452819939685,22.212785832706324&travelmode=walking" target="_blank" rel="noopener">Open navigation ↗</a>
 
       <div class="field">
         <span class="field-label">Location</span>
-        <span>Wschodnie wyjście z Parku Zdrojowego, 24-140 Nałęczów, near the Małachowski Palace</span>
+        <span>Eastern exit from the Spa Park, 24-140 Nałęczów, near the Małachowski Palace</span>
       </div>
       <div class="field">
         <span class="field-label">Directions</span>
         <span>Walking to Stanisław Strzyżyński Alley (stop 2 on this route) further into the park, the monument with the plaque stands by the eastern exit from the Spa Park, towards The Maiden with a Fish (stop 4).</span>
       </div>
-      
       <div class="field">
         <span class="field-label">Accessibility</span>
         <span>A paved path by the park exit, no steps.</span>
@@ -176,27 +184,34 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>A virtual walk following the sculptures.</p>
-      <p>This website is part of a project run by the Sztuka i Dom Foundation.</p>
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>A digital walk in the footsteps of sculptor Stanisław Strzyżyński, run by the Sztuka i Dom Foundation.</p>
     </div>
     <div>
-      <p><a href="../about/">About the project</a></p>
-    </div>
-    <div>
-      <p>Find us here too:</p>
+      <span class="footer-col-label">Foundation</span>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-funding">
     <p>
-      Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
-      Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
-      Międzynarodowego Roku Wolontariatu.
+      The initiative "Cyfrowy spacer śladami artysty rzeźbiarza
+      Stanisława Strzyżyńskiego" ("A digital walk following the sculptor
+      Stanisław Strzyżyński") is carried out as part of the "Fundusz
+      Inicjatyw MRW – Działam, bo lubię" project, funded by the
+      Fundusz Inicjatyw Międzynarodowego Roku Wolontariatu. The Regional
+      Operators of the project are: Bieszczadzki Uniwersytet Ludowy,
+      Stowarzyszenie Sursum Corda, and Fundacja Bieszczadzka.
+    </p>
+    <img class="funding-logos" src="../../img/logotypy-operatorzy.png" alt="Logos of the Regional Operators: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
+    <p>
+      Funded by the National Freedom Institute – Centre for Civil
+      Society Development, as part of the International Year of
+      Volunteers Initiatives Fund.
     </p>
     <img class="funding-logos" src="../../img/logotypy-dofinansowanie.png" alt="Logos: Committee for Public Benefit Affairs (Komitet do spraw Pożytku Publicznego), National Freedom Institute (NIW), International Year of Volunteers 2026" width="1650" height="432" loading="lazy">
   </div>
@@ -212,9 +227,7 @@
 <script src="../../js/main.js"></script>
 <script src="../../js/map.js"></script>
 <script src="../../js/player.js"></script>
-
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script src="../../js/nav.js"></script>
+<script src="../../js/text-size-toggle.js"></script>
 </body>
 </html>

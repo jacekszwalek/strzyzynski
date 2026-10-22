@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" data-root="../" data-lang-root="./">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nałęczów Stanisława Strzyżyńskiego, a virtual walk</title>
+<meta name="description" content="A virtual walk through Nałęczów following the sculptures of Stanisław Strzyżyński. Narrated by his son, Zbigniew Strzyżyński.">
+<link rel="canonical" href="./">
+<link rel="alternate" hreflang="pl" href="../">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../css/style.css">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Nałęczów Stanisława Strzyżyńskiego">
+<meta property="og:title" content="Nałęczów Stanisława Strzyżyńskiego, a virtual walk">
+<meta property="og:description" content="A virtual walk through Nałęczów following the sculptures of Stanisław Strzyżyński. Narrated by his son, Zbigniew Strzyżyński.">
+<meta property="og:image" content="../img/og-cover.jpg">
+<meta property="og:url" content="./">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-top">
+    <p class="site-title">
+      <a href="./">Nałęczów<span class="site-title-sub">Stanisław Strzyżyński, a virtual walk</span></a>
+    </p>
+    <div class="header-tools">
+      <div class="text-size-switch" role="group" aria-label="Text size">
+        <button type="button" data-scale="100" aria-pressed="true">A</button>
+        <button type="button" data-scale="125" aria-pressed="false">A+</button>
+        <button type="button" data-scale="150" aria-pressed="false">A++</button>
+      </div>
+      <a class="lang-switch" href="../" hreflang="pl" lang="pl">Polski</a>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul role="list">
+        <li><a href="./" aria-current="page">Home</a></li>
+        <li><a href="./prus-bench/"><span class="nav-step">1.</span> Prus Bench</a></li>
+        <li><a href="./family-tree/"><span class="nav-step">2.</span> Family Tree</a></li>
+        <li><a href="./papal-stone/"><span class="nav-step">3.</span> Papal Stone</a></li>
+        <li><a href="./maiden-with-a-fish/"><span class="nav-step">4.</span> The Maiden with a Fish</a></li>
+        <li><a href="./about/">About the project</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <h1>Nałęczów Stanisława Strzyżyńskiego</h1>
+    <p class="content">
+      This virtual walk follows four sculptures by Stanisław Strzyżyński
+      (1923–2015), which have shaped the landscape of Nałęczów for decades.
+      The recordings are narrated by his son, Zbigniew Strzyżyński, who tells
+      the story of his father and his work. You can take the whole walk from
+      home before visiting Nałęczów, or step by step on site by opening the
+      page on your phone at each sculpture. The route has four stops,
+      you'll find the exact distance and estimated walking time below the
+      map.
+    </p>
+
+    <section class="media-section" aria-labelledby="intro-heading">
+      <span class="media-section-label">Introduction</span>
+      <h2 id="intro-heading" class="visually-hidden">Introduction video</h2>
+      <div class="narrator-byline">
+        <span>Narrated by Zbigniew Strzyżyński, the artist's son</span>
+      </div>
+      <div class="video-wrap video-wrap--portrait">
+        <iframe src="https://www.youtube-nocookie.com/embed/3lmrVAe7QSM?cc_load_policy=0&loop=0" title="Introduction to the virtual walk" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <details class="transcript">
+        <summary>Expand the transcript</summary>
+        <div class="transcript-body"><p>Hello. My name is Zbigniew Strzyżyński, I am a sculptor, painter, and also an educator, a former deputy director for artistic affairs at the State Secondary School of Fine Arts in Nałęczów.</p>
+        <p>I am also president of the Sztuka i Dom Foundation, established to commemorate the creative legacy of my father, the sculptor Stanisław Strzyżyński, a man of great merit to Nałęczów, to the Lublin region, and to Poland as a whole. Today I will tell you about him, and about several of his works found in Nałęczów.</p></div>
+      </details>
+    </section>
+
+    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
+      <h2 id="mapa-heading">Walk map</h2>
+      <p>
+        Click a pin on the map to see a preview of the sculpture and open its recording.
+      </p>
+      <p>Whole route: approx. 850 m, approx. 13 min on foot</p>
+
+      <div class="map-wrap" id="map-wrap">
+        <div id="map" class="map-el" role="application" aria-label="Walk map with four numbered stops"></div>
+      </div>
+      <div class="map-fallback" id="map-fallback" hidden>
+        <p>The map is currently unavailable. Below is the full list of stops on the walk, it works independently of the map.</p>
+      </div>
+
+      <div class="map-meta">
+        <button type="button" class="btn btn--secondary" id="geolocate-btn">📍 Show my location</button>
+      </div>
+      <p class="map-geolocate-status" id="geolocate-status" aria-live="polite"></p>
+
+      <h3 class="visually-hidden">List of stops on the walk</h3>
+      <div class="location-carousel">
+        <ul class="location-list" id="location-list" role="list"></ul>
+        <div class="location-carousel-controls">
+          <button type="button" class="location-carousel-btn location-carousel-btn--prev" aria-label="Previous stop" aria-controls="location-list" disabled>
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="location-carousel-btn location-carousel-btn--next" aria-label="Next stop" aria-controls="location-list">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="jak-korzystac-heading">
+      <h2 id="jak-korzystac-heading">How to use this walk</h2>
+      <ol class="steps-grid" role="list">
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">1</div>
+          <p><strong>Choose a stop.</strong> On the map or the list above, click the sculpture you want to learn more about.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">2</div>
+          <p><strong>Listen to the story.</strong> Every page has a video or audio recording narrated by the artist's son, Zbigniew Strzyżyński.</p>
+        </li>
+        <li class="step-card">
+          <div class="step-number" aria-hidden="true">3</div>
+          <p><strong>Go for a walk.</strong> Open this page on your phone and use it on site, moving from one sculpture to the next at your own pace.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bio-section-wrap" aria-labelledby="bio-heading">
+      <h2 id="bio-heading">Stanisław Strzyżyński<br>(1923–2015)</h2>
+      <div class="bio-section">
+        <img src="../img/stanislaw-strzyzynski-portret.jpg" alt="Portrait of Stanisław Strzyżyński among his sculptures" width="640" height="870" loading="lazy">
+        <div class="content">
+          <h3>Youth and education</h3>
+          <p>
+            Stanisław Strzyżyński was born on 3 April 1923 in Kaliska
+            (Greater Poland Voivodeship). He studied at the State Higher
+            School of Fine Arts in Poznań, in the Sculpture Department, in
+            the studio of Prof. Bazyli Wojtowicz. He graduated from the
+            Academy of Fine Arts in Warsaw in 1955, in the studio of Prof.
+            Marian Wnuk.
+            <!-- DO UZUPEŁNIENIA: dodatkowe fakty z okresu studiów -->
+          </p>
+
+          <h3>Nałęczów</h3>
+          <p>
+            He moved to Nałęczów in 1953.
+            For thirty years, from 1953 to 1983, he taught at the State
+            Secondary School of Fine Arts in Nałęczów. He belonged to the
+            Union of Polish Visual Artists from 1951, and in 1957–1974 he
+            co-founded the Nałęczów Group.
+          </p>
+
+          <h3>Body of work</h3>
+          <p>
+            The artist's body of work includes over a dozen monuments,
+            around a hundred portrait sculptures, monumental sculptures,
+            several dozen medals, and paintings.
+            <!-- DO UZUPEŁNIENIA: pełny wykaz najważniejszych realizacji -->
+          </p>
+
+          <h3>Beyond Nałęczów</h3>
+          <p>
+            Beyond Nałęczów, Strzyżyński created, among other works, the
+            twenty-three-metre Monument to the Heroic Airmen of the Dęblin
+            Eaglets' School in Dęblin (1966), as well as monuments in
+            Rąblów, Kock, Zbędowice and Puławy, and the Maria Cunitz bench
+            in Świdnica. In 1967, together with Juliusz Kłeczek, he won
+            first prize in the competition for the Monument to the Struggle
+            and Martyrdom at Majdanek, however, the project awarded third
+            prize was selected for execution.
+            <!-- DO UZUPEŁNIENIA: więcej kontekstu wokół konkursu majdankowskiego -->
+            He was decorated with, among others, the Gold Cross of Merit.
+            He often worked together with his sons, Leszek and Zbigniew.
+            He died on 16 March 2015 in Nałęczów.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>A virtual walk following the sculptures.</p>
+      <p>This website is part of a project run by the Sztuka i Dom Foundation.</p>
+    </div>
+    <div>
+      <p><a href="./about/">About the project</a></p>
+    </div>
+    <div>
+      <p>Find us here too:</p>
+      <ul role="list" class="foundation-links">
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-funding">
+    <p>
+      Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
+      Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
+      Międzynarodowego Roku Wolontariatu.
+    </p>
+    <img class="funding-logos" src="../img/logotypy-dofinansowanie.png" alt="Logos: Committee for Public Benefit Affairs (Komitet do spraw Pożytku Publicznego), National Freedom Institute (NIW), International Year of Volunteers 2026" width="1650" height="432" loading="lazy">
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Close enlarged photo">✕</button>
+  <img src="" alt="">
+</div>
+
+<script src="../data/rzezby.js"></script>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/map.js"></script>
+
+<!-- Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "787469efbd7c445899e1da515ce9decd"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

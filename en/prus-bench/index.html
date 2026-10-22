@@ -30,18 +30,27 @@
 <header class="site-header">
   <div class="container header-top">
     <p class="site-title">
-      <a href="../">Nałęczów<span class="site-title-sub">Stanisław Strzyżyński, a virtual walk</span></a>
+      <a href="../">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisław Strzyżyński</span>
+      </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Text size">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Text size">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
-      <a class="lang-switch" href="../../laweczka-prusa/" hreflang="pl" lang="pl">Polski</a>
+      <a class="lang-switch" href="../../laweczka-prusa/" hreflang="pl" lang="pl">PL</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="site-nav" aria-label="Main navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
     <div class="container">
       <ul role="list">
         <li><a href="../">Home</a></li>
@@ -56,7 +65,7 @@
 </header>
 
 <main id="main">
-  <div class="container">
+  <div class="container content-main">
 
     <div class="route-badge-row">
       <span class="route-badge-number" aria-hidden="true">1</span>
@@ -74,7 +83,7 @@
       </div>
       <div class="meta-grid-item meta-grid-item--wide">
         <span class="meta-grid-label">Location</span>
-        <span class="meta-grid-value">Spa Park (Park Zdrojowy), by the pond, in front of the Prince Józef Sanatorium</span>
+        <span class="meta-grid-value">Spa Park, by the pond, in front of the Prince Józef Sanatorium</span>
       </div>
       <div class="meta-grid-item meta-grid-item--wide">
         <span class="meta-grid-label">Authors</span>
@@ -89,9 +98,8 @@
         <img class="narrator-avatar" src="../../img/zbigniew-strzyzynski-avatar.png" alt="" width="48" height="48" loading="lazy">
         <span>Narrated by Zbigniew Strzyżyński, the artist's son</span>
       </div>
-      <div class="video-wrap" hidden>
-        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_PLACEHOLDER?cc_load_policy=0&loop=0" title="Prus Bench" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <div class="media-grid">
+      <div class="media-player-col">
       <div class="audio-player">
         <audio class="audio-el" preload="metadata" controls src="../../audio/laweczka-prusa.mp3">
           Your browser does not support audio playback. <a href="../../audio/laweczka-prusa.mp3">Download the MP3 file</a>.
@@ -117,35 +125,36 @@
             <text x="12" y="13.5" font-size="8.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="middle">10</text>
           </svg></button>
           </div>
-          
         </div>
       </div>
-      
+      </div>
+
+      <div class="media-transcript">
+      <h3 class="transcript-heading" id="transcript-heading">Transcript</h3>
       <details class="transcript">
         <summary>Expand the transcript</summary>
-        <div class="transcript-body"><p>The Bolesław Prus Bench was created in 2002 on the initiative of Halina Bukowska, president of the Towarzystwo Przyjaciół Nałęczowa (Society of Friends of Nałęczów) and head of the Bolesław Prus Museum, with financial support from the Nałęczów City Council and the then mayor, Wojciech Wójcik.</p>
+        <div class="transcript-body" tabindex="0" role="region" aria-labelledby="transcript-heading"><p>The Bolesław Prus Bench was created in 2002 on the initiative of Halina Bukowska, president of the Towarzystwo Przyjaciół Nałęczowa (Society of Friends of Nałęczów) and head of the Bolesław Prus Museum, with financial support from the Nałęczów City Council and the then mayor, Wojciech Wójcik.</p>
         <p>My father prepared three plaster designs showing different poses of Bolesław Prus's figure on the bench. One proposal was chosen, and we then worked together on a full-size model in clay. I handled the initial execution of the whole figure, while my father worked on the entire head, he made the head himself and took care of the details.</p>
         <p>After finishing the model and getting the clients' approval, we made the casts and worked on plaster moulds, there were about 30 of them. We then made the plaster cast, which travelled to the foundry in Rzeszów, there the monument was cast in bronze.</p>
         <p>At first, the bench stood in front of the Małachowski Palace, where the Bolesław Prus Museum was located at the time. Today the bench also stands in a very attractive spot, by the pond, in front of the Prince Józef Sanatorium.</p>
         <p>If you happen to be in this spot, it is also worth visiting the Palm House. There you will find two busts made by my father. The first is a bust of Władysław Tatarkiewicz, a philosopher and aesthetician, who sat for my father on one of the balconies of the agricultural workers' sanatorium. The other sculpture is a bust of Dr. Wacław Szczepiński, a man of great merit for Nałęczów, the resort's chief physician.</p>
         <p>These and other sculptures in the Palm House were created during the sculpture symposium „Figures of Nałęczów" in 1978.</p></div>
       </details>
+      </div>
+      </div>
     </section>
 
-    
-
-    <p>The Bolesław Prus Bench was unveiled in the Spa Park on Sunday, 20 October 2002, on the 120th anniversary of the writer's first visit to Nałęczów. The bronze figure shows Prus seated in his characteristic bowler hat, hand resting on a book, as if he had paused his reading for a moment to rest in the shade of the park's avenues. <!-- DO UZUPEŁNIENIA: okoliczności powstania, fundator, przebieg odsłonięcia --></p>
-<figure class="content-figure">
-          <img src="../../img/laweczka-prusa-1.jpg" alt="The Bolesław Prus Bench in the Spa Park in Nałęczów, a seated figure of the writer in a bowler hat" width="1024" height="768" loading="lazy">
-          <figcaption>The Bolesław Prus Bench, bronze, 2002</figcaption>
-        </figure>
-<p>This is one of two works on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955, the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. The other joint work on the route is the Papal Stone. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji --></p>
-<figure class="content-figure">
-          <img src="../../img/laweczka-prusa-2.jpg" alt="Close-up of the Bolesław Prus monument's face, in a bowler hat and glasses" width="733" height="1100" loading="lazy">
-          <figcaption>Close-up of the sculpted face of Bolesław Prus</figcaption>
-        </figure>
-<p>Bolesław Prus visited Nałęczów many times, and the spa town left its mark on his work. <!-- DO UZUPEŁNIENIA: związki Prusa z Nałęczowem, kontekst literacki --></p>
-
+    <p>The Bolesław Prus Bench was unveiled in the Spa Park on Sunday, 20 October 2002, on the 120th anniversary of the writer's first visit to Nałęczów. The bronze figure shows Prus seated in his characteristic bowler hat, hand resting on a book, as if he had paused his reading for a moment to rest in the shade of the park's avenues.</p>
+    <figure class="content-figure">
+      <img src="../../img/laweczka-prusa-1.jpg" alt="The Bolesław Prus Bench in the Spa Park in Nałęczów, a seated figure of the writer in a bowler hat" width="1024" height="768" loading="lazy">
+      <figcaption>The Bolesław Prus Bench, bronze, 2002</figcaption>
+    </figure>
+    <p>This is one of two works on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955, the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. The other joint work on the route is the Papal Stone.</p>
+    <figure class="content-figure">
+      <img src="../../img/laweczka-prusa-2.jpg" alt="Close-up of the Bolesław Prus monument's face, in a bowler hat and glasses" width="733" height="1100" loading="lazy">
+      <figcaption>Close-up of the sculpted face of Bolesław Prus</figcaption>
+    </figure>
+    <p>Bolesław Prus visited Nałęczów many times, and the spa town left its mark on his work.</p>
 
     <section class="how-to-get-box" aria-labelledby="jak-dojsc-heading">
       <h2 id="jak-dojsc-heading">How to get there</h2>
@@ -154,7 +163,7 @@
         <div class="map-scroll-hint" hidden>Click the map to zoom</div>
       </div>
       <div class="map-fallback" hidden><p>The mini-map is currently unavailable.</p></div>
-      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.2870007258462,22.208436990572082">Open navigation ↗</a>
+      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.2870007258462,22.208436990572082&travelmode=walking" target="_blank" rel="noopener">Open navigation ↗</a>
 
       <div class="field">
         <span class="field-label">Location</span>
@@ -164,7 +173,6 @@
         <span class="field-label">Directions</span>
         <span>Enter the Spa Park from the side of the Małachowski Palace. The bench stands by the main path, near the pond and the pump room, not far from Stanisław Strzyżyński Alley (stop 2 on this route).</span>
       </div>
-      
       <div class="field">
         <span class="field-label">Accessibility</span>
         <span>A paved park path, no steps. Benches for resting nearby.</span>
@@ -178,27 +186,34 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>A virtual walk following the sculptures.</p>
-      <p>This website is part of a project run by the Sztuka i Dom Foundation.</p>
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>A digital walk in the footsteps of sculptor Stanisław Strzyżyński, run by the Sztuka i Dom Foundation.</p>
     </div>
     <div>
-      <p><a href="../about/">About the project</a></p>
-    </div>
-    <div>
-      <p>Find us here too:</p>
+      <span class="footer-col-label">Foundation</span>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-funding">
     <p>
-      Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
-      Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
-      Międzynarodowego Roku Wolontariatu.
+      The initiative "Cyfrowy spacer śladami artysty rzeźbiarza
+      Stanisława Strzyżyńskiego" ("A digital walk following the sculptor
+      Stanisław Strzyżyński") is carried out as part of the "Fundusz
+      Inicjatyw MRW – Działam, bo lubię" project, funded by the
+      Fundusz Inicjatyw Międzynarodowego Roku Wolontariatu. The Regional
+      Operators of the project are: Bieszczadzki Uniwersytet Ludowy,
+      Stowarzyszenie Sursum Corda, and Fundacja Bieszczadzka.
+    </p>
+    <img class="funding-logos" src="../../img/logotypy-operatorzy.png" alt="Logos of the Regional Operators: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
+    <p>
+      Funded by the National Freedom Institute – Centre for Civil
+      Society Development, as part of the International Year of
+      Volunteers Initiatives Fund.
     </p>
     <img class="funding-logos" src="../../img/logotypy-dofinansowanie.png" alt="Logos: Committee for Public Benefit Affairs (Komitet do spraw Pożytku Publicznego), National Freedom Institute (NIW), International Year of Volunteers 2026" width="1650" height="432" loading="lazy">
   </div>
@@ -214,9 +229,7 @@
 <script src="../../js/main.js"></script>
 <script src="../../js/map.js"></script>
 <script src="../../js/player.js"></script>
-
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script src="../../js/nav.js"></script>
+<script src="../../js/text-size-toggle.js"></script>
 </body>
 </html>
