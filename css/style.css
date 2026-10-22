@@ -211,7 +211,7 @@ section { margin-bottom: var(--space-6); }
 
 .lang-switch {
   display: inline-flex; align-items: center; justify-content: center;
-  min-height: var(--tap-min); padding: 0 var(--space-2);
+  width: var(--tap-min); height: var(--tap-min);
   border: 1.5px solid var(--ink); border-radius: 999px;
   background: transparent; color: var(--ink); font-weight: 700; text-decoration: none; font-size: 0.85rem;
 }
@@ -256,12 +256,6 @@ section { margin-bottom: var(--space-6); }
   }
   .header-tools { flex-wrap: nowrap; flex-shrink: 0; gap: 0.5rem; }
 
-  /* Wszystkie trzy przyciski nagłówka mają na starcie taki sam kształt: koło
-     o średnicy var(--tap-min), tak jak przycisk-hamburger. */
-  .lang-switch {
-    width: var(--tap-min); height: var(--tap-min); min-height: 0; padding: 0;
-  }
-
   /* Przycisk "Aa" zwijający przełącznik rozmiaru czcionki do okrągłego
      przycisku, który rozwija się w pasek z A / A+ / A++ po kliknięciu.
      Bez JS: .text-size-compact jest nadal "display:contents" (z bazowej
@@ -288,10 +282,11 @@ section { margin-bottom: var(--space-6); }
   html.js .text-size-compact[data-expanded="true"] .text-size-switch { opacity: 1; pointer-events: auto; }
 
   /* Przy powiększonej czcionce (A+ / A++) tytuł rośnie razem z resztą
-     strony i może nie zmieścić się obok kontrolek w jednym wierszu po
-     zwinięciu paska. W takim ustalonym stanie (nie w trakcie samego
-     rozwinięcia sekcji Aa, gdzie przykrycie napisu jest akceptowalne)
-     kontrolki przechodzą do drugiej linii, żeby nie zasłaniać tytułu. */
+     strony i może nie zmieścić się obok kontrolek w jednym wierszu, więc
+     kontrolki przechodzą do drugiej linii, żeby nie zasłaniać tytułu.
+     Ten układ jest stały - nie zmienia się po kliknięciu "Aa", żeby pasek
+     nie "skakał" między wierszami w trakcie rozwijania/zwijania. Pasek
+     rośnie tylko w obrębie swojego wiersza. */
   html.text-scale-125 .header-top,
   html.text-scale-150 .header-top {
     flex-wrap: wrap;
@@ -301,15 +296,6 @@ section { margin-bottom: var(--space-6); }
     flex-basis: 100%;
     justify-content: flex-end;
     margin-top: var(--space-1);
-  }
-  html.text-scale-125 .header-top:has(#text-size-compact[data-expanded="true"]),
-  html.text-scale-150 .header-top:has(#text-size-compact[data-expanded="true"]) {
-    flex-wrap: nowrap;
-  }
-  html.text-scale-125 .header-top:has(#text-size-compact[data-expanded="true"]) .header-tools,
-  html.text-scale-150 .header-top:has(#text-size-compact[data-expanded="true"]) .header-tools {
-    flex-basis: auto;
-    margin-top: 0;
   }
 
   /* Menu zwijane za przyciskiem-hamburgerem (domyślnie bez JS: w pełni
