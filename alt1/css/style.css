@@ -269,6 +269,7 @@ section { margin-bottom: var(--space-6); }
 .btn--secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--secondary:hover { background: var(--ink); color: var(--bg); }
 .btn--secondary:visited { color: var(--ink); }
+.btn--secondary:hover:visited { color: var(--bg); }
 
 .btn--large { font-size: 1.1rem; padding: var(--space-3) var(--space-4); min-height: 3.5rem; }
 .btn--block { width: 100%; }
