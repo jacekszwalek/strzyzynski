@@ -53,9 +53,9 @@ var RZEZBY = [
         <p>Jeżeli Państwo są w tym miejscu, to warto jeszcze odwiedzić palmiarnię. Znajdują się tam dwa popiersia wykonane przez ojca. Pierwsze z nich to popiersie Władysława Tatarkiewicza, filozofa, estetyka, pozował on ojcu na jednym z balkonów w sanatorium rolniczym. Druga rzeźba przedstawia popiersie dra Wacława Szczepińskiego, osoby bardzo zasłużonej dla Nałęczowa, lekarza naczelnego uzdrowiska.</p>
         <p>Te i inne rzeźby znajdujące się w palmiarni powstały podczas pleneru rzeźbiarskiego „Postacie Nałęczowa” w 1978 roku.</p>`,
       en: `<p>The Bolesław Prus Bench was created in 2002 on the initiative of Halina Bukowska, president of the Towarzystwo Przyjaciół Nałęczowa (Society of Friends of Nałęczów) and head of the Bolesław Prus Museum, with financial support from the Nałęczów City Council and the then mayor, Wojciech Wójcik.</p>
-        <p>My father prepared three plaster designs showing different poses of Bolesław Prus's figure on the bench. One proposal was chosen, and we then worked together on a full-size model in clay. I handled the initial execution of the whole figure, while my father worked on the entire head — he made the head himself and took care of the details.</p>
-        <p>After finishing the model and getting the clients' approval, we made the casts and worked on plaster moulds — there were about 30 of them. We then made the plaster cast, which travelled to the foundry in Rzeszów — there the monument was cast in bronze.</p>
-        <p>At first, the bench stood in front of the Małachowski Palace, where the Bolesław Prus Museum was located at the time. Today the bench also stands in a very attractive spot — by the pond, in front of the Prince Józef Sanatorium.</p>
+        <p>My father prepared three plaster designs showing different poses of Bolesław Prus's figure on the bench. One proposal was chosen, and we then worked together on a full-size model in clay. I handled the initial execution of the whole figure, while my father worked on the entire head, he made the head himself and took care of the details.</p>
+        <p>After finishing the model and getting the clients' approval, we made the casts and worked on plaster moulds, there were about 30 of them. We then made the plaster cast, which travelled to the foundry in Rzeszów, there the monument was cast in bronze.</p>
+        <p>At first, the bench stood in front of the Małachowski Palace, where the Bolesław Prus Museum was located at the time. Today the bench also stands in a very attractive spot, by the pond, in front of the Prince Józef Sanatorium.</p>
         <p>If you happen to be in this spot, it is also worth visiting the Palm House. There you will find two busts made by my father. The first is a bust of Władysław Tatarkiewicz, a philosopher and aesthetician, who sat for my father on one of the balconies of the agricultural workers' sanatorium. The other sculpture is a bust of Dr. Wacław Szczepiński, a man of great merit for Nałęczów, the resort's chief physician.</p>
         <p>These and other sculptures in the Palm House were created during the sculpture symposium „Figures of Nałęczów" in 1978.</p>`
     },
@@ -96,7 +96,7 @@ var RZEZBY = [
         h: 768,
         alt: {
           pl: "Ławeczka Bolesława Prusa w Parku Zdrojowym w Nałęczowie - siedząca postać pisarza w meloniku",
-          en: "The Bolesław Prus Bench in the Spa Park in Nałęczów — a seated figure of the writer in a bowler hat"
+          en: "The Bolesław Prus Bench in the Spa Park in Nałęczów, a seated figure of the writer in a bowler hat"
         },
         podpis: {
           pl: "Ławeczka Bolesława Prusa, brąz, 2002 <!-- DO UZUPEŁNIENIA: podpis fotografa/źródło -->",
@@ -125,7 +125,7 @@ var RZEZBY = [
 
     opisKrotki: {
       pl: "Siedząca postać pisarza w meloniku, z dłonią opartą na książce, jedno z dwóch dzieł na trasie, które Stanisław Strzyżyński stworzył wspólnie z synem Zbigniewem.",
-      en: "A seated figure of the writer in a bowler hat, hand resting on a book — one of two works on the route that Stanisław Strzyżyński created together with his son Zbigniew."
+      en: "A seated figure of the writer in a bowler hat, hand resting on a book, one of two works on the route that Stanisław Strzyżyński created together with his son Zbigniew."
     },
 
     opisPelny: {
@@ -135,8 +135,8 @@ var RZEZBY = [
         "Bolesław Prus odwiedzał Nałęczów wielokrotnie, a uzdrowisko wywarło wpływ na jego twórczość. <!-- DO UZUPEŁNIENIA: związki Prusa z Nałęczowem, kontekst literacki -->"
       ],
       en: [
-        "The Bolesław Prus Bench was unveiled in the Spa Park on Sunday, 20 October 2002, on the 120th anniversary of the writer's first visit to Nałęczów. The bronze figure shows Prus seated in his characteristic bowler hat, hand resting on a book — as if he had paused his reading for a moment to rest in the shade of the park's avenues. <!-- DO UZUPEŁNIENIA: okoliczności powstania, fundator, przebieg odsłonięcia -->",
-        "This is one of two works on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955 — the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. The other joint work on the route is the Papal Stone. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
+        "The Bolesław Prus Bench was unveiled in the Spa Park on Sunday, 20 October 2002, on the 120th anniversary of the writer's first visit to Nałęczów. The bronze figure shows Prus seated in his characteristic bowler hat, hand resting on a book, as if he had paused his reading for a moment to rest in the shade of the park's avenues. <!-- DO UZUPEŁNIENIA: okoliczności powstania, fundator, przebieg odsłonięcia -->",
+        "This is one of two works on this route that Stanisław Strzyżyński made together with his son Zbigniew Strzyżyński, born in Nałęczów in 1955, the same person who tells the story of his father and his work in the recordings accompanying this walk. Listening to his voice at this sculpture, we therefore hear not only a son's account, but a co-creator's. The other joint work on the route is the Papal Stone. <!-- DO UZUPEŁNIENIA: szczegóły współpracy ojca i syna przy tej realizacji -->",
         "Bolesław Prus visited Nałęczów many times, and the spa town left its mark on his work. <!-- DO UZUPEŁNIENIA: związki Prusa z Nałęczowem, kontekst literacki -->"
       ]
     }
@@ -170,7 +170,7 @@ var RZEZBY = [
         <p>Zachowało się kilkanaście projektów rzeźby Drzewo genealogiczne. Tę rzeźbę wykonywaliśmy razem, w naszym ogrodzie, obok pracowni. Wykonywaliśmy model z gliny, a następnie odlew w sztucznym kamieniu. Miejsce dla rzeźby ojciec wybrał sam, szukając w parku najlepszego otoczenia. Jest ona usadowiona na tle świerków, przy alei.</p>
         <p>Z naszej inicjatywy Rada Miejska podjęła uchwałę o nadaniu tej alei imienia Stanisława Strzyżyńskiego. Uroczyste otwarcie odbyło się w czerwcu 2026 roku. Jest to ważny moment uczczenia pamięci ojca i początek dostrzegania artystów związanych z Nałęczowem.</p>`,
       en: `<p>The open-air sculpture Family Tree was created in 1977 during a plein-air sculpture workshop that my father organised together with Jarosław Olejnicki, an artist and painter.</p>
-        <p>The sculpture symbolises the emergence of life. From an oval form emerge geometrised shapes, symbolising people and the emergence of new life — growing, however, from a certain foundation, from the heritage of previous generations.</p>
+        <p>The sculpture symbolises the emergence of life. From an oval form emerge geometrised shapes, symbolising people and the emergence of new life, growing, however, from a certain foundation, from the heritage of previous generations.</p>
         <p>Over a dozen designs for the Family Tree sculpture have survived. We made this sculpture together, in our garden, next to the studio. We made a model in clay, and then a cast in artificial stone. My father chose the spot for the sculpture himself, looking for the best setting in the park. It stands against a backdrop of spruce trees, by the alley.</p>
         <p>On our initiative, the City Council passed a resolution naming this alley after Stanisław Strzyżyński. The official opening took place in June 2026. This is an important moment of honouring my father's memory, and the beginning of greater recognition for artists connected with Nałęczów.</p>`
     },
@@ -211,7 +211,7 @@ var RZEZBY = [
         h: 683,
         alt: {
           pl: "Drzewo genealogiczne - abstrakcyjna, organiczna forma rzeźbiarska w Alei Stanisława Strzyżyńskiego",
-          en: "Family Tree — an abstract, organic sculptural form in Stanisław Strzyżyński Alley"
+          en: "Family Tree, an abstract, organic sculptural form in Stanisław Strzyżyński Alley"
         },
         podpis: {
           pl: "Drzewo genealogiczne, sztuczny kamień, 1977",
@@ -253,7 +253,7 @@ var RZEZBY = [
 
     opisKrotki: {
       pl: "Abstrakcyjna, organiczna forma stylizowana na drzewo, symbol więzów rodzinnych i ciągłości pokoleń, w alei noszącej imię artysty.",
-      en: "An abstract, organic form stylised as a tree — a symbol of family ties and the continuity of generations, in an alley named after the artist."
+      en: "An abstract, organic form stylised as a tree, a symbol of family ties and the continuity of generations, in an alley named after the artist."
     },
 
     opisPelny: {
@@ -298,10 +298,10 @@ var RZEZBY = [
         <p>Jeżeli Państwo pójdą kawałek dalej, ulicą Lipową, po prawej stronie widoczna będzie uliczka Bolesława Prusa. Tam znajduje się dom i pracownia Stanisława Strzyżyńskiego.</p>
         <p>Jeżeli będą Państwo chcieli zajrzeć do pracowni i obejrzeć rzeźby z bliska, zapraszam do kontaktu telefonicznego i umówienia wizyty. Do zobaczenia w pracowni Stanisława Strzyżyńskiego.</p>
         <p><em>(Numer telefonu do pracowni znajduje się w dalszej części tej strony.)</em></p>`,
-      en: `<p>The Maiden with a Fish, placed in the fountain in the garden of the well-known and much-loved Ewelina café, was created in 1979. It was commissioned by the café's owner at the time — Ewelina Bartosiewicz. My father had already made designs for the Maiden with a Fish back in the 1950s. Photographs of the small plaster designs of the sculpture have also survived.</p>
-        <p>In the garden you can also see many other sculptures — both outdoor pieces and, inside, portrait busts. Among others, he sculpted the owner, Ewelina Bartosiewicz. There is also a head of Władysław Tatarkiewicz, whom he sculpted from life — it was from this very head that he later made the larger-than-life bust now in the Palm House in the Spa Park.</p>
+      en: `<p>The Maiden with a Fish, placed in the fountain in the garden of the well-known and much-loved Ewelina café, was created in 1979. It was commissioned by the café's owner at the time, Ewelina Bartosiewicz. My father had already made designs for the Maiden with a Fish back in the 1950s. Photographs of the small plaster designs of the sculpture have also survived.</p>
+        <p>In the garden you can also see many other sculptures, both outdoor pieces and, inside, portrait busts. Among others, he sculpted the owner, Ewelina Bartosiewicz. There is also a head of Władysław Tatarkiewicz, whom he sculpted from life, it was from this very head that he later made the larger-than-life bust now in the Palm House in the Spa Park.</p>
         <p>If you walk a little further along Lipowa Street, you'll see Bolesław Prus Lane on the right. That is where Stanisław Strzyżyński's house and studio are located.</p>
-        <p>If you would like to stop by the studio and see the sculptures up close — you're welcome to get in touch by phone and arrange a visit. See you at Stanisław Strzyżyński's studio.</p>
+        <p>If you would like to stop by the studio and see the sculptures up close, you're welcome to get in touch by phone and arrange a visit. See you at Stanisław Strzyżyński's studio.</p>
         <p><em>(The studio's phone number can be found further down this page.)</em></p>`
     },
 
@@ -437,7 +437,7 @@ var RZEZBY = [
         <p>Cardinal Karol Wojtyła came to Nałęczów in the 1960s, and was here for the last time in 1976. He stayed privately with the Salvatorian priests and celebrated Mass in the Chapel of St. Charles Borromeo. He liked to walk through the loess ravines. His favourite ravine was the Łukoszyn ravine, now often informally called the Papal Ravine.</p>
         <p>The initiative to create this plaque came from Tadeusz Adamczyk, chairman of the Nałęczów City Council. The official unveiling took place on the 21st anniversary of John Paul II's pontificate.</p>
         <p>Stanisław Strzyżyński also made several dozen sacred figures that can be seen all over Poland. In Nałęczów, next to the Chapel of St. Charles Borromeo, there is a figure of Our Lady of the Mystical Rose and a monument to Maximilian Kolbe, which we made together. A great challenge for both of us was carving the six-metre figure of Christ the Saviour for Marek Kotański, intended for Markot in Warsaw.</p>
-        <p>Sacred art was very important to my father. His whole life, he searched for God and strengthened his faith, which mattered a great deal to him. The human being was just as important to him and was at the centre of his interest — throughout his work you can see the human being, and behind that person, the search for God.</p>`
+        <p>Sacred art was very important to my father. His whole life, he searched for God and strengthened his faith, which mattered a great deal to him. The human being was just as important to him and was at the centre of his interest, throughout his work you can see the human being, and behind that person, the search for God.</p>`
     },
 
     rok: 1999, // z transkrypcji nagrania (Zbigniew Strzyżyński)
@@ -517,7 +517,7 @@ var RZEZBY = [
         "Dla wielu odwiedzających to krótki przystanek na zadumę, zanim trasa prowadzi dalej, do kawiarni Ewelina. <!-- DO UZUPEŁNIENIA -->"
       ],
       en: [
-        "By one of the exits from the Spa Park stands a monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów — the future Pope John Paul II. The monument was made by Stanisław Strzyżyński together with his son Zbigniew. <!-- DO UZUPEŁNIENIA: dokładna data i okoliczności wizyty, treść tablicy -->",
+        "By one of the exits from the Spa Park stands a monument with a plaque commemorating Cardinal Karol Wojtyła's stays in Nałęczów, the future Pope John Paul II. The monument was made by Stanisław Strzyżyński together with his son Zbigniew. <!-- DO UZUPEŁNIENIA: dokładna data i okoliczności wizyty, treść tablicy -->",
         "For many visitors, this is a brief stop for reflection before the route continues on to Ewelina café. <!-- DO UZUPEŁNIENIA -->"
       ]
     }
