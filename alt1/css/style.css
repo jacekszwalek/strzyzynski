@@ -325,11 +325,19 @@ section { margin-bottom: var(--space-6); }
 .intro-copy { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
 .intro-video { flex: 0 1 360px; min-width: 260px; }
 
-/* Mobile: wideo nad transkrypcją (w ramach kolumny intro-copy, która
-   następuje zaraz po wideo) — na desktopie układ zostaje bez zmian. */
+/* Mobile: wideo dokładnie nad transkrypcją. .intro-copy traci swój
+   własny box (display: contents), więc eyebrow/heading/byline/
+   transcript stają się bezpośrednimi dziećmi .intro-grid razem z
+   .intro-video; "order" wstawia wideo między byline a transkrypcją,
+   mimo że w DOM transkrypcja jest przed .intro-video (wewnątrz
+   .intro-copy). Gap zmieniony na space-2, bo na mobile nie ma już
+   dwóch kolumn do rozdzielenia - potrzebny jest ciasny odstęp
+   pomiędzy wszystkimi elementami w jednej kolumnie. */
 @media (max-width: 760px) {
-  .intro-grid { flex-direction: column; }
-  .intro-video { order: -1; }
+  .intro-grid { flex-direction: column; gap: var(--space-2); }
+  .intro-copy { display: contents; }
+  .intro-video { order: 1; }
+  details.transcript { order: 2; }
 }
 .video-wrap {
   position: relative; width: 100%; aspect-ratio: 9 / 16; max-width: 22rem;
