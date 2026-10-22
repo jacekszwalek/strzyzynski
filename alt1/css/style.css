@@ -215,14 +215,6 @@ section { margin-bottom: var(--space-6); }
 }
 .lang-switch:hover { background: var(--ink); color: var(--bg); }
 
-.nav-toggle {
-  display: none; align-items: center; justify-content: center;
-  width: var(--tap-min); height: var(--tap-min); border-radius: 50%;
-  border: 1.5px solid var(--ink); background: transparent; padding: 0;
-  cursor: pointer; color: var(--ink); flex-shrink: 0;
-}
-.nav-toggle:hover { background: var(--ink); color: var(--bg); }
-
 .site-nav { background: var(--bg); border-top: 1px solid var(--line); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .site-nav a {
@@ -244,11 +236,10 @@ section { margin-bottom: var(--space-6); }
   .site-nav a[aria-current="page"] { border-bottom: none; border-left: 3px solid var(--accent); padding-left: calc(var(--space-2) - 3px); }
   .header-top { flex-direction: column; align-items: stretch; }
 
-  /* Menu kompaktowe: domyślnie (bez JS) w pełni widoczne — pełnoprawny
-     fallback. Z JS-em zwija się za przyciskiem-hamburgerem, żeby
-     zajmować jak najmniej miejsca na telefonie. */
-  html.js .nav-toggle { display: flex; }
-  html.js .site-nav[data-collapsed="true"] { display: none; }
+  /* Menu zawsze rozwinięte (bez przycisku-hamburgera) - ograniczone do
+     60% wysokości ekranu, z przewijaniem wewnątrz listy, gdyby pozycji
+     było więcej niż się mieści. */
+  .site-nav { max-height: 60vh; overflow-y: auto; }
 }
 
 /* --------------------------------------------------------------------------
