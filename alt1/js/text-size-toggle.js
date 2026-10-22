@@ -7,14 +7,16 @@
   var panel = compact.querySelector(".text-size-switch");
   if (!toggle || !panel) return;
 
-  var collapsedWidth = compact.getBoundingClientRect().width || 36;
-
   function setExpanded(expanded) {
     compact.setAttribute("data-expanded", expanded ? "true" : "false");
     toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
     toggle.inert = expanded;
     panel.inert = !expanded;
-    compact.style.width = (expanded ? panel.scrollWidth : collapsedWidth) + "px";
+    // Collapsed width comes from the stylesheet (var(--tap-min), which
+    // scales with the page's font-size setting) - clearing the inline
+    // style lets it take over again instead of freezing the width at
+    // whatever it measured at load time.
+    compact.style.width = expanded ? panel.scrollWidth + "px" : "";
   }
 
   setExpanded(false);
