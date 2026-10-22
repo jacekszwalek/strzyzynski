@@ -30,18 +30,27 @@
 <header class="site-header">
   <div class="container header-top">
     <p class="site-title">
-      <a href="../">Nałęczów<span class="site-title-sub">Stanisława Strzyżyńskiego - wirtualny spacer</span></a>
+      <a href="../">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisława Strzyżyńskiego</span>
+      </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Rozmiar tekstu">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Rozmiar tekstu">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
-      <a class="lang-switch" href="../en/papal-stone/" hreflang="en" lang="en">English</a>
+      <a class="lang-switch" href="../en/papal-stone/" hreflang="en" lang="en">EN</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="site-nav" aria-label="Główna nawigacja">
+  <nav class="site-nav" id="site-nav" aria-label="Główna nawigacja">
     <div class="container">
       <ul role="list">
         <li><a href="../">Start</a></li>
@@ -56,7 +65,7 @@
 </header>
 
 <main id="main">
-  <div class="container">
+  <div class="container content-main">
 
     <div class="route-badge-row">
       <span class="route-badge-number" aria-hidden="true">3</span>
@@ -89,9 +98,8 @@
         <img class="narrator-avatar" src="../img/zbigniew-strzyzynski-avatar.png" alt="" width="48" height="48" loading="lazy">
         <span>Opowiada Zbigniew Strzyżyński, syn artysty</span>
       </div>
-      <div class="video-wrap" hidden>
-        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_PLACEHOLDER?cc_load_policy=0&loop=0" title="Kamień Papieski" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <div class="media-grid">
+      <div class="media-player-col">
       <div class="audio-player">
         <audio class="audio-el" preload="metadata" controls src="../audio/kamien-papieski.mp3">
           Twoja przeglądarka nie obsługuje odtwarzania audio. <a href="../audio/kamien-papieski.mp3">Pobierz plik MP3</a>.
@@ -117,33 +125,34 @@
             <text x="12" y="13.5" font-size="8.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="middle">10</text>
           </svg></button>
           </div>
-          
         </div>
       </div>
-      
+      </div>
+
+      <div class="media-transcript">
+      <h3 class="transcript-heading" id="transcript-heading">Transkrypcja</h3>
       <details class="transcript">
         <summary>Rozwiń transkrypcję</summary>
-        <div class="transcript-body"><p>Kamień Papieski wraz z tablicą poświęconą pobytom kardynała Karola Wojtyły w Nałęczowie powstał w 1999 roku.</p>
+        <div class="transcript-body" tabindex="0" role="region" aria-labelledby="transcript-heading"><p>Kamień Papieski wraz z tablicą poświęconą pobytom kardynała Karola Wojtyły w Nałęczowie powstał w 1999 roku.</p>
         <p>Kardynał Karol Wojtyła przyjeżdżał do Nałęczowa w latach 60-tych, ostatni raz był tu w 1976 roku. Prywatnie mieszkał u księży Salwatorianów i odprawiał mszę w kaplicy św. Karola Boromeusza. Lubił spacerować po wąwozach lessowych. Jego najbardziej lubianym wąwozem był wąwóz łukoszyński, obecnie często zwany potocznie papieskim.</p>
         <p>Inicjatorem powstania tej tablicy był przewodniczący Rady Miejskiej w Nałęczowie, Tadeusz Adamczyk. Uroczyste odsłonięcie nastąpiło w 21. rocznicę pontyfikatu Jana Pawła II.</p>
         <p>Stanisław Strzyżyński wykonał także kilkadziesiąt figur sakralnych, które można zobaczyć w całej Polsce. W Nałęczowie, obok kaplicy św. Karola Boromeusza, znajduje się figura Matki Bożej Róży Duchownej oraz pomnik Maksymiliana Kolbego, który wykonaliśmy wspólnie. Wielkim wyzwaniem dla nas obu było wyrzeźbienie sześciometrowej figury Chrystusa Zbawiciela dla Marka Kotańskiego, przeznaczonej dla Markotu w Warszawie.</p>
         <p>Dla ojca sztuka sakralna była bardzo ważna. Całe życie poszukiwał Boga i umacniał wiarę, co miało dla niego duże znaczenie. Tak samo ważny był dla niego człowiek, który był w centrum jego zainteresowania - w całej jego twórczości widać człowieka i stojące za tym człowiekiem poszukiwanie Boga.</p></div>
       </details>
+      </div>
+      </div>
     </section>
 
-    
-
-    <p>Przy jednym z wyjść z Parku Zdrojowego stoi pomnik z tablicą upamiętniającą pobyt w Nałęczowie kardynała Karola Wojtyły - późniejszego papieża Jana Pawła II. Pomnik wykonał Stanisław Strzyżyński wspólnie z synem Zbigniewem. <!-- DO UZUPEŁNIENIA: dokładna data i okoliczności wizyty, treść tablicy --></p>
-<figure class="content-figure">
-          <img src="../img/kamien-papieski-1.jpg" alt="Pomnik z tablicą upamiętniającą pobyt kardynała Karola Wojtyły w Nałęczowie, przy wyjściu z Parku Zdrojowego" width="825" height="1100" loading="lazy">
-          <figcaption>Pomnik kardynała Karola Wojtyły, głaz narzutowy, 1999</figcaption>
-        </figure>
-<p>Dla wielu odwiedzających to krótki przystanek na zadumę, zanim trasa prowadzi dalej, do kawiarni Ewelina. <!-- DO UZUPEŁNIENIA --></p>
-<figure class="content-figure">
-          <img src="../img/kamien-papieski-2.jpg" alt="Zbliżenie na herb papieski i tablicę pamiątkową przy pomniku kardynała Karola Wojtyły" width="1024" height="768" loading="lazy">
-          <figcaption>Herb papieski i tablica pamiątkowa</figcaption>
-        </figure>
-
+    <p>Przy jednym z wyjść z Parku Zdrojowego stoi pomnik z tablicą upamiętniającą pobyt w Nałęczowie kardynała Karola Wojtyły - późniejszego papieża Jana Pawła II. Pomnik wykonał Stanisław Strzyżyński wspólnie z synem Zbigniewem.</p>
+    <figure class="content-figure">
+      <img src="../img/kamien-papieski-1.jpg" alt="Pomnik z tablicą upamiętniającą pobyt kardynała Karola Wojtyły w Nałęczowie, przy wyjściu z Parku Zdrojowego" width="825" height="1100" loading="lazy">
+      <figcaption>Pomnik kardynała Karola Wojtyły, głaz narzutowy, 1999</figcaption>
+    </figure>
+    <p>Dla wielu odwiedzających to krótki przystanek na zadumę, zanim trasa prowadzi dalej, do kawiarni Ewelina.</p>
+    <figure class="content-figure">
+      <img src="../img/kamien-papieski-2.jpg" alt="Zbliżenie na herb papieski i tablicę pamiątkową przy pomniku kardynała Karola Wojtyły" width="1024" height="768" loading="lazy">
+      <figcaption>Herb papieski i tablica pamiątkowa</figcaption>
+    </figure>
 
     <section class="how-to-get-box" aria-labelledby="jak-dojsc-heading">
       <h2 id="jak-dojsc-heading">Jak dojść</h2>
@@ -152,7 +161,7 @@
         <div class="map-scroll-hint" hidden>Kliknij mapę, aby przybliżać</div>
       </div>
       <div class="map-fallback" hidden><p>Mini-mapa jest obecnie niedostępna.</p></div>
-      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.285452819939685,22.212785832706324">Otwórz nawigację ↗</a>
+      <a class="btn btn--large" href="https://www.google.com/maps/dir/?api=1&destination=51.285452819939685,22.212785832706324&travelmode=walking" target="_blank" rel="noopener">Otwórz nawigację ↗</a>
 
       <div class="field">
         <span class="field-label">Lokalizacja</span>
@@ -162,7 +171,6 @@
         <span class="field-label">Dojście</span>
         <span>Idąc do Alei Stanisława Strzyżyńskiego (punkt 2 tej trasy) w głąb parku, pomnik z tablicą stoi przy wschodnim wyjściu z Parku Zdrojowego, w kierunku Panny z rybą (punkt 4).</span>
       </div>
-      
       <div class="field">
         <span class="field-label">Dostępność</span>
         <span>Utwardzona alejka przy wyjściu z parku, bez schodów.</span>
@@ -176,23 +184,29 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>Wirtualny spacer śladami rzeźb.</p>
-      <p>Ta strona jest częścią projektu realizowanego przez Fundację Sztuka i Dom.</p>
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>Cyfrowy spacer śladami artysty rzeźbiarza Stanisława Strzyżyńskiego jest realizowany przez Fundację Sztuka i Dom.</p>
     </div>
     <div>
-      <p><a href="../o-projekcie/">O projekcie</a></p>
-    </div>
-    <div>
-      <p>Znajdź nas też tutaj:</p>
+      <span class="footer-col-label">Fundacja</span>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-funding">
+    <p>
+      Inicjatywa pod nazwą „Cyfrowy spacer śladami artysty rzeźbiarza
+      Stanisława Strzyżyńskiego” realizowana w ramach projektu
+      „Funduszu Inicjatyw MRW – Działam, bo lubię” dofinansowanego ze
+      środków Funduszu Inicjatyw Międzynarodowego Roku Wolontariatu.
+      Regionalnymi Operatorami Projektu są: Bieszczadzki Uniwersytet
+      Ludowy, Stowarzyszenie Sursum Corda i Fundacja Bieszczadzka.
+    </p>
+    <img class="funding-logos" src="../img/logotypy-operatorzy.png" alt="Logotypy Operatorów Regionalnych: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
     <p>
       Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
       Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
@@ -212,9 +226,7 @@
 <script src="../js/main.js"></script>
 <script src="../js/map.js"></script>
 <script src="../js/player.js"></script>
-
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script src="../js/nav.js"></script>
+<script src="../js/text-size-toggle.js"></script>
 </body>
 </html>

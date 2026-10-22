@@ -12,7 +12,6 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="../../favicon.ico">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../../css/style.css">
 
 <meta property="og:type" content="website">
@@ -30,18 +29,27 @@
 <header class="site-header">
   <div class="container header-top">
     <p class="site-title">
-      <a href="../">Nałęczów<span class="site-title-sub">Stanisław Strzyżyński, a virtual walk</span></a>
+      <a href="../">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisław Strzyżyński</span>
+      </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Text size">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Text size">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
-      <a class="lang-switch" href="../../o-projekcie/" hreflang="pl" lang="pl">Polski</a>
+      <a class="lang-switch" href="../../o-projekcie/" hreflang="pl" lang="pl">PL</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="site-nav" aria-label="Main navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
     <div class="container">
       <ul role="list">
         <li><a href="../">Home</a></li>
@@ -56,8 +64,9 @@
 </header>
 
 <main id="main">
-  <div class="container">
+  <div class="container content-main">
 
+    <span class="eyebrow">About the project</span>
     <h1>About the project</h1>
 
     <section aria-labelledby="cel-heading">
@@ -77,18 +86,17 @@
       <p>
         The project is created in collaboration with the Sztuka i Dom
         Foundation and Zbigniew Strzyżyński - the artist's son, a sculptor
-        himself, and co-creator of the Bolesław Prus Bench - who narrates the
-        recordings accompanying the walk, telling the story of his father and
-        his work.
-        <!-- EN TRANSLATION NEEDED: full description of the foundation's role, team, history of the collaboration -->
+        himself, and co-creator of the Bolesław Prus Bench - who narrates
+        the recordings accompanying the walk, telling the story of his
+        father and his work.
       </p>
       <p>
         You can also find the Sztuka i Dom Foundation online:
       </p>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </section>
 
@@ -111,12 +119,12 @@
       <h2 id="partnerzy-heading">Partners and funding</h2>
       <p>
         The initiative "Cyfrowy spacer śladami artysty rzeźbiarza
-        Stanisława Strzyżyńskiego" ("A digital walk following the
-        sculptor Stanisław Strzyżyński") is carried out as part of the
-        "Fundusz Inicjatyw MRW – Działam, bo lubię" project, funded by
-        the Fundusz Inicjatyw Międzynarodowego Roku Wolontariatu. The
-        Regional Operators of the project are: Bieszczadzki Uniwersytet
-        Ludowy, Stowarzyszenie Sursum Corda, and Fundacja Bieszczadzka.
+        Stanisława Strzyżyńskiego" ("A digital walk following the sculptor
+        Stanisław Strzyżyński") is carried out as part of the "Fundusz
+        Inicjatyw MRW – Działam, bo lubię" project, funded by the
+        Fundusz Inicjatyw Międzynarodowego Roku Wolontariatu. The Regional
+        Operators of the project are: Bieszczadzki Uniwersytet Ludowy,
+        Stowarzyszenie Sursum Corda, and Fundacja Bieszczadzka.
       </p>
       <img class="funding-logos" src="../../img/logotypy-operatorzy.png" alt="Logos of the Regional Operators: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
       <p>
@@ -136,27 +144,34 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>A virtual walk following the sculptures.</p>
-      <p>This website is part of a project run by the Sztuka i Dom Foundation.</p>
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>A digital walk in the footsteps of sculptor Stanisław Strzyżyński, run by the Sztuka i Dom Foundation.</p>
     </div>
     <div>
-      <p><a href="./">About the project</a></p>
-    </div>
-    <div>
-      <p>Find us here too:</p>
+      <span class="footer-col-label">Foundation</span>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Sztuka i Dom Foundation website"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Sztuka i Dom Foundation on Facebook"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Sztuka i Dom Foundation on Instagram"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-funding">
     <p>
-      Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
-      Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
-      Międzynarodowego Roku Wolontariatu.
+      The initiative "Cyfrowy spacer śladami artysty rzeźbiarza
+      Stanisława Strzyżyńskiego" ("A digital walk following the sculptor
+      Stanisław Strzyżyński") is carried out as part of the "Fundusz
+      Inicjatyw MRW – Działam, bo lubię" project, funded by the
+      Fundusz Inicjatyw Międzynarodowego Roku Wolontariatu. The Regional
+      Operators of the project are: Bieszczadzki Uniwersytet Ludowy,
+      Stowarzyszenie Sursum Corda, and Fundacja Bieszczadzka.
+    </p>
+    <img class="funding-logos" src="../../img/logotypy-operatorzy.png" alt="Logos of the Regional Operators: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
+    <p>
+      Funded by the National Freedom Institute – Centre for Civil
+      Society Development, as part of the International Year of
+      Volunteers Initiatives Fund.
     </p>
     <img class="funding-logos" src="../../img/logotypy-dofinansowanie.png" alt="Logos: Committee for Public Benefit Affairs (Komitet do spraw Pożytku Publicznego), National Freedom Institute (NIW), International Year of Volunteers 2026" width="1650" height="432" loading="lazy">
   </div>
@@ -164,9 +179,7 @@
 
 <script src="../../data/rzezby.js"></script>
 <script src="../../js/main.js"></script>
-
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script src="../../js/nav.js"></script>
+<script src="../../js/text-size-toggle.js"></script>
 </body>
 </html>

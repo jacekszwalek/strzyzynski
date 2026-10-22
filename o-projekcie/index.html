@@ -12,7 +12,6 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="../favicon.ico">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../css/style.css">
 
 <meta property="og:type" content="website">
@@ -30,18 +29,27 @@
 <header class="site-header">
   <div class="container header-top">
     <p class="site-title">
-      <a href="../">Nałęczów<span class="site-title-sub">Stanisława Strzyżyńskiego - wirtualny spacer</span></a>
+      <a href="../">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisława Strzyżyńskiego</span>
+      </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Rozmiar tekstu">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Rozmiar tekstu">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
-      <a class="lang-switch" href="../en/about/" hreflang="en" lang="en">English</a>
+      <a class="lang-switch" href="../en/about/" hreflang="en" lang="en">EN</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="site-nav" aria-label="Główna nawigacja">
+  <nav class="site-nav" id="site-nav" aria-label="Główna nawigacja">
     <div class="container">
       <ul role="list">
         <li><a href="../">Start</a></li>
@@ -56,8 +64,9 @@
 </header>
 
 <main id="main">
-  <div class="container">
+  <div class="container content-main">
 
+    <span class="eyebrow">O projekcie</span>
     <h1>O projekcie</h1>
 
     <section aria-labelledby="cel-heading">
@@ -78,15 +87,14 @@
         Strzyżyńskiego - syna artysty, rzeźbiarza i współtwórcy Ławeczki
         Bolesława Prusa - który w nagraniach towarzyszących spacerowi opowiada
         o ojcu i jego twórczości.
-        <!-- DO UZUPEŁNIENIA: pełny opis roli Fundacji Sztuka i Dom, skład zespołu, historia współpracy -->
       </p>
       <p>
         Fundację Sztuka i Dom można znaleźć także w internecie:
       </p>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </section>
 
@@ -133,23 +141,29 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>Wirtualny spacer śladami rzeźb.</p>
-      <p>Ta strona jest częścią projektu realizowanego przez Fundację Sztuka i Dom.</p>
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>Cyfrowy spacer śladami artysty rzeźbiarza Stanisława Strzyżyńskiego jest realizowany przez Fundację Sztuka i Dom.</p>
     </div>
     <div>
-      <p><a href="./">O projekcie</a></p>
-    </div>
-    <div>
-      <p>Znajdź nas też tutaj:</p>
+      <span class="footer-col-label">Fundacja</span>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-funding">
+    <p>
+      Inicjatywa pod nazwą „Cyfrowy spacer śladami artysty rzeźbiarza
+      Stanisława Strzyżyńskiego” realizowana w ramach projektu
+      „Funduszu Inicjatyw MRW – Działam, bo lubię” dofinansowanego ze
+      środków Funduszu Inicjatyw Międzynarodowego Roku Wolontariatu.
+      Regionalnymi Operatorami Projektu są: Bieszczadzki Uniwersytet
+      Ludowy, Stowarzyszenie Sursum Corda i Fundacja Bieszczadzka.
+    </p>
+    <img class="funding-logos" src="../img/logotypy-operatorzy.png" alt="Logotypy Operatorów Regionalnych: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
     <p>
       Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
       Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
@@ -161,9 +175,7 @@
 
 <script src="../data/rzezby.js"></script>
 <script src="../js/main.js"></script>
-
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script src="../js/nav.js"></script>
+<script src="../js/text-size-toggle.js"></script>
 </body>
 </html>

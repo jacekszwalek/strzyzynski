@@ -30,73 +30,188 @@
 <header class="site-header">
   <div class="container header-top">
     <p class="site-title">
-      <a href="./">Nałęczów<span class="site-title-sub">Stanisława Strzyżyńskiego - wirtualny spacer</span></a>
+      <a href="./">
+        <span class="site-title-main">Nałęczów</span>
+        <span class="site-title-sub">Stanisława Strzyżyńskiego</span>
+      </a>
     </p>
     <div class="header-tools">
-      <div class="text-size-switch" role="group" aria-label="Rozmiar tekstu">
+      <div class="text-size-compact" id="text-size-compact">
+        <button type="button" class="text-size-toggle" aria-expanded="false" aria-controls="text-size-switch">Aa</button>
+        <div class="text-size-switch" id="text-size-switch" role="group" aria-label="Rozmiar tekstu">
         <button type="button" data-scale="100" aria-pressed="true">A</button>
         <button type="button" data-scale="125" aria-pressed="false">A+</button>
         <button type="button" data-scale="150" aria-pressed="false">A++</button>
+        </div>
       </div>
-      <a class="lang-switch" href="./en/" hreflang="en" lang="en">English</a>
+      <a class="lang-switch" href="en/" hreflang="en" lang="en">EN</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="site-nav" aria-label="Główna nawigacja">
+  <nav class="site-nav" id="site-nav" aria-label="Główna nawigacja">
     <div class="container">
       <ul role="list">
         <li><a href="./" aria-current="page">Start</a></li>
-        <li><a href="./laweczka-prusa/"><span class="nav-step">1.</span> Ławeczka Prusa</a></li>
-        <li><a href="./drzewo-genealogiczne/"><span class="nav-step">2.</span> Drzewo genealogiczne</a></li>
-        <li><a href="./kamien-papieski/"><span class="nav-step">3.</span> Kamień Papieski</a></li>
-        <li><a href="./panna-z-ryba/"><span class="nav-step">4.</span> Panna z rybą</a></li>
-        <li><a href="./o-projekcie/">O projekcie</a></li>
+        <li><a href="laweczka-prusa/"><span class="nav-step">1.</span> Ławeczka Prusa</a></li>
+        <li><a href="drzewo-genealogiczne/"><span class="nav-step">2.</span> Drzewo genealogiczne</a></li>
+        <li><a href="kamien-papieski/"><span class="nav-step">3.</span> Kamień Papieski</a></li>
+        <li><a href="panna-z-ryba/"><span class="nav-step">4.</span> Panna z rybą</a></li>
+        <li><a href="o-projekcie/">O projekcie</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
 <main id="main">
-  <div class="container">
 
-    <h1>Nałęczów Stanisława Strzyżyńskiego</h1>
-    <p class="content">
-      Ten wirtualny spacer prowadzi śladami czterech rzeźb Stanisława Strzyżyńskiego
-      (1923–2015), które przez dekady współtworzyły krajobraz Nałęczowa. O ojcu i jego
-      twórczości opowiada w nagraniach syn, Zbigniew Strzyżyński. Spacer możesz przejść
-      w całości z domu, zanim wybierzesz się do Nałęczowa, albo krok po kroku na miejscu,
-      otwierając stronę w telefonie przy kolejnych rzeźbach. Trasa liczy cztery przystanki
-      - dokładny dystans i orientacyjny czas przejścia znajdziesz pod mapą poniżej.
-    </p>
-
-    <section class="media-section" aria-labelledby="wprowadzenie-heading">
-      <span class="media-section-label">Wprowadzenie</span>
-      <h2 id="wprowadzenie-heading" class="visually-hidden">Wprowadzenie wideo</h2>
-      <div class="narrator-byline">
-        <span>Opowiada Zbigniew Strzyżyński, syn artysty</span>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Wirtualny spacer</span>
+        <h1>Śladami rzeźb Stanisława Strzyżyńskiego</h1>
+        <p class="hero-lede">Cztery przystanki w Parku Zdrojowym w Nałęczowie. O ojcu i jego twórczości opowiada syn, rzeźbiarz Zbigniew Strzyżyński.</p>
+        <div class="hero-actions">
+          <a href="#trasa" class="btn">Rozpocznij spacer</a>
+          <a href="#wprowadzenie" class="hero-play-link">
+            <span class="hero-play-icon" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" focusable="false"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>
+            </span>
+            Obejrzyj wprowadzenie
+          </a>
+        </div>
+        <div class="hero-credit">
+          <img src="./img/zbigniew-strzyzynski-avatar.png" alt="" width="40" height="40" loading="lazy">
+          <span>Opowiada <strong>Zbigniew Strzyżyński</strong>, syn artysty<br>4 przystanki · ok. 850 m · ok. 13 min pieszo</span>
+        </div>
       </div>
-      <div class="video-wrap video-wrap--portrait">
-        <iframe src="https://www.youtube-nocookie.com/embed/amiOJRqWpm0?cc_load_policy=0&loop=0" title="Wprowadzenie do wirtualnego spaceru" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="hero-media">
+        <div class="hero-photo">
+          <img src="./img/laweczka-prusa-1.jpg" alt="Ławeczka Bolesława Prusa w Parku Zdrojowym w Nałęczowie" width="1024" height="768" loading="eager">
+          <span class="hero-photo-caption">Ławeczka Bolesława Prusa · 2002</span>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <details class="transcript">
-        <summary>Rozwiń transkrypcję</summary>
-        <div class="transcript-body"><p>Dzień dobry Państwu. Nazywam się Zbigniew Strzyżyński, jestem rzeźbiarzem, malarzem, a także pedagogiem, byłym wicedyrektorem do spraw artystycznych Państwowego Liceum Sztuk Plastycznych w Nałęczowie.</p>
-        <p>Jestem również prezesem Fundacji Sztuka i Dom, która powstała w celu upamiętnienia dorobku twórczego mojego ojca, artysty rzeźbiarza Stanisława Strzyżyńskiego, osoby bardzo zasłużonej dla Nałęczowa, dla Lubelszczyzny, ale także dla Polski. Dzisiaj opowiem Państwu o nim, ale także o kilku jego realizacjach znajdujących się w Nałęczowie.</p></div>
-      </details>
-    </section>
+  <section class="intro-section" id="wprowadzenie" aria-labelledby="wprowadzenie-heading">
+    <div class="container intro-grid">
+      <div class="intro-copy">
+        <span class="eyebrow">Wprowadzenie</span>
+        <h2 id="wprowadzenie-heading" style="margin-top:0;">Zanim wyruszysz</h2>
+        <div class="narrator-byline">
+          <span>Opowiada Zbigniew Strzyżyński, syn artysty</span>
+        </div>
+        <details class="transcript">
+          <summary>Rozwiń transkrypcję</summary>
+          <div class="transcript-body">
+            <p>Dzień dobry Państwu. Nazywam się Zbigniew Strzyżyński, jestem rzeźbiarzem, malarzem, a także pedagogiem, byłym wicedyrektorem do spraw artystycznych Państwowego Liceum Sztuk Plastycznych w Nałęczowie.</p>
+            <p>Jestem również prezesem Fundacji Sztuka i Dom, która powstała w celu upamiętnienia dorobku twórczego mojego ojca, artysty rzeźbiarza Stanisława Strzyżyńskiego, osoby bardzo zasłużonej dla Nałęczowa, dla Lubelszczyzny, ale także dla Polski. Dzisiaj opowiem Państwu o nim, ale także o kilku jego realizacjach znajdujących się w Nałęczowie.</p>
+          </div>
+        </details>
+      </div>
+      <div class="intro-video">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/amiOJRqWpm0?cc_load_policy=0&loop=0" title="Wprowadzenie do wirtualnego spaceru" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
-      <h2 id="mapa-heading">Mapa spaceru</h2>
-      <p>
-        Kliknij pinezkę na mapie, aby zobaczyć podgląd rzeźby i przejść do nagrania.
-      </p>
-      <p>Cała trasa: ok. 850 m, ok. 13 min pieszo</p>
+  <section class="route-section" id="trasa" aria-labelledby="trasa-heading">
+    <div class="container">
+      <div class="route-section-head">
+        <div>
+          <span class="eyebrow">Trasa spaceru</span>
+          <h2 id="trasa-heading" style="margin-top:0;">Cztery przystanki, jedna opowieść</h2>
+        </div>
+        <p class="route-meta">ok. 850 m · ok. 13 min pieszo</p>
+      </div>
+      <div class="route-cards">
+        <a class="route-card" href="laweczka-prusa/">
+          <span class="route-card-photo">
+            <img src="./img/laweczka-prusa-mini.jpg" alt="" width="300" height="400" loading="lazy">
+            <span class="route-card-num" aria-hidden="true">1</span>
+          </span>
+          <h3>Ławeczka Prusa</h3>
+          <p>Siedząca postać pisarza w meloniku, dłoń oparta na książce.</p>
+          <span class="route-card-meta">2002 · Zobacz →</span>
+        </a>
+        <a class="route-card" href="drzewo-genealogiczne/">
+          <span class="route-card-photo">
+            <img src="./img/drzewo-genealogiczne-mini.jpg" alt="" width="300" height="400" loading="lazy">
+            <span class="route-card-num" aria-hidden="true">2</span>
+          </span>
+          <h3>Drzewo genealogiczne</h3>
+          <p>Abstrakcyjna forma — symbol więzów rodzinnych i ciągłości pokoleń.</p>
+          <span class="route-card-meta">1977 · Zobacz →</span>
+        </a>
+        <a class="route-card" href="kamien-papieski/">
+          <span class="route-card-photo">
+            <img src="./img/kamien-papieski-mini.jpg" alt="" width="300" height="400" loading="lazy">
+            <span class="route-card-num" aria-hidden="true">3</span>
+          </span>
+          <h3>Kamień Papieski</h3>
+          <p>Pomnik i tablica przypominające o pobycie kard. Karola Wojtyły.</p>
+          <span class="route-card-meta">1999 · Zobacz →</span>
+        </a>
+        <a class="route-card" href="panna-z-ryba/">
+          <span class="route-card-photo">
+            <img src="./img/panna-z-ryba-mini.jpg" alt="" width="300" height="400" loading="lazy">
+            <span class="route-card-num" aria-hidden="true">4</span>
+          </span>
+          <h3>Panna z rybą</h3>
+          <p>Rzeźba w fontannie przed willą „Pod Matką Boską”.</p>
+          <span class="route-card-meta">1979 · Zobacz →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section" aria-labelledby="jak-korzystac-heading">
+    <div class="container">
+      <span class="eyebrow">Praktycznie</span>
+      <h2 id="jak-korzystac-heading" style="margin-top:0; margin-bottom: var(--space-4);">Jak korzystać ze spaceru</h2>
+      <ol class="steps-grid" role="list">
+        <li class="step-card">
+          <span class="step-number" aria-hidden="true">1</span>
+          <div>
+            <h3>Wybierz punkt</h3>
+            <p>Na mapie lub liście poniżej kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
+          </div>
+        </li>
+        <li class="step-card">
+          <span class="step-number" aria-hidden="true">2</span>
+          <div>
+            <h3>Posłuchaj opowieści</h3>
+            <p>Na każdej podstronie czeka nagranie z opowieścią syna artysty, Zbigniewa Strzyżyńskiego.</p>
+          </div>
+        </li>
+        <li class="step-card">
+          <span class="step-number" aria-hidden="true">3</span>
+          <div>
+            <h3>Ruszaj na spacer</h3>
+            <p>Otwórz tę stronę w telefonie i korzystaj z niej na miejscu, przechodząc od jednej rzeźby do drugiej we własnym tempie.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
+    <div class="container">
+      <div class="map-section-head">
+        <span class="eyebrow">Mapa</span>
+        <h2 id="mapa-heading" style="margin-top:0;">Zaplanuj spacer</h2>
+        <p style="margin:0;">Kliknij pinezkę na mapie, aby zobaczyć podgląd rzeźby i przejść do nagrania.</p>
+      </div>
 
       <div class="map-wrap" id="map-wrap">
         <div id="map" class="map-el" role="application" aria-label="Mapa spaceru z czterema numerowanymi punktami"></div>
       </div>
       <div class="map-fallback" id="map-fallback" hidden>
-        <p>Mapa jest obecnie niedostępna. Poniżej pełna lista punktów spaceru - działa niezależnie od mapy.</p>
+        <p>Mapa jest obecnie niedostępna. Poniżej pełna lista punktów spaceru — działa niezależnie od mapy.</p>
       </div>
 
       <div class="map-meta">
@@ -109,120 +224,73 @@
         <ul class="location-list" id="location-list" role="list"></ul>
         <div class="location-carousel-controls">
           <button type="button" class="location-carousel-btn location-carousel-btn--prev" aria-label="Poprzedni punkt" aria-controls="location-list" disabled>
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <button type="button" class="location-carousel-btn location-carousel-btn--next" aria-label="Następny punkt" aria-controls="location-list">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section aria-labelledby="jak-korzystac-heading">
-      <h2 id="jak-korzystac-heading">Jak korzystać ze spaceru</h2>
-      <ol class="steps-grid" role="list">
-        <li class="step-card">
-          <div class="step-number" aria-hidden="true">1</div>
-          <p><strong>Wybierz punkt.</strong> Na mapie lub liście powyżej - kliknij rzeźbę, o której chcesz się dowiedzieć więcej.</p>
-        </li>
-        <li class="step-card">
-          <div class="step-number" aria-hidden="true">2</div>
-          <p><strong>Posłuchaj opowieści.</strong> Na każdej podstronie czeka nagranie wideo lub audio z opowieścią syna artysty, Zbigniewa Strzyżyńskiego.</p>
-        </li>
-        <li class="step-card">
-          <div class="step-number" aria-hidden="true">3</div>
-          <p><strong>Ruszaj na spacer.</strong> Otwórz tę stronę w telefonie i korzystaj z niej na miejscu, przechodząc od jednej rzeźby do drugiej we własnym tempie.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="bio-section-wrap" aria-labelledby="bio-heading">
-      <h2 id="bio-heading">Stanisław Strzyżyński<br>(1923–2015)</h2>
-      <div class="bio-section">
+  <section class="bio-section" id="artysta" aria-labelledby="bio-heading">
+    <div class="container bio-grid">
+      <div class="bio-portrait">
         <img src="./img/stanislaw-strzyzynski-portret.jpg" alt="Portret Stanisława Strzyżyńskiego na tle jego rzeźb" width="640" height="870" loading="lazy">
-        <div class="content">
-          <h3>Młodość i wykształcenie</h3>
-          <p>
-            Stanisław Strzyżyński urodził się 3 kwietnia 1923 roku w Kaliskach (woj.
-            wielkopolskie). Studiował na Wydziale Rzeźby Państwowej Wyższej Szkoły
-            Sztuk Plastycznych w Poznaniu, w pracowni prof. Bazylego Wojtowicza.
-            Dyplom uzyskał w 1955 roku w Akademii Sztuk Pięknych w Warszawie, w
-            pracowni prof. Mariana Wnuka.
-          </p>
-
-          <h3>Nałęczów</h3>
-          <p>
-            Do Nałęczowa przeniósł się w 1953 roku. Przez trzydzieści lat, od 1953
-            do 1983 roku, pracował jako nauczyciel rzeźby w Państwowym Liceum Sztuk
-            Plastycznych w Nałęczowie. Od 1951 roku należał do Związku Polskich
-            Artystów Plastyków, a w latach 1957–1974 współtworzył Grupę Nałęczów.
-            Wspólnie z malarzem Jarosławem Olejnickim, prezesem Towarzystwa Przyjaciół
-            Nałęczowa, zorganizował ogólnopolskie plenery rzeźbiarskie: „Rzeźby
-            parkowej” w 1975 roku oraz „Postaci Nałęczowa” w 1979 roku.
-          </p>
-
-          <h3>Twórczość</h3>
-          <p>
-            Dorobek artysty obejmuje dwadzieścia pomników, kilkanaście rzeźb
-            plenerowych, około stu rzeźb portretowych, kilkadziesiąt medali, a także
-            rzeźby sakralne i prace o tematyce martyrologicznej.
-          </p>
-          <p>
-            W Nałęczowie stworzył m.in. ławeczkę Bolesława Prusa, pomnik poświęcony
-            żołnierzom Armii Krajowej poległym w walce z NKWD, pomnik Maksymiliana
-            Kolbego, figury Matki Bożej Róży Duchownej, Chrystusa Miłosiernego i
-            Chrystusa Frasobliwego oraz rzeźby plenerowe „Drzewo genealogiczne”,
-            „Panna z rybą” i „Taniec dzieci”.
-          </p>
-
-          <h3>Poza Nałęczowem</h3>
-          <p>
-            Poza Nałęczowem Strzyżyński wykonał m.in. dwudziestotrzymetrowy pomnik
-            Bohaterskim Lotnikom Dęblińskiej Szkoły Orląt w Dęblinie (1966),
-            sześciometrową figurę Chrystusa Zbawiciela w Warszawie, a także pomniki
-            w Rąblowie, Kocku, Zbędowicach i Puławach oraz ławeczki Marii Cunitz w
-            Świdnicy, Józefa Kraszewskiego w Romanowie i Stefana Żeromskiego w
-            Siedlcach.
-          </p>
-
-          <h3>Nagrody i odznaczenia</h3>
-          <p>
-            W 1967 roku, wspólnie z Juliuszem Kłeczkiem, zdobył główną nagrodę w
-            ogólnopolskim konkursie na Pomnik Walki i Męczeństwa na Majdanku. Został
-            odznaczony m.in. Krzyżem Oficerskim i Krzyżem Kawalerskim Orderu
-            Odrodzenia Polski oraz Złotym Krzyżem Zasługi.
-          </p>
-          <p>Zmarł 16 marca 2015 roku w Nałęczowie.</p>
-          <p>
-            W czerwcu 2026 roku jedną z alei w Parku Zdrojowym w Nałęczowie nazwano
-            jego imieniem.
-          </p>
-        </div>
       </div>
-    </section>
+      <div class="bio-copy">
+        <span class="eyebrow">Artysta</span>
+        <h2 id="bio-heading" style="margin-top:0;">Stanisław Strzyżyński (1923–2015)</h2>
 
-  </div>
+        <h3>Młodość i wykształcenie</h3>
+        <p>Stanisław Strzyżyński urodził się 3 kwietnia 1923 roku w Kaliskach (woj. wielkopolskie). Studiował na Wydziale Rzeźby Państwowej Wyższej Szkoły Sztuk Plastycznych w Poznaniu, w pracowni prof. Bazylego Wojtowicza. Dyplom uzyskał w 1955 roku w Akademii Sztuk Pięknych w Warszawie, w pracowni prof. Mariana Wnuka.</p>
+
+        <h3>Nałęczów</h3>
+        <p>Do Nałęczowa przeniósł się w 1953 roku. Przez trzydzieści lat, od 1953 do 1983 roku, pracował jako nauczyciel rzeźby w Państwowym Liceum Sztuk Plastycznych w Nałęczowie. Od 1951 roku należał do Związku Polskich Artystów Plastyków, a w latach 1957–1974 współtworzył Grupę Nałęczów. Wspólnie z malarzem Jarosławem Olejnickim, prezesem Towarzystwa Przyjaciół Nałęczowa, zorganizował ogólnopolskie plenery rzeźbiarskie: „Rzeźby parkowej” w 1975 roku oraz „Postaci Nałęczowa” w 1979 roku.</p>
+
+        <h3>Twórczość</h3>
+        <p>Dorobek artysty obejmuje dwadzieścia pomników, kilkanaście rzeźb plenerowych, około stu rzeźb portretowych, kilkadziesiąt medali, a także rzeźby sakralne i prace o tematyce martyrologicznej.</p>
+        <p>W Nałęczowie stworzył m.in. ławeczkę Bolesława Prusa, pomnik poświęcony żołnierzom Armii Krajowej poległym w walce z NKWD, pomnik Maksymiliana Kolbego, figury Matki Bożej Róży Duchownej, Chrystusa Miłosiernego i Chrystusa Frasobliwego oraz rzeźby plenerowe „Drzewo genealogiczne”, „Panna z rybą” i „Taniec dzieci”.</p>
+
+        <h3>Poza Nałęczowem</h3>
+        <p>Poza Nałęczowem Strzyżyński wykonał m.in. dwudziestotrzymetrowy pomnik Bohaterskim Lotnikom Dęblińskiej Szkoły Orląt w Dęblinie (1966), sześciometrową figurę Chrystusa Zbawiciela w Warszawie, a także pomniki w Rąblowie, Kocku, Zbędowicach i Puławach oraz ławeczki Marii Cunitz w Świdnicy, Józefa Kraszewskiego w Romanowie i Stefana Żeromskiego w Siedlcach.</p>
+
+        <h3>Nagrody i odznaczenia</h3>
+        <p>W 1967 roku, wspólnie z Juliuszem Kłeczkiem, zdobył główną nagrodę w ogólnopolskim konkursie na Pomnik Walki i Męczeństwa na Majdanku. Został odznaczony m.in. Krzyżem Oficerskim i Krzyżem Kawalerskim Orderu Odrodzenia Polski oraz Złotym Krzyżem Zasługi.</p>
+        <p>Zmarł 16 marca 2015 roku w Nałęczowie.</p>
+        <p>W czerwcu 2026 roku jedną z alei w Parku Zdrojowym w Nałęczowie nazwano jego imieniem.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <p><strong>Nałęczów Stanisława Strzyżyńskiego</strong><br>Wirtualny spacer śladami rzeźb.</p>
-      <p>Ta strona jest częścią projektu realizowanego przez Fundację Sztuka i Dom.</p>
+    <div class="footer-grid-brand">
+      <strong>Nałęczów Stanisława Strzyżyńskiego</strong>
+      <p>Cyfrowy spacer śladami artysty rzeźbiarza Stanisława Strzyżyńskiego jest realizowany przez Fundację Sztuka i Dom.</p>
     </div>
     <div>
-      <p><a href="./o-projekcie/">O projekcie</a></p>
-    </div>
-    <div>
-      <p>Znajdź nas też tutaj:</p>
+      <span class="footer-col-label">Fundacja</span>
       <ul role="list" class="foundation-links">
-        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.6"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
-        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://sztukaidom.com/" aria-label="Strona internetowa Fundacji Sztuka i Dom"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="3.5" y1="12" x2="20.5" y2="12" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.facebook.com/sztukaidom/" aria-label="Fundacja Sztuka i Dom na Facebooku"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path d="M14 8.5h2.2V5.3h-2.2c-2.1 0-3.7 1.4-3.7 3.7v1.8H8V14h2.3v6h3.2v-6h2.3l.4-3.2h-2.7V9c0-.3.1-.5.5-.5z" fill="currentColor"/></svg></a></li>
+        <li><a class="foundation-link-btn" href="https://www.instagram.com/fundacjasztukaidom" aria-label="Fundacja Sztuka i Dom na Instagramie"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-funding">
+    <p>
+      Inicjatywa pod nazwą „Cyfrowy spacer śladami artysty rzeźbiarza
+      Stanisława Strzyżyńskiego” realizowana w ramach projektu
+      „Funduszu Inicjatyw MRW – Działam, bo lubię” dofinansowanego ze
+      środków Funduszu Inicjatyw Międzynarodowego Roku Wolontariatu.
+      Regionalnymi Operatorami Projektu są: Bieszczadzki Uniwersytet
+      Ludowy, Stowarzyszenie Sursum Corda i Fundacja Bieszczadzka.
+    </p>
+    <img class="funding-logos" src="./img/logotypy-operatorzy.png" alt="Logotypy Operatorów Regionalnych: Bieszczadzki Uniwersytet Ludowy, Stowarzyszenie Sursum Corda, Fundacja Bieszczadzka" width="1650" height="315" loading="lazy">
     <p>
       Sfinansowano ze środków Narodowego Instytutu Wolności – Centrum
       Rozwoju Społeczeństwa Obywatelskiego w ramach Funduszu Inicjatyw
@@ -241,9 +309,7 @@
 <script src="./vendor/leaflet/leaflet.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/map.js"></script>
-
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a46f3933837645ba83ed6957bdff97e0"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script src="./js/nav.js"></script>
+<script src="./js/text-size-toggle.js"></script>
 </body>
 </html>

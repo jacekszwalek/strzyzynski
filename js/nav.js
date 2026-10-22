@@ -1,8 +1,8 @@
 /**
- * alt1/js/nav.js — zwijane menu nawigacyjne na telefonie.
+ * js/nav.js — zwijane menu nawigacyjne na telefonie.
  *
  * Postępujące wzmocnienie: bez JS menu jest w pełni widoczne (pionowa
- * lista, patrz alt1/css/style.css) - w pełni funkcjonalne, tylko zajmuje
+ * lista, patrz css/style.css) - w pełni funkcjonalne, tylko zajmuje
  * więcej miejsca. Z JS-em dodajemy klasę "js" na <html>, która w CSS
  * odsłania przycisk-hamburger. Menu domyślnie jest rozwinięte (tak jak
  * bez JS) - hamburger pozwala je zwinąć, gdy zawadza.
