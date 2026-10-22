@@ -682,8 +682,7 @@ figure.content-figure figcaption { margin-top: var(--space-1); font-size: 0.95re
 .bio-copy { flex: 1 1 420px; min-width: 0; }
 .bio-copy h2 { margin-top: 0; }
 @media (max-width: 760px) {
-  .bio-extra-photos { flex-direction: row; }
-  .bio-extra-photos img { width: auto; flex: 1 1 0; min-width: 0; aspect-ratio: 1 / 1; }
+  .bio-extra-photos { display: none; }
 }
 
 /* --------------------------------------------------------------------------
