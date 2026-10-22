@@ -260,6 +260,12 @@ section { margin-bottom: var(--space-6); }
   }
   .header-tools { flex-wrap: nowrap; flex-shrink: 0; gap: 0.5rem; }
 
+  /* Wszystkie trzy przyciski nagłówka mają na starcie taki sam kształt: koło
+     o średnicy var(--tap-min), tak jak przycisk-hamburger. */
+  .lang-switch {
+    width: var(--tap-min); height: var(--tap-min); min-height: 0; padding: 0;
+  }
+
   /* Przycisk "Aa" zwijający przełącznik rozmiaru czcionki do okrągłego
      przycisku, który rozwija się w pasek z A / A+ / A++ po kliknięciu.
      Bez JS: .text-size-compact jest nadal "display:contents" (z bazowej
@@ -267,14 +273,14 @@ section { margin-bottom: var(--space-6); }
      pełnoprawny fallback. */
   html.js .text-size-compact {
     display: inline-flex; position: relative; flex-shrink: 0;
-    height: 2.25rem; width: 2.25rem; border-radius: 999px;
+    height: var(--tap-min); width: var(--tap-min); border-radius: 999px;
     border: 1.5px solid var(--ink); background: var(--bg);
     overflow: hidden; transition: width 220ms ease;
   }
   html.js .text-size-toggle {
     display: flex; align-items: center; justify-content: center;
     position: absolute; inset: 0; margin: 0; padding: 0; border: none; background: none;
-    font-family: var(--font-sans); font-weight: 700; font-size: 0.78rem; color: var(--ink);
+    font-family: var(--font-sans); font-weight: 700; font-size: 0.85rem; color: var(--ink);
     cursor: pointer; transition: opacity 150ms ease;
   }
   html.js .text-size-compact[data-expanded="true"] .text-size-toggle { opacity: 0; pointer-events: none; }
@@ -284,6 +290,31 @@ section { margin-bottom: var(--space-6); }
     opacity: 0; pointer-events: none; transition: opacity 150ms ease;
   }
   html.js .text-size-compact[data-expanded="true"] .text-size-switch { opacity: 1; pointer-events: auto; }
+
+  /* Przy powiększonej czcionce (A+ / A++) tytuł rośnie razem z resztą
+     strony i może nie zmieścić się obok kontrolek w jednym wierszu po
+     zwinięciu paska. W takim ustalonym stanie (nie w trakcie samego
+     rozwinięcia sekcji Aa, gdzie przykrycie napisu jest akceptowalne)
+     kontrolki przechodzą do drugiej linii, żeby nie zasłaniać tytułu. */
+  html.text-scale-125 .header-top,
+  html.text-scale-150 .header-top {
+    flex-wrap: wrap;
+  }
+  html.text-scale-125 .header-tools,
+  html.text-scale-150 .header-tools {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    margin-top: var(--space-1);
+  }
+  html.text-scale-125 .header-top:has(#text-size-compact[data-expanded="true"]),
+  html.text-scale-150 .header-top:has(#text-size-compact[data-expanded="true"]) {
+    flex-wrap: nowrap;
+  }
+  html.text-scale-125 .header-top:has(#text-size-compact[data-expanded="true"]) .header-tools,
+  html.text-scale-150 .header-top:has(#text-size-compact[data-expanded="true"]) .header-tools {
+    flex-basis: auto;
+    margin-top: 0;
+  }
 
   /* Menu zwijane za przyciskiem-hamburgerem (domyślnie bez JS: w pełni
      widoczne - pełnoprawny fallback). Z JS-em domyślnie też rozwinięte
