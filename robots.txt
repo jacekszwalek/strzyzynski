@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /archived/
+Disallow: /qr/
 
 Sitemap: https://sladamistrzyzynskiego.pl/sitemap.xml
