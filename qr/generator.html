@@ -16,19 +16,46 @@
   html { font-size: 75%; }
   .container { max-width: 1088px; }
   body { padding: var(--space-4) 0; }
+  .content { max-width: var(--measure); }
   .base-url-box { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
-  .base-url-box code { background: var(--color-bg-alt); padding: 0.3em 0.5em; border-radius: 0.25em; font-size: 1.05rem; }
+  .base-url-box code { background: var(--bg-alt); padding: 0.3em 0.5em; border-radius: 0.25em; font-size: 1.05rem; }
   .ecl-switch { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-2); }
   .ecl-switch label { display: flex; align-items: center; gap: 0.4em; cursor: pointer; }
   .qr-panel-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--space-3); align-items: start; }
-  .qr-lang-tabs { display: flex; gap: var(--space-2); border-bottom: 2px solid var(--color-border); margin-bottom: var(--space-3); }
-  .qr-lang-tab { font: inherit; padding: 0.5em 1.25em; border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; color: var(--color-text); }
-  .qr-lang-tab.active { font-weight: 700; color: var(--color-accent); border-bottom-color: var(--color-accent); }
-  details.info-toggle summary { cursor: pointer; font-weight: 700; color: var(--color-accent); display: inline-flex; align-items: center; gap: 0.35em; list-style: none; }
+  .qr-lang-tabs { display: flex; gap: var(--space-2); border-bottom: 2px solid var(--line); margin-bottom: var(--space-3); }
+  .qr-lang-tab { font: inherit; padding: 0.5em 1.25em; border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; color: var(--ink); }
+  .qr-lang-tab.active { font-weight: 700; color: var(--accent); border-bottom-color: var(--accent); }
+  details.info-toggle summary { cursor: pointer; font-weight: 700; color: var(--accent); display: inline-flex; align-items: center; gap: 0.35em; list-style: none; }
   details.info-toggle summary::-webkit-details-marker { display: none; }
   details.info-toggle summary::before { content: "▸"; display: inline-block; font-size: 0.85em; transition: transform 0.15s ease; }
   details.info-toggle[open] summary::before { transform: rotate(90deg); }
   details.info-toggle p { margin-top: var(--space-2); }
+
+  /* Te klasy wcześniej pożyczały się z głównego arkusza stylów serwisu
+     (css/style.css), który jest teraz inną, niezależną wersją wizualną -
+     stąd lokalne, samodzielne definicje, żeby to narzędzie administracyjne
+     nie zależało od tego, jak wygląda witryna publiczna. */
+  .qr-tool-panel {
+    background: var(--bg-card);
+    border: 2px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  .qr-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--space-3);
+  }
+  .qr-preview-card {
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--space-2);
+    text-align: center;
+    background: var(--bg-card);
+  }
+  .qr-preview-card svg, .qr-preview-card img { margin: 0 auto var(--space-1) auto; }
+  .qr-preview-card .btn { width: 100%; margin-top: var(--space-1); }
 </style>
 </head>
 <body>
