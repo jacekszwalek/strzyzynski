@@ -720,10 +720,10 @@ figure.content-figure figcaption { margin-top: var(--space-1); font-size: 0.95re
 .site-footer { border-top: 1px solid var(--line); margin-top: var(--space-6); padding: var(--space-5) 0 var(--space-4); font-size: 0.95rem; }
 .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: var(--space-4); }
 .footer-grid-brand { display: flex; flex-direction: column; gap: 0.4rem; max-width: 26rem; }
-.footer-grid-social { justify-self: end; }
+.footer-grid-social { width: 20rem; justify-self: end; }
 @media (max-width: 760px) {
   .footer-grid { grid-template-columns: 1fr; }
-  .footer-grid-social { justify-self: stretch; }
+  .footer-grid-social { width: auto; justify-self: stretch; }
 }
 .footer-grid-brand strong { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; }
 .footer-grid-brand p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
